@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://irayyankoo.github.io/rayyan-portfolio/sitemap.xml
