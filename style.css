@@ -3,6 +3,46 @@
    Theme: Deep Navy, White, Premium Gold
    ========================================================================== */
 
+/* ==========================================================================
+   Custom Font: Thmanyah Serif Display
+   ========================================================================== */
+@font-face {
+    font-family: 'ThmanyahSerif';
+    src: url('./assets/fonts/thmanyahserifdisplay-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ThmanyahSerif';
+    src: url('./assets/fonts/thmanyahserifdisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ThmanyahSerif';
+    src: url('./assets/fonts/thmanyahserifdisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ThmanyahSerif';
+    src: url('./assets/fonts/thmanyahserifdisplay-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ThmanyahSerif';
+    src: url('./assets/fonts/thmanyahserifdisplay-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     /* Color Palette */
     --color-navy: #0B192C;
@@ -24,7 +64,7 @@
     --gradient-navy: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
     
     /* Typography */
-    --font-arabic: 'Tajawal', sans-serif;
+    --font-arabic: 'ThmanyahSerif', 'Tajawal', sans-serif;
     --font-english: 'Outfit', sans-serif;
     --font-primary: var(--font-arabic);
     
