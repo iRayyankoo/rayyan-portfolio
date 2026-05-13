@@ -742,17 +742,23 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item reveal delay-2" data-category="events">
+                <!-- Gallery Item 6 (Video Example) -->
+                <div class="gallery-item reveal delay-2" data-category="events" data-video="./assets/gallery/event-video.mp4">
                     <div class="gallery-img-wrap">
+                        <!-- صورة غلاف الفيديو (Thumbnail) -->
                         <img src="./assets/gallery/event-03.jpg"
                              onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="Gallery 6" loading="lazy" class="gallery-img">
+                             alt="Video Event" loading="lazy" class="gallery-img">
+                        
+                        <!-- أيقونة الفيديو -->
+                        <div class="gallery-video-icon">
+                            <i data-lucide="play" fill="currentColor"></i>
+                        </div>
+
                         <div class="gallery-overlay">
                             <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="الفعالية 03" data-caption-en="Event 03">الفعالية 03</span>
+                                <span class="gallery-caption-text" data-caption-ar="تغطية فيديو لفعالية" data-caption-en="Event Video Coverage">تغطية فيديو لفعالية</span>
                             </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
                         </div>
                     </div>
                 </div>
@@ -795,10 +801,13 @@
         </div>
     </footer>
 
-    <!-- Lightbox for Image Zoom -->
+    <!-- Lightbox for Image/Video Zoom -->
     <div class="lightbox" id="imageLightbox">
         <div class="lightbox-close" id="lightboxClose"><i data-lucide="x"></i></div>
-        <img src="" alt="Zoomed Image" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-content">
+            <img src="" alt="Zoomed Image" class="lightbox-img" id="lightboxImg">
+            <video controls class="lightbox-video" id="lightboxVideo" style="display: none;"></video>
+        </div>
     </div>
 
     <!-- Main Script -->
