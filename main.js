@@ -148,6 +148,16 @@ const translations = {
         camp_new_list_4: "استخدام صور احترافية وعناصر بصرية قوية",
         camp_new_list_5: "ترتيب بصري واضح وتجربة مستخدم متكاملة",
         
+        // Gallery
+        nav_gallery: "المعرض",
+        gallery_title: "معرض الأعمال",
+        gallery_subtitle: "لحظات ومحطات من مسيرتي المهنية في الفعاليات والمشاريع الإبداعية.",
+        filter_all: "الكل",
+        filter_events: "الفعاليات",
+        filter_branding: "الهوية البصرية",
+        filter_campaigns: "الحملات",
+        filter_web: "المواقع",
+
         // Contact
         contact_title: "لنبقَ على تواصل",
         contact_desc: "للتواصل بخصوص المشاريع، التعاون، أو الفرص المهنية، يمكنكم مراسلتي عبر البريد الإلكتروني.",
@@ -296,6 +306,16 @@ const translations = {
         camp_new_list_4: "Use of professional imagery and strong visual elements",
         camp_new_list_5: "Clear visual hierarchy and integrated user experience",
         
+        // Gallery
+        nav_gallery: "Gallery",
+        gallery_title: "Work Gallery",
+        gallery_subtitle: "Moments and milestones from my professional journey in events and creative projects.",
+        filter_all: "All",
+        filter_events: "Events",
+        filter_branding: "Branding",
+        filter_campaigns: "Campaigns",
+        filter_web: "Web",
+
         // Contact
         contact_title: "Let's Stay Connected",
         contact_desc: "For projects, collaborations, and professional opportunities, feel free to contact me via email.",
@@ -331,6 +351,7 @@ window.addEventListener("load", () => {
     setupCustomCursor();
     setupInteractiveSlider();
     setupLightbox();
+    setupGalleryFilters();
     
     // Run animations for elements already in view
     setTimeout(() => {
@@ -657,5 +678,58 @@ function setupLightbox() {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
         }
+    });
+}
+
+// ==========================================
+// 9. Gallery Filter Logic
+// ==========================================
+function setupGalleryFilters() {
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryImgs = document.querySelectorAll('.gallery-img');
+
+    if (!filterBtns.length) return;
+
+    // Hook gallery images into lightbox
+    galleryImgs.forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            if (lightbox && lightboxImg) {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            }
+        });
+    });
+
+    // Filter logic
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Update captions on language change
+    document.getElementById('langToggle')?.addEventListener('click', () => {
+        setTimeout(() => {
+            const lang = document.documentElement.lang;
+            document.querySelectorAll('.gallery-caption-text').forEach(el => {
+                el.textContent = lang === 'ar'
+                    ? (el.dataset.captionAr || el.textContent)
+                    : (el.dataset.captionEn || el.textContent);
+            });
+        }, 50);
     });
 }

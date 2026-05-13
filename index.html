@@ -100,6 +100,7 @@
                 <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
                 <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
                 <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
+                <a href="#gallery" data-i18n="nav_gallery">المعرض</a>
                 <a href="#contact" data-i18n="nav_contact" class="btn-outline btn-sm">تواصل معي</a>
             </div>
 
@@ -119,6 +120,7 @@
             <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
             <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
             <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
+            <a href="#gallery" data-i18n="nav_gallery">المعرض</a>
             <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
         </div>
     </div>
@@ -630,7 +632,138 @@
         </div>
     </section>
 
+    <!-- ===================================================================
+         Gallery Section
+         لإضافة صور جديدة: انسخ بلوك gallery-item وعدّل مسار الصورة
+         ضع الصور في مجلد: assets/gallery/
+         ================================================================ -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-heading center reveal">
+                <h2 class="section-title" data-i18n="gallery_title">معرض الأعمال</h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">لحظات ومحطات من مسيرتي المهنية في الفعاليات والمشاريع الإبداعية.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="gallery-filters reveal">
+                <button class="gallery-filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
+                <button class="gallery-filter-btn" data-filter="events" data-i18n="filter_events">الفعاليات</button>
+                <button class="gallery-filter-btn" data-filter="branding" data-i18n="filter_branding">الهوية البصرية</button>
+                <button class="gallery-filter-btn" data-filter="campaigns" data-i18n="filter_campaigns">الحملات</button>
+                <button class="gallery-filter-btn" data-filter="web" data-i18n="filter_web">المواقع</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- ============================================================
+                     كيفية إضافة صورة جديدة:
+                     1. ضع الصورة في مجلد: assets/gallery/
+                     2. انسخ البلوك أدناه وعدّل:
+                        - src: مسار الصورة
+                        - data-category: events | branding | campaigns | web
+                        - data-caption-ar: التسمية بالعربية
+                        - data-caption-en: التسمية بالإنجليزية
+                     ============================================================ -->
+
+                <!-- Gallery Item 1 — عدّل الصورة هنا -->
+                <div class="gallery-item reveal" data-category="events">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/event-01.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 1" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="الفعالية 01" data-caption-en="Event 01">الفعالية 01</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item reveal delay-1" data-category="events">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/event-02.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 2" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="الفعالية 02" data-caption-en="Event 02">الفعالية 02</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item reveal delay-2" data-category="branding">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/branding-01.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 3" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="هوية بصرية 01" data-caption-en="Branding 01">هوية بصرية 01</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item reveal" data-category="campaigns">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/campaign-01.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 4" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="حملة إبداعية 01" data-caption-en="Campaign 01">حملة إبداعية 01</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item reveal delay-1" data-category="web">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/web-01.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 5" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="تطوير موقع 01" data-caption-en="Web Project 01">تطوير موقع 01</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item reveal delay-2" data-category="events">
+                    <div class="gallery-img-wrap">
+                        <img src="./assets/gallery/event-03.jpg"
+                             onerror="this.closest('.gallery-item').style.display='none'"
+                             alt="Gallery 6" loading="lazy" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-caption">
+                                <span class="gallery-caption-text" data-caption-ar="الفعالية 03" data-caption-en="Event 03">الفعالية 03</span>
+                            </div>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.gallery-grid -->
+
+        </div>
+    </section>
+
     <!-- Contact Section -->
+
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-minimal glass reveal">
