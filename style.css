@@ -118,6 +118,17 @@ body {
     overflow-x: hidden;
     position: relative;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* OpenType: تفعيل الحروف المرسلة والبدائل الأسلوبية */
+    font-feature-settings:
+        "salt" 1,   /* Stylistic Alternates — الحروف المرسلة */
+        "calt" 1,   /* Contextual Alternates — التبادل السياقي */
+        "liga" 1,   /* Standard Ligatures — التشبيك */
+        "kern" 1;   /* Kerning — الفراغات الدقيقة */
+
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-alternates: stylistic-set(1);
 }
 
 /* Custom Cursor */
