@@ -1074,6 +1074,23 @@ html[dir="rtl"] .project-tags {
     height: 16px;
 }
 
+.project-links-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: auto;
+}
+
+.alt-link {
+    color: var(--color-gold);
+    opacity: 0.85;
+}
+
+.alt-link:hover {
+    opacity: 1;
+    color: var(--color-white);
+}
+
 /* ==========================================================================
    Before & After Branding Section (JS Drag Interactive)
    ========================================================================== */

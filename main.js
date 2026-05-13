@@ -80,6 +80,7 @@ const translations = {
         status_dev: "Under Dev",
         status_personal: "Personal",
         btn_visit: "زيارة الموقع",
+        btn_visit_alt: "زيارة نسخة أخرى",
         
         tag_web: "Web Dev",
         tag_branding: "Branding",
@@ -240,6 +241,7 @@ const translations = {
         status_dev: "Under Dev",
         status_personal: "Personal",
         btn_visit: "Visit Website",
+        btn_visit_alt: "Alternative Link",
 
         tag_web: "Web Dev",
         tag_branding: "Branding",
