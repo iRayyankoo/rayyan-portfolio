@@ -91,13 +91,13 @@ const translations = {
         tag_meta: "Meta Ads",
         tag_strategy: "Marketing Strategy",
 
-        p1_title: "T&S Corporate Website",
+        p1_title: "T&S Corporate (النسخة السابقة)",
         p1_role: "تحسين الموقع، هيكلة المحتوى وتجربة المستخدم",
-        p1_desc: "تحسين تجربة المستخدم وهيكلة المحتوى لموقع شركة T&S الرئيسي.",
+        p1_desc: "تحسين تجربة المستخدم وهيكلة المحتوى لموقع شركة T&S الرئيسي (النسخة القديمة).",
         
-        p2_title: "T&S Holding Website",
+        p2_title: "T&S Holding (الهوية الجديدة)",
         p2_role: "تطوير الموقع وهيكلة المحتوى بالكامل",
-        p2_desc: "تطوير الموقع بالكامل وهيكلة المحتوى للمجموعة القابضة (قيد التطوير).",
+        p2_desc: "تطوير الموقع بالكامل وهيكلة المحتوى للمجموعة القابضة ليعكس التوجه الجديد.",
         
         p3_title: "T&S Academy Website",
         p3_role: "تطوير الموقع والربط التسويقي",
@@ -252,13 +252,13 @@ const translations = {
         tag_meta: "Meta Ads",
         tag_strategy: "Marketing Strategy",
         
-        p1_title: "T&S Corporate Website",
+        p1_title: "T&S Corporate (Old Version)",
         p1_role: "Website Enhancement, Content & UX",
-        p1_desc: "Enhancing user experience and content structuring for the main T&S website.",
+        p1_desc: "Enhancing user experience and content structuring for the previous T&S website.",
         
-        p2_title: "T&S Holding Website",
+        p2_title: "T&S Holding (New Version)",
         p2_role: "Full Web Dev & Content Arch.",
-        p2_desc: "Full website development and content architecture for the Holding Group (Under Development).",
+        p2_desc: "Full website development and content architecture for the new Holding Group identity.",
         
         p3_title: "T&S Academy Website",
         p3_role: "Web Dev & Marketing Integration",
