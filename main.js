@@ -101,8 +101,19 @@ const translations = {
         p5_title: "SportX",
         p5_role: "تجربة رقمية",
         p5_desc: "تجربة رقمية مرتبطة بالقطاع الرياضي، تجمع بين الهوية، العرض البصري، وتجربة المستخدم لخلق حضور أكثر وضوحًا واحترافية.",
+
+        p6_title: "SportX Landing Page",
+        p6_role: "صفحة هبوط وتحسين التحويل",
+        p6_desc: "تصميم صفحة هبوط مخصصة لرفع معدلات التحويل واستقطاب العملاء عبر حملات غوغل وميتا (CRO).",
+
+        p7_title: "Real Estate Platform",
+        p7_role: "تطوير موقع متكامل",
+        p7_desc: "تطوير منصة عقارية شاملة تتيح للمستخدمين عرض واستعراض العقارات، مع واجهة حديثة وتجربة مستخدم سلسة.",
+
+        p8_title: "HRKH Personal App",
+        p8_role: "تطبيق ويب مخصص",
+        p8_desc: "برمجة وتطوير تطبيق ويب مخصص بالكامل كمشروع شخصي، يتضمن نظام إدارة محتوى وأدوات متكاملة.",
         
-        // How I Work
         work_title: "كيف أعمل",
         work_1_title: "فهم الهدف",
         work_1_desc: "أبدأ بفهم احتياج العلامة، الجمهور، والرسالة الأساسية.",
@@ -251,7 +262,19 @@ const translations = {
         p5_title: "SportX",
         p5_role: "Digital Experience",
         p5_desc: "A digital experience for the sports sector, combining identity, visual presentation, and user experience to create a clearer and more professional presence.",
-        
+
+        p6_title: "SportX Landing Page",
+        p6_role: "Landing Page & CRO",
+        p6_desc: "A dedicated landing page built to boost conversion rates and capture leads from Google Ads and Meta campaigns (CRO).",
+
+        p7_title: "Real Estate Platform",
+        p7_role: "Full Website Development",
+        p7_desc: "A comprehensive real estate platform allowing users to browse and explore properties, with a modern interface and smooth user experience.",
+
+        p8_title: "HRKH Personal App",
+        p8_role: "Custom Web App Dev",
+        p8_desc: "A fully custom web application built as a personal project, featuring a content management system and integrated tools.",
+
         // How I Work
         work_title: "How I Work",
         work_1_title: "Understand the Goal",
