@@ -734,13 +734,17 @@ html[dir="rtl"] .float-2 {
     border-top: 1px solid var(--glass-border);
 }
 
-.stat-number {
-    font-size: 3rem;
-    font-weight: 800;
+.stat-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-icon i {
+    width: 48px;
+    height: 48px;
     color: var(--color-gold);
-    margin-bottom: 0.5rem;
-    line-height: 1;
-    font-family: var(--font-english);
+    stroke-width: 1.5;
 }
 
 .stat-label {
@@ -847,6 +851,15 @@ html[dir="rtl"] .float-2 {
     font-weight: 500;
 }
 
+.practical-exp {
+    font-size: 0.95rem;
+    color: var(--color-gray-300);
+    line-height: 1.6;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
 /* Expertise list - two columns */
 .expertise-list {
     margin-top: 2rem;
@@ -884,7 +897,7 @@ html[dir="rtl"] .float-2 {
    ========================================================================== */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -1089,6 +1102,46 @@ html[dir="rtl"] .project-tags {
 .alt-link:hover {
     opacity: 1;
     color: var(--color-white);
+}
+
+/* ==========================================================================
+   How I Work Section
+   ========================================================================== */
+.how-i-work {
+    padding: var(--spacing-xl) 0;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.work-card {
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border-top: 1px solid var(--glass-border);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+    transition: var(--transition);
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.work-card h3 {
+    color: var(--color-gold);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.work-card p {
+    color: var(--color-gray-300);
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* ==========================================================================
@@ -1738,6 +1791,7 @@ html[dir="rtl"] .lightbox-close {
     .about-container { grid-template-columns: 1fr; gap: 3rem; }
     .about-visual { order: -1; max-width: 500px; margin: 0 auto; }
     .services-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .work-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1751,7 +1805,7 @@ html[dir="rtl"] .lightbox-close {
     .hero-actions { justify-content: center; }
     .hero-visual { height: 350px; }
     
-    .services-grid, .projects-grid { grid-template-columns: 1fr; }
+    .services-grid, .projects-grid, .work-grid { grid-template-columns: 1fr; }
     .campaign-comparison { grid-template-columns: 1fr; gap: 2rem; }
     .direction-indicator { flex-direction: row; margin: 1rem 0; }
     .indicator-line { height: 2px; width: auto; background: linear-gradient(to right, transparent, rgba(212,175,55,0.5), transparent); }
