@@ -1115,33 +1115,72 @@ html[dir="rtl"] .project-tags {
 .work-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
 .work-card {
-    padding: 2.5rem 2rem;
-    border-radius: 16px;
+    position: relative;
+    padding: 3rem 2rem 2.5rem;
+    border-radius: 20px;
     border-top: 1px solid var(--glass-border);
     background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
     transition: var(--transition);
+    overflow: hidden;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+html[dir="ltr"] .work-card {
+    text-align: left;
+}
+
+.work-step {
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(212, 175, 55, 0.05);
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    line-height: 1;
+    font-family: var(--font-english);
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 0;
+}
+
+html[dir="ltr"] .work-step {
+    right: auto;
+    left: 10px;
 }
 
 .work-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.work-card:hover .work-step {
+    color: rgba(212, 175, 55, 0.15);
+    transform: scale(1.05);
 }
 
 .work-card h3 {
     color: var(--color-gold);
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .work-card p {
     color: var(--color-gray-300);
     line-height: 1.6;
     font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
 }
 
 /* ==========================================================================

@@ -104,13 +104,13 @@ const translations = {
         
         // How I Work
         work_title: "كيف أعمل",
-        work_1_title: "01 — فهم الهدف",
+        work_1_title: "فهم الهدف",
         work_1_desc: "أبدأ بفهم احتياج العلامة، الجمهور، والرسالة الأساسية.",
-        work_2_title: "02 — بناء التوجه",
+        work_2_title: "بناء التوجه",
         work_2_desc: "أحوّل الفكرة إلى توجه بصري ومحتوى وتجربة رقمية واضحة.",
-        work_3_title: "03 — تنفيذ بمرونة",
+        work_3_title: "تنفيذ بمرونة",
         work_3_desc: "أعمل على المواقع، الحملات، المحتوى، والأنظمة بطريقة عملية وسريعة.",
-        work_4_title: "04 — تحسين مستمر",
+        work_4_title: "تحسين مستمر",
         work_4_desc: "أراجع التجربة، أحسن النتائج، وأطور الهوية بناءً على الاستخدام الفعلي.",
 
         // Branding
@@ -254,13 +254,13 @@ const translations = {
         
         // How I Work
         work_title: "How I Work",
-        work_1_title: "01 — Understand the Goal",
+        work_1_title: "Understand the Goal",
         work_1_desc: "I start by understanding the brand need, audience, and core message.",
-        work_2_title: "02 — Build the Direction",
+        work_2_title: "Build the Direction",
         work_2_desc: "I turn the idea into a clear visual direction, content approach, and digital experience.",
-        work_3_title: "03 — Execute with Flexibility",
+        work_3_title: "Execute with Flexibility",
         work_3_desc: "I execute websites, campaigns, content, and systems in a practical and flexible way.",
-        work_4_title: "04 — Improve Continuously",
+        work_4_title: "Improve Continuously",
         work_4_desc: "I review the experience, improve outcomes, and refine the brand based on real usage.",
 
         // Branding
