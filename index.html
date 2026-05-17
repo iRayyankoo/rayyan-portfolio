@@ -100,7 +100,7 @@
                 <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
                 <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
                 <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
-                <a href="#gallery" data-i18n="nav_gallery">المعرض</a>
+                <a href="#gallery" data-i18n="nav_gallery" style="display: none !important;">المعرض</a>
                 <a href="#contact" data-i18n="nav_contact" class="btn-outline btn-sm">تواصل معي</a>
             </div>
 
@@ -120,7 +120,7 @@
             <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
             <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
             <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
-            <a href="#gallery" data-i18n="nav_gallery">المعرض</a>
+            <a href="#gallery" data-i18n="nav_gallery" style="display: none !important;">المعرض</a>
             <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
         </div>
     </div>
@@ -617,11 +617,11 @@
     </section>
 
     <!-- ===================================================================
-         Gallery Section — HIDDEN TEMPORARILY
-         لإظهار المعرض مرة أخرى: احذف السطر أدناه وآخر سطر (end comment)
+         Gallery Section
+         لإضافة صور جديدة: انسخ بلوك gallery-item وعدّل مسار الصورة
+         ضع الصور في مجلد: assets/gallery/
          ================================================================ -->
-    <!-- GALLERY_HIDDEN_START
-    <section class="gallery-section" id="gallery">
+    <section class="gallery-section" id="gallery" style="display: none !important;">
         <div class="container">
             <div class="section-heading center reveal">
                 <h2 class="section-title" data-i18n="gallery_title">معرض الأعمال</h2>
@@ -772,7 +772,6 @@
 
         </div>
     </section>
-    GALLERY_HIDDEN_END -->
 
     <!-- Contact Section -->
 
