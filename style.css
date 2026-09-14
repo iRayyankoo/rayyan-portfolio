@@ -1089,6 +1089,10 @@ html[lang="ar"] .marquee-track {
     transform: scale(0.95);
 }
 
+.marquee-logo-img.saudi-club-logo {
+    transform: scale(1.15);
+}
+
 .marquee-item:hover .marquee-logo-badge {
     border-color: var(--color-accent);
     box-shadow: 0 0 12px var(--color-accent-glow);
@@ -1554,6 +1558,10 @@ html[lang="ar"] .marquee-track {
     transform: scale(1.1);
 }
 
+.company-logo-img.saudi-club-logo {
+    transform: scale(1.15);
+}
+
 .experience-card:hover .company-logo-img {
     transform: scale(1.08);
 }
@@ -1563,7 +1571,8 @@ html[lang="ar"] .marquee-track {
 }
 
 .experience-card:hover .company-logo-img.rac-logo,
-.experience-card:hover .company-logo-img.wahag-logo {
+.experience-card:hover .company-logo-img.wahag-logo,
+.experience-card:hover .company-logo-img.saudi-club-logo {
     transform: scale(1.22);
 }
 

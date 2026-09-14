@@ -104,6 +104,15 @@ const translations = {
         exp_4_b2: "ضمان التغطية التشغيلية المستمرة على مدار الساعة مع الحفاظ على سجلات الحضور والإجازات الدقيقة.",
         exp_4_b3: "تطوير آليات التنسيق الميداني بين المشرفين والكوادر لضمان سلاسة حركة وخدمة المسافرين.",
 
+        // Experience 5: Saudi Students Association (Pocatello, Idaho)
+        exp_5_role: "رئيس اللجنة الإعلامية والتسويق الرقمي",
+        exp_5_company: "النادي السعودي للطلبة المبتعثين (بوكاتيلو، أيداهو)",
+        exp_5_period: "2015 – 2020",
+        exp_5_location: "بوكاتيلو، أيداهو، الولايات المتحدة الأمريكية",
+        exp_5_b1: "قيادة الهوية البصرية وإدارة قنوات التواصل الرقمي والموقع الإلكتروني للنادي لتعزيز الحضور والانتشار الإعلامي.",
+        exp_5_b2: "تخطيط وتنفيذ الحملات الإعلامية وتغطية الفعاليات والمؤتمرات الثقافية والوطنية الكبرى أمام المجتمع الأكاديمي والملحقية.",
+        exp_5_b3: "إنتاج المحتوى الإبداعي والتصاميم وإدارة العلاقات العامة والتفاعل المباشر لخدمة ودعم مئات المبتعثين والطلبة الدوليين.",
+
         // Education & Certifications
         edu_title: "التعليم الأكاديمي والشهادات العالمية",
         edu_degree: "معلوماتية الأعمال (Business Informatics)",
@@ -356,6 +365,15 @@ const translations = {
         exp_4_b1: "Organized master schedules and governed daily operations for airport customer service frontline teams.",
         exp_4_b2: "Maintained 24/7 mission-critical operational coverage while upholding strict attendance and leave logs.",
         exp_4_b3: "Streamlined field dispatch workflows between floor supervisors and staff to ensure seamless passenger traffic.",
+
+        // Experience 5: Saudi Students Association (Pocatello, Idaho)
+        exp_5_role: "Head of Media & Digital Marketing",
+        exp_5_company: "Saudi Students Association (ISU Pocatello)",
+        exp_5_period: "2015 – 2020",
+        exp_5_location: "Pocatello, Idaho, USA",
+        exp_5_b1: "Directed brand identity and governed official digital channels and web presence to scale community and media reach.",
+        exp_5_b2: "Spearheaded promotional campaigns, cultural showcase events, and official delegations representing Saudi students.",
+        exp_5_b3: "Produced multimedia content and led public relations initiatives to engage international students and US academic partners.",
 
         // Education & Certifications
         edu_title: "Academic Background & Global Credentials",
