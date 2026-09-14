@@ -160,6 +160,14 @@ const translations = {
         p8_impact_2: "تصميم واجهات زجاجية معتمة راقية مستوحاة من أحدث توجهات الـ Dark Mode",
         p8_impact_3: "بناء مكونات مرنة وقابلة للتطوير وإعادة الاستخدام السريع في مشاريع مستقبلية",
 
+        // Project 9 (NAHT Real Estate CRM)
+        p9_title: "منصة إدارة العمليات والعملاء (نحت CRM)",
+        p9_role: "مهندس ومطور النظام وتجربة المستخدم",
+        p9_desc: "تطوير منصة سحابية متكاملة لشركة نحت العقارية لإدارة دورة حياة العملاء (Leads)، أتمتة تدفقات العمل، وربط محادثات واتساب، مع لوحات تحكم متقدمة لمراقبة الأداء العقاري والمبيعات في الوقت الفعلي.",
+        p9_impact_1: "إدارة وأتمتة مسار العملاء المتوقعين (Leads Pipeline) وتوزيعهم الفوري على فريق المبيعات",
+        p9_impact_2: "تكامل ذكي ومباشر مع محادثات واتساب لرفع سرعة الاستجابة ومعدلات إغلاق الصفقات",
+        p9_impact_3: "لوحة تحكم مركزية للتحليلات الإدارية، التقارير الأسبوعية، ومتابعة المشاريع السكنية",
+
         // How I Work Refinements
         work_title: "آلية العمل",
         work_1_title: "فهم الهدف",
@@ -376,6 +384,14 @@ const translations = {
         p8_impact_1: "Implemented robust backend security configurations for secure private access",
         p8_impact_2: "Designed high-end glassmorphic dark layouts utilizing modern web design best practices",
         p8_impact_3: "Engineered reusable modular components to accelerate future platform iterations",
+
+        // Project 9 (NAHT Real Estate CRM)
+        p9_title: "NAHT Real Estate CRM & Operations",
+        p9_role: "Lead Product Developer & UX Architect",
+        p9_desc: "Engineered an end-to-end cloud CRM and operations platform for NAHT Real Estate to streamline lead management, automate sales pipelines, and integrate WhatsApp communications with live executive analytics.",
+        p9_impact_1: "Automated real estate lead intake and dynamic sales pipeline routing",
+        p9_impact_2: "Seamless WhatsApp messaging integration for rapid response and higher deal conversions",
+        p9_impact_3: "Central executive dashboard for weekly team reporting, performance metrics, and project tracking",
 
         // How I Work Refinements
         work_title: "How I Work",
