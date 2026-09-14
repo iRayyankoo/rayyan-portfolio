@@ -1,4 +1,4 @@
-# Rayyan Aldhuhayan - Personal Portfolio
+# Rayyan Aldohian - Personal Portfolio
 
 A premium, bilingual (Arabic & English) single-page portfolio designed for a Digital Media Specialist. Features a Deep Navy, White, and Premium Gold color palette with interactive scroll animations, a custom cursor, and an interactive Before & After image slider.
 

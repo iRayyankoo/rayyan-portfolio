@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Rayyan Aldhuhayan Portfolio - Main Script
+   Rayyan Aldohian Portfolio - Main Script
    Bilingual System (AR / EN) + Dynamic Theme System + Terminal Simulation
    ========================================================================== */
 
