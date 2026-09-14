@@ -394,7 +394,6 @@ html[dir="rtl"] .nav-link::after {
     flex-shrink: 0;
     white-space: nowrap;
 }
-}
 
 /* Language Switcher */
 .lang-btn {
@@ -593,6 +592,12 @@ html[lang="ar"] .btn-outline-accent {
     align-items: center;
     gap: 0.75rem;
     padding-block: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: var(--color-bone);
 }
 
 .mobile-nav-link .nav-num {
@@ -2070,8 +2075,22 @@ html[lang="ar"] .experience-meta {
 }
 
 /* ==========================================================================
-   SECTION 4: ABOUT ME & SKILLS (Sunny Patel 2-Column Architecture)
+   STANDALONE ABOUT PAGE & SKILLS (Sunny Patel Architecture)
    ========================================================================== */
+.about-page-main {
+    position: relative;
+    padding-top: 6.5rem;
+    padding-bottom: 5rem;
+    min-height: calc(100vh - 180px);
+}
+
+@media (min-width: 960px) {
+    .about-page-main {
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+    }
+}
+
 .about-grid-layout {
     display: grid;
     grid-template-columns: 1fr;

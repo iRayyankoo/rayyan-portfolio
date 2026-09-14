@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبذة عني · ريان الضحيان</title>
+    <meta name="description" content="نبذة عن ريان الضحيان - أخصائي ذكاء أعمال ونمو، دمج تحليل البيانات مع الهوية والذكاء الاصطناعي.">
+    <meta name="author" content="Rayyan Aldohian">
+    <link rel="canonical" href="https://irayyankoo.github.io/rayyan-portfolio/about.html">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="نبذة عني · ريان الضحيان">
+    <meta property="og:description" content="نبذة عن مسيرة ريان الضحيان، مهارات ذكاء الأعمال، أنظمة AI، ونمو العلامات التجارية.">
+    <meta property="og:image" content="assets/profile.jpg">
+    <meta property="og:url" content="https://irayyankoo.github.io/rayyan-portfolio/about.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- Monospace Brandmark -->
+            <a href="index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <!-- Numbered Nav Links -->
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="index.html#work" class="nav-link">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="index.html#experience" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_experience">الخبرات المهنية</span>
+                </a>
+                <a href="index.html#impact" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="about.html" class="nav-link active">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <span class="nav-num">06</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <!-- Actions (Language, Theme, Contact) -->
+            <div class="header-actions">
+                <!-- Theme Picker -->
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Language Toggle -->
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <!-- Get in Touch CTA -->
+                <a href="index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="index.html#experience" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_experience">الخبرات المهنية</span>
+        </a>
+        <a href="index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="about.html" class="mobile-nav-link active">
+            <span class="nav-num">05</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">06</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content" class="about-page-main">
+        <div class="ambient-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="about-grid-layout">
+                <!-- Column 1: Portrait Card & Definition List -->
+                <div class="about-sidebar">
+                    <span class="section-tag">
+                        <span class="line" aria-hidden="true"></span>
+                        <span data-i18n="tag_about">عن مسيرتي</span>
+                    </span>
+
+                    <div class="portrait-card-wrap">
+                        <div class="portrait-ambient-glow" aria-hidden="true"></div>
+                        <div class="portrait-frame">
+                            <img src="assets/profile.jpg" alt="Rayyan Aldohian" class="portrait-img" loading="lazy">
+                            <div class="portrait-fade-overlay"></div>
+                        </div>
+                    </div>
+
+                    <dl class="about-meta-list">
+                        <div class="about-meta-row">
+                            <dt data-i18n="about_meta_based_in_dt">المقر</dt>
+                            <dd data-i18n="about_meta_based_in_dd">الرياض، المملكة العربية السعودية</dd>
+                        </div>
+                        <div class="about-meta-row">
+                            <dt data-i18n="about_meta_currently_dt">حالياً</dt>
+                            <dd data-i18n="about_meta_currently_dd">أخصائي أول ذكاء أعمال ونمو</dd>
+                        </div>
+                        <div class="about-meta-row">
+                            <dt data-i18n="about_meta_education_dt">التعليم</dt>
+                            <dd data-i18n="about_meta_education_dd">جامعة ولاية أيداهو (ISU)</dd>
+                        </div>
+                        <div class="about-meta-row">
+                            <dt data-i18n="about_meta_focus_dt">التخصص</dt>
+                            <dd data-i18n="about_meta_focus_dd">ذكاء الأعمال، نظم AI، ونمو العلامات</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Column 2: Lead Headline, Narrative & Now List -->
+                <div class="about-main">
+                    <h1 class="about-headline font-display" data-i18n="about_heading">
+                        أجمع بين دقة ذكاء الأعمال، قوة الذكاء الاصطناعي، وإبداع الهوية لصناعة أثر ونمو استثنائي.
+                    </h1>
+
+                    <div class="about-story">
+                        <p data-i18n="about_p1">
+                            تنطلق منهجيتي في العمل من الفهم العميق للبيانات: أرى في الأرقام <em class="text-ember">خارطة طريق ترشدنا بدقة</em> إلى أين يجب أن نتجه. أحوّل هذه الرؤى إلى هويات بصرية راسخة، ومسارات تسويقية عالية التحويل، وأنظمة رقمية متكاملة تدعم الأهداف المالية والتوسعية للعلامات التجارية.
+                        </p>
+                        <p data-i18n="about_p2">
+                            بدمج أدوات ونماذج الذكاء الاصطناعي (AI) في صلب العمليات، نختصر دورات الإنتاج، ونوفر تحليلات تنبؤية دقيقة لسلوك الجمهور. <em class="text-ember">لا أقدّم مجرد تقارير عابرة</em>، بل أبني أنظمة نمو مؤتمتة ومستدامة تمكّن الشركات من التوسع بثبات واتخاذ قرارات حاسمة بثقة وسرعة.
+                        </p>
+                    </div>
+
+                    <!-- Now Section -->
+                    <div class="about-now-section">
+                        <span class="section-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="about_now_tag">التركيز الحالي</span>
+                        </span>
+                        <ul class="about-now-list">
+                            <li>
+                                <span class="now-dash"></span>
+                                <span data-i18n="about_now_1">بناء لوحات ذكاء أعمال (BI) متقدمة ونماذج بيانات استراتيجية للشركات</span>
+                            </li>
+                            <li>
+                                <span class="now-dash"></span>
+                                <span data-i18n="about_now_2">تطوير حلول وأتمتة تسويقية قائمة على نماذج الذكاء الاصطناعي التوليدي</span>
+                            </li>
+                            <li>
+                                <span class="now-dash"></span>
+                                <span data-i18n="about_now_3">خريج معلوماتية الأعمال من جامعة ولاية أيداهو، ورئيس النادي السعودي لـ 5 سنوات</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Full-Width Section: Categorized Capabilities & Tools -->
+            <div class="about-tools-section">
+                <span class="section-tag">
+                    <span class="line" aria-hidden="true"></span>
+                    <span data-i18n="about_tools_tag">أدوات وأنظمة أعتمد عليها</span>
+                </span>
+                <div class="about-tools-grid">
+                    <div class="tool-category">
+                        <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_bi">ذكاء الأعمال والبيانات</span></h3>
+                        <ul class="tool-badge-list">
+                            <li>Business Intelligence (BI)</li>
+                            <li>Interactive Dashboards</li>
+                            <li>Marketing Analytics</li>
+                            <li>Data Modeling & SQL</li>
+                            <li>KPI Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_ai">الذكاء الاصطناعي والأتمتة</span></h3>
+                        <ul class="tool-badge-list">
+                            <li>Artificial Intelligence (AI)</li>
+                            <li>Generative AI Workflows</li>
+                            <li>Marketing Automation</li>
+                            <li>Predictive Analytics</li>
+                            <li>AI Prompt Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_growth">النمو والتسويق الرقمي</span></h3>
+                        <ul class="tool-badge-list">
+                            <li>Growth Strategy & CRO</li>
+                            <li>Paid Ads (Google & Meta)</li>
+                            <li>CRM Architecture</li>
+                            <li>Funnel Optimization</li>
+                            <li>Campaign Strategy</li>
+                        </ul>
+                    </div>
+                    <div class="tool-category">
+                        <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_design">الهوية والتجربة الرقمية</span></h3>
+                        <ul class="tool-badge-list">
+                            <li>Brand Identity Building</li>
+                            <li>UI/UX Strategy</li>
+                            <li>Web Platforms</li>
+                            <li>Creative Direction</li>
+                            <li>Design Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="about.html" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic & Translations -->
+    <script src="main.js"></script>
+</body>
+</html>

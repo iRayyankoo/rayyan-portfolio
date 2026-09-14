@@ -651,6 +651,17 @@ function setLanguage(lang) {
         langText.textContent = lang === 'ar' ? 'English' : 'عربي';
     }
 
+    const isAboutPage = window.location.pathname.endsWith('about.html') || window.location.pathname.includes('/about');
+    if (isAboutPage) {
+        document.title = lang === 'ar' 
+            ? 'نبذة عني · ريان الضحيان' 
+            : 'About · Rayyan Aldohian';
+    } else {
+        document.title = lang === 'ar'
+            ? 'ريان الضحيان · متخصص ذكاء أعمال، تسويق، ونمو'
+            : 'Rayyan Aldohian · Business Intelligence & Growth Strategist';
+    }
+
     const dict = translations[lang] || translations.ar;
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -716,6 +727,19 @@ function initTerminalTyping() {
 
 // --- Scroll Spy for Nav Links ---
 function initScrollSpy() {
+    const isAboutPage = window.location.pathname.endsWith('about.html') || window.location.pathname.includes('/about');
+    if (isAboutPage) {
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && (href === 'about.html' || href.endsWith('/about.html') || href.endsWith('/about'))) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        return;
+    }
+
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
