@@ -341,7 +341,7 @@ const translations = {
         cs_hrkh_hl4: "هندسة صفحة هبوط ذات معدل تحويل مرتفع لشرح الخدمات والحلول.",
         cs_hrkh_hl5: "لوحة قياس فورية لطلبات التوظيف ومتابعة عقود الشركات الجديدة.",
 
-        cs_ri88_tagline: "منصة ويب SaaS متعددة الخدمات توفر أدوات ذكية ومعالجة ملفات محلية",
+        cs_ri88_tagline: "منصة ويب SaaS لأدوات الإنتاجية والمعالجة المحلية",
         cs_ri88_title: "منصة الأدوات والخدمات الذكية Ri88 SaaS",
         cs_ri88_lead: "منظومة SaaS متكاملة تجمع أكثر من 50 أداة ذكية مجانية للمستخدمين في مكان واحد؛ تشمل الحاسبات المالية السعودية، معالجة ملفات PDF، تحرير الوسائط بـ WebAssembly، وأدوات المطورين، مع ضمان الخصوصية التامة عبر معالجة البيانات محلياً داخل المتصفح.",
         cs_ri88_action: "مستودع الكود على GitHub",
@@ -704,7 +704,7 @@ const translations = {
         cs_hrkh_hl4: "High-conversion landing page architecture detailing corporate HR solutions.",
         cs_hrkh_hl5: "Real-time recruitment telemetry tracking candidate pipeline and corporate contracts.",
 
-        cs_ri88_tagline: "Multi-Utility Web SaaS Delivering Free Client-Side Tools & Compute",
+        cs_ri88_tagline: "Client-Side SaaS Utility Platform",
         cs_ri88_title: "Ri88 SaaS Utility Ecosystem",
         cs_ri88_lead: "An all-in-one web SaaS ecosystem uniting 50+ free smart utilities under a single interface—spanning Saudi financial calculators, PDF manipulation, in-browser WebAssembly media processing, and developer toolkits with 100% client-side data privacy.",
         cs_ri88_action: "GitHub Code Repository",
