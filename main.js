@@ -8,6 +8,7 @@ const translations = {
     ar: {
         nav_work: "المشاريع",
         nav_services: "مجالات التخصص",
+        nav_experience: "الخبرات المهنية",
         nav_impact: "الأثر الاستراتيجي",
         nav_about: "نبذة عني",
         nav_contact: "تواصل",
@@ -62,6 +63,62 @@ const translations = {
         srv_3_detail: "تصميم هويات بصرية وتجارية متكاملة تنطلق من الفهم العميق للجمهور، وتوحيد لغة التصميم عبر المنصات والتطبيقات والحملات لترسيخ مكانة العلامة في السوق.",
         srv_4_name: "حلول وأتمتة الذكاء الاصطناعي (AI Solutions)",
         srv_4_detail: "توظيف وكلاء ونماذج الذكاء الاصطناعي في تحليل سلوك العملاء، أتمتة تدفقات العمل التسويقية والإدارية، وتسريع إنتاج وتخصيص المحتوى الذكي بدقة عالية.",
+        
+        tag_experience: "المسار المهني والخبرات",
+        heading_experience: "خبرات ميدانية تصنع الفارق بين الاستراتيجية والتنفيذ.",
+        experience_lead: "مسار مهني يدمج الانضباط التشغيلي في كبرى الشركات العالمية، قيادة استراتيجيات النمو والهوية للشركات القابضة، والتأسيس الأكاديمي والتقني المدعوم بحلول الذكاء الاصطناعي وذكاء الأعمال.",
+        
+        // Experience 1: T&S
+        exp_1_role: "أخصائي أول تسويق رقمي",
+        exp_1_company: "مجموعة T&S القابضة",
+        exp_1_period: "04/2025 – 05/2026",
+        exp_1_location: "الرياض، المملكة العربية السعودية",
+        exp_1_b1: "صياغة وتنفيذ الاستراتيجيات الرقمية لتعزيز وتوسيع الحضور المؤسسي للمجموعة عبر منصات X و LinkedIn.",
+        exp_1_b2: "تصميم وإدارة خطط وجداول المحتوى التحريري لرفع معدلات التفاعل وضمان الاتساق البصري عبر 10 قطاعات أعمال.",
+        exp_1_b3: "التعاون الوثيق مع فرق التصميم والاستراتيجية لإطلاق حملات تسويقية متزامنة مع إنجازات وتوسعات المجموعة.",
+
+        // Experience 2: Wahag
+        exp_2_role: "أخصائي تسويق",
+        exp_2_company: "شركة وهج للترفيه",
+        exp_2_period: "02/2024 – 03/2025",
+        exp_2_location: "الرياض، المملكة العربية السعودية",
+        exp_2_b1: "قيادة حملات تسويقية متكاملة رسخت مكانة 'وهج' كجهة إبداعية رائدة في قطاع الترفيه.",
+        exp_2_b2: "إدارة مشروع إعادة تطوير الهوية التجارية (Rebranding)، وتوحيد لغة التصميم ونبرة الصوت عبر كافة القنوات.",
+        exp_2_b3: "تطوير مسارات رقمية وحملات إعلانية مبتكرة لتحقيق أعلى وصول وتفاعل مع الفئات المستهدفة.",
+
+        // Experience 3: Amazon
+        exp_3_role: "عمليات خدمة العملاء (CS Operations)",
+        exp_3_company: "شركة أمازون (Amazon)",
+        exp_3_period: "10/2022 – 07/2023",
+        exp_3_location: "الرياض، المملكة العربية السعودية",
+        exp_3_b1: "تحليل مؤشرات الأداء التشغيلية (KPIs) بدقة لرصد فجوات الأداء واقتراح تحسينات عملية مستدامة.",
+        exp_3_b2: "التنسيق المباشر مع فرق التدريب وضمان الجودة (QA) لرفع معدلات رضا العملاء والالتزام بمعايير أمازون الصارمة.",
+        exp_3_b3: "توظيف أدوات تحليل البيانات لرفع كفاءة الاستجابة وتسريع حل الإشكاليات المعقدة.",
+
+        // Experience 4: Riyadh Airports
+        exp_4_role: "منسق إداري",
+        exp_4_company: "شركة مطارات الرياض (RAC)",
+        exp_4_period: "02/2020 – 09/2022",
+        exp_4_location: "الرياض، المملكة العربية السعودية",
+        exp_4_b1: "إدارة وتنظيم الجداول التشغيلية اليومية لفرق خدمة العملاء في مرافق المطار الحيوية.",
+        exp_4_b2: "ضمان التغطية التشغيلية المستمرة على مدار الساعة مع الحفاظ على سجلات الحضور والإجازات الدقيقة.",
+        exp_4_b3: "تطوير آليات التنسيق الميداني بين المشرفين والكوادر لضمان سلاسة حركة وخدمة المسافرين.",
+
+        // Education & Certifications
+        edu_title: "التعليم الأكاديمي والشهادات العالمية",
+        edu_degree: "معلوماتية الأعمال (Business Informatics)",
+        edu_school: "جامعة ولاية أيداهو (Idaho State University)",
+        edu_period: "2015 – 2019 · الولايات المتحدة الأمريكية",
+        edu_desc: "تأسيس أكاديمي عميق يدمج نظم المعلومات وقواعد البيانات مع مفاهيم الأعمال والتسويق الحديث في بيئة دولية.",
+        
+        cert_ibm: "تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي",
+        cert_ibm_issuer: "IBM · 2025",
+        cert_google: "أسس التسويق الرقمي والتجارة الإلكترونية",
+        cert_google_issuer: "Google · 2025",
+        cert_meta: "التسويق الاحترافي عبر منصات التواصل الاجتماعي",
+        cert_meta_issuer: "Meta · 2025",
+
+        marquee_trusted: "خبرات ومشاريع مع كبرى الجهات والشركات الرائدة",
         
         tag_impact: "الأثر الاستراتيجي",
         heading_impact: "أثر ملموس عبر شركات ومجموعات الأعمال.",
@@ -204,6 +261,7 @@ const translations = {
     en: {
         nav_work: "Projects",
         nav_services: "What I Do",
+        nav_experience: "Experience",
         nav_impact: "Impact",
         nav_about: "About",
         nav_contact: "Contact",
@@ -258,6 +316,62 @@ const translations = {
         srv_3_detail: "Building comprehensive brand identities grounded in customer psychology, guaranteeing unified aesthetics across all touchpoints.",
         srv_4_name: "AI Solutions & Workflow Automation",
         srv_4_detail: "Leveraging generative AI models and intelligent automations to accelerate content production, personalize user journeys, and streamline operations.",
+        
+        tag_experience: "Career & Experience",
+        heading_experience: "Field-tested expertise bridging strategy and execution.",
+        experience_lead: "A progressive career combining Amazon-grade operational discipline, high-growth marketing and brand leadership for diversified holding groups, and strong academic foundations in business informatics enhanced with AI & BI capabilities.",
+        
+        // Experience 1: T&S
+        exp_1_role: "Senior Digital Marketing Specialist",
+        exp_1_company: "T&S Holding Group",
+        exp_1_period: "04/2025 – 05/2026",
+        exp_1_location: "Riyadh, Saudi Arabia",
+        exp_1_b1: "Formulated and executed digital strategies to scale corporate market presence across Twitter (X) and LinkedIn.",
+        exp_1_b2: "Designed and governed strategic content calendars, boosting engagement while safeguarding brand consistency across 10 subsidiaries.",
+        exp_1_b3: "Collaborated closely with creative and executive leadership to launch synchronized corporate milestone campaigns.",
+
+        // Experience 2: Wahag
+        exp_2_role: "Marketing Specialist",
+        exp_2_company: "Wahag Entertainment",
+        exp_2_period: "02/2024 – 03/2025",
+        exp_2_location: "Riyadh, Saudi Arabia",
+        exp_2_b1: "Spearheaded integrated campaigns that solidified Wahag as an avant-garde creative leader in entertainment.",
+        exp_2_b2: "Led full corporate rebranding, harmonizing visual identity and tone of voice across omnichannel media touchpoints.",
+        exp_2_b3: "Engineered innovative digital activations delivering viral engagement and strong consumer affinity.",
+
+        // Experience 3: Amazon
+        exp_3_role: "Customer Service Operations",
+        exp_3_company: "Amazon",
+        exp_3_period: "10/2022 – 07/2023",
+        exp_3_location: "Riyadh, Saudi Arabia",
+        exp_3_b1: "Analyzed operational KPIs to detect performance variances and propose data-backed workflow enhancements.",
+        exp_3_b2: "Coordinated cross-functionally with QA and training departments to elevate customer satisfaction (CSAT) under Amazon standards.",
+        exp_3_b3: "Applied analytics to optimize response velocity and eliminate friction points in customer journeys.",
+
+        // Experience 4: Riyadh Airports
+        exp_4_role: "Administrative Coordinator",
+        exp_4_company: "Riyadh Airports Company (RAC)",
+        exp_4_period: "02/2020 – 09/2022",
+        exp_4_location: "Riyadh, Saudi Arabia",
+        exp_4_b1: "Organized master schedules and governed daily operations for airport customer service frontline teams.",
+        exp_4_b2: "Maintained 24/7 mission-critical operational coverage while upholding strict attendance and leave logs.",
+        exp_4_b3: "Streamlined field dispatch workflows between floor supervisors and staff to ensure seamless passenger traffic.",
+
+        // Education & Certifications
+        edu_title: "Academic Background & Global Credentials",
+        edu_degree: "Business Informatics (Undergraduate Studies)",
+        edu_school: "Idaho State University",
+        edu_period: "2015 – 2019 · Pocatello, USA",
+        edu_desc: "Rigorous academic grounding in information systems, database architectures, and international business management.",
+        
+        cert_ibm: "Generative AI for Digital Marketing Specialization",
+        cert_ibm_issuer: "IBM · 2025",
+        cert_google: "Foundations of Digital Marketing and E-commerce",
+        cert_google_issuer: "Google · 2025",
+        cert_meta: "Social Media Marketing Professional Certificate",
+        cert_meta_issuer: "Meta · 2025",
+
+        marquee_trusted: "Field experience and partnerships with leading enterprises",
         
         tag_impact: "Strategic Impact",
         heading_impact: "Measurable performance across diversified corporate sectors.",

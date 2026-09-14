@@ -49,9 +49,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Background Ambient Glow -->
-    <div class="ambient-glow" aria-hidden="true"></div>
-
     <!-- Header & Navigation -->
     <header class="site-header">
         <div class="container nav-container">
@@ -70,16 +67,20 @@
                     <span class="nav-num">02</span>
                     <span data-i18n="nav_services">مجالات التخصص</span>
                 </a>
-                <a href="#impact" class="nav-link">
+                <a href="#experience" class="nav-link">
                     <span class="nav-num">03</span>
+                    <span data-i18n="nav_experience">الخبرات المهنية</span>
+                </a>
+                <a href="#impact" class="nav-link">
+                    <span class="nav-num">04</span>
                     <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
                 </a>
                 <a href="#about" class="nav-link">
-                    <span class="nav-num">04</span>
+                    <span class="nav-num">05</span>
                     <span data-i18n="nav_about">نبذة عني</span>
                 </a>
                 <a href="#contact" class="nav-link">
-                    <span class="nav-num">05</span>
+                    <span class="nav-num">06</span>
                     <span data-i18n="nav_contact">تواصل</span>
                 </a>
             </nav>
@@ -135,14 +136,17 @@
         <a href="#services" class="mobile-nav-link">
             <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
         </a>
+        <a href="#experience" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_experience">الخبرات المهنية</span>
+        </a>
         <a href="#impact" class="mobile-nav-link">
-            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+            <span class="nav-num">04</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
         </a>
         <a href="#about" class="mobile-nav-link">
-            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+            <span class="nav-num">05</span> <span data-i18n="nav_about">نبذة عني</span>
         </a>
         <a href="#contact" class="mobile-nav-link">
-            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+            <span class="nav-num">06</span> <span data-i18n="nav_contact">تواصل</span>
         </a>
     </div>
 
@@ -152,6 +156,7 @@
              HERO SECTION (exact layout inspired by sunnypatel.net)
              ========================================================================== -->
         <section class="hero-section">
+            <div class="ambient-glow" aria-hidden="true"></div>
             <div class="container hero-grid">
                 <!-- Left Hero Content -->
                 <div class="hero-content">
@@ -223,6 +228,137 @@
             <div class="scroll-prompt" aria-hidden="true">
                 <span data-i18n="scroll_label">SCROLL</span>
                 <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             EXPERIENCE & PARTNERS LOGO MARQUEE (Infinite Smooth Ticker)
+             ========================================================================== -->
+        <section class="marquee-section" aria-label="Companies and Entities">
+            <div class="marquee-header">
+                <span class="marquee-subtitle" data-i18n="marquee_trusted">خبرات ومشاريع مع كبرى الجهات والشركات الرائدة</span>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Group 1 -->
+                    <div class="marquee-group">
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">TS</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">T&amp;S Holding</span>
+                                <span class="marquee-brand-tag">Corporate Group</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">WH</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Wahag Entertainment</span>
+                                <span class="marquee-brand-tag">Creative &amp; Media</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">AMZ</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Amazon</span>
+                                <span class="marquee-brand-tag">Global CS Operations</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">RAC</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Riyadh Airports</span>
+                                <span class="marquee-brand-tag">Operations &amp; Governance</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">NHT</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">ERP &amp; Development</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">HRK</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">HRKH Solutions</span>
+                                <span class="marquee-brand-tag">Human Capital B2B</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">SPX</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">SportX Platform</span>
+                                <span class="marquee-brand-tag">Sports Ecosystem</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">R88</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Ri88 Food Co.</span>
+                                <span class="marquee-brand-tag">Brand &amp; Packaging</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Group 2 (Duplicate for Seamless Infinite Loop) -->
+                    <div class="marquee-group" aria-hidden="true">
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">TS</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">T&amp;S Holding</span>
+                                <span class="marquee-brand-tag">Corporate Group</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">WH</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Wahag Entertainment</span>
+                                <span class="marquee-brand-tag">Creative &amp; Media</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">AMZ</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Amazon</span>
+                                <span class="marquee-brand-tag">Global CS Operations</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">RAC</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Riyadh Airports</span>
+                                <span class="marquee-brand-tag">Operations &amp; Governance</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">NHT</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">ERP &amp; Development</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">HRK</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">HRKH Solutions</span>
+                                <span class="marquee-brand-tag">Human Capital B2B</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">SPX</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">SportX Platform</span>
+                                <span class="marquee-brand-tag">Sports Ecosystem</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge">R88</span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Ri88 Food Co.</span>
+                                <span class="marquee-brand-tag">Brand &amp; Packaging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -496,7 +632,241 @@
         </section>
 
         <!-- ==========================================================================
-             SECTION 3: STRATEGIC IMPACT (Across Business Units)
+             SECTION 3: CAREER & PROFESSIONAL EXPERIENCE
+             ========================================================================== -->
+        <section id="experience" class="section-block">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <span class="section-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="tag_experience">المسار المهني والخبرات</span>
+                        </span>
+                        <h2 class="section-heading font-display" data-i18n="heading_experience">
+                            خبرات ميدانية تصنع الفارق بين الاستراتيجية والتنفيذ.
+                        </h2>
+                    </div>
+                </div>
+
+                <p class="hero-desc" style="max-width: 46rem; margin-top: 0.5rem; margin-bottom: 2.5rem;" data-i18n="experience_lead">
+                    مسار مهني يدمج الانضباط التشغيلي في كبرى الشركات العالمية، قيادة استراتيجيات النمو والهوية للشركات القابضة، والتأسيس الأكاديمي والتقني المدعوم بحلول الذكاء الاصطناعي وذكاء الأعمال.
+                </p>
+
+                <div class="experience-layout">
+                    <!-- Left Column: Professional Career Milestones -->
+                    <div class="experience-timeline">
+                        <!-- Role 1: T&S Holding -->
+                        <div class="experience-card">
+                            <div class="experience-card-header">
+                                <div class="experience-role-group">
+                                    <div class="experience-company-icon">TS</div>
+                                    <div>
+                                        <h3 class="experience-role" data-i18n="exp_1_role">أخصائي أول تسويق رقمي</h3>
+                                        <div class="experience-company-name">
+                                            <span data-i18n="exp_1_company">مجموعة T&amp;S القابضة</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="experience-period" data-i18n="exp_1_period">04/2025 – 05/2026</span>
+                                    <span class="experience-location" data-i18n="exp_1_location">الرياض، المملكة العربية السعودية</span>
+                                </div>
+                            </div>
+                            <ul class="experience-bullets">
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_1_b1">صياغة وتنفيذ الاستراتيجيات الرقمية لتعزيز وتوسيع الحضور المؤسسي للمجموعة عبر منصات X و LinkedIn.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_1_b2">تصميم وإدارة خطط وجداول المحتوى التحريري لرفع معدلات التفاعل وضمان الاتساق البصري عبر 10 قطاعات أعمال.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_1_b3">التعاون الوثيق مع فرق التصميم والاستراتيجية لإطلاق حملات تسويقية متزامنة مع إنجازات وتوسعات المجموعة.</span>
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag-pill">Digital Growth</span>
+                                <span class="tag-pill">Content Planning</span>
+                                <span class="tag-pill">LinkedIn &amp; X</span>
+                                <span class="tag-pill">Brand Governance</span>
+                                <span class="tag-pill">Corporate Strategy</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 2: Wahag Entertainment -->
+                        <div class="experience-card">
+                            <div class="experience-card-header">
+                                <div class="experience-role-group">
+                                    <div class="experience-company-icon">WH</div>
+                                    <div>
+                                        <h3 class="experience-role" data-i18n="exp_2_role">أخصائي تسويق</h3>
+                                        <div class="experience-company-name">
+                                            <span data-i18n="exp_2_company">شركة وهج للترفيه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="experience-period" data-i18n="exp_2_period">02/2024 – 03/2025</span>
+                                    <span class="experience-location" data-i18n="exp_2_location">الرياض، المملكة العربية السعودية</span>
+                                </div>
+                            </div>
+                            <ul class="experience-bullets">
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_2_b1">قيادة حملات تسويقية متكاملة رسخت مكانة 'وهج' كجهة إبداعية رائدة في قطاع الترفيه.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_2_b2">إدارة مشروع إعادة تطوير الهوية التجارية (Rebranding)، وتوحيد لغة التصميم ونبرة الصوت عبر كافة القنوات.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_2_b3">تطوير مسارات رقمية وحملات إعلانية مبتكرة لتحقيق أعلى وصول وتفاعل مع الفئات المستهدفة.</span>
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag-pill">Rebranding</span>
+                                <span class="tag-pill">Entertainment Media</span>
+                                <span class="tag-pill">Creative Direction</span>
+                                <span class="tag-pill">Tone of Voice</span>
+                                <span class="tag-pill">Omnichannel</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 3: Amazon -->
+                        <div class="experience-card">
+                            <div class="experience-card-header">
+                                <div class="experience-role-group">
+                                    <div class="experience-company-icon">AMZ</div>
+                                    <div>
+                                        <h3 class="experience-role" data-i18n="exp_3_role">عمليات خدمة العملاء (CS Operations)</h3>
+                                        <div class="experience-company-name">
+                                            <span data-i18n="exp_3_company">شركة أمازون (Amazon)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="experience-period" data-i18n="exp_3_period">10/2022 – 07/2023</span>
+                                    <span class="experience-location" data-i18n="exp_3_location">الرياض، المملكة العربية السعودية</span>
+                                </div>
+                            </div>
+                            <ul class="experience-bullets">
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_3_b1">تحليل مؤشرات الأداء التشغيلية (KPIs) بدقة لرصد فجوات الأداء واقتراح تحسينات عملية مستدامة.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_3_b2">التنسيق المباشر مع فرق التدريب وضمان الجودة (QA) لرفع معدلات رضا العملاء والالتزام بمعايير أمازون الصارمة.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_3_b3">توظيف أدوات تحليل البيانات لرفع كفاءة الاستجابة وتسريع حل الإشكاليات المعقدة.</span>
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag-pill">KPI Analytics</span>
+                                <span class="tag-pill">Quality Assurance (QA)</span>
+                                <span class="tag-pill">Process Optimization</span>
+                                <span class="tag-pill">Customer Delight</span>
+                                <span class="tag-pill">Amazon Standards</span>
+                            </div>
+                        </div>
+
+                        <!-- Role 4: Riyadh Airports -->
+                        <div class="experience-card">
+                            <div class="experience-card-header">
+                                <div class="experience-role-group">
+                                    <div class="experience-company-icon">RAC</div>
+                                    <div>
+                                        <h3 class="experience-role" data-i18n="exp_4_role">منسق إداري</h3>
+                                        <div class="experience-company-name">
+                                            <span data-i18n="exp_4_company">شركة مطارات الرياض (RAC)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="experience-period" data-i18n="exp_4_period">02/2020 – 09/2022</span>
+                                    <span class="experience-location" data-i18n="exp_4_location">الرياض، المملكة العربية السعودية</span>
+                                </div>
+                            </div>
+                            <ul class="experience-bullets">
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_4_b1">إدارة وتنظيم الجداول التشغيلية اليومية لفرق خدمة العملاء في مرافق المطار الحيوية.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_4_b2">ضمان التغطية التشغيلية المستمرة على مدار الساعة مع الحفاظ على سجلات الحضور والإجازات الدقيقة.</span>
+                                </li>
+                                <li>
+                                    <span class="dash" aria-hidden="true"></span>
+                                    <span data-i18n="exp_4_b3">تطوير آليات التنسيق الميداني بين المشرفين والكوادر لضمان سلاسة حركة وخدمة المسافرين.</span>
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag-pill">Operations Scheduling</span>
+                                <span class="tag-pill">Field Governance</span>
+                                <span class="tag-pill">Workforce Management</span>
+                                <span class="tag-pill">Passenger Operations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Education & Global Certifications -->
+                    <div class="credentials-column">
+                        <div class="credentials-box">
+                            <h3 class="credentials-box-title">
+                                <i data-lucide="graduation-cap"></i>
+                                <span data-i18n="edu_title">التعليم الأكاديمي والشهادات العالمية</span>
+                            </h3>
+
+                            <!-- Education: Idaho State University -->
+                            <div class="edu-card">
+                                <h4 class="edu-degree" data-i18n="edu_degree">معلوماتية الأعمال (Business Informatics)</h4>
+                                <div class="edu-school" data-i18n="edu_school">جامعة ولاية أيداهو (Idaho State University)</div>
+                                <div class="edu-period" data-i18n="edu_period">2015 – 2019 · الولايات المتحدة الأمريكية</div>
+                                <p class="edu-desc" data-i18n="edu_desc">
+                                    تأسيس أكاديمي عميق يدمج نظم المعلومات وقواعد البيانات مع مفاهيم الأعمال والتسويق الحديث في بيئة دولية.
+                                </p>
+                            </div>
+
+                            <!-- Certifications -->
+                            <div class="certs-list" style="margin-top: 1.25rem;">
+                                <div class="cert-item">
+                                    <div class="cert-issuer-badge">IBM</div>
+                                    <div>
+                                        <div class="cert-name" data-i18n="cert_ibm">تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي</div>
+                                        <div class="cert-issuer" data-i18n="cert_ibm_issuer">IBM · 2025</div>
+                                    </div>
+                                </div>
+
+                                <div class="cert-item">
+                                    <div class="cert-issuer-badge">GOOG</div>
+                                    <div>
+                                        <div class="cert-name" data-i18n="cert_google">أسس التسويق الرقمي والتجارة الإلكترونية</div>
+                                        <div class="cert-issuer" data-i18n="cert_google_issuer">Google · 2025</div>
+                                    </div>
+                                </div>
+
+                                <div class="cert-item">
+                                    <div class="cert-issuer-badge">META</div>
+                                    <div>
+                                        <div class="cert-name" data-i18n="cert_meta">التسويق الاحترافي عبر منصات التواصل الاجتماعي</div>
+                                        <div class="cert-issuer" data-i18n="cert_meta_issuer">Meta · 2025</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 4: STRATEGIC IMPACT (Across Business Units)
              ========================================================================== -->
         <section id="impact" class="section-block">
             <div class="container">
@@ -562,6 +932,12 @@
                     <span data-i18n="tag_about">عن مسيرتي</span>
                 </span>
                 
+                <div class="about-portrait-mobile">
+                    <div class="about-portrait-frame">
+                        <img src="assets/profile.jpg" alt="Rayyan Aldohian" loading="lazy">
+                    </div>
+                </div>
+
                 <div class="about-grid">
                     <div>
                         <h2 class="about-lead font-display" data-i18n="about_heading">
