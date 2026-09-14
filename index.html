@@ -1,908 +1,633 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="emerald">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>ريان الضحيان | ذكاء الأعمال، التسويق، بناء الهويات والنمو</title>
-    <meta name="title" content="ريان الضحيان | ذكاء الأعمال، التسويق، بناء الهويات والنمو">
-    <meta name="description" content="ريان الضحيان - مختص في ذكاء الأعمال (BI)، التسويق الاستراتيجي، بناء الهويات البصرية، وهندسة النمو، مدعوماً بحلول وأدوات الذكاء الاصطناعي (AI).">
-    <meta name="keywords" content="Rayyan Aldhuhayan, ريان الضحيان, ذكاء الأعمال, Business Intelligence, التسويق الرقمي, بناء الهوية البصرية, استراتيجيات النمو, الذكاء الاصطناعي, AI, السعودية">
+    <title>Rayyan Aldhuhayan · Business Intelligence, Growth & AI</title>
+    <meta name="description" content="Rayyan Aldhuhayan — Specialist in Business Intelligence (BI), Performance Marketing, Brand Identity, Growth Engineering, and AI-Powered Systems.">
+    <meta name="keywords" content="Rayyan Aldhuhayan, ريان الضحيان, ذكاء الأعمال, Business Intelligence, تسويق, نمو, Growth, ذكاء اصطناعي, AI, هويات بصرية, Brand Identity, CRM, Dashboard">
     <meta name="author" content="Rayyan Aldhuhayan">
+    <meta name="theme-color" content="#0b0d0f">
+    <meta name="color-scheme" content="dark">
 
-    <!-- Google Site Verification Placeholder -->
-    <meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_VERIFICATION_CODE_HERE">
-
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://irayyankoo.github.io/rayyan-portfolio/">
-    <meta property="og:title" content="ريان الضحيان | ذكاء الأعمال، التسويق، بناء الهويات والنمو">
-    <meta property="og:description" content="ريان الضحيان - مختص في ذكاء الأعمال (BI)، التسويق، بناء الهويات وهندسة النمو بحلول الذكاء الاصطناعي (AI).">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:title" content="Rayyan Aldhuhayan · Business Intelligence, Growth & AI">
+    <meta property="og:description" content="Business Intelligence (BI), Strategic Marketing, Brand Identity & Growth Engineering powered by AI.">
+    <meta property="og:image" content="assets/p10-naht-crm.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://irayyankoo.github.io/rayyan-portfolio/">
-    <meta property="twitter:title" content="ريان الضحيان | ذكاء الأعمال، التسويق، بناء الهويات والنمو">
-    <meta property="twitter:description" content="ريان الضحيان - مختص في ذكاء الأعمال (BI)، التسويق، بناء الهويات وهندسة النمو بحلول الذكاء الاصطناعي (AI).">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rayyan Aldhuhayan · BI, Growth & AI Specialist">
+    <meta name="twitter:description" content="Data analytics, brand identity, and scalable growth powered by AI.">
+    <meta name="twitter:image" content="assets/p10-naht-crm.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
-    <!-- JSON-LD Structured Data -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Rayyan Aldhuhayan",
-      "jobTitle": "Business Intelligence & Brand Growth Specialist",
+      "alternateName": "ريان الضحيان",
+      "jobTitle": "Business Intelligence, Marketing, Brand Identity & Growth Specialist (AI-Driven)",
       "url": "https://irayyankoo.github.io/rayyan-portfolio/",
-      "sameAs": [
-        "https://www.linkedin.com/in/rayyan-aldohian",
-        "https://github.com/iRayyanKoo"
+      "image": "assets/profile.jpg",
+      "knowsAbout": [
+        "Business Intelligence",
+        "Artificial Intelligence",
+        "Brand Identity",
+        "Performance Marketing",
+        "Growth Engineering",
+        "Conversion Rate Optimization"
       ]
     }
     </script>
 
-    <!-- Preload Key Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Tajawal:wght@400;500;700;800&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- CSS -->
+    <!-- Stylesheets & Icons -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Analytics Placeholder -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'YOUR_TRACKING_ID');
-    </script>
-    -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader-circle"></div>
-    </div>
+    <!-- Background Ambient Glow -->
+    <div class="ambient-glow" aria-hidden="true"></div>
 
-    <!-- Custom Cursor -->
-    <div class="custom-cursor" id="customCursor"></div>
-
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress-container">
-        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-    </div>
-
-    <!-- Background Animation Elements -->
-    <div class="bg-elements">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar glass">
+    <!-- Header & Navigation -->
+    <header class="site-header">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <span data-i18n="nav_logo">ريان الضحيان</span>
+            <!-- Monospace Brandmark -->
+            <a href="#" class="brand-logo" dir="ltr" aria-label="Rayyan Aldhuhayan">
+                <span>rayyan</span><span class="dot">.</span><span>aldhuhayan</span>
             </a>
-            
-            <div class="nav-links">
-                <a href="#about" data-i18n="nav_about">نبذة عني</a>
-                <a href="#services" data-i18n="nav_services">الخدمات</a>
-                <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
-                <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
-                <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
-                <a href="#gallery" data-i18n="nav_gallery" style="display: none !important;">المعرض</a>
-                <a href="#contact" data-i18n="nav_contact" class="btn-outline btn-sm">تواصل معي</a>
-            </div>
 
-            <div class="nav-controls">
-                <button id="langToggle" class="lang-btn">EN</button>
-                <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
-            </div>
-        </div>
-    </nav>
+            <!-- Numbered Nav Links -->
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="#work" class="nav-link">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="#impact" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu glass">
-        <button class="close-menu"><i data-lucide="x"></i></button>
-        <div class="mobile-links">
-            <a href="#about" data-i18n="nav_about">نبذة عني</a>
-            <a href="#services" data-i18n="nav_services">الخدمات</a>
-            <a href="#projects" data-i18n="nav_projects">المشاريع الرقمية</a>
-            <a href="#branding" data-i18n="nav_branding">الهوية البصرية</a>
-            <a href="#campaigns" data-i18n="nav_campaigns">حملات إبداعية</a>
-            <a href="#gallery" data-i18n="nav_gallery" style="display: none !important;">المعرض</a>
-            <a href="#contact" data-i18n="nav_contact">تواصل معي</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content reveal">
-                <div class="hero-profile-wrap">
-                    <img src="./assets/profile.jpg" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Rayyan+AlDohian&background=0B192C&color=D4AF37&size=200&bold=true&font-size=0.35';" alt="Rayyan Profile" class="hero-profile-img">
-                    <div class="badge" data-i18n="hero_badge">مختص ذكاء الأعمال، التسويق، بناء الهويات والنمو | حلول AI</div>
-                </div>
-                <h1 class="hero-title" data-i18n="hero_title">ريان الضحيان</h1>
-                <p class="hero-desc" data-i18n="hero_desc">أدمج ذكاء الأعمال (BI) وتحليل البيانات مع التسويق الاستراتيجي، بناء الهويات البصرية، وحلول الذكاء الاصطناعي (AI) لصناعة تجارب رقمية تقود النمو وتحقق نتائج ملموسة قابلة للقياس.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn-primary" data-i18n="btn_view_work">عرض الأعمال <i data-lucide="arrow-down"></i></a>
-                    <a href="assets/Rayyan-AlDohian-CV.pdf" target="_blank" class="btn-secondary" data-i18n="btn_download_cv">تحميل السيرة الذاتية <i data-lucide="file-text"></i></a>
-                    <a href="#contact" class="btn-outline" data-i18n="btn_contact_me">تواصل معي <i data-lucide="mail"></i></a>
-                </div>
-            </div>
-            <div class="hero-visual reveal fade-left">
-                <div class="abstract-shape">
-                    <div class="glass-card main-card">
-                        <div class="card-icon"><i data-lucide="bar-chart-3"></i></div>
-                        <h3 data-i18n="card_growth">ذكاء الأعمال والنمو</h3>
-                        <p data-i18n="card_growth_desc">قرارات مدفوعة بالبيانات و AI</p>
-                    </div>
-                    <div class="glass-card float-card float-1">
-                        <div class="card-icon"><i data-lucide="sparkles"></i></div>
-                        <span data-i18n="card_creative">بناء الهويات</span>
-                    </div>
-                    <div class="glass-card float-card float-2">
-                        <div class="card-icon"><i data-lucide="cpu"></i></div>
-                        <span data-i18n="card_dev">ذكاء اصطناعي وأنظمة</span>
+            <!-- Actions (Language, Theme, CV, Contact) -->
+            <div class="header-actions">
+                <!-- Theme Picker -->
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="emerald">
+                            <span class="theme-dot" style="background: #00d294;"></span> Cyber Emerald
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
                     </div>
                 </div>
+
+                <!-- Language Toggle -->
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <!-- Get in Touch CTA -->
+                <a href="#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Achievements Section -->
-    <section class="achievements">
-        <div class="container achievements-grid">
-            <div class="stat-card reveal">
-                <div class="stat-icon"><i data-lucide="layout"></i></div>
-                <div class="stat-label" data-i18n="stat_projects">مواقع وأنظمة رقمية</div>
-            </div>
-            <div class="stat-card reveal delay-1">
-                <div class="stat-icon"><i data-lucide="sparkles"></i></div>
-                <div class="stat-label" data-i18n="stat_branding">هويات وتجارب بصرية</div>
-            </div>
-            <div class="stat-card reveal delay-2">
-                <div class="stat-icon"><i data-lucide="trending-up"></i></div>
-                <div class="stat-label" data-i18n="stat_campaigns">حملات ونمو مدفوع</div>
-            </div>
-            <div class="stat-card reveal delay-3">
-                <div class="stat-icon"><i data-lucide="award"></i></div>
-                <div class="stat-label" data-i18n="stat_clients">أعمال وشراكات ناجحة</div>
-            </div>
-        </div>
-    </section>
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="#impact" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container about-container">
-
-            <!-- Left: Personal Photo -->
-            <div class="about-visual reveal fade-right">
-                <div class="about-photo-card glass">
-                    <div class="about-photo-frame">
-                        <img 
-                            src="./assets/profile.jpg" 
-                            onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Rayyan+AlDohian&background=0B192C&color=D4AF37&size=400&bold=true&font-size=0.35';"
-                            alt="Rayyan Al-Dohian" 
-                            class="about-profile-img" 
-                            loading="lazy"
-                            id="personalPhoto">
-                        <div class="photo-ring"></div>
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <!-- ==========================================================================
+             HERO SECTION (exact layout inspired by sunnypatel.net)
+             ========================================================================== -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <!-- Left Hero Content -->
+                <div class="hero-content">
+                    <!-- Status Pill with Pulsing Dot -->
+                    <div class="status-pill">
+                        <span class="pulsing-dot"></span>
+                        <span data-i18n="hero_status">متاح للمشاريع واستشارات النمو</span>
                     </div>
-                    <div class="about-photo-info">
-                        <h3 class="about-name">ريان الضحيان</h3>
-                        <p class="about-title-label" data-i18n="hero_subtitle">Business Intelligence, Marketing & Brand Growth Specialist (AI-Driven)</p>
-                        <p class="practical-exp" data-i18n="practical_exp">خبرة متقدمة في ذكاء الأعمال، تحليل البيانات، بناء الهويات البصرية، إدارة الحملات التسويقية، وتوظيف أدوات الذكاء الاصطناعي لتعزيز نمو العلامات التجارية.</p>
+
+                    <!-- Massive Headline -->
+                    <h1 class="hero-title font-display" data-i18n="hero_headline">
+                        أبني مسارات النمو، ذكاء الأعمال، والتجارب الرقمية <span class="accent-span">المدعومة بالذكاء الاصطناعي.</span>
+                    </h1>
+
+                    <!-- Lead Paragraph with <em> Highlights -->
+                    <p class="hero-desc" data-i18n="hero_lead">
+                        أدمج تحليلات <em>ذكاء الأعمال (BI)</em> مع استراتيجيات التسويق والأداء، وبناء <em>الهويات البصرية الراسخة</em>، وحلول <em>الذكاء الاصطناعي (AI)</em> لهندسة نمو مستدام وتجارب رقمية ذات أثر ملموس وقابل للقياس.
+                    </p>
+
+                    <!-- Hero Actions -->
+                    <div class="hero-actions">
+                        <a href="#work" class="btn-primary-accent" data-i18n="btn_see_work">
+                            <span>استعرض الأعمال</span>
+                            <i data-lucide="arrow-down-left" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#contact" class="btn-link-muted" data-i18n="btn_contact_link">
+                            <span>بدء محادثة</span>
+                            <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i>
+                        </a>
                     </div>
-                </div>
-            </div>
 
-            <!-- Right: Content -->
-            <div class="about-content reveal fade-left">
-                <div class="section-heading">
-                    <h2 class="section-title" data-i18n="about_title">نبذة عني</h2>
-                    <div class="title-line"></div>
-                </div>
-                <p class="lead-text" data-i18n="about_lead">أدمج ذكاء الأعمال وتحليل البيانات مع التسويق وبناء الهويات والذكاء الاصطناعي لقيادة النمو.</p>
-                <p class="body-text" data-i18n="about_text">ينطلق عملي من قراءة دقيقة للبيانات وتحليلات ذكاء الأعمال (BI)، لأحوّل الأرقام إلى استراتيجيات تسويقية مؤثرة، وهويات بصرية راسخة، ومسارات نمو واضحة. أدمج أحدث تقنيات وحلول الذكاء الاصطناعي (AI) في تحليل سلوك الجمهور، أتمتة العمليات التسويقية، وصناعة المحتوى التفاعلي، مما يمنح العلامات التجارية ميزة تنافسية حقيقية وسرعة فائقة في تحقيق العوائد.</p>
-                <ul class="expertise-list two-col">
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_1">ذكاء الأعمال (Business Intelligence)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_2">حلول وتطبيقات الذكاء الاصطناعي (AI)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_3">بناء الهويات البصرية والتجارية</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_4">استراتيجيات وهندسة النمو (Growth)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_5">تحسين معدل التحويل (CRO)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_6">تحليل البيانات ولوحات التحكم</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_7">الحملات التسويقية المدفوعة (Google & Meta)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_8">أتمتة التسويق والعمليات (Automation)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_9">تصميم تجربة المستخدم (UI/UX)</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_10">تطوير المواقع والمنصات الرقمية</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_11">صياغة وتوجيه المحتوى الإبداعي الذكي</span></li>
-                    <li><i data-lucide="check-circle-2"></i> <span data-i18n="exp_12">استهداف وتحليل سلوك العملاء</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="services_title">مجالات التخصص</h2>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card glass reveal">
-                    <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
-                    <h3 data-i18n="srv_1_title">ذكاء الأعمال وتحليل البيانات (BI)</h3>
-                    <p data-i18n="srv_1_desc">بناء لوحات تحكم تفاعلية متقدمة، وتحويل بيانات العملاء والمبيعات إلى رؤى استراتيجية تدعم اتخاذ القرارات وتكشف فرص النمو.</p>
-                </div>
-                <div class="service-card glass reveal delay-1">
-                    <div class="service-icon"><i data-lucide="trending-up"></i></div>
-                    <h3 data-i18n="srv_2_title">التسويق واستراتيجيات النمو (Growth)</h3>
-                    <p data-i18n="srv_2_desc">تخطيط وإدارة الحملات الإعلانية الممولة، هندسة مسارات التحويل (Funnels)، وتحسين معدل التحويل (CRO) لتعظيم العائد على الاستثمار.</p>
-                </div>
-                <div class="service-card glass reveal delay-2">
-                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
-                    <h3 data-i18n="srv_3_title">بناء الهويات البصرية والتجارب</h3>
-                    <p data-i18n="srv_3_desc">تطوير هويات بصرية متكاملة وعصرية تضمن الاتساق عبر كافة نقاط التماس، وتصنع حضوراً راسخاً يعزز ثقة ومكانة العلامة التجارية.</p>
-                </div>
-                <div class="service-card glass reveal">
-                    <div class="service-icon"><i data-lucide="cpu"></i></div>
-                    <h3 data-i18n="srv_4_title">حلول وأتمتة الذكاء الاصطناعي (AI)</h3>
-                    <p data-i18n="srv_4_desc">توظيف أحدث نماذج وأدوات الذكاء الاصطناعي التوليدي للأتمتة، تسريع إنتاج المحتوى، تخصيص تجربة العملاء، ورفع كفاءة النظم الرقمية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Digital Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="proj_title">المشاريع الرقمية البارزة</h2>
-                <div class="title-line"></div>
-                <p class="section-subtitle" data-i18n="proj_subtitle">مجموعة من المواقع والأنظمة والتطبيقات التي قمت بالعمل عليها بشكل كامل أو جزئي.</p>
-            </div>
-            <div class="projects-grid">
-                <!-- Proj 0 (Framework) -->
-                <div class="project-card glass reveal featured-project-card">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p0-framework.jpg" alt="Growth Framework" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_strategy">Strategy</span>
-                            <span class="ptag" data-i18n="tag_growth">Growth</span>
-                            <span class="ptag" data-i18n="tag_branding">Branding</span>
+                    <!-- Terminal / Live Session Widget -->
+                    <div class="terminal-widget" dir="ltr" aria-hidden="true">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot active"></span>
+                            <span class="terminal-label">SESSION // BI_AI_PIPELINE</span>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p0_title">إطار النمو الرقمي وتجربة العلامة</h3>
-                            <span class="project-status status-featured" data-i18n="status_featured">Featured</span>
+                        <div class="terminal-body">
+                            <div class="terminal-line active-line">
+                                <span id="terminalType"></span><span class="terminal-cursor"></span>
+                            </div>
+                            <div class="terminal-line" id="termLine1">› Data Warehouse connected: BigQuery / Supabase</div>
+                            <div class="terminal-line" id="termLine2">› Conversion Funnel (CRO): +38.4% Uplift</div>
+                            <div class="terminal-line accent-line" id="termLine3">› AI Automation Workflows: Operational</div>
                         </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p0_role">Specialist / أخصائي</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p0_desc">بناء وتطوير نموذج عمل رقمي متكامل يربط بين المحتوى والتصميم والأداء...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p0_impact_1">تحديد الهيكل التنظيمي للأصول الرقمية عبر الفروع والقنوات</li>
-                            <li data-i18n="p0_impact_2">مواءمة المحتوى وتجربة المستخدم مع الهوية البصرية</li>
-                            <li data-i18n="p0_impact_3">تحسين أداء الحملات من خلال مسارات مستخدم مدروسة وأدوات أوتوماتيكية</li>
-                        </ul>
                     </div>
                 </div>
 
-                <!-- Proj 1 (Brand Hub) -->
-                <div class="project-card glass reveal">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p9-brand-hub.jpg" alt="T&S Brand Hub" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_branding">Branding</span>
-                            <span class="ptag" data-i18n="tag_systems">Internal Systems</span>
+                <!-- Right Visual / Portrait Card -->
+                <div class="hero-visual-card">
+                    <div class="hero-visual-inner">
+                        <div class="hero-portrait-frame">
+                            <img src="assets/profile.jpg" alt="Rayyan Aldhuhayan" loading="eager">
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p1_title">T&S Brand Hub</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
+                        <div class="hero-spec-chips">
+                            <span class="spec-chip highlight">Business Intelligence</span>
+                            <span class="spec-chip">Artificial Intelligence</span>
+                            <span class="spec-chip">Brand Identity</span>
+                            <span class="spec-chip">Growth & CRO</span>
+                            <span class="spec-chip">Marketing Automation</span>
                         </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p1_role">Internal Brand Platform</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p1_desc">منصة داخلية تفاعلية لإدارة أصول الهوية البصرية...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p1_impact_1">تحميل فوري وتطبيق معايير الهوية عبر جميع الأقسام</li>
-                            <li data-i18n="p1_impact_2">أتمتة طلبات التصاميم وتوزيع الموارد الرقمية المشتركة</li>
-                            <li data-i18n="p1_impact_3">مستودع آمن وموحد للأصول البصرية يمنع تشتت الهوية</li>
-                        </ul>
-                        <a href="https://toolsandsolution.github.io/ts-brand-hub/#logos" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 2 (Corp Website) -->
-                <div class="project-card glass reveal delay-1">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p2-ts-holding.jpg" alt="T&S Corporate" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_web">Web Dev</span>
-                            <span class="ptag" data-i18n="tag_branding">Branding</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p2_title">T&S Corporate Website</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p2_role">UX & Content</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p2_desc">تحسين وتطوير تجربة الموقع الرئيسي...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p2_impact_1">إعادة هيكلة مسارات المستخدم لسهولة تصفح الخدمات والقطاعات</li>
-                            <li data-i18n="p2_impact_2">صياغة محتوى احترافي وموائم لسمعة المؤسسة المرموقة</li>
-                            <li data-i18n="p2_impact_3">زيادة طلبات التواصل وعروض الشراكات الاستراتيجية المباشرة</li>
-                        </ul>
-                        <a href="https://www.ts.sa" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 3 (Academy) -->
-                <div class="project-card glass reveal delay-2">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p3-ts-academy.jpg" alt="T&S Academy" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_web">Web Dev</span>
-                            <span class="ptag" data-i18n="tag_marketing">Marketing</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p3_title">T&S Academy</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p3_role">Digital Experience</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p3_desc">المساهمة في بناء التجربة الرقمية للأكاديمية...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p3_impact_1">ربط الحملات التسويقية مباشرة بقنوات التسجيل الرقمية للأكاديمية</li>
-                            <li data-i18n="p3_impact_2">تسهيل وتيسير قمع التسجيل والتحويل البصري للطلاب والمتقدمين</li>
-                            <li data-i18n="p3_impact_3">تكامل أدوات تتبع البيانات لتقييم مصادر الزيارات وجدوى الإعلانات</li>
-                        </ul>
-                        <a href="https://tsacademy.sa/" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 4 (RI88 SaaS) -->
-                <div class="project-card glass reveal">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p8-ri88.jpg" alt="RI88 CRM" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_systems">Internal Systems</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p4_title">RI88 CRM & SaaS</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p4_role">Internal Systems</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p4_desc">تطوير نظام إدارة عملاء داخلي...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p4_impact_1">تجميع وتنظيم طلبات العملاء والفرص التسويقية في مكان واحد</li>
-                            <li data-i18n="p4_impact_2">أتمتة توزيع المهام على أعضاء الفريق وقياس فترات الاستجابة</li>
-                            <li data-i18n="p4_impact_3">تجاوز مشكلة ضياع المتابعات بين المبيعات والدعم الفني</li>
-                        </ul>
-                        <a href="https://www.ri88.info/" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 5 (SportX) -->
-                <div class="project-card glass reveal delay-1">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p4-sportx.jpg" alt="SportX" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_web">Web Dev</span>
-                            <span class="ptag" data-i18n="tag_branding">Branding</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p5_title">SportX</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p5_role">Digital Experience</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p5_desc">تجربة رقمية مرتبطة بالقطاع الرياضي...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p5_impact_1">توحيد المظهر والهوية الرقمية للعلامة في الفروع وعبر الإنترنت</li>
-                            <li data-i18n="p5_impact_2">بناء مسار حجز واشتراكات تفاعلي وسريع يلائم الشريحة الشابة</li>
-                            <li data-i18n="p5_impact_3">نمو كبير في تدفقات الزوار والطلبات القادمة من قنوات التواصل</li>
-                        </ul>
-                        <a href="https://sportx.sa/" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 6 (SportX Landing Page) -->
-                <div class="project-card glass reveal delay-2">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p5-sportx-landing.jpg" alt="SportX Landing" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_marketing">Marketing</span>
-                            <span class="ptag" data-i18n="tag_gads">Google Ads</span>
-                            <span class="ptag" data-i18n="tag_meta">Meta Ads</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p6_title">SportX Landing Page</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p6_role">Landing Page & CRO</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p6_desc">تصميم صفحة هبوط مخصصة لرفع معدلات التحويل...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p6_impact_1">تحسين أداء الهواتف الذكية وسرعة الاستجابة لاستقبال الحملات المدفوعة</li>
-                            <li data-i18n="p6_impact_2">إجراء اختبارات A/B لعناصر الحث واتجاهات التصفح لتقليل الارتداد</li>
-                            <li data-i18n="p6_impact_3">مضاعفة معدلات تحويل إعلانات قوقل وميتا وتوليد مئات من العملاء المحتملين</li>
-                        </ul>
-                        <a href="https://sportx.sa/" target="_blank" class="project-link" data-i18n="btn_visit">زيارة الموقع <i data-lucide="external-link"></i></a>
-                    </div>
-                </div>
-
-                <!-- Proj 7 (Real Estate Platform) -->
-                <div class="project-card glass reveal">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p6-real-estate.jpg" alt="Real Estate Platform" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_web">Web Dev</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p7_title">Real Estate Platform</h3>
-                            <span class="project-status status-dev" data-i18n="status_dev">Under Dev</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p7_role">Full Website Development</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p7_desc">تطوير منصة عقارية شاملة...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p7_impact_1">تصميم نظام مرشحات وخيارات بحث متطورة وسريعة الاستجابة</li>
-                            <li data-i18n="p7_impact_2">صياغة خريطة تفاعلية لعرض الوحدات والفلل السكنية</li>
-                            <li data-i18n="p7_impact_3">أتمتة استقبال وفرز طلبات الشراء والمبيعات مباشرة</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Proj 8 (HRKH Personal App) -->
-                <div class="project-card glass reveal delay-1">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p7-hrkh.jpg" alt="HRKH App" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_systems">Internal Systems</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p8_title">HRKH Personal App</h3>
-                            <span class="project-status status-personal" data-i18n="status_personal">Personal</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p8_role">Custom Web App Dev</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p8_desc">برمجة وتطوير تطبيق ويب مخصص بالكامل...</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p8_impact_1">بناء خوادم ونظام إدارة محتوى داخلي مرن وسريع بالكامل</li>
-                            <li data-i18n="p8_impact_2">ربط وتجربة أساليب البرمجة الحديثة لنمذجة وتجربة الأفكار الرقمية</li>
-                            <li data-i18n="p8_impact_3">بيئة اختبار متكاملة لربط واجهات برمجة التطبيقات وقواعد البيانات</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Proj 9 (NAHT Real Estate CRM) -->
-                <div class="project-card glass reveal delay-2">
-                    <div class="project-image-wrapper">
-                        <img src="./assets/p10-naht-crm.jpg" alt="NAHT Real Estate CRM" class="project-image" loading="lazy">
-                        <div class="project-tags">
-                            <span class="ptag" data-i18n="tag_systems">Internal Systems</span>
-                            <span class="ptag" data-i18n="tag_web">Web Dev</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title" data-i18n="p9_title">منصة إدارة العمليات والعملاء (نحت CRM)</h3>
-                            <span class="project-status status-live" data-i18n="status_live">Live</span>
-                        </div>
-                        <div class="project-role">
-                            <i data-lucide="user"></i> <span data-i18n="p9_role">مهندس ومطور النظام وتجربة المستخدم</span>
-                        </div>
-                        <p class="project-desc" data-i18n="p9_desc">تطوير منصة سحابية متكاملة لشركة نحت العقارية لإدارة دورة حياة العملاء (Leads)، أتمتة تدفقات العمل، وربط محادثات واتساب، مع لوحات تحكم متقدمة لمراقبة الأداء العقاري والمبيعات في الوقت الفعلي.</p>
-                        <div class="project-impact-title" data-i18n="lbl_impact">الأثر والقيمة المحققة</div>
-                        <ul class="project-impact-list">
-                            <li data-i18n="p9_impact_1">إدارة وأتمتة مسار العملاء المتوقعين (Leads Pipeline) وتوزيعهم الفوري على فريق المبيعات</li>
-                            <li data-i18n="p9_impact_2">تكامل ذكي ومباشر مع محادثات واتساب لرفع سرعة الاستجابة ومعدلات إغلاق الصفقات</li>
-                            <li data-i18n="p9_impact_3">لوحة تحكم مركزية للتحليلات الإدارية، التقارير الأسبوعية، ومتابعة المشاريع السكنية</li>
-                        </ul>
-                        <a href="https://naht-re.sa/crm/#view=dashboard" target="_blank" class="project-link" data-i18n="btn_visit">زيارة المنصة <i data-lucide="external-link"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Before & After Branding Section -->
-    <section class="branding-section" id="branding">
-        <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="brand_title">الهوية البصرية - قبل وبعد</h2>
-                <div class="title-line"></div>
-                <p class="section-subtitle" data-i18n="brand_subtitle">مشروع إعادة صياغة وهيكلة الهوية البصرية لشركة T&S لتعكس التطور والاحترافية.</p>
+            <!-- Scroll Indicator -->
+            <div class="scroll-prompt" aria-hidden="true">
+                <span data-i18n="scroll_label">SCROLL</span>
+                <i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i>
             </div>
+        </section>
 
-            <div class="comparison-slider reveal" id="brandSlider">
-                <div class="comparison-labels">
-                    <span data-i18n="brand_after">بعد التحديث (New)</span>
-                    <span data-i18n="brand_before">قبل (Old)</span>
+        <!-- ==========================================================================
+             SECTION 1: SELECTED WORK (Browser Window Mockup Cards)
+             ========================================================================== -->
+        <section id="work" class="section-block">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <span class="section-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="tag_work">أعمال مختارة</span>
+                        </span>
+                        <h2 class="section-heading font-display" data-i18n="heading_work">
+                            مشاريع وأنظمة تصنع أثراً حقيقياً في السوق.
+                        </h2>
+                    </div>
+                    <a href="#contact" class="section-header-link" data-i18n="link_discuss_project">
+                        <span>طلب استشارة أو مشروع</span>
+                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    </a>
                 </div>
+
+                <!-- Projects Grid (Window Mockups like sunnypatel.net) -->
+                <div class="projects-grid">
+                    <!-- Project 1: NAHT Real Estate CRM (NEW & Authentic) -->
+                    <a href="https://naht-re.sa/crm/#view=dashboard" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">naht-re.sa/crm</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p10-naht-crm.jpg" alt="نحت CRM" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p1_title">منصة نحت العقارية (CRM)</h3>
+                                <span class="card-year">2026</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p1_desc">نظام CRM عقاري ذكي لإدارة العملاء المحتملين، مسارات المبيعات، ولوحات تحكم الأداء التفاعلية.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_active">نظام مباشر ونشط</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2: T&S Holding Corporate Platform -->
+                    <a href="https://tsholding.sa" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">tsholding.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p2-ts-holding.jpg" alt="مجموعة T&S القابضة" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p2_title">منصة مجموعة T&S القابضة</h3>
+                                <span class="card-year">2025</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p2_desc">منصة رقمية مؤسسية توحد 10 قطاعات أعمال تابعة وتعكس الهوية الاستثمارية للمجموعة.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_live">منصة مؤسسية حية</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 3: SportX Platform -->
+                    <div class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">sportx.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p4-sportx.jpg" alt="منصة SportX" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p3_title">منصة SportX الرياضية</h3>
+                                <span class="card-year">2024</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p3_desc">منصة رقمية متكاملة لإدارة البطولات والملاعب وحجوزات الفعاليات وتجربة الجماهير.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_growth">مسار نمو متسارع</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Brand Architecture & Guidelines Hub -->
+                    <div class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">brand.guidelines.ts</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p9-brand-hub.jpg" alt="بوابة الهوية المؤسسية" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p4_title">بوابة ونظام الهوية البصرية</h3>
+                                <span class="card-year">2024</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p4_desc">منظومة موحدة للأدلة الإرشادية والأصول البصرية وضمان اتساق العلامة عبر كافة نقاط التماس.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_system">Design System</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: HRKH Recruitment Solutions -->
+                    <div class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">hrkh.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p7-hrkh.jpg" alt="شركة حركة" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p5_title">منصة وحملات شركة حركة</h3>
+                                <span class="card-year">2023</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p5_desc">بناء الحضور الرقمي والحملات التسويقية لخدمات استقطاب الكفاءات والحلول الإدارية.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_delivered">مشروع مكتمل الأثر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Ri88 Commercial Identity -->
+                    <div class="project-card">
+                        <div class="window-mockup">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">ri88.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p8-ri88.jpg" alt="ريت الأغذية Ri88" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title-row">
+                                <h3 class="card-title" data-i18n="p6_title">الهوية التجارية Ri88</h3>
+                                <span class="card-year">2023</span>
+                            </div>
+                            <p class="card-tagline" data-i18n="p6_desc">تطوير الهوية البصرية، التغليف، وتجربة العلامة التجارية في قطاع الأغذية والمشروبات.</p>
+                            <div class="card-status">
+                                <span class="mini-ping"></span>
+                                <span data-i18n="status_brand">Brand Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 2: WHAT I DO (Numbered Horizontal Rows like sunnypatel.net)
+             ========================================================================== -->
+        <section id="services" class="section-block">
+            <div class="container">
+                <span class="section-tag">
+                    <span class="line" aria-hidden="true"></span>
+                    <span data-i18n="tag_services">مجالات التخصص</span>
+                </span>
+                <h2 class="section-heading font-display" data-i18n="heading_services">
+                    بناء الأنظمة الرقمية التي تدمج البيانات بالنمو.
+                </h2>
+
+                <div class="services-list">
+                    <!-- Service 01 -->
+                    <div class="service-row">
+                        <div class="service-title-wrap">
+                            <span class="service-num">01</span>
+                            <h3 class="service-name" data-i18n="srv_1_name">ذكاء الأعمال وتحليل البيانات (BI)</h3>
+                        </div>
+                        <p class="service-desc" data-i18n="srv_1_detail">
+                            بناء لوحات تحكم تفاعلية وتنفيذية متقدمة، وربط مصادر البيانات المتفرقة لاستخراج رؤى استراتيجية تكشف فرص التوسع وتحسن كفاءة القرارات التشغيلية والتسويقية.
+                        </p>
+                    </div>
+
+                    <!-- Service 02 -->
+                    <div class="service-row">
+                        <div class="service-title-wrap">
+                            <span class="service-num">02</span>
+                            <h3 class="service-name" data-i18n="srv_2_name">التسويق واستراتيجيات النمو (Growth & CRO)</h3>
+                        </div>
+                        <p class="service-desc" data-i18n="srv_2_detail">
+                            تخطيط الحملات الإعلانية الممولة الموجهة بالأرقام (Google & Meta Ads)، وهندسة مسارات التحويل (Funnels)، وتحسين معدل التحويل لتعظيم العائد الاستثماري على كل ريال.
+                        </p>
+                    </div>
+
+                    <!-- Service 03 -->
+                    <div class="service-row">
+                        <div class="service-title-wrap">
+                            <span class="service-num">03</span>
+                            <h3 class="service-name" data-i18n="srv_3_name">بناء وتطوير الهويات البصرية (Brand Identity)</h3>
+                        </div>
+                        <p class="service-desc" data-i18n="srv_3_detail">
+                            تصميم هويات بصرية وتجارية متكاملة تنطلق من الفهم العميق للجمهور، وتوحيد لغة التصميم عبر المنصات والتطبيقات والحملات لترسيخ مكانة العلامة في السوق.
+                        </p>
+                    </div>
+
+                    <!-- Service 04 -->
+                    <div class="service-row">
+                        <div class="service-title-wrap">
+                            <span class="service-num">04</span>
+                            <h3 class="service-name" data-i18n="srv_4_name">حلول وأتمتة الذكاء الاصطناعي (AI Solutions)</h3>
+                        </div>
+                        <p class="service-desc" data-i18n="srv_4_detail">
+                            توظيف وكلاء ونماذج الذكاء الاصطناعي في تحليل سلوك العملاء، أتمتة تدفقات العمل التسويقية والإدارية، وتسريع إنتاج وتخصيص المحتوى الذكي بدقة عالية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 3: STRATEGIC IMPACT (Across Business Units)
+             ========================================================================== -->
+        <section id="impact" class="section-block">
+            <div class="container">
+                <div class="impact-banner">
+                    <div>
+                        <span class="section-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="tag_impact">الأثر الاستراتيجي</span>
+                        </span>
+                        <h2 class="section-heading font-display" data-i18n="heading_impact">
+                            أثر ملموس عبر شركات ومجموعات الأعمال.
+                        </h2>
+                    </div>
+                    <a href="#about" class="section-header-link" data-i18n="link_read_philosophy">
+                        <span>قراءة فلسفة العمل</span>
+                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    </a>
+                </div>
+
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-card-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3 class="impact-card-title" data-i18n="imp_1_title">لوحات تحكم ذكاء الأعمال</h3>
+                        <p class="impact-card-desc" data-i18n="imp_1_desc">بناء شاشات قياس فورية لربط المبيعات بالحملات ورفع سرعة اتخاذ القرارات التنفيذية.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-card-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h3 class="impact-card-title" data-i18n="imp_2_title">استراتيجيات نمو المبيعات</h3>
+                        <p class="impact-card-desc" data-i18n="imp_2_desc">تحسين مسارات العميل ورفع معدل التحويل (CRO) لخفض تكلفة الاستحواذ على العملاء.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-card-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="impact-card-title" data-i18n="imp_3_title">توحيد الهوية المؤسسية</h3>
+                        <p class="impact-card-desc" data-i18n="imp_3_desc">هندسة هوية بصرية ولغة تواصل موحدة عبر كافة القطاعات والشركات الشقيقة.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-card-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3 class="impact-card-title" data-i18n="imp_4_title">أتمتة وحلول الذكاء الاصطناعي</h3>
+                        <p class="impact-card-desc" data-i18n="imp_4_desc">أتمتة المهام التسويقية المتكررة وتحليل تفاعل العملاء بواسطة وكلاء الذكاء الاصطناعي.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 4: ABOUT ME & SKILLS
+             ========================================================================== -->
+        <section id="about" class="section-block">
+            <div class="container">
+                <span class="section-tag">
+                    <span class="line" aria-hidden="true"></span>
+                    <span data-i18n="tag_about">عن مسيرتي</span>
+                </span>
                 
-                <!-- NEW LOGO (Background base layer) -->
-                <img src="./assets/ts-logo-new.png" class="img-after" alt="New Brand Logo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?auto=format&fit=crop&q=80&w=900'">
-                
-                <!-- OLD LOGO (Clipped foreground layer) -->
-                <div class="img-before-container" id="beforeImgContainer">
-                    <img src="./assets/ts-logo-old.png" alt="Old Brand Logo" id="beforeImg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=900'">
-                </div>
-                
-                <!-- Custom Drag Handle -->
-                <div class="slider-handle" id="sliderHandle">
-                    <div class="slider-button"><i data-lucide="move-horizontal"></i></div>
+                <div class="about-grid">
+                    <div>
+                        <h2 class="about-lead font-display" data-i18n="about_heading">
+                            أجمع بين دقة الأرقام وذكاء الأعمال، وإبداع الهوية البصرية، وقوة الذكاء الاصطناعي لصناعة نمو حقيقي.
+                        </h2>
+                        <p class="about-body" data-i18n="about_p1">
+                            تنطلق منهجي في العمل من الفهم العميق للبيانات: أرى في الأرقام خارطة طريق ترشدنا بدقة إلى أين يجب أن نتجه. أحوّل هذه الرؤى إلى هويات بصرية راسخة، ومسارات تسويقية عالية التحويل، وأنظمة رقمية متكاملة تدعم الأهداف المالية والتوسعية للعلامات التجارية.
+                        </p>
+                        <p class="about-body" data-i18n="about_p2">
+                            بدمج أدوات ونماذج الذكاء الاصطناعي (AI) في صلب العمليات، نختصر دورات الإنتاج، ونوفر تحليلات تنبؤية أكثر دقة لسلوك الجمهور، مما يمنح المشاريع سرعة استثنائية وقدرة على التوسع بثبات واستدامة.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="card-title" style="margin-bottom: 1.25rem;" data-i18n="skills_title">المهارات والتقنيات الأساسية</h3>
+                        <div class="skills-badge-list">
+                            <span class="skill-badge"><i data-lucide="check"></i> Business Intelligence (BI)</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Artificial Intelligence (AI)</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Brand Identity Building</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Growth & CRO</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Marketing Analytics</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Paid Ads (Google & Meta)</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> CRM Architecture</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Interactive Dashboards</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Marketing Automation</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> UI/UX Design</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Web Platforms Development</span>
+                            <span class="skill-badge"><i data-lucide="check"></i> Content Strategy</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Creative Campaigns Section -->
-    <section class="campaigns" id="campaigns">
+        <!-- ==========================================================================
+             SECTION 5: CALL TO ACTION (CTA like sunnypatel.net)
+             ========================================================================== -->
+        <section id="contact" class="section-block cta-block">
+            <div class="container">
+                <h2 class="cta-title font-display" data-i18n="cta_heading">
+                    لديك مشروع أو فكرة تستحق البناء؟
+                </h2>
+                <p class="cta-sub" data-i18n="cta_subtitle">
+                    متاح للمشاريع النوعية، استشارات النمو، وبناء الأنظمة والهويات المدعومة بالذكاء الاصطناعي.
+                </p>
+                <div class="cta-btn-wrap">
+                    <a href="mailto:rayyan.aldohian@gmail.com" class="btn-primary-accent">
+                        <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+                        <span data-i18n="btn_email_me">راسلني عبر البريد الإلكتروني</span>
+                    </a>
+                    <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="btn-outline-accent" style="display: inline-flex;">
+                        <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
+                        <span data-i18n="btn_whatsapp">واتساب مباشر</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-link-muted">
+                        <i data-lucide="linkedin" style="width: 15px; height: 15px;"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (exact style from sunnypatel.net) -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="camp_title">الحملات الإبداعية</h2>
-                <div class="title-line"></div>
-                <p class="section-subtitle" data-i18n="camp_subtitle">تصاميم وإداريات مبدعة لحملات الترويج والفعاليات وشبكات التواصل.</p>
-            </div>
-
-            <div class="campaign-comparison">
-                <!-- Previous Direction -->
-                <div class="direction-panel panel-old glass reveal fade-right">
-                    <div class="panel-header">
-                        <div class="panel-icon icon-old"><i data-lucide="history"></i></div>
-                        <h3 class="panel-title" data-i18n="camp_old_title">التوجه السابق في التصاميم</h3>
-                    </div>
-                    <p class="panel-desc" data-i18n="camp_old_desc">تصاميم تقليدية، معلومات كثيفة، وأسلوب بصري غير موحد.</p>
-                    <ul class="direction-list">
-                        <li><i data-lucide="x-circle"></i> <span data-i18n="camp_old_list_1">عدم وجود هوية بصرية موحدة</span></li>
-                        <li><i data-lucide="x-circle"></i> <span data-i18n="camp_old_list_2">ألوان وخطوط غير متناسقة</span></li>
-                        <li><i data-lucide="x-circle"></i> <span data-i18n="camp_old_list_3">محتوى نصي كثيف وضعف في التسلسل البصري</span></li>
-                        <li><i data-lucide="x-circle"></i> <span data-i18n="camp_old_list_4">محدودية في استخدام العناصر الإبداعية</span></li>
-                        <li><i data-lucide="x-circle"></i> <span data-i18n="camp_old_list_5">تركيز أقل على الرسالة والقيمة</span></li>
-                    </ul>
-                    <!-- 
-                        =========================================
-                        OLD DESIGNS IMAGES (3 Images)
-                        =========================================
-                        قم بوضع مسارات صور التصاميم "القديمة" هنا.
-                        العدد: 3 صور. الأبعاد المفضلة: 16:9 (عرضية).
-                    -->
-                    <div class="panel-images">
-                        <!-- Old Image 1 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/old-design-01.jpg" alt="Old Design 1" loading="lazy">
-                        </div>
-                        <!-- Old Image 2 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/old-design-02.jpg" alt="Old Design 2" loading="lazy">
-                        </div>
-                        <!-- Old Image 3 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/old-design-03.jpg" alt="Old Design 3" loading="lazy">
-                        </div>
-                    </div>
+            <div class="footer-top">
+                <div>
+                    <a href="#" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldhuhayan</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
                 </div>
-
-                <!-- Center Transition Indicator -->
-                <div class="direction-indicator reveal">
-                    <div class="indicator-line"></div>
-                    <div class="indicator-icon glass"><i data-lucide="arrow-left-right"></i></div>
-                    <div class="indicator-line"></div>
-                </div>
-
-                <!-- New Direction -->
-                <div class="direction-panel panel-new glass reveal fade-left delay-1">
-                    <div class="panel-header">
-                        <div class="panel-icon icon-new"><i data-lucide="sparkles"></i></div>
-                        <h3 class="panel-title" data-i18n="camp_new_title">التوجه الجديد في التصاميم</h3>
-                    </div>
-                    <p class="panel-desc" data-i18n="camp_new_desc">هوية بصرية موحدة، رسائل واضحة، وتصاميم احترافية تعكس قيمة العلامة التجارية.</p>
-                    <ul class="direction-list">
-                        <li><i data-lucide="check-circle-2"></i> <span data-i18n="camp_new_list_1">هوية بصرية موحدة تعكس الاحترافية والثقة</span></li>
-                        <li><i data-lucide="check-circle-2"></i> <span data-i18n="camp_new_list_2">ألوان متناسقة (كحلي، ذهبي، أبيض)</span></li>
-                        <li><i data-lucide="check-circle-2"></i> <span data-i18n="camp_new_list_3">تصاميم حديثة تركز على الرسالة والقيمة</span></li>
-                        <li><i data-lucide="check-circle-2"></i> <span data-i18n="camp_new_list_4">استخدام صور احترافية وعناصر بصرية قوية</span></li>
-                        <li><i data-lucide="check-circle-2"></i> <span data-i18n="camp_new_list_5">ترتيب بصري واضح وتجربة مستخدم متكاملة</span></li>
-                    </ul>
-                    <!-- 
-                        =========================================
-                        NEW DESIGNS IMAGES (3 Images)
-                        =========================================
-                        قم بوضع مسارات صور التصاميم "الجديدة" هنا لتكون مقابلة للقديمة.
-                        العدد: 3 صور. الأبعاد المفضلة: 16:9 (عرضية).
-                    -->
-                    <div class="panel-images">
-                        <!-- New Image 1 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/new-design-01.jpg" alt="New Design 1" loading="lazy">
-                        </div>
-                        <!-- New Image 2 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/new-design-02.jpg" alt="New Design 2" loading="lazy">
-                        </div>
-                        <!-- New Image 3 -->
-                        <div class="panel-img-wrapper">
-                            <img src="./assets/new-design-03.jpg" alt="New Design 3" loading="lazy">
-                        </div>
-                    </div>
+                <div class="footer-links">
+                    <a href="#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="#about" data-i18n="nav_about">نبذة عني</a>
+                    <a href="mailto:rayyan.aldohian@gmail.com">rayyan.aldohian@gmail.com</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- How I Work Section -->
-    <section class="how-i-work" id="how-i-work">
-        <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="work_title">آلية العمل</h2>
-                <div class="title-line"></div>
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldhuhayan. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
             </div>
-            
-            <div class="work-grid">
-                <div class="work-card glass reveal">
-                    <div class="work-step">01</div>
-                    <h3 data-i18n="work_1_title">فهم الهدف</h3>
-                    <p data-i18n="work_1_desc">أبدأ بفهم احتياج العلامة، الجمهور المستهدف، والرسالة الأساسية.</p>
-                </div>
-                <div class="work-card glass reveal delay-1">
-                    <div class="work-step">02</div>
-                    <h3 data-i18n="work_2_title">بناء التوجه</h3>
-                    <p data-i18n="work_2_desc">أحول الفكرة إلى توجه بصري واضح، مسار محتوى، وتجربة رقمية.</p>
-                </div>
-                <div class="work-card glass reveal delay-2">
-                    <div class="work-step">03</div>
-                    <h3 data-i18n="work_3_title">التنفيذ بمرونة</h3>
-                    <p data-i18n="work_3_desc">أنفذ المواقع، الحملات، المحتوى، والأنظمة بطريقة عملية ومرنة.</p>
-                </div>
-                <div class="work-card glass reveal delay-3">
-                    <div class="work-step">04</div>
-                    <h3 data-i18n="work_4_title">التحسين المستمر</h3>
-                    <p data-i18n="work_4_desc">أراجع التجربة، أُحسن النتائج، وأطور العلامة بناءً على الاستخدام الفعلي.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================================================================
-         Gallery Section
-         لإضافة صور جديدة: انسخ بلوك gallery-item وعدّل مسار الصورة
-         ضع الصور في مجلد: assets/gallery/
-         ================================================================ -->
-    <section class="gallery-section" id="gallery" style="display: none !important;">
-        <div class="container">
-            <div class="section-heading center reveal">
-                <h2 class="section-title" data-i18n="gallery_title">معرض الأعمال</h2>
-                <div class="title-line"></div>
-                <p class="section-subtitle" data-i18n="gallery_subtitle">لحظات ومحطات من مسيرتي المهنية في الفعاليات والمشاريع الإبداعية.</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="gallery-filters reveal">
-                <button class="gallery-filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
-                <button class="gallery-filter-btn" data-filter="events" data-i18n="filter_events">الفعاليات</button>
-                <button class="gallery-filter-btn" data-filter="branding" data-i18n="filter_branding">الهوية البصرية</button>
-                <button class="gallery-filter-btn" data-filter="campaigns" data-i18n="filter_campaigns">الحملات</button>
-                <button class="gallery-filter-btn" data-filter="web" data-i18n="filter_web">المواقع</button>
-            </div>
-
-            <!-- Gallery Grid -->
-            <div class="gallery-grid" id="galleryGrid">
-
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item reveal" data-category="events">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/event-01.jpg"
-                             onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="International Tech Exhibition" loading="lazy" class="gallery-img">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>معرض التقنية والابتكار الدولي</b><br><small>تغطية ميدانية وإدارة المحتوى الرقمي المباشر أثناء المعرض</small>" data-caption-en="<b>International Tech Exhibition</b><br><small>On-site media coverage and live digital content management</small>"><b>معرض التقنية والابتكار الدولي</b><br><small>تغطية ميدانية وإدارة المحتوى الرقمي المباشر أثناء المعرض</small></span>
-                            </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item reveal delay-1" data-category="events">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/event-02.jpg"
-                             onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="Startups & Growth Summit" loading="lazy" class="gallery-img">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>ملتقى الشركات الناشئة والنمو</b><br><small>تغطية منصات التواصل وصناعة المحتوى التفاعلي المباشر</small>" data-caption-en="<b>Startups & Growth Summit</b><br><small>Social media coverage and live interactive content creation</small>"><b>ملتقى الشركات الناشئة والنمو</b><br><small>تغطية منصات التواصل وصناعة المحتوى التفاعلي المباشر</small></span>
-                            </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item reveal delay-2" data-category="branding">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/branding-01.jpg"
-                             onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="Visual Identity Launch" loading="lazy" class="gallery-img">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>إطلاق الهوية البصرية المطورة</b><br><small>تدشين وتطبيق معايير الهوية الجديدة عبر الأصول الرقمية</small>" data-caption-en="<b>Visual Identity Launch</b><br><small>Unveiling and applying the updated brand assets across channels</small>"><b>إطلاق الهوية البصرية المطورة</b><br><small>تدشين وتطبيق معايير الهوية الجديدة عبر الأصول الرقمية</small></span>
-                            </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item reveal" data-category="campaigns">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/campaign-01.jpg"
-                             onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="Annual Digital Growth Campaign" loading="lazy" class="gallery-img">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>حملة النمو الرقمي السنوية</b><br><small>إدارة وتوجيه المحتوى الإبداعي للحملات الإعلانية المدفوعة</small>" data-caption-en="<b>Annual Digital Growth Campaign</b><br><small>Directing and managing creative content assets for paid ads</small>"><b>حملة النمو الرقمي السنوية</b><br><small>إدارة وتوجيه المحتوى الإبداعي للحملات الإعلانية المدفوعة</small></span>
-                            </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item reveal delay-1" data-category="web">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/web-01.jpg"
-                             onerror="this.closest('.gallery-item').style.display='none'"
-                             alt="Shared Services Portal" loading="lazy" class="gallery-img">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>منصة الخدمات المشتركة</b><br><small>تصميم واجهات المستخدم للمنصات الرقمية ولوحات التحكم</small>" data-caption-en="<b>Shared Services Portal</b><br><small>UI/UX layout design for interactive tools and client dashboards</small>"><b>منصة الخدمات المشتركة</b><br><small>تصميم واجهات المستخدم للمنصات الرقمية ولوحات التحكم</small></span>
-                            </div>
-                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 6 (Video 1) -->
-                <div class="gallery-item reveal delay-2" data-category="events" data-video="./assets/gallery/event-video1.mp4">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/event-01.jpg"
-                             alt="Identity Unveiling Showcase" loading="lazy" class="gallery-img">
-                        <div class="gallery-video-icon"><i data-lucide="play" fill="currentColor"></i></div>
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>فيديو تدشين الهوية التجارية</b><br><small>إنتاج وإخراج المحتوى المرئي لمراسم الإعلان الرسمي</small>" data-caption-en="<b>Identity Unveiling Showcase</b><br><small>Video production and creative direction for the launch ceremony</small>"><b>فيديو تدشين الهوية التجارية</b><br><small>إنتاج وإخراج المحتوى المرئي لمراسم الإعلان الرسمي</small></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 7 (Video 2) -->
-                <div class="gallery-item reveal" data-category="events" data-video="./assets/gallery/event-video2.mp4">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/event-02.jpg"
-                             alt="Official Summit Media Wrap" loading="lazy" class="gallery-img">
-                        <div class="gallery-video-icon"><i data-lucide="play" fill="currentColor"></i></div>
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>التغطية المرئية الرسمية للملتقى</b><br><small>توثيق وإعداد التقارير الإبداعية المصورة للفعالية</small>" data-caption-en="<b>Official Summit Media Wrap</b><br><small>Visual production and media recap documentation</small>"><b>التغطية المرئية الرسمية للملتقى</b><br><small>توثيق وإعداد التقارير الإبداعية المصورة للفعالية</small></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 8 (Video 3) -->
-                <div class="gallery-item reveal delay-1" data-category="events" data-video="./assets/gallery/event-video3.mp4">
-                    <div class="gallery-img-wrap">
-                        <img src="./assets/gallery/event-03.jpg"
-                             alt="Tech Expo Media Coverage" loading="lazy" class="gallery-img">
-                        <div class="gallery-video-icon"><i data-lucide="play" fill="currentColor"></i></div>
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">
-                                <span class="gallery-caption-text" data-caption-ar="<b>مقابلة متلفزة في المؤتمر الدولي</b><br><small>تغطية وتنسيق اللقاءات الإعلامية خلال مشاركة العلامة</small>" data-caption-en="<b>Tech Expo Media Coverage</b><br><small>Managing press relations and live media interactions</small>"><b>مقابلة متلفزة في المؤتمر الدولي</b><br><small>تغطية وتنسيق اللقاءات الإعلامية خلال مشاركة العلامة</small></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- /.gallery-grid -->
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-minimal glass reveal">
-                <div class="contact-icon">
-                    <i data-lucide="mail"></i>
-                </div>
-                <h2 class="contact-title" data-i18n="contact_title">لنبقَ على تواصل</h2>
-                <p class="contact-desc" data-i18n="contact_desc">للتواصل بخصوص المشاريع، التعاون، أو الفرص المهنية، يمكنكم مراسلتي عبر البريد الإلكتروني.</p>
-                <a href="mailto:rayyan.aldohian@gmail.com" class="contact-email-link">rayyan.aldohian@gmail.com</a>
-                
-                <div class="social-links-minimal">
-                    <a href="https://www.linkedin.com/in/rayyan-aldohian" target="_blank" class="social-btn glass"><i data-lucide="linkedin"></i></a>
-                    <a href="https://github.com/iRayyanKoo" target="_blank" class="social-btn glass"><i data-lucide="github"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <span data-i18n="nav_logo">ريان الضحيان</span>
-            </div>
-            <p class="copyright">
-                &copy; <span id="year">2026</span> <span data-i18n="footer_copy">Rayyan Al-Dohian. All Rights Reserved.</span>
-            </p>
-            <button id="scrollToTop" class="scroll-top glass"><i data-lucide="arrow-up"></i></button>
         </div>
     </footer>
 
-    <!-- Lightbox for Image/Video Zoom -->
-    <div class="lightbox" id="imageLightbox">
-        <div class="lightbox-close" id="lightboxClose"><i data-lucide="x"></i></div>
-        <div class="lightbox-content">
-            <img src="" alt="Zoomed Image" class="lightbox-img" id="lightboxImg">
-            <video controls class="lightbox-video" id="lightboxVideo" style="display: none;"></video>
-        </div>
-    </div>
-
-    <!-- Main Script -->
+    <!-- Main Logic & Translations -->
     <script src="main.js"></script>
 </body>
 </html>
