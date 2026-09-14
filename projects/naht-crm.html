@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة نحت العقارية (CRM & BI) · Rayyan Aldohian</title>
+    <meta name="description" content="دراسة حالة لمنصة نحت العقارية (CRM & BI) — إدارة علاقات العملاء، لوحات ذكاء الأعمال، وتحسين مسارات التحويل لفرق المبيعات العقارية.">
+    <meta name="author" content="Rayyan Aldohian">
+    <meta name="theme-color" content="#0b0d0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="منصة نحت العقارية (CRM & BI) · Rayyan Aldohian">
+    <meta property="og:description" content="نظام CRM عقاري ذكي لإدارة العملاء المحتملين ومسارات المبيعات ولوحات القياس التنفيذية.">
+    <meta property="og:image" content="../assets/p10-naht-crm.jpg">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="../index.html#work" class="nav-link active">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="../index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="../index.html#impact" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="../index.html#about" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="../index.html#contact" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <a href="../index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="../index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="../index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="../index.html#about" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="../index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <article class="case-study-hero">
+            <div class="container">
+                <!-- Back Link -->
+                <a href="../index.html#work" class="case-study-back">
+                    <i data-lucide="arrow-right"></i>
+                    <span data-i18n="cs_back">العودة لكافة المشاريع</span>
+                </a>
+
+                <!-- Meta Row -->
+                <div class="case-study-meta-row">
+                    <span class="year">2026</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="tagline" data-i18n="cs_crm_tagline">نظام إدارة علاقات العملاء وذكاء مبيعات العقارات</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="status-badge">
+                        <span class="pulsing-dot"></span>
+                        <span data-i18n="status_active">نظام مباشر ونشط</span>
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="case-study-title font-display" data-i18n="cs_crm_title">منصة نحت العقارية (CRM & BI)</h1>
+
+                <!-- Lead Paragraph -->
+                <p class="case-study-lead" data-i18n="cs_crm_lead">
+                    منظومة ذكية متخصصة في إدارة وتأهيل العملاء المحتملين في القطاع العقاري، مزودة بلوحات ذكاء أعمال تنفيذية لمراقبة الأداء التسويقي وسرعة الاستجابة وتعظيم عائد المبيعات.
+                </p>
+
+                <!-- Actions -->
+                <div class="case-study-actions">
+                    <a href="https://naht-re.sa/crm/#view=dashboard" target="_blank" rel="noopener noreferrer" class="action-live">
+                        <span data-i18n="cs_action_live">زيارة النظام المباشر</span>
+                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    </a>
+                    <span class="action-muted">
+                        <i data-lucide="activity" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
+                        <span data-i18n="cs_crm_telemetry">تتبع فوري لمعدل التحويل وسرعة الإغلاق</span>
+                    </span>
+                </div>
+
+                <!-- Showcase Window Mockup -->
+                <div class="case-study-showcase">
+                    <div class="glow-backdrop" aria-hidden="true"></div>
+                    <div class="window-mockup">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-url">naht-re.sa/crm/#view=dashboard</span>
+                        </div>
+                        <div class="window-preview">
+                            <img src="../assets/p10-naht-crm.jpg" alt="لوحة تحكم منصة نحت CRM" loading="eager">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column Detail Grid -->
+                <div class="case-study-grid">
+                    <!-- Left: Narrative Story -->
+                    <div class="case-study-narrative">
+                        <div>
+                            <h2 data-i18n="cs_crm_h1">السياق ومسار العميل العقاري</h2>
+                            <p data-i18n="cs_crm_p1">
+                                في التسويق العقاري عالي القيمة، يُعد هدر العملاء المحتملين (Lead Leakage) وبطء استجابة الوسطاء السبب الأول في ضياع الصفقات. تم تطوير <strong>منصة نحت CRM</strong> لمعالجة هذا التحدي عبر أتمتة استقبال الطلبات من الحملات الإعلانية لحظياً، وتوجيهها فورياً للمستشار العقاري المختص حسب المشروع والاهتمام والميزانية.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_crm_h2">معمارية مسار البيانات ولوحة ذكاء الأعمال</h2>
+                            <p data-i18n="cs_crm_p2">
+                                تم ربط المنصة مباشرة مع مصادر الإعلانات (Google Ads & Meta Ads) عبر <code>Webhooks</code> مخصصة لتحليل مسار الإحالة وحملات <code>UTM</code> بدقة متناهية. تعرض لوحة القيادة التنفيذية شاشات قياس فورية لمعدل التحويل (CRO)، وتكلفة اكتساب العميل (CAC)، والمدة الزمنية المستغرقة من أول تواصل حتى إتمام الصفقة، مع تصفية ديناميكية حسب المشروع وحالة العميل.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_crm_h3">تأهيل العملاء وتوزيع الفرص الذكي</h2>
+                            <p data-i18n="cs_crm_p3">
+                                يتضمن النظام خوارزمية لتوزيع الفرص (Round-Robin with Availability Check) تضمن التوزيع العادل والسريع للعملاء، مع تتبع حالة كل عميل عبر مراحل مسار المبيعات المعتمد (جديد، تم التواصل، مهتم، موعد معاينة، تفاوض، إغلاق). كما تم دمج قنوات التواصل عبر تطبيق WhatsApp Business وتوثيق سجل المكالمات والملاحظات في ملف العميل.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_crm_h4">النمو المحقق وأثر الذكاء الاصطناعي</h2>
+                            <p data-i18n="cs_crm_p4">
+                                ساهمت المنصة في رفع سرعة التواصل مع العملاء من ساعات إلى أقل من 8 دقائق، مما انعكس على قفزة ملحوظة في معدل حجز المعاينات الميدانية بنسبة تجاوزت 38%. وعبر تحليل البيانات التراكمية، استطاع فريق التسويق إعادة توجيه ميزانيات الحملات نحو الفئات الجغرافية والشرائح الأكثر استجابة وإغلاقاً للصفقات.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Sidebar -->
+                    <div class="case-study-sidebar">
+                        <span class="sidebar-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_highlights">أبرز الخصائص</span>
+                        </span>
+                        <ul class="highlights-list">
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_crm_hl1">لوحة تحكم تنفيذية تفاعلية ببيانات حية ومؤشرات أداء مبيعات فورية.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_crm_hl2">أتمتة استقبال وتوزيع العملاء عبر الويب هوك من Google وMeta Ads.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_crm_hl3">تتبع دقيق لمصادر الإحالة (UTM Tracking) وحساب العائد التسويقي ROAS.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_crm_hl4">ربط مباشر مع WhatsApp وسجل تفاعلات متكامل لكل عميل.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_crm_hl5">تشفير وحماية البيانات مع ميزات إخفاء وتغبيش الهويات الحساسة.</span>
+                            </li>
+                        </ul>
+
+                        <span class="sidebar-tag" style="margin-top: 2.5rem;">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_built_with">التقنيات المستخدمة</span>
+                        </span>
+                        <ul class="built-with-list">
+                            <li class="built-chip">Next.js</li>
+                            <li class="built-chip">TypeScript</li>
+                            <li class="built-chip">Tailwind CSS</li>
+                            <li class="built-chip">Supabase</li>
+                            <li class="built-chip">Chart.js</li>
+                            <li class="built-chip">Webhooks API</li>
+                            <li class="built-chip">BI Dashboards</li>
+                            <li class="built-chip">CRO Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Pagination: Next Project -->
+                <div class="case-study-pagination">
+                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                    <a href="ts-holding.html" class="pagination-next-link">
+                        <span data-i18n="p2_title">منصة مجموعة T&S القابضة</span>
+                        <i data-lucide="arrow-up-left"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="../index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="../index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="../index.html#about" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

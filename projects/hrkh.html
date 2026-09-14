@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة وحملات شركة حركة · Rayyan Aldohian</title>
+    <meta name="description" content="دراسة حالة لمنصة وحملات شركة حركة (HRKH Recruitment Platform) — بناء مسارات استقطاب الكفاءات وحملات النمو الموجهة لقطاع الأعمال B2B.">
+    <meta name="author" content="Rayyan Aldohian">
+    <meta name="theme-color" content="#0b0d0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="منصة وحملات شركة حركة · Rayyan Aldohian">
+    <meta property="og:description" content="بناء الحضور الرقمي والحملات التسويقية لخدمات استقطاب الكفاءات والحلول الإدارية.">
+    <meta property="og:image" content="../assets/p7-hrkh.jpg">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="../index.html#work" class="nav-link active">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="../index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="../index.html#impact" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="../index.html#about" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="../index.html#contact" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <a href="../index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="../index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="../index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="../index.html#about" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="../index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <article class="case-study-hero">
+            <div class="container">
+                <!-- Back Link -->
+                <a href="../index.html#work" class="case-study-back">
+                    <i data-lucide="arrow-right"></i>
+                    <span data-i18n="cs_back">العودة لكافة المشاريع</span>
+                </a>
+
+                <!-- Meta Row -->
+                <div class="case-study-meta-row">
+                    <span class="year">2023</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="tagline" data-i18n="cs_hrkh_tagline">بناء الحضور الرقمي ومسارات استقطاب الكفاءات والحلول الإدارية</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="status-badge">
+                        <span class="pulsing-dot"></span>
+                        <span data-i18n="status_delivered">مشروع مكتمل الأثر</span>
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="case-study-title font-display" data-i18n="cs_hrkh_title">منصة وحملات شركة حركة</h1>
+
+                <!-- Lead Paragraph -->
+                <p class="case-study-lead" data-i18n="cs_hrkh_lead">
+                    منظومة تسويقية ورقمية متكاملة لشركة "حركة" المتخصصة في استقطاب الكفاءات والحلول الإدارية، تجمع بين منصة B2B احترافية، وحملات نمو موجهة لأصحاب القرار في كبرى الشركات.
+                </p>
+
+                <!-- Actions -->
+                <div class="case-study-actions">
+                    <span class="action-live" style="cursor: default;">
+                        <span data-i18n="cs_hrkh_live">حلول استقطاب كفاءات B2B</span>
+                        <i data-lucide="users" style="width: 14px; height: 14px;"></i>
+                    </span>
+                    <span class="action-muted">
+                        <i data-lucide="target" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
+                        <span data-i18n="cs_hrkh_clients">+30 شراكة مؤسسية في 6 أشهر</span>
+                    </span>
+                </div>
+
+                <!-- Showcase Window Mockup -->
+                <div class="case-study-showcase">
+                    <div class="glow-backdrop" aria-hidden="true"></div>
+                    <div class="window-mockup">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-url">hrkh.sa · talent-solutions</span>
+                        </div>
+                        <div class="window-preview">
+                            <img src="../assets/p7-hrkh.jpg" alt="منصة وحملات شركة حركة" loading="eager">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column Detail Grid -->
+                <div class="case-study-grid">
+                    <!-- Left: Narrative Story -->
+                    <div class="case-study-narrative">
+                        <div>
+                            <h2 data-i18n="cs_hrkh_h1">التحدي وبناء الثقة في قطاع الكوادر</h2>
+                            <p data-i18n="cs_hrkh_p1">
+                                في سوق الموارد البشرية والتوظيف عالي التنافسية بالمملكة، واجهت شركة <strong>حركة</strong> تحدي بناء هوية تسويقية تبرز الاحترافية العالية والالتزام بأنظمة العمل والتوطين، وتستقطب مدراء الموارد البشرية والرؤساء التنفيذيين الذين يبحثون عن شريك موثوق لتأمين الكفاءات التنفيذية والتخصصية.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_hrkh_h2">هندسة منصة الأعمال ومسار التحويل (CRO)</h2>
+                            <p data-i18n="cs_hrkh_p2">
+                                تم تصميم وبناء منصة ويب موجهة لقطاع الأعمال <code>B2B</code> تركز على إبراز القيمة المضافة لخدمات التوظيف والتشغيل. تم تبسيط مسار طلب الكفاءات عبر نماذج تفاعلية ذكية تجمع الاحتياجات الوظيفية بدقة وتوجهها فورياً لفريق الاستشارات لتقديم العروض المالية في زمن قياسي.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_hrkh_h3">الحملات الإعلانية الممولة الموجهة للشركات</h2>
+                            <p data-i18n="cs_hrkh_p3">
+                                تم إطلاق حملات أداء ممولة على منصات <code>LinkedIn Ads</code> و <code>Google Search Ads</code> تستهدف الكلمات الدلالية المرتبطة بخدمات التوظيف المؤسسي والإسناد الإداري. ركزت الرسائل الإعلانية على سرعة تلبية الطلبات ومطابقة السير الذاتية لأعلى معايير الجودة، مع قياس مستمر لتكلفة اكتساب العميل المؤسسي (CAC).
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_hrkh_h4">النتائج التشغيلية وعقود التوظيف</h2>
+                            <p data-i18n="cs_hrkh_p4">
+                                أثمرت الاستراتيجية عن إغلاق أكثر من 30 عقداً سنوياً مع كبرى الشركات خلال النصف الأول من الإطلاق، مع رفع معدل تحويل الزوار إلى طلبات عروض أسعار مؤهلة بنسبة تفوق 28%، وترسيخ مكانة "حركة" كواحدة من أسرع الشركات الصاعدة في القطاع.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Sidebar -->
+                    <div class="case-study-sidebar">
+                        <span class="sidebar-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_highlights">أبرز الخصائص</span>
+                        </span>
+                        <ul class="highlights-list">
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_hrkh_hl1">منصة ويب B2B مصممة لهندسة مسار التحويل وجذب كبرى الشركات.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_hrkh_hl2">نماذج تفاعلية لطلب الكفاءات مع تصنيف فوري للمتطلبات الإدارية.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_hrkh_hl3">حملات إعلانات موجهة على LinkedIn و Google Ads بنتائج قابلة للقياس.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_hrkh_hl4">ربط آلي مع نظام إدارة علاقات العملاء وسرعة استجابة لا تتعدى ساعات.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_hrkh_hl5">صياغة محتوى ورسائل تسويقية تركز على التوطين ومعايير وزارة الموارد.</span>
+                            </li>
+                        </ul>
+
+                        <span class="sidebar-tag" style="margin-top: 2.5rem;">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_built_with">التقنيات المستخدمة</span>
+                        </span>
+                        <ul class="built-with-list">
+                            <li class="built-chip">Web Architecture</li>
+                            <li class="built-chip">B2B Marketing</li>
+                            <li class="built-chip">LinkedIn Ads</li>
+                            <li class="built-chip">Google Search Ads</li>
+                            <li class="built-chip">Conversion Optimization</li>
+                            <li class="built-chip">Lead Generation</li>
+                            <li class="built-chip">CRM Automation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Pagination: Next Project -->
+                <div class="case-study-pagination">
+                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                    <a href="ri88.html" class="pagination-next-link">
+                        <span data-i18n="p6_title">الهوية التجارية Ri88</span>
+                        <i data-lucide="arrow-up-left"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="../index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="../index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="../index.html#about" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

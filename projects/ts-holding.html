@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مجموعة T&S القابضة · Rayyan Aldohian</title>
+    <meta name="description" content="دراسة حالة لمنصة مجموعة T&S القابضة (T&S Holding Corporate Platform) — بناء الحضور الرقمي الموحد لـ 10 قطاعات استثمارية وهندسة الهوية المؤسسية.">
+    <meta name="author" content="Rayyan Aldohian">
+    <meta name="theme-color" content="#0b0d0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="منصة مجموعة T&S القابضة · Rayyan Aldohian">
+    <meta property="og:description" content="منصة رقمية مؤسسية توحد 10 قطاعات أعمال استثمارية وتعكس الهوية المرموقة للمجموعة.">
+    <meta property="og:image" content="../assets/p2-ts-holding.jpg">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="../index.html#work" class="nav-link active">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="../index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="../index.html#impact" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="../index.html#about" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="../index.html#contact" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <a href="../index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="../index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="../index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="../index.html#about" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="../index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <article class="case-study-hero">
+            <div class="container">
+                <!-- Back Link -->
+                <a href="../index.html#work" class="case-study-back">
+                    <i data-lucide="arrow-right"></i>
+                    <span data-i18n="cs_back">العودة لكافة المشاريع</span>
+                </a>
+
+                <!-- Meta Row -->
+                <div class="case-study-meta-row">
+                    <span class="year">2025</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="tagline" data-i18n="cs_ts_tagline">بوابة مؤسسية توحد 10 قطاعات أعمال استثمارية</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="status-badge">
+                        <span class="pulsing-dot"></span>
+                        <span data-i18n="status_live">منصة مؤسسية حية</span>
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="case-study-title font-display" data-i18n="cs_ts_title">منصة مجموعة T&S القابضة</h1>
+
+                <!-- Lead Paragraph -->
+                <p class="case-study-lead" data-i18n="cs_ts_lead">
+                    بوابة رقمية كبرى توحد الحضور الرقمي لأكثر من 10 شركات تابعة ومشاريع استثمارية عبر المملكة، بتصميم راقٍ يعزز مكانة المجموعة الاستثمارية أمام الشركاء والجهات الحكومية والخاصة.
+                </p>
+
+                <!-- Actions -->
+                <div class="case-study-actions">
+                    <a href="https://tsholding.sa" target="_blank" rel="noopener noreferrer" class="action-live">
+                        <span data-i18n="cs_action_visit">زيارة المنصة الرسمية (tsholding.sa)</span>
+                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    </a>
+                    <span class="action-muted">
+                        <i data-lucide="layers" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
+                        <span data-i18n="cs_ts_sectors">10 قطاعات أعمال تابعة</span>
+                    </span>
+                </div>
+
+                <!-- Showcase Window Mockup -->
+                <div class="case-study-showcase">
+                    <div class="glow-backdrop" aria-hidden="true"></div>
+                    <div class="window-mockup">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-url">tsholding.sa · corporate-gateway</span>
+                        </div>
+                        <div class="window-preview">
+                            <img src="../assets/p2-ts-holding.jpg" alt="منصة مجموعة T&S القابضة" loading="eager">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column Detail Grid -->
+                <div class="case-study-grid">
+                    <!-- Left: Narrative Story -->
+                    <div class="case-study-narrative">
+                        <div>
+                            <h2 data-i18n="cs_ts_h1">التحدي الاستراتيجي وتوحيد الكيانات</h2>
+                            <p data-i18n="cs_ts_p1">
+                                مع توسع مجموعة <strong>T&S القابضة</strong> في عدة قطاعات استثمارية شملت التطوير العقاري، الحلول اللوجستية، إدارة الفعاليات الرياضية، والضيافة، نشأت الحاجة إلى منصة رقمية جامعة تنهي تشتت الحضور الرقمي، وتقدم صورة مؤسسية متسقة تعكس الحجم الحقيقي للمجموعة وأصولها الاستثمارية.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_ts_h2">معمارية العلامة وتجربة المستخدم</h2>
+                            <p data-i18n="cs_ts_p2">
+                                تم وضع معمارية بصرية ورمزية محكمة (Brand Hierarchy Architecture) تفصل بين الهوية الاستثمارية للشركة الأم وبين الخصوصية التشغيلية لكل شركة تابعة. اعتمدت المنصة أسلوب التصفح التفاعلي السلس، مع بوابات مخصصة لكل قطاع تتيح للزوار والمستثمرين الاطلاع على المشروعات المنجزة والمبادرات المستقبلية بنقرة واحدة.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_ts_h3">الأداء الهندسي وتجربة متعددة اللغات</h2>
+                            <p data-i18n="cs_ts_p3">
+                                بُنيت المنصة بأحدث تقنيات الويب الحديثة لضمان زمن تحميل فائق يقل عن ثانية واحدة عالمياً، مع دعم كامل وثنائي الاتجاه للغتين العربية والإنجليزية، ومراعاة دقيقة للخطوط والطباعة الرقمية وقواعد تحسين محركات البحث <code>Technical SEO</code>، مما رفع الظهور العضوي للمجموعة بنسبة تفوق 140%.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_ts_h4">الأثر المؤسسي وتعزيز الثقة الاستثمارية</h2>
+                            <p data-i18n="cs_ts_p4">
+                                نجحت المنصة في تحويل الحضور الرقمي للمجموعة إلى أصل استراتيجي ساهم بشكل مباشر في تسهيل الشراكات المؤسسية مع كبرى الصناديق الاستثمارية، وأصبحت المرجع الرسمي والوحيد للإعلاميين والمستثمرين الراغبين في التعرف على تاريخ المجموعة ورؤيتها للمستقبل.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Sidebar -->
+                    <div class="case-study-sidebar">
+                        <span class="sidebar-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_highlights">أبرز الخصائص</span>
+                        </span>
+                        <ul class="highlights-list">
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_ts_hl1">هيكلية رقمية موحدة تجمع 10 شركات وقطاعات أعمال تحت علامة واحدة.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_ts_hl2">بوابة مخصصة لعلاقات المستثمرين والتقارير وحوكمة الشركات.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_ts_hl3">سرعة تحميل قياسية (Sub-second load) وبنية تحتية سحابية موزعة عبر CDN.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_ts_hl4">ثنائية اللغة بالكامل مع دعم الخطوط العربية التيبوغرافية الفاخرة.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_ts_hl5">نظام إدارة محتوى مرن يتيح نشر الأخبار والبيانات الصحفية لحظياً.</span>
+                            </li>
+                        </ul>
+
+                        <span class="sidebar-tag" style="margin-top: 2.5rem;">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_built_with">التقنيات المستخدمة</span>
+                        </span>
+                        <ul class="built-with-list">
+                            <li class="built-chip">Next.js</li>
+                            <li class="built-chip">TypeScript</li>
+                            <li class="built-chip">Tailwind CSS</li>
+                            <li class="built-chip">Brand Architecture</li>
+                            <li class="built-chip">Headless CMS</li>
+                            <li class="built-chip">Cloudflare CDN</li>
+                            <li class="built-chip">Technical SEO</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Pagination: Next Project -->
+                <div class="case-study-pagination">
+                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                    <a href="sportx.html" class="pagination-next-link">
+                        <span data-i18n="p3_title">منصة SportX الرياضية</span>
+                        <i data-lucide="arrow-up-left"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="../index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="../index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="../index.html#about" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

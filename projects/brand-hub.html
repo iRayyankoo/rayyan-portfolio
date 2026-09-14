@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة ونظام الهوية البصرية · Rayyan Aldohian</title>
+    <meta name="description" content="دراسة حالة لنظام وبوابة الهوية البصرية (Brand Architecture & Design Hub) — أدلة التصميم، إدارة الأصول البصرية، وضمان اتساق العلامة المؤسسية.">
+    <meta name="author" content="Rayyan Aldohian">
+    <meta name="theme-color" content="#0b0d0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="بوابة ونظام الهوية البصرية · Rayyan Aldohian">
+    <meta property="og:description" content="منظومة موحدة للأدلة الإرشادية والأصول البصرية لضمان اتساق العلامة عبر كافة نقاط التماس.">
+    <meta property="og:image" content="../assets/p9-brand-hub.jpg">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="../index.html#work" class="nav-link active">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="../index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="../index.html#impact" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="../index.html#about" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="../index.html#contact" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <a href="../index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#work" class="mobile-nav-link">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="../index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="../index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="../index.html#about" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="../index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <article class="case-study-hero">
+            <div class="container">
+                <!-- Back Link -->
+                <a href="../index.html#work" class="case-study-back">
+                    <i data-lucide="arrow-right"></i>
+                    <span data-i18n="cs_back">العودة لكافة المشاريع</span>
+                </a>
+
+                <!-- Meta Row -->
+                <div class="case-study-meta-row">
+                    <span class="year">2024</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="tagline" data-i18n="cs_brand_tagline">بوابة الأدلة الإرشادية والأصول البصرية الموحدة للمجموعة</span>
+                    <span class="divider" aria-hidden="true"></span>
+                    <span class="status-badge">
+                        <span class="pulsing-dot"></span>
+                        <span data-i18n="status_system">Design System</span>
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="case-study-title font-display" data-i18n="cs_brand_title">بوابة ونظام الهوية البصرية</h1>
+
+                <!-- Lead Paragraph -->
+                <p class="case-study-lead" data-i18n="cs_brand_lead">
+                    منظومة تصميم مركزية تحفظ اتساق الهوية البصرية للمجموعة والشركات التابعة، وتوفر دليلاً إرشادياً رقمياً تفاعلياً ومستودعاً رسمياً للأصول والخطوط ولغات التواصل المعتمدة.
+                </p>
+
+                <!-- Actions -->
+                <div class="case-study-actions">
+                    <span class="action-live" style="cursor: default;">
+                        <span data-i18n="cs_brand_system">نظام تصميم مؤسسي معتمد</span>
+                        <i data-lucide="check-circle-2" style="width: 14px; height: 14px;"></i>
+                    </span>
+                    <span class="action-muted">
+                        <i data-lucide="palette" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
+                        <span data-i18n="cs_brand_tokens">مئات الأصول البصرية ومحددات التصميم</span>
+                    </span>
+                </div>
+
+                <!-- Showcase Window Mockup -->
+                <div class="case-study-showcase">
+                    <div class="glow-backdrop" aria-hidden="true"></div>
+                    <div class="window-mockup">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-url">brand.guidelines.ts · design-hub</span>
+                        </div>
+                        <div class="window-preview">
+                            <img src="../assets/p9-brand-hub.jpg" alt="بوابة ونظام الهوية البصرية" loading="eager">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-Column Detail Grid -->
+                <div class="case-study-grid">
+                    <!-- Left: Narrative Story -->
+                    <div class="case-study-narrative">
+                        <div>
+                            <h2 data-i18n="cs_brand_h1">التحدي وتشتت الهوية عبر نقاط التماس</h2>
+                            <p data-i18n="cs_brand_p1">
+                                مع تعدد شركات المجموعة وتنوع الوكالات الإعلانية ومصممي الحملات، أصبحت ملفات الهوية بصيغ PDF التقليدية عرضة للتقادم والضياع، مما أنتج تشوهات بصرية في استخدام الشعارات والخطوط والألوان في الحملات التسويقية والمنصات والمطبوعات الرسمية.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_brand_h2">بناء البوابة التفاعلية ونظام الرموز</h2>
+                            <p data-i18n="cs_brand_p2">
+                                تم تحويل أدلة الهوية البصرية من ملفات جامدة إلى <strong>بوابة ويب تفاعلية حية</strong> تعتمد على محددات التصميم الرقمية (Design Tokens). توفر البوابة رموز الألوان بدقة (HEX, RGB, CMYK, Pantone)، ومقاييس الخطوط العربية والإنجليزية، وتطبيقات الاستخدام الصحيح والخاطئ (Dos and Don'ts) في بيئة رقمية سهلة البحث والتصفح.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_brand_h3">مستودع الأصول السحابي والتنزيل المباشر</h2>
+                            <p data-i18n="cs_brand_p3">
+                                يتيح النظام لفرق العمل والشركاء الخارجيين تنزيل الشعارات والأيقونات والملفات المتجهية (Vector SVG & AI) بجودات فائقة بنقرة واحدة، مع تصنيفها حسب القطاع ونوع الاستخدام (رقمي، طباعة، واجهات مباني، وأسطول المركبات)، مما يضمن عدم استخدام أي أصول غير معتمدة.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 data-i18n="cs_brand_h4">تسريع الإنتاج وتوحيد الانطباع الذهني</h2>
+                            <p data-i18n="cs_brand_p4">
+                                ساهمت البوابة في تقليص زمن إعداد واعتماد المواد التسويقية بنسبة 40%، وضمنت ظهوراً احترافياً متطابقاً في كافة المعارض والمؤتمرات والحملات الرقمية، مما رسخ حضوراً ذهنياً قوياً وموحداً يعكس موثوقية المجموعة في أذهان العملاء والمستثمرين.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Sidebar -->
+                    <div class="case-study-sidebar">
+                        <span class="sidebar-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_highlights">أبرز الخصائص</span>
+                        </span>
+                        <ul class="highlights-list">
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_brand_hl1">دليل رقمي حي وتفاعلي يحل محل ملفات PDF التقليدية الجامدة.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_brand_hl2">محددات تصميم موحدة (Design Tokens) لرموز الألوان والخطوط والأبعاد.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_brand_hl3">تنزيل مباشر لكافة صيغ الشعارات المتجهية (SVG, PNG, AI).</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_brand_hl4">أدلة عملية لتطبيقات الهوية في المعارض والمطبوعات والرقميات.</span>
+                            </li>
+                            <li>
+                                <span class="dash"></span>
+                                <span data-i18n="cs_brand_hl5">حوكمة بصرية تمنع الانحراف عن المعايير في الحملات الإعلانية.</span>
+                            </li>
+                        </ul>
+
+                        <span class="sidebar-tag" style="margin-top: 2.5rem;">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="cs_sidebar_built_with">التقنيات المستخدمة</span>
+                        </span>
+                        <ul class="built-with-list">
+                            <li class="built-chip">Figma Tokens</li>
+                            <li class="built-chip">Design Systems</li>
+                            <li class="built-chip">HTML5 / CSS3</li>
+                            <li class="built-chip">JavaScript</li>
+                            <li class="built-chip">SVG Vector Assets</li>
+                            <li class="built-chip">Brand Governance</li>
+                            <li class="built-chip">Typography Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Pagination: Next Project -->
+                <div class="case-study-pagination">
+                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                    <a href="hrkh.html" class="pagination-next-link">
+                        <span data-i18n="p5_title">منصة وحملات شركة حركة</span>
+                        <i data-lucide="arrow-up-left"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="../index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html#work" data-i18n="nav_work">المشاريع</a>
+                    <a href="../index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="../index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="../index.html#about" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

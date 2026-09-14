@@ -24,6 +24,10 @@ const translations = {
         heading_work: "مشاريع وأنظمة تصنع أثراً حقيقياً في السوق.",
         link_discuss_project: "طلب استشارة أو مشروع",
         
+        p0_title: "منظومة نحت العقارية المتكاملة (ERP)",
+        p0_desc: "نظام ERP عقاري شامل لإدارة العمليات التشغيلية، والقيود المالية، والكوادر البشرية، وإدارة المشاريع والوحدات.",
+        status_erp: "نظام مؤسسي نشط",
+
         p1_title: "منصة نحت العقارية (CRM)",
         p1_desc: "نظام CRM عقاري ذكي لإدارة العملاء المحتملين، مسارات المبيعات، ولوحات تحكم الأداء التفاعلية.",
         status_active: "نظام مباشر ونشط",
@@ -83,7 +87,56 @@ const translations = {
         btn_whatsapp: "واتساب مباشر",
         
         footer_role: "متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية",
-        footer_credit: "Designed and built from scratch."
+        footer_credit: "Designed and built from scratch.",
+
+        // --- Case Studies Shared Keys ---
+        cs_back: "العودة لكافة المشاريع",
+        cs_sidebar_highlights: "أبرز الخصائص",
+        cs_sidebar_built_with: "التقنيات المستخدمة",
+        cs_next_project: "المشروع التالي",
+        cs_action_live: "معاينة المنصة الحية",
+
+        // --- Case Studies Project-Specific Keys ---
+        cs_erp_tagline: "منظومة تخطيط الموارد وإدارة العمليات المؤسسية",
+        cs_erp_status: "نظام مؤسسي نشط",
+        cs_erp_title: "منظومة نحت العقارية المتكاملة (ERP)",
+        cs_erp_lead: "منصة رقمية مؤسسية تجمع بين ذكاء الأعمال (BI) والإدارة المالية المتقدمة، وإدارة الكوادر والمشاريع العقارية في بيئة تشغيلية موحدة ومؤمنة بالكامل تدعم التوسع والنمو.",
+        cs_erp_sec: "معمارية حوكمة وصلاحيات RBAC مشددة",
+
+        cs_crm_tagline: "منصة ذكاء الأعمال وإدارة مسارات المبيعات العقارية",
+        cs_crm_title: "منصة نحت العقارية (CRM)",
+        cs_crm_lead: "نظام رقمي سحابي متكامل لإدارة علاقات العملاء في قطاع الوساطة والتطوير العقاري، يربط بين الحملات الإعلانية ومسار الصفقات، ويوفر لوحات تحكم فورية لتحليل أداء الوسطاء والمبيعات.",
+        cs_crm_leads: "+15,000 عميل محتمل تمت معالجتهم",
+
+        cs_ts_tagline: "المنصة الرقمية الموحدة لشركات المجموعة",
+        cs_ts_title: "منصة مجموعة T&S القابضة",
+        cs_ts_lead: "منصة استثمارية ومؤسسية تعيد هيكلة الحضور الرقمي لمجموعة T&S، موحدة 10 قطاعات أعمال كبرى تحت مظلة بصرية واستراتيجية واحدة تعكس القوة المالية وموثوقية المجموعة.",
+        cs_ts_action: "زيارة الموقع المؤسسي",
+        cs_ts_subs: "10 قطاعات أعمال موحدة",
+
+        cs_sportx_tagline: "منظومة إدارة الرياضة والبطولات وحجوزات الملاعب",
+        cs_sportx_title: "منصة SportX الرياضية",
+        cs_sportx_lead: "منصة رقمية شاملة لإدارة الفعاليات الرياضية، توفر حلول حجز الملاعب الفورية، إدارة لوائح وجداول البطولات، وتجربة جماهيرية تفاعلية تعتمد على البيانات لتوسيع قاعدة المشاركين.",
+        cs_sportx_action: "منصة البطولات والملاعب",
+        cs_sportx_users: "+20,000 مستخدم وحجز رياضي",
+
+        cs_brand_tagline: "منظومة موحدة للأدلة الإرشادية والأصول البصرية",
+        cs_brand_title: "بوابة ونظام الهوية البصرية",
+        cs_brand_lead: "بوابة رقمية تفاعلية تجمع كافة أدلة الهوية، الأصول البصرية، والخطوط، لتكون المرجع الموحد لفرق التصميم والتسويق والشركاء، وتضمن ثبات الشخصية البصرية عبر كافة المنصات.",
+        cs_brand_action: "نظام تصميم رقمي حي",
+        cs_brand_tokens: "+200 أصل بصري ومحدد تصميم موحد",
+
+        cs_hrkh_tagline: "بناء الحضور الرقمي ومسارات استقطاب الكفاءات والحلول الإدارية",
+        cs_hrkh_title: "منصة وحملات شركة حركة",
+        cs_hrkh_lead: "منظومة تسويقية ورقمية متكاملة لشركة 'حركة' المتخصصة في استقطاب الكفاءات والحلول الإدارية، تجمع بين منصة B2B احترافية، وحملات نمو موجهة لأصحاب القرار في كبرى الشركات.",
+        cs_hrkh_live: "حلول استقطاب كفاءات B2B",
+        cs_hrkh_clients: "+30 شراكة مؤسسية في 6 أشهر",
+
+        cs_ri88_tagline: "تطوير الهوية البصرية، التغليف، وتجربة العلامة التجارية",
+        cs_ri88_title: "الهوية التجارية Ri88",
+        cs_ri88_lead: "مشروع متكامل لتأسيس الهوية التجارية وتجربة العميل لعلامة Ri88 في قطاع الأغذية والمشروبات، يجمع بين التصميم البصري الرفيع، هندسة التغليف، وصياغة تجربة حسية فريدة للعميل في نقاط البيع.",
+        cs_ri88_action: "تجربة علامة متكاملة 360°",
+        cs_ri88_metric: "هندسة تغليف وخط إنتاج متكامل"
     },
     en: {
         nav_work: "Projects",
@@ -104,6 +157,10 @@ const translations = {
         heading_work: "Systems and platforms that drive measurable market impact.",
         link_discuss_project: "Discuss a project",
         
+        p0_title: "Naht Enterprise ERP & Operations",
+        p0_desc: "End-to-end real estate ERP orchestrating corporate operations, general ledger accounting, HR workflows, and project asset modeling.",
+        status_erp: "Active ERP system",
+
         p1_title: "NAHT Real Estate CRM & BI",
         p1_desc: "Intelligent real estate CRM platform with automated lead pipeline, performance analytics, and live broker dashboards.",
         status_active: "Actively maintained",
@@ -163,7 +220,56 @@ const translations = {
         btn_whatsapp: "Direct WhatsApp",
         
         footer_role: "Specialist in Business Intelligence, Marketing, Brand Identity & Growth · Riyadh, Saudi Arabia",
-        footer_credit: "Designed and built from scratch."
+        footer_credit: "Designed and built from scratch.",
+
+        // --- Case Studies Shared Keys ---
+        cs_back: "Back to all projects",
+        cs_sidebar_highlights: "Key Highlights",
+        cs_sidebar_built_with: "Technologies & Capabilities",
+        cs_next_project: "Next Project",
+        cs_action_live: "Visit Live Platform",
+
+        // --- Case Studies Project-Specific Keys ---
+        cs_erp_tagline: "Enterprise Resource Planning & Operations Engine",
+        cs_erp_status: "Active ERP system",
+        cs_erp_title: "Naht Enterprise ERP & Operations",
+        cs_erp_lead: "Enterprise platform uniting Business Intelligence (BI), automated general ledger accounting, HR workflows, and real estate portfolio assets in a unified, secured operational environment.",
+        cs_erp_sec: "Hardened RBAC governance & audit trails",
+
+        cs_crm_tagline: "Real Estate Sales CRM & Business Intelligence Engine",
+        cs_crm_title: "NAHT Real Estate Sales CRM & BI",
+        cs_crm_lead: "Cloud-native CRM platform built for high-velocity real estate brokerage, tracking leads from ad spend to closed deals with real-time broker analytics and deal pipelines.",
+        cs_crm_leads: "+15,000 qualified buyer leads processed",
+
+        cs_ts_tagline: "Unified Corporate Digital Ecosystem for 10 Subsidiaries",
+        cs_ts_title: "T&S Holding Corporate Platform",
+        cs_ts_lead: "Flagship corporate platform restructuring the digital presence of T&S Holding, unifying 10 high-growth business sectors under a single authoritative design system.",
+        cs_ts_action: "Explore Corporate Platform",
+        cs_ts_subs: "10 enterprise business sectors unified",
+
+        cs_sportx_tagline: "Sports Management, Tournament Ops & Facility Booking",
+        cs_sportx_title: "SportX Sports Management Platform",
+        cs_sportx_lead: "Integrated digital ecosystem for sports venue reservations, league tournament scheduling, automated referee logs, and high-engagement community player experiences.",
+        cs_sportx_action: "Sports Ops Ecosystem",
+        cs_sportx_users: "+20,000 athlete bookings & participants",
+
+        cs_brand_tagline: "Living Design System & Brand Asset Repository",
+        cs_brand_title: "Brand Architecture & Design Hub",
+        cs_brand_lead: "Centralized interactive brand portal housing vector assets, design tokens, color typography specs, and usage guidelines to guarantee aesthetic consistency across all corporate subsidiaries.",
+        cs_brand_action: "Living Design System",
+        cs_brand_tokens: "+200 verified vector assets & tokens",
+
+        cs_hrkh_tagline: "B2B Talent Acquisition Funnels & Enterprise Solutions",
+        cs_hrkh_title: "HRKH Recruitment & HR Solutions",
+        cs_hrkh_lead: "Strategic B2B digital platform and targeted performance campaigns for HRKH, driving executive headhunting and organizational talent solutions across Saudi Arabia.",
+        cs_hrkh_live: "B2B Talent Funnels",
+        cs_hrkh_clients: "+30 enterprise corporate contracts in 6 months",
+
+        cs_ri88_tagline: "Visual Identity, Packaging & Brand Experience",
+        cs_ri88_title: "Ri88 Commercial Identity",
+        cs_ri88_lead: "End-to-end commercial identity and consumer experience design for Ri88 in the gourmet F&B sector, merging refined visual branding, packaging engineering, and sensory unboxing.",
+        cs_ri88_action: "360° Brand Experience",
+        cs_ri88_metric: "Complete packaging line engineering"
     }
 };
 
