@@ -183,7 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Theme Initialization
-    const savedTheme = localStorage.getItem('rayyan_theme') || 'emerald';
+    let savedTheme = localStorage.getItem('rayyan_theme') || 'teal';
+    if (savedTheme === 'emerald') savedTheme = 'teal';
     setTheme(savedTheme);
 
     const themeToggleBtn = document.getElementById('themeToggleBtn');

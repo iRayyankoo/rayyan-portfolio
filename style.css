@@ -20,14 +20,14 @@
     --color-muted: #8a929b;
     --color-dot-inactive: #2c3338;
     
-    /* Default Accent: Cyber Emerald (#00d294) */
-    --color-accent: #00d294;
-    --color-accent-bright: #10e0a1;
-    --color-accent-10: rgba(0, 210, 148, 0.10);
-    --color-accent-15: rgba(0, 210, 148, 0.15);
-    --color-accent-20: rgba(0, 210, 148, 0.20);
-    --color-accent-glow: rgba(0, 210, 148, 0.12);
-    --color-accent-border: rgba(0, 210, 148, 0.45);
+    /* Primary Accent: Cyan Teal (#24B1B1) */
+    --color-accent: #24B1B1;
+    --color-accent-bright: #32caca;
+    --color-accent-10: rgba(36, 177, 177, 0.10);
+    --color-accent-15: rgba(36, 177, 177, 0.15);
+    --color-accent-20: rgba(36, 177, 177, 0.20);
+    --color-accent-glow: rgba(36, 177, 177, 0.14);
+    --color-accent-border: rgba(36, 177, 177, 0.45);
     
     /* Typography Tokens */
     --font-mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -48,6 +48,17 @@
 }
 
 /* Multi-theme support */
+[data-theme="teal"],
+[data-theme="emerald"] {
+    --color-accent: #24B1B1;
+    --color-accent-bright: #32caca;
+    --color-accent-10: rgba(36, 177, 177, 0.10);
+    --color-accent-15: rgba(36, 177, 177, 0.15);
+    --color-accent-20: rgba(36, 177, 177, 0.20);
+    --color-accent-glow: rgba(36, 177, 177, 0.14);
+    --color-accent-border: rgba(36, 177, 177, 0.45);
+}
+
 [data-theme="cobalt"] {
     --color-accent: #3b82f6;
     --color-accent-bright: #60a5fa;
