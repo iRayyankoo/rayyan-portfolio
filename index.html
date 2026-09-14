@@ -1041,50 +1041,137 @@
         <!-- ==========================================================================
              SECTION 4: ABOUT ME & SKILLS
              ========================================================================== -->
+        <!-- ==========================================================================
+             SECTION 4: ABOUT ME & SKILLS (Sunny Patel 2-Column Architecture)
+             ========================================================================== -->
         <section id="about" class="section-block">
             <div class="container">
-                <span class="section-tag">
-                    <span class="line" aria-hidden="true"></span>
-                    <span data-i18n="tag_about">عن مسيرتي</span>
-                </span>
                 
-                <div class="about-portrait-mobile">
-                    <div class="about-portrait-frame">
-                        <img src="assets/profile.jpg" alt="Rayyan Aldohian" loading="lazy">
-                    </div>
-                </div>
+                <div class="about-grid-layout">
+                    <!-- Column 1: Portrait Card & Definition List -->
+                    <div class="about-sidebar">
+                        <span class="section-tag">
+                            <span class="line" aria-hidden="true"></span>
+                            <span data-i18n="tag_about">عن مسيرتي</span>
+                        </span>
 
-                <div class="about-grid">
-                    <div>
-                        <h2 class="about-lead font-display" data-i18n="about_heading">
-                            أجمع بين دقة الأرقام وذكاء الأعمال، وإبداع الهوية البصرية، وقوة الذكاء الاصطناعي لصناعة نمو حقيقي.
+                        <div class="portrait-card-wrap">
+                            <div class="portrait-ambient-glow" aria-hidden="true"></div>
+                            <div class="portrait-frame">
+                                <img src="assets/profile.jpg" alt="Rayyan Aldohian" class="portrait-img" loading="lazy">
+                                <div class="portrait-fade-overlay"></div>
+                            </div>
+                        </div>
+
+                        <dl class="about-meta-list">
+                            <div class="about-meta-row">
+                                <dt data-i18n="about_meta_based_in_dt">المقر</dt>
+                                <dd data-i18n="about_meta_based_in_dd">الرياض، المملكة العربية السعودية</dd>
+                            </div>
+                            <div class="about-meta-row">
+                                <dt data-i18n="about_meta_currently_dt">حالياً</dt>
+                                <dd data-i18n="about_meta_currently_dd">أخصائي أول ذكاء أعمال ونمو</dd>
+                            </div>
+                            <div class="about-meta-row">
+                                <dt data-i18n="about_meta_education_dt">التعليم</dt>
+                                <dd data-i18n="about_meta_education_dd">جامعة ولاية أيداهو (ISU)</dd>
+                            </div>
+                            <div class="about-meta-row">
+                                <dt data-i18n="about_meta_focus_dt">التخصص</dt>
+                                <dd data-i18n="about_meta_focus_dd">ذكاء الأعمال، نظم AI، ونمو العلامات</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Column 2: Lead Headline, Narrative & Now List -->
+                    <div class="about-main">
+                        <h2 class="about-headline font-display" data-i18n="about_heading">
+                            أجمع بين دقة ذكاء الأعمال، قوة الذكاء الاصطناعي، وإبداع الهوية لصناعة أثر ونمو استثنائي.
                         </h2>
-                        <p class="about-body" data-i18n="about_p1">
-                            تنطلق منهجي في العمل من الفهم العميق للبيانات: أرى في الأرقام خارطة طريق ترشدنا بدقة إلى أين يجب أن نتجه. أحوّل هذه الرؤى إلى هويات بصرية راسخة، ومسارات تسويقية عالية التحويل، وأنظمة رقمية متكاملة تدعم الأهداف المالية والتوسعية للعلامات التجارية.
-                        </p>
-                        <p class="about-body" data-i18n="about_p2">
-                            بدمج أدوات ونماذج الذكاء الاصطناعي (AI) في صلب العمليات، نختصر دورات الإنتاج، ونوفر تحليلات تنبؤية أكثر دقة لسلوك الجمهور، مما يمنح المشاريع سرعة استثنائية وقدرة على التوسع بثبات واستدامة.
-                        </p>
-                    </div>
 
-                    <div>
-                        <h3 class="card-title" style="margin-bottom: 1.25rem;" data-i18n="skills_title">المهارات والتقنيات الأساسية</h3>
-                        <div class="skills-badge-list">
-                            <span class="skill-badge"><i data-lucide="check"></i> Business Intelligence (BI)</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Artificial Intelligence (AI)</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Brand Identity Building</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Growth & CRO</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Marketing Analytics</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Paid Ads (Google & Meta)</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> CRM Architecture</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Interactive Dashboards</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Marketing Automation</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> UI/UX Design</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Web Platforms Development</span>
-                            <span class="skill-badge"><i data-lucide="check"></i> Content Strategy</span>
+                        <div class="about-story">
+                            <p data-i18n="about_p1">
+                                تنطلق منهجيتي في العمل من الفهم العميق للبيانات: أرى في الأرقام <em class="text-ember">خارطة طريق ترشدنا بدقة</em> إلى أين يجب أن نتجه. أحوّل هذه الرؤى إلى هويات بصرية راسخة، ومسارات تسويقية عالية التحويل، وأنظمة رقمية متكاملة تدعم الأهداف المالية والتوسعية للعلامات التجارية.
+                            </p>
+                            <p data-i18n="about_p2">
+                                بدمج أدوات ونماذج الذكاء الاصطناعي (AI) في صلب العمليات، نختصر دورات الإنتاج، ونوفر تحليلات تنبؤية دقيقة لسلوك الجمهور. <em class="text-ember">لا أقدّم مجرد تقارير عابرة</em>، بل أبني أنظمة نمو مؤتمتة ومستدامة تمكّن الشركات من التوسع بثبات واتخاذ قرارات حاسمة بثقة وسرعة.
+                            </p>
+                        </div>
+
+                        <!-- Now Section -->
+                        <div class="about-now-section">
+                            <span class="section-tag">
+                                <span class="line" aria-hidden="true"></span>
+                                <span data-i18n="about_now_tag">التركيز الحالي</span>
+                            </span>
+                            <ul class="about-now-list">
+                                <li>
+                                    <span class="now-dash"></span>
+                                    <span data-i18n="about_now_1">بناء لوحات ذكاء أعمال (BI) متقدمة ونماذج بيانات استراتيجية للشركات</span>
+                                </li>
+                                <li>
+                                    <span class="now-dash"></span>
+                                    <span data-i18n="about_now_2">تطوير حلول وأتمتة تسويقية قائمة على نماذج الذكاء الاصطناعي التوليدي</span>
+                                </li>
+                                <li>
+                                    <span class="now-dash"></span>
+                                    <span data-i18n="about_now_3">خريج معلوماتية الأعمال من جامعة ولاية أيداهو، ورئيس النادي السعودي لـ 5 سنوات</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Bottom Full-Width Section: Categorized Capabilities & Tools -->
+                <div class="about-tools-section">
+                    <span class="section-tag">
+                        <span class="line" aria-hidden="true"></span>
+                        <span data-i18n="about_tools_tag">أدوات وأنظمة أعتمد عليها</span>
+                    </span>
+                    <div class="about-tools-grid">
+                        <div class="tool-category">
+                            <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_bi">ذكاء الأعمال والبيانات</span></h3>
+                            <ul class="tool-badge-list">
+                                <li>Business Intelligence (BI)</li>
+                                <li>Interactive Dashboards</li>
+                                <li>Marketing Analytics</li>
+                                <li>Data Modeling & SQL</li>
+                                <li>KPI Architecture</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_ai">الذكاء الاصطناعي والأتمتة</span></h3>
+                            <ul class="tool-badge-list">
+                                <li>Artificial Intelligence (AI)</li>
+                                <li>Generative AI Workflows</li>
+                                <li>Marketing Automation</li>
+                                <li>Predictive Analytics</li>
+                                <li>AI Prompt Engineering</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_growth">النمو والتسويق الرقمي</span></h3>
+                            <ul class="tool-badge-list">
+                                <li>Growth Strategy & CRO</li>
+                                <li>Paid Ads (Google & Meta)</li>
+                                <li>CRM Architecture</li>
+                                <li>Funnel Optimization</li>
+                                <li>Campaign Strategy</li>
+                            </ul>
+                        </div>
+                        <div class="tool-category">
+                            <h3 class="tool-cat-title"><span class="cat-dash"></span><span data-i18n="about_cat_design">الهوية والتجربة الرقمية</span></h3>
+                            <ul class="tool-badge-list">
+                                <li>Brand Identity Building</li>
+                                <li>UI/UX Strategy</li>
+                                <li>Web Platforms</li>
+                                <li>Creative Direction</li>
+                                <li>Design Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
