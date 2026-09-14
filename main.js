@@ -136,6 +136,10 @@ const translations = {
         cs_ts_hl3: "زمن تحميل فائق (Sub-second load) وبنية سحابية موزعة عبر CDN.",
         cs_ts_hl4: "تصميم متجاوب بالكامل مع أعلى معايير سهولة الوصول وتجربة المستخدم.",
         cs_ts_hl5: "بوابة تواصل موحدة لربط المستثمرين والعملاء بالقطاع المستهدف مباشرة.",
+        cs_ts_p1: "مع توسع مجموعة <strong>T&S القابضة</strong> في عدة قطاعات استثمارية شملت التطوير العقاري، الحلول اللوجستية، إدارة الفعاليات الرياضية، والضيافة، نشأت الحاجة الملحة إلى منصة رقمية مركزية توحد الحضور المؤسسي وتلغي تشتت الهوية. <em>الهدف كان بناء واجهة استثمارية واحدة تعكس الحجم الحقيقي لأصول المجموعة وموثوقيتها المالية.</em>",
+        cs_ts_p2: "تم تأسيس معمارية بصرية وحوكمة علامات تجارية <code>Brand Hierarchy Architecture</code> تفصل بوضوح بين الهوية الاستثمارية للشركة القابضة وبين الخصوصية التشغيلية لكل شركة تابعة، مما أتاح استعراض محفظة المشاريع والشراكات بنقرة واحدة عبر بوابات تفاعلية متخصصة لكل قطاع.",
+        cs_ts_p3: "على الصعيد التقني، صُممت البنية التحتية لتقديم أداء فائق بزمن تحميل يقل عن ثانية واحدة عالمياً عبر شبكات <code>Edge CDN</code>، مع دعم كامل ومتقن للغتين العربية والإنجليزية، وتطبيق أفضل ممارسات <code>Technical SEO</code> التي رفعت الظهور العضوي للمجموعة بنسبة تفوق <em>140%</em> أمام كبرى الصناديق والمؤسسات.",
+        cs_ts_p4: "تحولت المنصة من مجرد موقع تعريفي إلى أصل رقمي استراتيجي يعزز الموثوقية ويسرع إبرام الشراكات والاتفاقيات الاستثمارية، وأصبحت المرجع الرقمي المعتمد للإعلاميين والمستثمرين للوصول إلى تقارير وبيانات المجموعة المؤسسية.",
 
         cs_sportx_tagline: "منظومة إدارة الرياضة والبطولات وحجوزات الملاعب",
         cs_sportx_title: "منصة SportX الرياضية",
@@ -147,6 +151,10 @@ const translations = {
         cs_sportx_hl3: "إصدار تذاكر ذكية عبر QR Code لتسهيل الدخول عند البوابات.",
         cs_sportx_hl4: "ربط آمن مع بوابات الدفع الإلكتروني (مدى، فيزا، و Apple Pay).",
         cs_sportx_hl5: "لوحة تحكم للمنظمين وإحصائيات مباشرة لنسب الحجوزات والإيرادات اليومية.",
+        cs_sportx_p1: "تشهد المملكة حراكاً رياضياً غير مسبوق وتزايداً في الاهتمام بجودة الحياة والرياضة المجتمعية. ومع ذلك، عانى منظمو البطولات ومشغلو الملاعب من الاعتماد على الرسائل النصية والاتصالات اليدوية لتأكيد الحجوزات والمدفوعات. <em>كان الهدف بناء منظومة رقمية مؤتمتة تلغي تضارب المواعيد وتوفر تجربة رياضية تفاعلية.</em>",
+        cs_sportx_p2: "تم تطوير محرك حجز متزامن لحظياً <code>Real-time Slot Synchronization</code> يعتمد على <code>WebSockets</code> و <code>Redis</code> لمنع الحجوزات المزدوجة نهائياً. إلى جانب ذلك، دُمجت خوارزمية لتوليد جداول المسابقات <em>Tournament Brackets</em> وحساب الترتيب وفروق الأهداف تلقائياً دون أي تدخل بشري.",
+        cs_sportx_p3: "أتاحت المنصة نظام تذاكر إلكتروني يصدر رموز <code>QR Codes</code> مشفرة تتيح المسح السريع عبر بوابات الدخول في ثوانٍ معدودة، مع ربط كامل مع بوابات الدفع الوطنية (مدى و Apple Pay)، مما وفر تجربة دفع فائقة السرعة والأمان للجماهير والرياضيين.",
+        cs_sportx_p4: "حققت المنصة أثراً ملموساً بتنفيذ أكثر من <em>45,000 عملية حجز</em> خلال مواسم التشغيل، ورفعت معدل إشغال الملاعب بنسبة <em>35%</em> عبر خوارزميات التسعير الديناميكي في أوقات الذروة، مع تقديم لوحات قياس مالية مباشرة لملاك المنشآت الرياضية.",
 
         cs_brand_tagline: "منظومة موحدة للأدلة الإرشادية والأصول البصرية",
         cs_brand_title: "بوابة ونظام الهوية البصرية",
@@ -158,6 +166,10 @@ const translations = {
         cs_brand_hl3: "معايير استخدام الشعار والمساحات الآمنة لمنع التشوه البصري.",
         cs_brand_hl4: "دليل طباعة ومواصفات خامات التغليف لتوحيد الجودة عبر الموردين.",
         cs_brand_hl5: "مكتبة أيقونات ورموز مخصصة تعكس روح وهوية العلامة التجارية.",
+        cs_brand_p1: "مع توسع منظومة الأعمال وتعدد الشركاء والوكالات الإعلانية، أصبحت ملفات الهوية بصيغ PDF التقليدية عرضة للتقادم والتشوه البصري. <em>كان التحدي هو تحويل أدلة الهوية البصرية من وثائق ورقية جامدة إلى بوابة تفاعلية حية ومحدثة لحظياً.</em>",
+        cs_brand_p2: "تم بناء المنظومة استناداً إلى محددات التصميم الرقمية <code>Design Tokens</code> لتوحيد لغة التصميم عبر كافة المنصات والتطبيقات. توفر البوابة رموز الألوان بدقة (HEX, RGB, CMYK, Pantone)، ومقاييس الخطوط التيبوغرافية، وإرشادات الاستخدام الصحيح والخاطئ في بيئة تفاعلية سهلة البحث.",
+        cs_brand_p3: "يتضمن النظام مستودعاً سحابياً يتيح لفرق العمل والشركاء تنزيل الشعارات والأيقونات والملفات المتجهية <code>Vector SVG & AI</code> بدقة عالية بنقرة واحدة، مع تصنيفها حسب قطاع الأعمال ونوع الاستخدام، مما يضمن الامتثال التام لهوية العلامة التجارية.",
+        cs_brand_p4: "ساهمت البوابة في تقليص زمن إنتاج واعتماد المواد التسويقية بنسبة <em>40%</em>، وضمنت ظهوراً احترافياً متطابقاً في المعارض والمؤتمرات والحملات الرقمية، مما رسخ حضوراً ذهنياً موحداً يعكس القوة المؤسسية للمجموعة.",
 
         cs_hrkh_tagline: "بناء الحضور الرقمي ومسارات استقطاب الكفاءات والحلول الإدارية",
         cs_hrkh_title: "منصة وحملات شركة حركة",
@@ -169,6 +181,10 @@ const translations = {
         cs_hrkh_hl3: "إطلاق حملات تسويق نمو موجهة على LinkedIn للمدراء التنفيذيين ومسؤولي HR.",
         cs_hrkh_hl4: "هندسة صفحة هبوط ذات معدل تحويل مرتفع لشرح الخدمات والحلول.",
         cs_hrkh_hl5: "لوحة قياس فورية لطلبات التوظيف ومتابعة عقود الشركات الجديدة.",
+        cs_hrkh_p1: "في سوق استقطاب الكفاءات والحلول الإدارية عالي التنافسية، واجهت شركة <strong>حركة</strong> تحدي بناء حضور رقمي يبرز الاحترافية العالية والالتزام بمعايير التوطين، ويجذب أصحاب القرار في كبرى الشركات. <em>كان الهدف بناء منصة B2B وحملات نمو موجهة تحول الزوار المؤهلين إلى عقود تشغيلية مستدامة.</em>",
+        cs_hrkh_p2: "صُممت وهُندست منصة الويب لتبسيط مسار طلب الكفاءات عبر نماذج تفاعلية ذكية تجمع المتطلبات الوظيفية وتوجهها فورياً لفريق الاستشارات لتقديم العروض المالية في زمن قياسي، مع تطبيق معايير تحسين معدل التحويل <code>CRO</code> في كافة صفحات الهبوط.",
+        cs_hrkh_p3: "أُطلقت حملات نمو رقمية موجهة عبر <code>LinkedIn Ads</code> و <code>Google Search Ads</code> تستهدف الكلمات الدلالية المرتبطة بخدمات التوظيف المؤسسي والإسناد الإداري، مع رسائل إعلانية تركز على سرعة الاستجابة وموثوقية الكوادر، وقياس مستمر لتكلفة اكتساب العميل المؤسسي <em>CAC</em>.",
+        cs_hrkh_p4: "أثمرت الاستراتيجية عن إغلاق أكثر من <em>30 عقداً مؤسسياً</em> مع كبرى الشركات خلال النصف الأول، مع رفع معدل تحويل الزوار إلى طلبات عروض أسعار بنسبة <em>28%</em>، وترسيخ مكانة 'حركة' كواحدة من أسرع الشركات نمواً في قطاع حلول الأعمال.",
 
         cs_ri88_tagline: "تطوير الهوية البصرية، التغليف، وتجربة العلامة التجارية",
         cs_ri88_title: "الهوية التجارية Ri88",
@@ -179,7 +195,11 @@ const translations = {
         cs_ri88_hl2: "تصميم هندسي متقن لعلب التغليف مع مراعاة الجودة وسهولة الاستخدام.",
         cs_ri88_hl3: "اختيار خامات ورق وطباعة راقية تعزز من قيمة المنتج الاستهلاكي.",
         cs_ri88_hl4: "تصميم تجربة فتح العلبة (Unboxing) لتترك انطباعاً استثنائياً لدى العميل.",
-        cs_ri88_hl5: "دليل إرشادي لاستخدام الهوية ونبرة الصوت (Tone of Voice) للعلامة."
+        cs_ri88_hl5: "دليل إرشادي لاستخدام الهوية ونبرة الصوت (Tone of Voice) للعلامة.",
+        cs_ri88_p1: "يشهد قطاع الأغذية والمشروبات الفاخرة <em>Specialty F&B</em> منافسة متسارعة، حيث لا يكفي تقديم منتج عالي الجودة فقط دون هوية بصرية متميزة وتجربة حسية تبرز في نقاط البيع. <em>كان الهدف بناء لغة بصرية وتجربة تغليف تترك انطباعاً راقياً وتخلق ارتباطاً عاطفياً مع المستهلك من اللحظة الأولى.</em>",
+        cs_ri88_p2: "تم ابتكار شعار عصري يجمع بين الأصالة والتفرد البصري، مدعوماً بلوحة ألوان ترابية ودافئة مستوحاة من جودة المكونات والتحميص الطبيعي. صيغت الخطوط والأنماط التجريدية <code>Brand Patterns</code> لتعكس الفخامة والانسيابية وتمنح العلامة طابعاً مريحاً وجذاباً في كافة أشكال العرض.",
+        cs_ri88_p3: "صُممت عبوات التغليف، والأكياس الورقية، والأكواب بلمسات ملمسية مختارة بعناية تعتمد على مواد صديقة للبيئة وتشطيبات طباعة دقيقة. روعيت في التصميم رحلة فتح المنتج <code>Unboxing Experience</code>، مما حوّل كل عبوة إلى قطعة تسويقية تشجع العملاء على توثيق التجربة ومشاركتها عضوياً على منصات التواصل.",
+        cs_ri88_p4: "ساهم التموضع البصري الاحترافي في ترسيخ علامة Ri88 كوجهة مفضلة، محققاً تفاعلاً لافتاً ومعدلات ولاء وإعادة شراء استثنائية، مع إشادة واسعة بتميز تفاصيل التغليف واتساق التجربة البصرية بين المتجر الواقعي والمحتوى الرقمي."
     },
     en: {
         nav_work: "Projects",
@@ -312,6 +332,10 @@ const translations = {
         cs_ts_hl3: "Sub-second global load times powered by distributed cloud edge CDN.",
         cs_ts_hl4: "Fully responsive accessible UI meeting strict enterprise UX and WCAG standards.",
         cs_ts_hl5: "Centralized corporate contact gateway directing investors to relevant subsidiaries.",
+        cs_ts_p1: "As <strong>T&S Holding Group</strong> expanded across multiple diversified sectors—including real estate development, supply chain logistics, sports entertainment, and premium hospitality—a unified corporate platform became essential to eliminate brand fragmentation. <em>The mission was to engineer a single authoritative investment portal reflecting the group's true asset scale and institutional financial standing.</em>",
+        cs_ts_p2: "We established an enterprise <code>Brand Hierarchy Architecture</code> clearly delineating the parent holding company's corporate identity from the operational uniqueness of each subsidiary. This allowed investors and partners to seamlessly explore portfolios and joint ventures across dedicated sector hubs with a single click.",
+        cs_ts_p3: "Technically, the cloud infrastructure was architected for sub-second global page loads via distributed <code>Edge CDN</code> networks, pairing complete bilingual parity (Arabic & English) with rigorous <code>Technical SEO</code> standards that lifted institutional organic visibility by over <em>140%</em> across regional investment funds.",
+        cs_ts_p4: "The platform evolved from a corporate profile into a strategic digital asset that accelerates deal-making and joint-venture negotiations, serving as the verified portal for analysts, sovereign partners, and media stakeholders.",
 
         cs_sportx_tagline: "Sports Management, Tournament Ops & Facility Booking",
         cs_sportx_title: "SportX Sports Management Platform",
@@ -323,6 +347,10 @@ const translations = {
         cs_sportx_hl3: "Encrypted QR code ticketing system for rapid turnstile access and check-in.",
         cs_sportx_hl4: "Secure payment gateway integration with Mada, Visa, and Apple Pay.",
         cs_sportx_hl5: "Organizer dashboard with live analytics on booking density and daily revenue.",
+        cs_sportx_p1: "With the unprecedented sports surge and community athletic participation in Saudi Arabia, venue operators and league organizers struggled with fragmented SMS bookings, phone calls, and manual payment reconciliations. <em>The goal was to construct an automated digital platform that eliminates double-bookings and provides an immersive athletic experience.</em>",
+        cs_sportx_p2: "We built a <code>Real-time Slot Synchronization</code> engine powered by <code>WebSockets</code> and <code>Redis</code> to eliminate concurrency conflicts and double bookings. In parallel, an automated <em>Tournament Brackets</em> algorithm schedules group stages, knockout rounds, points tables, and goal differentials autonomously.",
+        cs_sportx_p3: "The ecosystem features encrypted <code>QR Code</code> ticketing for rapid contactless turnstile entry in seconds, fully integrated with national payment rails (Mada, Visa, and Apple Pay) to deliver zero-friction checkout for players and fans.",
+        cs_sportx_p4: "SportX processed over <em>45,000 bookings</em> across operating seasons and drove a <em>35%</em> increase in facility utilization through dynamic peak-hour pricing models, delivering transparent real-time revenue telemetry to venue owners.",
 
         cs_brand_tagline: "Living Design System & Brand Asset Repository",
         cs_brand_title: "Brand Architecture & Design Hub",
@@ -334,6 +362,10 @@ const translations = {
         cs_brand_hl3: "Strict logo usage standards, safety margins, and visual distortion rules.",
         cs_brand_hl4: "Packaging and print material specifications ensuring vendor production parity.",
         cs_brand_hl5: "Bespoke icon library tailored specifically to the brand identity language.",
+        cs_brand_p1: "As corporate operations scale across multiple agencies and commercial partners, static PDF brand guidelines quickly become obsolete, leading to visual dilution. <em>The challenge was transforming static identity documents into an interactive, living digital brand portal updated in real time.</em>",
+        cs_brand_p2: "The system was engineered on standardized <code>Design Tokens</code> to unify design language across web, apps, and print. The portal exposes precise color tokens (HEX, RGB, CMYK, Pantone), typographic scales, and strict do's-and-don'ts rules in a searchable developer-friendly interface.",
+        cs_brand_p3: "It houses a cloud-native vector repository allowing internal teams and agency partners to download verified <code>Vector SVG & AI</code> brand assets with one click, filtered by subsidiary and media format to enforce flawless corporate governance.",
+        cs_brand_p4: "The hub compressed marketing asset review cycles by <em>40%</em> and ensured consistent visual authority across international expos, corporate collateral, and advertising campaigns, projecting uncompromising brand discipline.",
 
         cs_hrkh_tagline: "B2B Talent Acquisition Funnels & Enterprise Solutions",
         cs_hrkh_title: "HRKH Recruitment & HR Solutions",
@@ -345,6 +377,10 @@ const translations = {
         cs_hrkh_hl3: "Targeted LinkedIn growth campaigns aimed at C-suite and HR decision-makers.",
         cs_hrkh_hl4: "High-conversion landing page architecture detailing corporate HR solutions.",
         cs_hrkh_hl5: "Real-time recruitment telemetry tracking candidate pipeline and corporate contracts.",
+        cs_hrkh_p1: "In the hyper-competitive talent acquisition and enterprise staffing landscape, <strong>HRKH</strong> needed a digital authority platform that proved institutional compliance and attracted enterprise procurement decision-makers. <em>The objective was to engineer a high-conversion B2B portal and targeted growth funnels converting qualified traffic into recurring corporate contracts.</em>",
+        cs_hrkh_p2: "We designed an intuitive talent request funnel utilizing interactive multi-step forms that capture job specs and immediately route them to executive recruiters for expedited proposal generation, applying strict <code>CRO</code> principles across every landing page.",
+        cs_hrkh_p3: "Targeted B2B performance campaigns were deployed on <code>LinkedIn Ads</code> and high-intent <code>Google Search Ads</code> targeting enterprise HR directors, emphasizing candidate vetting speed, Saudization quotas, and transparent <em>CAC</em> attribution.",
+        cs_hrkh_p4: "The strategy generated over <em>30 long-term enterprise agreements</em> with prominent regional corporations within 6 months, lifted proposal-request conversion by <em>28%</em>, and established HRKH as a premier human capital partner.",
 
         cs_ri88_tagline: "Visual Identity, Packaging & Brand Experience",
         cs_ri88_title: "Ri88 Commercial Identity",
@@ -355,7 +391,11 @@ const translations = {
         cs_ri88_hl2: "Structural packaging engineering harmonizing aesthetic appeal and production durability.",
         cs_ri88_hl3: "Selection of premium paper stocks and tactile finishes to elevate brand prestige.",
         cs_ri88_hl4: "Engineered unboxing choreography designed to maximize delight and social sharing.",
-        cs_ri88_hl5: "Comprehensive brand guideline establishing tone of voice and retail touchpoints."
+        cs_ri88_hl5: "Comprehensive brand guideline establishing tone of voice and retail touchpoints.",
+        cs_ri88_p1: "In the gourmet specialty F&B sector, exceptional product quality must be paired with an unforgettable visual identity and tactile retail experience to command premium pricing. <em>The mission was to craft an authoritative brand world and bespoke packaging choreography that builds instant emotional affinity with discerning consumers.</em>",
+        cs_ri88_p2: "We designed an artisanal logo harmonizing timeless geometric balance with modern minimalism, underpinned by warm earth-tone palettes derived from raw ingredients and roast profiles. Custom <code>Brand Patterns</code> and typography standards were formulated to project understated luxury across retail formats.",
+        cs_ri88_p3: "Every packaging touchpoint—from textured bean pouches to foil-stamped takeaway cups—was engineered using tactile sustainable stocks and precise print finishes. The <code>Unboxing Experience</code> was curated to transform every purchase into an organic, Instagram-worthy consumer moment.",
+        cs_ri88_p4: "The elevated brand positioning cemented Ri88 as a coveted destination brand, driving extraordinary customer repeat-purchase rates and viral social engagement while achieving total visual harmony between physical stores and digital channels."
     }
 };
 
