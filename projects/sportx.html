@@ -141,13 +141,14 @@
 
                 <!-- Actions -->
                 <div class="case-study-actions">
-                    <span class="action-live" style="cursor: default;">
-                        <span data-i18n="cs_sportx_live">منظومة تشغيل وإدارة فعاليات</span>
-                        <i data-lucide="trophy" style="width: 14px; height: 14px;"></i>
+                    <span class="action-primary" style="cursor: default;">
+                        <i data-lucide="trophy" style="width: 15px; height: 15px;"></i>
+                        <span data-i18n="cs_sportx_action">منصة البطولات والملاعب</span>
+                        <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
                     </span>
-                    <span class="action-muted">
+                    <span class="action-secondary">
                         <i data-lucide="trending-up" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
-                        <span data-i18n="cs_sportx_growth">+45,000 عملية حجز مؤكدة</span>
+                        <span data-i18n="cs_sportx_users">+20,000 مستخدم وحجز رياضي</span>
                     </span>
                 </div>
 
@@ -159,7 +160,6 @@
                             <div class="window-dots">
                                 <span></span><span></span><span></span>
                             </div>
-                            <span class="window-url">sportx.sa · platform-system</span>
                         </div>
                         <div class="window-preview">
                             <img src="../assets/p4-sportx.jpg" alt="منصة SportX الرياضية" loading="eager">
@@ -171,33 +171,18 @@
                 <div class="case-study-grid">
                     <!-- Left: Narrative Story -->
                     <div class="case-study-narrative">
-                        <div>
-                            <h2 data-i18n="cs_sportx_h1">السياق والفرصة في القطاع الرياضي</h2>
-                            <p data-i18n="cs_sportx_p1">
-                                تشهد المملكة حراكاً رياضياً غير مسبوق وتزايداً في الاهتمام بجودة الحياة والرياضة المجتمعية. ومع ذلك، عانى منظمو البطولات ومشغلو الملاعب من الاعتماد على الرسائل النصية والاتصالات اليدوية لتأكيد الحجوزات والمدفوعات، مما سبب تضارباً متكرراً في المواعيد وضعفاً في متابعة الإيرادات.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_sportx_h2">محرك الحجز وجدولة البطولات الفورية</h2>
-                            <p data-i18n="cs_sportx_p2">
-                                تم بناء محرك حجز مرن يعتمد على التحديث الفوري <code>Real-time Slot Synchronization</code> باستخدام <code>WebSockets</code> و <code>Redis</code> لمنع الحجوزات المزدوجة نهائياً. إلى جانب ذلك، زُوّدت المنصة بخوارزمية آلية لتوليد جداول المباريات (Tournament Brackets) وحساب النقاط وفروق الأهداف تلقائياً للمسابقات الرسمية والمجتمعية.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_sportx_h3">التذاكر الذكية وبوابات الدفع الوطنية</h2>
-                            <p data-i18n="cs_sportx_p3">
-                                أتاحت المنصة نظام تذاكر إلكتروني يصدر رموز <code>QR</code> ديناميكية مشفرة تمنع الاحتيال وتتيح المسح السريع عبر بوابات الدخول في ثوانٍ معدودة، مع ربط كامل مع بوابات الدفع المعتمدة (مدى و Apple Pay)، مما وفر تجربة دفع آمنة وسلسة للجماهير بنقرة واحدة عبر الهواتف الذكية.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_sportx_h4">النمو ورفع معدلات الإشغال</h2>
-                            <p data-i18n="cs_sportx_p4">
-                                نجحت المنصة في معالجة أكثر من 45,000 حجز خلال مواسم التشغيل، ورفعت معدل إشغال الملاعب بنسبة 35% عبر ميزات العروض في أوقات الذروة وخفض أوقات الفراغ التشغيلي، مع تقديم لوحات قياس واضحة للملاك لمتابعة الأداء المالي لكل ملعب ومنشأة.
-                            </p>
-                        </div>
+                        <p>
+                            تشهد المملكة حراكاً رياضياً غير مسبوق وتزايداً في الاهتمام بجودة الحياة والرياضة المجتمعية. ومع ذلك، عانى منظمو البطولات ومشغلو الملاعب من الاعتماد على الرسائل النصية والاتصالات اليدوية لتأكيد الحجوزات والمدفوعات. <em>كان الهدف بناء منظومة رقمية مؤتمتة تلغي تضارب المواعيد وتوفر تجربة رياضية تفاعلية.</em>
+                        </p>
+                        <p>
+                            تم تطوير محرك حجز متزامن لحظياً <code>Real-time Slot Synchronization</code> يعتمد على <code>WebSockets</code> و <code>Redis</code> لمنع الحجوزات المزدوجة نهائياً. إلى جانب ذلك، دُمجت خوارزمية لتوليد جداول المسابقات <em>Tournament Brackets</em> وحساب الترتيب وفروق الأهداف تلقائياً دون أي تدخل بشري.
+                        </p>
+                        <p>
+                            أتاحت المنصة نظام تذاكر إلكتروني يصدر رموز <code>QR Codes</code> مشفرة تتيح المسح السريع عبر بوابات الدخول في ثوانٍ معدودة، مع ربط كامل مع بوابات الدفع الوطنية (مدى و Apple Pay)، مما وفر تجربة دفع فائقة السرعة والأمان للجماهير والرياضيين.
+                        </p>
+                        <p>
+                            حققت المنصة أثراً ملموساً بتنفيذ أكثر من <em>45,000 عملية حجز</em> خلال مواسم التشغيل، ورفعت معدل إشغال الملاعب بنسبة <em>35%</em> عبر خوارزميات التسعير الديناميكي في أوقات الذروة، مع تقديم لوحات قياس مالية مباشرة لملاك المنشآت الرياضية.
+                        </p>
                     </div>
 
                     <!-- Right: Sidebar -->
@@ -248,10 +233,12 @@
 
                 <!-- Footer Pagination: Next Project -->
                 <div class="case-study-pagination">
-                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
-                    <a href="brand-hub.html" class="pagination-next-link">
-                        <span data-i18n="p4_title">بوابة ونظام الهوية البصرية</span>
-                        <i data-lucide="arrow-up-left"></i>
+                    <a href="brand-hub.html">
+                        <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                        <span class="pagination-next-title">
+                            <span data-i18n="p4_title">بوابة ونظام الهوية البصرية</span>
+                            <i data-lucide="arrow-up-left"></i>
+                        </span>
                     </a>
                 </div>
             </div>

@@ -141,11 +141,12 @@
 
                 <!-- Actions -->
                 <div class="case-study-actions">
-                    <a href="https://naht-re.sa/crm/#view=dashboard" target="_blank" rel="noopener noreferrer" class="action-live">
+                    <a href="https://naht-re.sa/crm/#view=dashboard" target="_blank" rel="noopener noreferrer" class="action-primary">
+                        <i data-lucide="external-link" style="width: 15px; height: 15px;"></i>
                         <span data-i18n="cs_action_live">معاينة المنصة الحية</span>
                         <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
                     </a>
-                    <span class="action-muted">
+                    <span class="action-secondary">
                         <i data-lucide="shield-check" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
                         <span data-i18n="cs_erp_sec">معمارية حوكمة وصلاحيات RBAC مشددة</span>
                     </span>
@@ -159,7 +160,6 @@
                             <div class="window-dots">
                                 <span></span><span></span><span></span>
                             </div>
-                            <span class="window-url">naht-re.sa/erp · enterprise-dashboard</span>
                         </div>
                         <div class="window-preview">
                             <img src="../assets/p11-naht-erp.jpg" alt="لوحة تحكم منظومة نحت ERP" loading="eager">
@@ -171,33 +171,18 @@
                 <div class="case-study-grid">
                     <!-- Left: Narrative Story -->
                     <div class="case-study-narrative">
-                        <div>
-                            <h2 data-i18n="cs_erp_h1">السياق وتحديات التشغيل</h2>
-                            <p data-i18n="cs_erp_p1">
-                                واجهت الشركات العقارية المتنامية تشتتاً حاداً بين البرامج المحاسبية المعزولة، وجداول البيانات لمتابعة العملاء والمبيعات، وملفات الموارد البشرية المتفرقة. تم بناء <strong>منظومة نحت العقارية المتكاملة</strong> لتكون النواة المركزية الموحدة التي تلغي الفجوات التشغيلية وتربط كافة العمليات من لحظة تسجيل العميل وحتى إصدار القيود المحاسبية وتسليم الوحدات.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_erp_h2">معمارية البيانات والذكاء المحاسبي</h2>
-                            <p data-i18n="cs_erp_p2">
-                                بنيت المنظومة على إطار <code>Next.js</code> مع قاعدة بيانات علائقية متقدمة عبر <code>Prisma ORM</code>، مع تطبيق معايير المحاسبة المالية المزدوجة (Double-Entry General Ledger). تتيح المنظومة تتبع قيود اليومية، موازين المراجعة، ومراكز التكلفة لكل مشروع عقاري على حدة، مع سجل تدقيق غير قابل للتعديل <code>Append-Only Audit Log</code> لضمان الشفافية والامتثال المالي الصارم.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_erp_h3">إدارة دورة حياة الأصول والكوادر</h2>
-                            <p data-i18n="cs_erp_p3">
-                                يشتمل النظام على محرك إدارة المشاريع العقارية والوحدات والنماذج مع تحديثات فورية للحالات التشغيلية، وبوابة متكاملة للموارد البشرية والخدمات الذاتية لإدارة الإجازات، الطلبات الإدارية، وتوزيع مهام العمل بين الإدارات الهندسية والتسويقية والقانونية وفق مصفوفة صلاحيات دقيقة <code>Role-Based Access Control (RBAC)</code>.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 data-i18n="cs_erp_h4">التحليلات الاستراتيجية وتكامل الذكاء الاصطناعي</h2>
-                            <p data-i18n="cs_erp_p4">
-                                توفر لوحات ذكاء الأعمال المدمجة رؤى فورية للإدارة التنفيذية حول كفاءة الحملات التسويقية، مسارات العملاء (Funnels)، وسرعة إغلاق الصفقات. كما تم دمج وكلاء الذكاء الاصطناعي لتحليل سلوك العملاء وأتمتة تصنيف الطلبات الواردة، مما وفر أكثر من 60% من زمن المراجعة اليدوية وسرّع من اتخاذ القرارات الاستثمارية.
-                            </p>
-                        </div>
+                        <p>
+                            واجهت الشركات العقارية المتنامية تشتتاً حاداً بين برامج المحاسبة المنعزلة، وجداول المبيعات اليدوية، وملفات الكوادر المتفرقة. تم بناء <strong>منظومة نحت العقارية المتكاملة</strong> لتكون النواة التشغيلية المركزية التي تسد هذه الفجوات، وتربط كافة التدفقات من لحظة تسجيل العميل وحتى إغلاق القيود المحاسبية وتسليم الوحدات.
+                        </p>
+                        <p>
+                            بنيت معمارية البيانات على أحدث تقنيات <code>Next.js 15</code> وقاعدة بيانات علائقية عبر <code>Prisma ORM</code> مع تطبيق معايير المحاسبة المزدوجة <code>Double-Entry General Ledger</code>. تتيح المنظومة تتبع قيود اليومية، موازين المراجعة، ومراكز التكلفة لكل مشروع عقاري، مع سجل تدقيق غير قابل للتعديل <code>Append-Only Audit Log</code> لضمان الشفافية والامتثال المالي الصارم.
+                        </p>
+                        <p>
+                            يشتمل النظام على محرك تفاعلي لإدارة الأصول والمشاريع وتحديث الحالات التشغيلية، وبوابة خدمات ذاتية للموارد البشرية لإدارة الإجازات وتوزيع المهام الإدارية والهندسية وفق مصفوفة صلاحيات دقيقة <em>Role-Based Access Control (RBAC)</em> تضمن سرية البيانات وحمايتها.
+                        </p>
+                        <p>
+                            توفر لوحات ذكاء الأعمال المدمجة <code>BI Telemetry</code> رؤية لحظية للإدارة التنفيذية حول العائد على الاستثمار، وسرعة دوران الصفقات. كما دُمج وكلاء الذكاء الاصطناعي <em>AI Automation</em> لتصنيف طلبات العملاء آلياً، مما وفر أكثر من <em>60%</em> من وقت المراجعة اليدوية وسرّع من اتخاذ القرارات التوسعية.
+                        </p>
                     </div>
 
                     <!-- Right: Sidebar -->
@@ -249,10 +234,12 @@
 
                 <!-- Footer Pagination: Next Project -->
                 <div class="case-study-pagination">
-                    <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
-                    <a href="naht-crm.html" class="pagination-next-link">
-                        <span data-i18n="p1_title">منصة نحت العقارية (CRM)</span>
-                        <i data-lucide="arrow-up-left"></i>
+                    <a href="naht-crm.html">
+                        <span class="pagination-label" data-i18n="cs_next_project">المشروع التالي</span>
+                        <span class="pagination-next-title">
+                            <span data-i18n="p1_title">منصة نحت العقارية (CRM)</span>
+                            <i data-lucide="arrow-up-left"></i>
+                        </span>
                     </a>
                 </div>
             </div>
