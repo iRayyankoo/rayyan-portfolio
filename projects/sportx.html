@@ -139,16 +139,28 @@
                     نظام بيئي رقمي متكامل لإدارة حجوزات الملاعب وجدولة البطولات وإصدار التذاكر الذكية، مصمم لتسهيل وصول الرياضيين والجماهير للمنشآت الرياضية في المملكة.
                 </p>
 
-                <!-- Actions -->
+                <!-- Actions & Links (Row 1) -->
                 <div class="case-study-actions">
-                    <span class="action-primary" style="cursor: default;">
+                    <a href="#architecture" class="action-primary">
                         <i data-lucide="trophy" style="width: 15px; height: 15px;"></i>
-                        <span data-i18n="cs_sportx_action">منصة البطولات والملاعب</span>
-                        <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i>
+                        <span data-i18n="cs_sportx_action">منظومة الحجوزات والملاعب</span>
+                    </a>
+                    <a href="#outcomes" class="action-secondary">
+                        <span data-i18n="cs_action_docs">التوثيق والنتائج</span>
+                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    </a>
+                </div>
+
+                <!-- Developer Shields / Badges (Row 2) -->
+                <div class="case-study-badges">
+                    <span class="inline-flex">
+                        <img src="https://img.shields.io/badge/Concurrency-Redis%20Locks-24B1B1?style=flat&labelColor=15191c" alt="Concurrency Redis Locks" class="badge-shield">
                     </span>
-                    <span class="action-secondary">
-                        <i data-lucide="trending-up" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
-                        <span data-i18n="cs_sportx_users">+45,000 حجز ومشارك رياضي</span>
+                    <span class="inline-flex">
+                        <img src="https://img.shields.io/badge/Engine-Real--Time-24B1B1?style=flat&labelColor=15191c" alt="Engine Real-Time" class="badge-shield">
+                    </span>
+                    <span class="inline-flex">
+                        <img src="https://img.shields.io/badge/Bookings-45K%2B-24B1B1?style=flat&labelColor=15191c" alt="45K+ Bookings" class="badge-shield">
                     </span>
                 </div>
 
@@ -180,7 +192,7 @@
                         </div>
 
                         <!-- Section 2 -->
-                        <div class="cs-section">
+                        <div class="cs-section" id="architecture">
                             <h3 class="cs-section-title" data-i18n="cs_sportx_h2">02. المعمارية التقنية ومحرك التزامن اللحظي</h3>
                             <p data-i18n="cs_sportx_p2">
                                 تم بناء محرك تزامن لحظي <code>Real-Time Slot Engine</code> مدعوم بذاكرة <code>Redis</code> فائقة السرعة وبروتوكول <code>WebSockets</code> لإقفال الفترات الزمنية لحظياً ومنع التضارب نهائياً. كما طُورت خوارزمية ذكية لجدولة البطولات <em>Tournament Engine</em> تحسب النقاط والمجموعات وفوارق الأهداف تلقائياً دون أي تدخل يدوي.
@@ -196,7 +208,7 @@
                         </div>
 
                         <!-- Section 4 -->
-                        <div class="cs-section">
+                        <div class="cs-section" id="outcomes">
                             <h3 class="cs-section-title" data-i18n="cs_sportx_h4">04. الأثر التشغيلي والعوائد المحققة</h3>
                             <p data-i18n="cs_sportx_p4">
                                 حولت المنصة إدارة المرافق والبطولات إلى منظومة رقمية ذات كفاءة تشغيلية كاملة، ورفعت من معدلات تشغيل الملاعب خلال ساعات الصباح وبعد منتصف الليل عبر سياسات التسعير الديناميكي.

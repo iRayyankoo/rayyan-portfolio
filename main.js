@@ -177,7 +177,9 @@ const translations = {
         cs_sidebar_highlights: "أبرز الخصائص",
         cs_sidebar_built_with: "التقنيات المستخدمة",
         cs_next_project: "المشروع التالي",
-        cs_action_live: "معاينة المنصة الحية",
+        cs_action_source: "الكود المصدري",
+        cs_action_live: "الموقع المباشر",
+        cs_action_docs: "التوثيق",
 
         // --- Case Studies Project-Specific Keys ---
         cs_erp_tagline: "منظومة تخطيط الموارد وإدارة العمليات المؤسسية",
@@ -540,7 +542,9 @@ const translations = {
         cs_sidebar_highlights: "Key Highlights",
         cs_sidebar_built_with: "Technologies & Capabilities",
         cs_next_project: "Next Project",
-        cs_action_live: "Visit Live Platform",
+        cs_action_source: "Source",
+        cs_action_live: "Live Site",
+        cs_action_docs: "Docs",
 
         // --- Case Studies Project-Specific Keys ---
         cs_erp_tagline: "Enterprise Resource Planning & Operations Engine",
@@ -849,6 +853,26 @@ function setLanguage(lang) {
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('rayyan_theme', theme);
+    updateBadgeTheme(theme);
+}
+
+function updateBadgeTheme(theme) {
+    const themeColors = {
+        teal: '24B1B1',
+        emerald: '24B1B1',
+        cobalt: '3b82f6',
+        gold: 'd4af37',
+        violet: '8b5cf6',
+        ember: 'd9663d'
+    };
+    const color = themeColors[theme] || '24B1B1';
+    document.querySelectorAll('img.badge-shield').forEach(img => {
+        let src = img.getAttribute('src');
+        if (src && src.includes('img.shields.io/badge/')) {
+            src = src.replace(/-[0-9a-fA-F]{6}\?/, `-${color}?`);
+            img.setAttribute('src', src);
+        }
+    });
 }
 
 // --- Terminal Simulation ---
