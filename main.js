@@ -190,7 +190,7 @@ const translations = {
         btn_touch: "Get in touch",
         
         hero_status: "Open to projects & growth advisory",
-        hero_headline: 'Engineering scalable growth, Business Intelligence, and digital brands <span class="accent-span">powered by AI.</span>',
+        hero_headline: 'Building scalable growth, Business Intelligence, and digital brands <span class="accent-span">powered by AI.</span>',
         hero_lead: 'Bridging <em>Business Intelligence (BI)</em> and data analytics with high-converting marketing, <em>authoritative brand identity</em>, and <em>AI-driven workflows</em> to build sustainable enterprise growth and measurable ROI.',
         btn_see_work: "See the work",
         btn_contact_link: "Start a conversation",
@@ -233,7 +233,7 @@ const translations = {
         srv_1_name: "Business Intelligence & Data Analytics (BI)",
         srv_1_detail: "Architecting interactive executive dashboards, integrating fragmented data pipelines, and transforming numbers into high-value strategic growth insights.",
         srv_2_name: "Strategic Marketing & Growth (CRO)",
-        srv_2_detail: "Engineering high-yield paid ad funnels (Google & Meta), running conversion rate optimization (CRO), and maximizing acquisition efficiency.",
+        srv_2_detail: "Building high-yield paid ad funnels (Google & Meta), running conversion rate optimization (CRO), and maximizing acquisition efficiency.",
         srv_3_name: "Visual Identity & Brand Architecture",
         srv_3_detail: "Building comprehensive brand identities grounded in customer psychology, guaranteeing unified aesthetics across all touchpoints.",
         srv_4_name: "AI Solutions & Workflow Automation",
@@ -247,7 +247,7 @@ const translations = {
         imp_2_title: "Growth Funnel Optimization",
         imp_2_desc: "Systematically reducing CAC and accelerating lead-to-deal conversion velocity across key products.",
         imp_3_title: "Unified Brand Standards",
-        imp_3_desc: "Engineering cohesive identity guidelines that elevate corporate valuation and stakeholder trust.",
+        imp_3_desc: "Crafting cohesive identity guidelines that elevate corporate valuation and stakeholder trust.",
         imp_4_title: "AI Workflows & Automation",
         imp_4_desc: "Eliminating operational drag through custom AI assistants and automated lead qualification pipelines.",
         
