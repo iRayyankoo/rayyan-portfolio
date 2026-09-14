@@ -115,8 +115,8 @@ const translations = {
 
         // Education & Certifications
         edu_title: "التعليم الأكاديمي والشهادات العالمية",
-        edu_degree: "معلوماتية الأعمال (Business Informatics)",
-        edu_school: "جامعة ولاية أيداهو (Idaho State University)",
+        edu_degree: 'معلوماتية الأعمال <span class="edu-sub-label" dir="ltr">Business Informatics</span>',
+        edu_school: 'جامعة ولاية أيداهو <span class="edu-sub-label" dir="ltr">Idaho State University</span>',
         edu_period: "2015 – 2019 · الولايات المتحدة الأمريكية",
         edu_desc: "تأسيس أكاديمي عميق يدمج نظم المعلومات وقواعد البيانات مع مفاهيم الأعمال والتسويق الحديث في بيئة دولية.",
         

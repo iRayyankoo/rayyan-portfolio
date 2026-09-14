@@ -1856,6 +1856,15 @@ html[lang="ar"] .experience-meta {
     line-height: 1.35;
 }
 
+.edu-sub-label {
+    display: block;
+    font-size: 0.76rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    margin-top: 0.15rem;
+    font-weight: 500;
+}
+
 .edu-school {
     font-family: var(--font-mono);
     font-size: 0.82rem;
@@ -1915,6 +1924,49 @@ html[lang="ar"] .experience-meta {
     font-size: 0.72rem;
     font-weight: 700;
     color: var(--color-accent);
+    transition: all 0.25s var(--ease-premium);
+}
+
+.cert-issuer-badge.has-logo {
+    background: rgba(18, 21, 24, 0.7);
+    padding: 0.35rem;
+    overflow: hidden;
+}
+
+.cert-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.25s var(--ease-premium);
+}
+
+.cert-logo-img.ibm-logo {
+    transform: scale(1.18);
+}
+
+.cert-logo-img.google-logo {
+    transform: scale(1.02);
+}
+
+.cert-logo-img.meta-logo {
+    transform: scale(1.08);
+}
+
+.cert-item:hover .cert-issuer-badge {
+    border-color: var(--color-accent-border);
+    box-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.cert-item:hover .cert-logo-img {
+    transform: scale(1.14);
+}
+
+.cert-item:hover .cert-logo-img.ibm-logo {
+    transform: scale(1.06);
+}
+
+.cert-item:hover .cert-logo-img.meta-logo {
+    transform: scale(1.18);
 }
 
 .cert-name {
