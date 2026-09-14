@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <radialGradient id="glow-tsacademy" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#24B1B1" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#24B1B1" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0b0d0f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line-grad-tsacademy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#262b30" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#24B1B1" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#262b30" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&amp;family=Geist:wght@600;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@600;700;800&amp;display=swap');
+      .bg { fill: #0b0d0f; }
+      .glow { fill: url(#glow-tsacademy); }
+      .mono-sm { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.18em; fill: #6b7785; text-transform: uppercase; }
+      .mono-accent { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.16em; fill: #24B1B1; font-weight: 500; }
+      .brand-ar { font-family: 'IBM Plex Sans Arabic', sans-serif; font-weight: 700; font-size: 38px; fill: #c7c3ba; letter-spacing: 0.04em; }
+      .brand-en { font-family: 'Geist', 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 60px; letter-spacing: 0.12em; fill: #ede8dc; }
+      .badge-text { font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.22em; fill: #24B1B1; }
+      .tagline { font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.18em; fill: #8a929b; text-transform: uppercase; }
+      .border-line { stroke: #1a1e22; stroke-width: 1; }
+      .accent-line { stroke: url(#line-grad-tsacademy); stroke-width: 1; }
+      .corner-cross { fill: #2c3338; font-family: 'Geist Mono', monospace; font-size: 12px; }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="960" height="600" class="bg"/>
+  <rect width="960" height="600" class="glow"/>
+
+  <!-- Minimal Blueprint Grid Lines -->
+  <line x1="50" y1="50" x2="910" y2="50" class="border-line"/>
+  <line x1="50" y1="550" x2="910" y2="550" class="border-line"/>
+  <line x1="50" y1="50" x2="50" y2="550" class="border-line"/>
+  <line x1="910" y1="50" x2="910" y2="550" class="border-line"/>
+
+  <!-- Corner Crosshairs -->
+  <text x="46" y="54" class="corner-cross">+</text>
+  <text x="907" y="54" class="corner-cross">+</text>
+  <text x="46" y="554" class="corner-cross">+</text>
+  <text x="907" y="554" class="corner-cross">+</text>
+
+  <!-- Top Metadata Bar -->
+  <g transform="translate(75, 88)">
+    <text x="0" y="0" class="mono-sm">SYS // 05 · HUMAN CAPITAL ACADEMY</text>
+    <circle cx="810" cy="-4" r="3.5" fill="#24B1B1"/>
+    <text x="795" y="0" text-anchor="end" class="mono-accent">ACCREDITED PLATFORM</text>
+  </g>
+
+  <!-- Center Logo Lockup -->
+  <!-- Pill Badge -->
+  <g transform="translate(480, 195)" text-anchor="middle">
+    <rect x="-145" y="-17" width="290" height="30" rx="15" fill="#121518" stroke="#24B1B1" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="-122" cy="-2" r="3" fill="#24B1B1"/>
+    <text x="8" y="3" text-anchor="middle" class="badge-text">CAPABILITY DEVELOPMENT</text>
+  </g>
+
+  <!-- Massive Wordmark: T&S ACADEMY -->
+  <g transform="translate(480, 280)" text-anchor="middle">
+    <text x="0" y="0" class="brand-en">T&amp;S ACADEMY<tspan fill="#24B1B1">.</tspan></text>
+  </g>
+  
+  <!-- Arabic Wordmark: أكاديمية T&S للتميز -->
+  <g transform="translate(480, 335)" text-anchor="middle">
+    <text x="0" y="0" class="brand-ar">&#x202B;أكاديمية T&amp;S للتميز&#x202C;</text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="360" y1="370" x2="600" y2="370" class="accent-line"/>
+
+  <!-- Subtitle Descriptor -->
+  <g transform="translate(480, 410)" text-anchor="middle">
+    <text x="0" y="0" class="tagline">Assessment Centers // Executive Tracks // Dynamic LMS</text>
+  </g>
+
+  <!-- Bottom Metadata Bar -->
+  <g transform="translate(75, 518)">
+    <text x="0" y="0" class="mono-sm">NEXT.JS · TRAINING CALENDAR · CRM WEBHOOKS</text>
+    <text x="810" y="0" text-anchor="end" class="mono-sm">+12,000 TRAINEES · 94% PASS RATE</text>
+  </g>
+</svg>
