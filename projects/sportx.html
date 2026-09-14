@@ -148,7 +148,7 @@
                     </span>
                     <span class="action-secondary">
                         <i data-lucide="trending-up" style="width: 14px; height: 14px; color: var(--color-accent);"></i>
-                        <span data-i18n="cs_sportx_users">+20,000 مستخدم وحجز رياضي</span>
+                        <span data-i18n="cs_sportx_users">+45,000 حجز ومشارك رياضي</span>
                     </span>
                 </div>
 
@@ -171,18 +171,59 @@
                 <div class="case-study-grid">
                     <!-- Left: Narrative Story -->
                     <div class="case-study-narrative">
-                        <p data-i18n="cs_sportx_p1">
-                            تشهد المملكة حراكاً رياضياً غير مسبوق وتزايداً في الاهتمام بجودة الحياة والرياضة المجتمعية. ومع ذلك، عانى منظمو البطولات ومشغلو الملاعب من الاعتماد على الرسائل النصية والاتصالات اليدوية لتأكيد الحجوزات والمدفوعات. <em>كان الهدف بناء منظومة رقمية مؤتمتة تلغي تضارب المواعيد وتوفر تجربة رياضية تفاعلية.</em>
-                        </p>
-                        <p data-i18n="cs_sportx_p2">
-                            تم تطوير محرك حجز متزامن لحظياً <code>Real-time Slot Synchronization</code> يعتمد على <code>WebSockets</code> و <code>Redis</code> لمنع الحجوزات المزدوجة نهائياً. إلى جانب ذلك، دُمجت خوارزمية لتوليد جداول المسابقات <em>Tournament Brackets</em> وحساب الترتيب وفروق الأهداف تلقائياً دون أي تدخل بشري.
-                        </p>
-                        <p data-i18n="cs_sportx_p3">
-                            أتاحت المنصة نظام تذاكر إلكتروني يصدر رموز <code>QR Codes</code> مشفرة تتيح المسح السريع عبر بوابات الدخول في ثوانٍ معدودة، مع ربط كامل مع بوابات الدفع الوطنية (مدى و Apple Pay)، مما وفر تجربة دفع فائقة السرعة والأمان للجماهير والرياضيين.
-                        </p>
-                        <p data-i18n="cs_sportx_p4">
-                            حققت المنصة أثراً ملموساً بتنفيذ أكثر من <em>45,000 عملية حجز</em> خلال مواسم التشغيل، ورفعت معدل إشغال الملاعب بنسبة <em>35%</em> عبر خوارزميات التسعير الديناميكي في أوقات الذروة، مع تقديم لوحات قياس مالية مباشرة لملاك المنشآت الرياضية.
-                        </p>
+                        <!-- Section 1 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_sportx_h1">01. سياق التحدي والفوضى التشغيلية في الملاعب</h3>
+                            <p data-i18n="cs_sportx_p1">
+                                أدى الزخم الرياضي الكبير في المملكة إلى تضاعف الإقبال على الملاعب والمنافسات المجتمعية. غير أن أصحاب المنشآت الرياضية عانوا من اعتماد كامل على الرسائل والاتصالات اليدوية، مما تسبب في تضارب الحجوزات المتزامنة، وضياع الإيرادات النقدية، وفوضى تنظيم لوائح البطولات وجداول المباريات.
+                            </p>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_sportx_h2">02. المعمارية التقنية ومحرك التزامن اللحظي</h3>
+                            <p data-i18n="cs_sportx_p2">
+                                تم بناء محرك تزامن لحظي <code>Real-Time Slot Engine</code> مدعوم بذاكرة <code>Redis</code> فائقة السرعة وبروتوكول <code>WebSockets</code> لإقفال الفترات الزمنية لحظياً ومنع التضارب نهائياً. كما طُورت خوارزمية ذكية لجدولة البطولات <em>Tournament Engine</em> تحسب النقاط والمجموعات وفوارق الأهداف تلقائياً دون أي تدخل يدوي.
+                            </p>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_sportx_h3">03. تجربة الجماهير والبوابات الرقمية</h3>
+                            <p data-i18n="cs_sportx_p3">
+                                أتاحت المنصة إصدار بطاقات دخول إلكترونية بتشفير <code>Dynamic QR Codes</code> لمسحها عند بوابات الدخول خلال ثوانٍ معدودة، مع ربط سلس بمدافع الدفع الوطنية (مدى و Apple Pay)، وتطبيق نظام المحفظة الرقمية <code>Digital Wallet</code> للاسترداد الفوري عند إلغاء المواعيد.
+                            </p>
+                        </div>
+
+                        <!-- Section 4 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_sportx_h4">04. الأثر التشغيلي والعوائد المحققة</h3>
+                            <p data-i18n="cs_sportx_p4">
+                                حولت المنصة إدارة المرافق والبطولات إلى منظومة رقمية ذات كفاءة تشغيلية كاملة، ورفعت من معدلات تشغيل الملاعب خلال ساعات الصباح وبعد منتصف الليل عبر سياسات التسعير الديناميكي.
+                            </p>
+                            <div class="cs-metric-grid">
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_sportx_m1_val">+45,000</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_sportx_m1_lbl">حجز رياضي ومشاركة تنافسية تمت معالجتها</span>
+                                </div>
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_sportx_m2_val">+35%</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_sportx_m2_lbl">ارتفاع معدل إشغال الملاعب بالتسعير الديناميكي</span>
+                                </div>
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_sportx_m3_val">0%</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_sportx_m3_lbl">معدل الخطأ في تضارب الحجوزات المتزامنة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 5 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_sportx_h5">05. آفاق التوسع والنمو المستقبلي</h3>
+                            <p data-i18n="cs_sportx_p5">
+                                يستهدف التطوير القادم دمج كاميرات الذكاء الاصطناعي لالتقاط ملخصات المباريات آلياً، وبناء نظام تصنيف اللاعبين الهواة (Elo Rating) لإطلاق بطولات رسمية ترعاها كبرى الشركات.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Right: Sidebar -->

@@ -171,18 +171,59 @@
                 <div class="case-study-grid">
                     <!-- Left: Narrative Story -->
                     <div class="case-study-narrative">
-                        <p data-i18n="cs_crm_p1">
-                            في قطاع التسويق العقاري عالي القيمة، يُعد هدر العملاء المحتملين <em>Lead Leakage</em> وبطء استجابة الوسطاء السبب الرئيسي في ضياع الصفقات. تم تطوير <strong>منصة نحت CRM</strong> لمعالجة هذا التحدي عبر أتمتة استقبال الفرص من الحملات الإعلانية لحظياً، وتوجيهها فورياً للمستشار العقاري المختص وفق الميزانية والاهتمام الجغرافي.
-                        </p>
-                        <p data-i18n="cs_crm_p2">
-                            رُبطت المنصة مباشرة مع مصادر الإعلانات (Google Ads & Meta Ads) عبر <code>Webhooks</code> مخصصة لتحليل مسار الإحالة وحملات <code>UTM</code> بدقة متناهية. تعرض لوحة القيادة التنفيذية مؤشرات فورية لمعدل التحويل <code>CRO</code>، وتكلفة الاستحواذ <code>CAC</code>، والزمن المستغرق من أول تواصل حتى إتمام البيع.
-                        </p>
-                        <p data-i18n="cs_crm_p3">
-                            يتضمن النظام خوارزمية ذكية لتوزيع الفرص <em>Smart Distribution</em> تضمن التوزيع العادل والسريع للعملاء، مع تتبع حالة كل عميل عبر مراحل مسار المبيعات المعتمد. كما تم دمج قنوات التواصل عبر WhatsApp وتوثيق سجل المكالمات والملاحظات في ملف العميل الموحد.
-                        </p>
-                        <p data-i18n="cs_crm_p4">
-                            ساهمت المنصة في خفض زمن الاستجابة للعملاء إلى أقل من <em>8 دقائق</em>، مما حقق قفزة نوعية في حجز المعاينات الميدانية بنسبة تجاوزت <em>38%</em>، ومكّن فريق التسويق من توجيه الميزانيات بدقة نحو القنوات الأكثر تحقيقاً للعائد الاستثماري.
-                        </p>
+                        <!-- Section 1 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_crm_h1">01. سياق التحدي ونقاط الاختناق في المبيعات</h3>
+                            <p data-i18n="cs_crm_p1">
+                                في تسويق المشاريع العقارية الفاخرة، يمثل بطء التواصل مع العميل المحتمل <em>Lead Decay</em> السبب الأكبر لخسارة الصفقات. كان فريق المبيعات يستقبل مئات البيانات يومياً من إعلانات Meta وGoogle، لكن التوزيع اليدوي استغرق من 4 إلى 12 ساعة، مما أدى إلى تسرب العملاء لمنافسين آخرين وصعوبة قياس كفاءة الميزانيات الإعلانية.
+                            </p>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_crm_h2">02. المعمارية التقنية والتكامل السحابي</h3>
+                            <p data-i18n="cs_crm_p2">
+                                تم بناء المنصة على قاعدة بيانات سحابية لحظية <code>Supabase PostgreSQL</code> مع واجهة تفاعلية خفيفة، وربط مباشر عبر <code>Webhooks API</code> لاستقبال طلبات الشراء لحظة إرسالها من إعلانات Meta Lead Ads وGoogle Ads. دُمجت واجهة برمجة تطبيقات <code>Bevatel WhatsApp Business Cloud API</code> للتواصل الفوري الآلي وتوثيق كافة المحادثات في سجل العميل الموحد.
+                            </p>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_crm_h3">03. استراتيجية التنفيذ وهندسة التدفقات</h3>
+                            <p data-i18n="cs_crm_p3">
+                                ابتُكرت خوارزمية ذكية لتوزيع الفرص <em>Smart Distribution Engine</em> توزع العملاء على المستشارين حسب التخصص الجغرافي والقدرة الاستيعابية، مع نظام تصعيد آلي يعيد سحب العميل في حال عدم استجابة الوسيط خلال <em>15 دقيقة</em>. كما جهزت المنصة بنظام تتبع <code>UTM Attribution</code> يربط كل صفقة بيع مغلقة بالإعلان والكلمة الدلالية المحددة.
+                            </p>
+                        </div>
+
+                        <!-- Section 4 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_crm_h4">04. الأثر التجاري والنتائج الرقمية المحققة</h3>
+                            <p data-i18n="cs_crm_p4">
+                                نجحت المنصة في تحويل إدارة المبيعات العقارية إلى بيئة عمل محكومة بالبيانات اللحظية عبر لوحات <code>Chart.js Telemetry</code>، مما سرع من وتيرة المبيعات وخفض الهدر الإعلاني بشكل ملموس.
+                            </p>
+                            <div class="cs-metric-grid">
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_crm_m1_val">&lt; 8 دقائق</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_crm_m1_lbl">متوسط زمن أول استجابة للعميل المحتمل</span>
+                                </div>
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_crm_m2_val">+38%</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_crm_m2_lbl">ارتفاع معدل حجز المعاينات الميدانية</span>
+                                </div>
+                                <div class="cs-metric-card">
+                                    <span class="cs-metric-val" data-i18n="cs_crm_m3_val">-28%</span>
+                                    <span class="cs-metric-lbl" data-i18n="cs_crm_m3_lbl">انخفاض تكلفة الاستحواذ على العميل (CAC)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 5 -->
+                        <div class="cs-section">
+                            <h3 class="cs-section-title" data-i18n="cs_crm_h5">05. آفاق التوسع والدروس المستفادة</h3>
+                            <p data-i18n="cs_crm_p5">
+                                أكدت المنظومة أن سرعة الاستجابة المقترنة بالتأهيل الذكي هي العامل الحاسم في مبيعات العقار. يتجه التطوير المستقبلي نحو إضافة نماذج تقييم احتمالية الإغلاق التنبؤية بالذكاء الاصطناعي وربط عروض التمويل البنكي آلياً.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Right: Sidebar -->
