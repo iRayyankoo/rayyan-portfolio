@@ -118,6 +118,18 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+html[dir="rtl"],
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="ltr"],
+html[lang="en"] {
+    direction: ltr;
+    text-align: left;
+}
+
 html[lang="en"] {
     font-family: var(--font-body);
 }
@@ -129,6 +141,16 @@ body {
     line-height: 1.625;
     overflow-x: hidden;
     position: relative;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="ltr"] body {
+    direction: ltr;
+    text-align: left;
 }
 
 a {
@@ -1517,6 +1539,12 @@ html[dir="ltr"] .case-study-back:hover i {
     color: var(--color-bone);
 }
 
+html[dir="rtl"] .case-study-title,
+html[lang="ar"] .case-study-title {
+    text-align: right;
+    direction: rtl;
+}
+
 @media (min-width: 640px) {
     .case-study-title {
         font-size: 3.75rem;
@@ -1531,6 +1559,12 @@ html[dir="ltr"] .case-study-back:hover i {
     font-size: 1.125rem;
     line-height: 1.75;
     color: var(--color-bone-dim);
+}
+
+html[dir="rtl"] .case-study-lead,
+html[lang="ar"] .case-study-lead {
+    text-align: right;
+    direction: rtl;
 }
 
 @media (min-width: 640px) {
@@ -1548,6 +1582,11 @@ html[dir="ltr"] .case-study-back:hover i {
     gap: 1.5rem;
     font-family: var(--font-mono);
     font-size: 0.875rem;
+}
+
+html[dir="rtl"] .case-study-actions,
+html[lang="ar"] .case-study-actions {
+    direction: rtl;
 }
 
 .case-study-actions .action-primary {
@@ -1668,9 +1707,21 @@ html[dir="ltr"] .case-study-back:hover i {
     gap: 1.25rem;
 }
 
+html[dir="rtl"] .case-study-narrative,
+html[lang="ar"] .case-study-narrative {
+    direction: rtl;
+    text-align: right;
+}
+
 .case-study-narrative p {
     color: var(--color-bone-dim);
     margin: 0;
+}
+
+html[dir="rtl"] .case-study-narrative p,
+html[lang="ar"] .case-study-narrative p {
+    direction: rtl;
+    text-align: right;
 }
 
 .case-study-narrative strong {
@@ -1694,10 +1745,28 @@ html[dir="ltr"] .case-study-back:hover i {
     border: 1px solid var(--color-accent-border);
 }
 
+/* Bi-directional Text Isolation for Latin Terms & Code Pills */
+.case-study-narrative code,
+.case-study-narrative em,
+.case-study-lead code,
+.case-study-lead em,
+.highlights-list li code,
+.highlights-list li em,
+.highlights-list li bdi {
+    unicode-bidi: isolate;
+    display: inline-block;
+}
+
 /* Sidebar Column */
 .case-study-sidebar {
     border-top: 1px solid var(--color-line);
     padding-top: 2.5rem;
+}
+
+html[dir="rtl"] .case-study-sidebar,
+html[lang="ar"] .case-study-sidebar {
+    direction: rtl;
+    text-align: right;
 }
 
 @media (min-width: 820px) {
@@ -1735,6 +1804,12 @@ html[dir="ltr"] .case-study-back:hover i {
     gap: 0.75rem;
 }
 
+html[dir="rtl"] .highlights-list,
+html[lang="ar"] .highlights-list {
+    direction: rtl;
+    text-align: right;
+}
+
 .highlights-list li {
     display: flex;
     align-items: flex-start;
@@ -1742,6 +1817,13 @@ html[dir="ltr"] .case-study-back:hover i {
     font-size: 0.95rem;
     line-height: 1.65;
     color: var(--color-bone-dim);
+}
+
+html[dir="rtl"] .highlights-list li,
+html[lang="ar"] .highlights-list li {
+    direction: rtl;
+    text-align: right;
+    flex-direction: row;
 }
 
 .highlights-list li .dash {
