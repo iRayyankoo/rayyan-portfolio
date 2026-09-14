@@ -1052,6 +1052,43 @@ html[lang="ar"] .marquee-track {
     color: var(--color-accent);
 }
 
+.marquee-logo-badge.logo-badge-img {
+    padding: 0.18rem;
+    overflow: hidden;
+    background: var(--color-ink-2);
+}
+
+.marquee-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s var(--ease-premium), filter 0.25s var(--ease-premium);
+}
+
+.marquee-logo-img.amazon-logo {
+    filter: brightness(0) invert(1);
+    transform: scale(0.92);
+}
+
+.marquee-logo-img.rac-logo {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
+.marquee-logo-img.wahag-logo {
+    transform: scale(1.1);
+}
+
+.marquee-logo-img.ts-logo {
+    transform: scale(1.05);
+}
+
+.marquee-logo-img.isu-logo {
+    filter: brightness(0) invert(1);
+    transform: scale(0.95);
+}
+
 .marquee-item:hover .marquee-logo-badge {
     border-color: var(--color-accent);
     box-shadow: 0 0 12px var(--color-accent-glow);
@@ -1475,6 +1512,61 @@ html[lang="ar"] .marquee-track {
     color: var(--color-accent);
 }
 
+.experience-company-icon.has-logo {
+    width: 2.85rem;
+    height: 2.85rem;
+    padding: 0.35rem;
+    overflow: hidden;
+    background: var(--color-ink-2);
+    border: 1px solid var(--color-line);
+    transition: all 0.25s var(--ease-premium);
+}
+
+.experience-card:hover .experience-company-icon.has-logo {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 16px var(--color-accent-glow);
+    transform: translateY(-2px);
+}
+
+.company-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s var(--ease-premium);
+}
+
+.company-logo-img.amazon-logo {
+    filter: brightness(0) invert(1);
+    transform: scale(0.92);
+}
+
+.company-logo-img.rac-logo {
+    filter: brightness(0) invert(1);
+    transform: scale(1.15);
+}
+
+.company-logo-img.wahag-logo {
+    transform: scale(1.15);
+}
+
+.company-logo-img.ts-logo {
+    transform: scale(1.1);
+}
+
+.experience-card:hover .company-logo-img {
+    transform: scale(1.08);
+}
+
+.experience-card:hover .company-logo-img.amazon-logo {
+    transform: scale(1.0);
+}
+
+.experience-card:hover .company-logo-img.rac-logo,
+.experience-card:hover .company-logo-img.wahag-logo {
+    transform: scale(1.22);
+}
+
 .experience-role {
     font-family: var(--font-display);
     font-size: 1.12rem;
@@ -1635,6 +1727,58 @@ html[lang="ar"] .experience-meta {
     background: var(--color-ink-2);
     border: 1px solid var(--color-line);
     border-radius: var(--radius);
+    transition: all 0.25s var(--ease-premium);
+}
+
+.edu-card:hover {
+    border-color: var(--color-line-hover);
+    background: var(--color-surface-hover);
+}
+
+.edu-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+    margin-bottom: 0.85rem;
+}
+
+.edu-logo-wrap {
+    width: 2.85rem;
+    height: 2.85rem;
+    flex-shrink: 0;
+    padding: 0.3rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.25s var(--ease-premium);
+}
+
+.edu-card:hover .edu-logo-wrap {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 16px var(--color-accent-glow);
+    transform: translateY(-2px);
+}
+
+.edu-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: transform 0.25s var(--ease-premium);
+}
+
+.edu-card:hover .edu-logo-img {
+    transform: scale(1.08);
+}
+
+.edu-meta-group {
+    flex: 1;
+    min-width: 0;
 }
 
 .edu-degree {
