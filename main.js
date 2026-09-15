@@ -76,6 +76,10 @@ const translations = {
         tag_experience: "المسار المهني والخبرات",
         heading_experience: "خبرات ميدانية تصنع الفارق بين الاستراتيجية والتنفيذ.",
         experience_lead: "مسار مهني يدمج الانضباط التشغيلي في كبرى الشركات العالمية، قيادة استراتيجيات النمو والهوية للشركات القابضة، والتأسيس الأكاديمي والتقني المدعوم بحلول الذكاء الاصطناعي وذكاء الأعمال.",
+        experience_page_title: "المسار المهني والخبرات · ريان الضحيان",
+        experience_teaser_desc: "محطات قيادية وتجارب تشغيلية في كبرى الشركات (أمازون، مطارات الرياض، مجموعة T&S القابضة، وهج)، مدعومة باعتمادات عالمية وتأسيس أكاديمي أمريكي.",
+        btn_explore_career: "استعراض كامل المسار المهني والشهادات",
+        cs_back_home: "العودة للرئيسية",
         
         // Experience 1: T&S
         exp_1_role: "أخصائي أول تسويق رقمي",
@@ -499,6 +503,10 @@ const translations = {
         tag_experience: "Career & Experience",
         heading_experience: "Field-tested expertise bridging strategy and execution.",
         experience_lead: "A progressive career combining Amazon-grade operational discipline, high-growth marketing and brand leadership for diversified holding groups, and strong academic foundations in business informatics enhanced with AI & BI capabilities.",
+        experience_page_title: "Career & Experience · Rayyan Aldohian",
+        experience_teaser_desc: "Strategic leadership and operational excellence across leading enterprises (Amazon, RAC, T&S Holding, Wahag), backed by global credentials and US academic foundations.",
+        btn_explore_career: "Explore Full Career & Credentials",
+        cs_back_home: "Back to Home",
         
         // Experience 1: T&S
         exp_1_role: "Senior Digital Marketing Specialist",
