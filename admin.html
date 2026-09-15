@@ -576,6 +576,43 @@
             transform: translateX(16px);
             background-color: #000;
         }
+
+        /* Modal Backdrop & Box */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1rem;
+        }
+        .modal-backdrop.show {
+            display: flex;
+        }
+        .modal-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 520px;
+            padding: 1.75rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            animation: modalFadeIn 0.2s ease-out;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -612,7 +649,13 @@
             <!-- Primary Save & Publish Button -->
             <button type="button" class="btn-primary-action" id="btnPublish">
                 <i data-lucide="check" style="width: 14px; height: 14px;"></i>
-                <span>نشر التعديلات</span>
+                <span>نشر محلياً</span>
+            </button>
+
+            <!-- GitHub Direct Push Button -->
+            <button type="button" class="btn-tool" id="btnGithubPublish" style="border-color: rgba(255,255,255,0.25); color: #fff; background: rgba(255,255,255,0.06);" title="نشر التعديلات مباشرة إلى مستودع GitHub">
+                <i data-lucide="github" style="width: 14px; height: 14px;"></i>
+                <span>نشر إلى GitHub</span>
             </button>
         </div>
     </header>
@@ -673,7 +716,7 @@
 
             <a class="nav-item" data-tab="saas">
                 <i data-lucide="cloud" style="width: 16px; height: 16px;"></i>
-                <span>السحابة ومنصة SaaS</span>
+                <span>منظومة GitHub والنشر المباشر</span>
             </a>
         </aside>
 
@@ -948,37 +991,73 @@
                 </div>
             </div>
 
-            <!-- TAB 10: SAAS PLATFORM & SUPABASE -->
+            <!-- TAB 10: GITHUB DIRECT SYNC & ARCHITECTURE -->
             <div class="tab-content" id="tab-saas" style="display: none;">
                 <div class="editor-header">
                     <div>
-                        <h2 class="section-title">إعدادات المنصة السحابية (SaaS Architecture)</h2>
-                        <p class="section-desc">تحويل لوحة التحكم هذه إلى منصة SaaS متعددة المستخدمين (Multi-Tenancy) مع Supabase و Vercel.</p>
+                        <h2 class="section-title">منظومة GitHub المستقلة (100% On GitHub)</h2>
+                        <p class="section-desc">إدارة المحتوى وحفظه مباشرة في مستودع GitHub بدون الحاجة لأي خوادم خارجية أو قواعد بيانات معقدة.</p>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">
-                            <i data-lucide="database" style="width: 16px; height: 16px; color: var(--accent);"></i>
-                            قاعدة بيانات Supabase (PostgreSQL)
+                            <i data-lucide="github" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            إعدادات النشر السحابي المباشر (GitHub API Direct Sync)
                         </span>
-                        <span class="brand-pill" style="font-size: 0.68rem;">Ready for Connect</span>
+                        <span class="brand-pill" style="font-size: 0.68rem;">100% Serverless</span>
                     </div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
-                        تم تجهيز مخطط قاعدة البيانات بالكامل في ملف <code style="color: var(--accent);">supabase/schema.sql</code>. يتضمن جداول العزل (RLS) لدعم آلاف المشتركين كل مستخدم بصفحته المستقلة.
+                    <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                        عند النقر على "نشر إلى GitHub"، تتصل لوحة التحكم مباشرة بـ GitHub API لعمل Commit سحابي لملف <code style="color: var(--accent);">data/portfolio-data.json</code>، ليتم تحديث الموقع لجميع زوار العالم فوراً.
                     </p>
+                    
                     <div class="field-group">
-                        <label class="field-label">اسم المنصة المقترح (Platform Name)</label>
-                        <input type="text" class="input-text" id="saasPlatformName" value="PulsePortfolio // Elite Builder" dir="ltr">
+                        <div class="field-label-row">
+                            <label class="field-label">رمز الوصول الشخصي (Personal Access Token - PAT)</label>
+                            <a href="https://github.com/settings/tokens/new?scopes=repo&description=Portfolio+CMS+Sync" target="_blank" style="font-size: 0.72rem; color: var(--accent); text-decoration: none;">توليد رمز جديد بنقرة زر ↗</a>
+                        </div>
+                        <input type="password" class="input-text" id="tabGhToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" dir="ltr" oninput="syncGithubToken(this.value)">
+                        <span style="font-size: 0.7rem; color: var(--text-dim); margin-top: 4px; display: block;">يحتاج صلاحية <code>repo</code> أو <code>contents:write</code> فقط. يُحفظ في المتصفح بأمان تام.</span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">معرف المستخدم الحالي (Tenant ID)</label>
-                        <input type="text" class="input-text" id="saasTenantId" value="rayyan" dir="ltr" readonly style="opacity: 0.7;">
+
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">اسم المستودع (GitHub Repository)</label>
+                            <input type="text" class="input-text" id="tabGhRepo" value="iRayyanKoo/rayyan-portfolio" dir="ltr" oninput="localStorage.setItem('gh_repo', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">الفرع (Branch)</label>
+                            <input type="text" class="input-text" id="tabGhBranch" value="main" dir="ltr" oninput="localStorage.setItem('gh_branch', this.value)">
+                        </div>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">النطاق المخصص (Custom Domain)</label>
-                        <input type="text" class="input-text" id="saasCustomDomain" value="rayyan.sa" dir="ltr">
+
+                    <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                        <button type="button" class="btn-primary-action" onclick="executeGithubPush()">
+                            <i data-lucide="upload-cloud" style="width: 14px; height: 14px;"></i>
+                            <span>حفظ ونشر التعديلات على GitHub</span>
+                        </button>
+                        <button type="button" class="btn-tool" onclick="testGithubConnection()">
+                            <i data-lucide="plug" style="width: 14px; height: 14px;"></i>
+                            <span>فحص الاتصال</span>
+                        </button>
                     </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="copy" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            كيف تحول هذا المشروع إلى منصة للآخرين على GitHub مجاناً للأبد؟
+                        </span>
+                    </div>
+                    <ul style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.85; padding-right: 1.25rem;">
+                        <li><strong>1. تحويل المستودع لقالب (Template):</strong> من إعدادات مستودعك في GitHub، فعّل خيار <code>Template repository</code>.</li>
+                        <li><strong>2. استنساخ بضغطة زر:</strong> أي شخص أو عميل يريد صفحة شخصية يدخل على مستودعك ويضغط الزر الأخضر <code>Use this template</code>.</li>
+                        <li><strong>3. النشر المجاني عبر GitHub Pages:</strong> يفعّل العميل خيار Pages من مستودعه ليحصل على رابطه المجاني مثل <code>username.github.io</code> أو يربط نطاقه الخاص.</li>
+                        <li><strong>4. لوحة التحكم الفورية:</strong> يفتح العميل <code>/admin.html</code> ويدخل الـ Token الخاص به ويعدل بياناته وصوره وماريعه بنظام المعاينة الحية.</li>
+                        <li><strong>النتيجة:</strong> منصة كاملة تعمل لآلاف الأشخاص مجاناً 100% بدون أي تكلفة استضافة أو صيانة خوادم عليك!</li>
+                    </ul>
                 </div>
             </div>
 
@@ -1493,8 +1572,242 @@
             localStorage.setItem('rayyan_portfolio_draft', JSON.stringify(portfolioData));
         }
 
+        
+        // --- GitHub API Integration ---
+        function syncGithubToken(val) {
+            localStorage.setItem('gh_token', val.trim());
+            const modalInput = document.getElementById('modalGhToken');
+            if (modalInput && modalInput.value !== val.trim()) modalInput.value = val.trim();
+        }
+
+        function openGithubModal() {
+            const modal = document.getElementById('githubModal');
+            if (!modal) return;
+            const token = localStorage.getItem('gh_token') || '';
+            const repo = localStorage.getItem('gh_repo') || 'iRayyanKoo/rayyan-portfolio';
+            const branch = localStorage.getItem('gh_branch') || 'main';
+
+            document.getElementById('modalGhToken').value = token;
+            document.getElementById('modalGhRepo').value = repo;
+            document.getElementById('modalGhBranch').value = branch;
+            modal.classList.add('show');
+            lucide.createIcons();
+        }
+
+        function closeGithubModal() {
+            const modal = document.getElementById('githubModal');
+            if (modal) modal.classList.remove('show');
+        }
+
+        function submitModalGithubPush() {
+            const token = document.getElementById('modalGhToken').value.trim();
+            const repo = document.getElementById('modalGhRepo').value.trim();
+            const branch = document.getElementById('modalGhBranch').value.trim();
+
+            if (!token) {
+                alert('الرجاء إدخال رمز الوصول الشخصي (GitHub Token)');
+                return;
+            }
+
+            localStorage.setItem('gh_token', token);
+            localStorage.setItem('gh_repo', repo);
+            localStorage.setItem('gh_branch', branch);
+
+            const tabToken = document.getElementById('tabGhToken');
+            if (tabToken) tabToken.value = token;
+
+            closeGithubModal();
+            executeGithubPush();
+        }
+
+        async function testGithubConnection() {
+            const token = localStorage.getItem('gh_token') || document.getElementById('tabGhToken')?.value.trim();
+            const repo = localStorage.getItem('gh_repo') || document.getElementById('tabGhRepo')?.value.trim() || 'iRayyanKoo/rayyan-portfolio';
+
+            if (!token) {
+                alert('الرجاء إدخال رمز GitHub Token أولاً لفحص الاتصال');
+                return;
+            }
+
+            try {
+                const res = await fetch(`https://api.github.com/repos/${repo}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    showToast(`الاتصال ناجح بمستودع: ${data.full_name} ✅`);
+                } else {
+                    const err = await res.json();
+                    alert('فشل الاتصال: ' + (err.message || res.statusText));
+                }
+            } catch(e) {
+                alert('خطأ في الاتصال بالإنترنت أو بـ GitHub: ' + e.message);
+            }
+        }
+
+        async function executeGithubPush() {
+            collectFormData();
+            saveDraftAuto();
+
+            let token = localStorage.getItem('gh_token');
+            let repo = localStorage.getItem('gh_repo') || 'iRayyanKoo/rayyan-portfolio';
+            let branch = localStorage.getItem('gh_branch') || 'main';
+
+            if (!token) {
+                openGithubModal();
+                return;
+            }
+
+            const pushBtn = document.getElementById('btnGithubPublish');
+            const originalHtml = pushBtn ? pushBtn.innerHTML : '';
+            if (pushBtn) {
+                pushBtn.disabled = true;
+                pushBtn.innerHTML = `<i data-lucide="loader-2" class="spin" style="width: 14px; height: 14px;"></i> <span>جاري النشر...</span>`;
+                lucide.createIcons();
+            }
+
+            try {
+                // 1. Get current SHA of data/portfolio-data.json
+                const filePath = 'data/portfolio-data.json';
+                const fileUrl = `https://api.github.com/repos/${repo}/contents/${filePath}?ref=${branch}`;
+                
+                const getRes = await fetch(fileUrl, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                let sha = null;
+                if (getRes.ok) {
+                    const fileData = await getRes.json();
+                    sha = fileData.sha;
+                } else if (getRes.status === 401 || getRes.status === 403) {
+                    throw new Error('رمز GitHub Token غير صالح أو انتهت صلاحيته. يُرجى تحديثه.');
+                }
+
+                // 2. Encode UTF-8 content to base64
+                const jsonStr = JSON.stringify(portfolioData, null, 2);
+                const utf8Base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+
+                // 3. Commit to GitHub API
+                const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${filePath}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `CMS: تحديث محتوى الموقع [${new Date().toLocaleTimeString('ar-SA')}]`,
+                        content: utf8Base64,
+                        sha: sha || undefined,
+                        branch: branch
+                    })
+                });
+
+                if (!putRes.ok) {
+                    const errData = await putRes.json();
+                    throw new Error(errData.message || 'تعذر إتمام عملية الـ Commit على GitHub');
+                }
+
+                // Also update iframe
+                const iframe = document.getElementById('previewFrame');
+                if (iframe && iframe.contentWindow) {
+                    iframe.contentWindow.postMessage({ type: 'PORTFOLIO_UPDATE', data: portfolioData }, '*');
+                }
+
+                showToast('🚀 تم عمل Commit ونشر التحديثات على GitHub بنجاح! ستظهر على الموقع للجميع خلال دقائق.');
+            } catch (err) {
+                alert('خطأ أثناء النشر إلى GitHub:\n' + err.message);
+                openGithubModal();
+            } finally {
+                if (pushBtn) {
+                    pushBtn.disabled = false;
+                    pushBtn.innerHTML = originalHtml;
+                    lucide.createIcons();
+                }
+            }
+        }
+
+        // Initialize GitHub fields on load
+        function initGithubIntegration() {
+            const token = localStorage.getItem('gh_token') || '';
+            const repo = localStorage.getItem('gh_repo') || 'iRayyanKoo/rayyan-portfolio';
+            const branch = localStorage.getItem('gh_branch') || 'main';
+
+            const tabToken = document.getElementById('tabGhToken');
+            if (tabToken) tabToken.value = token;
+            const tabRepo = document.getElementById('tabGhRepo');
+            if (tabRepo) tabRepo.value = repo;
+            const tabBranch = document.getElementById('tabGhBranch');
+            if (tabBranch) tabBranch.value = branch;
+
+            const btnGh = document.getElementById('btnGithubPublish');
+            if (btnGh) {
+                btnGh.addEventListener('click', () => {
+                    if (!localStorage.getItem('gh_token')) {
+                        openGithubModal();
+                    } else {
+                        executeGithubPush();
+                    }
+                });
+            }
+        }
+
         // Run
-        window.addEventListener('DOMContentLoaded', initDashboard);
+        window.addEventListener('DOMContentLoaded', () => {
+            initDashboard();
+            initGithubIntegration();
+        });
     </script>
+
+    <!-- GitHub Sync Modal -->
+    <div class="modal-backdrop" id="githubModal">
+        <div class="modal-box">
+            <div class="card-header" style="margin-bottom: 1.25rem;">
+                <span class="card-title" style="font-size: 1.05rem;">
+                    <i data-lucide="github" style="width: 20px; height: 20px; color: var(--accent);"></i>
+                    النشر المباشر على مستودع GitHub
+                </span>
+                <button type="button" class="btn-icon" onclick="closeGithubModal()">
+                    <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+                </button>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                يتم حفظ ونشر كافة تعديلات الموقع مباشرة داخل مستودعك على GitHub في ملف <code style="color: var(--accent);">data/portfolio-data.json</code> دون الحاجة لأي خادم وسيط.
+            </p>
+            <div class="field-group">
+                <div class="field-label-row">
+                    <label class="field-label">رمز الوصول الشخصي (Personal Access Token - PAT)</label>
+                    <a href="https://github.com/settings/tokens/new?scopes=repo&description=Portfolio+CMS+Sync" target="_blank" style="font-size: 0.72rem; color: var(--accent); text-decoration: none;">توليد رمز جديد بضغطة زر ↗</a>
+                </div>
+                <input type="password" class="input-text" id="modalGhToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" dir="ltr" autocomplete="off">
+                <span style="font-size: 0.7rem; color: var(--text-dim); margin-top: 4px; display: block;">يحتاج صلاحية <code>repo</code> أو <code>contents:write</code> فقط. يُحفظ الرمز محلياً بأمان في متصفحك.</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.75rem;">
+                <div class="field-group">
+                    <label class="field-label">اسم المستودع (Owner/Repo)</label>
+                    <input type="text" class="input-text" id="modalGhRepo" value="iRayyanKoo/rayyan-portfolio" dir="ltr">
+                </div>
+                <div class="field-group">
+                    <label class="field-label">الفرع (Branch)</label>
+                    <input type="text" class="input-text" id="modalGhBranch" value="main" dir="ltr">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.5rem;">
+                <button type="button" class="btn-tool" onclick="closeGithubModal()">إلغاء</button>
+                <button type="button" class="btn-primary-action" id="btnConfirmGithubPush" onclick="submitModalGithubPush()">
+                    <i data-lucide="upload-cloud" style="width: 14px; height: 14px;"></i>
+                    <span>حفظ ونشر التعديلات الآن</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

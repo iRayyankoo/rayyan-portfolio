@@ -1232,6 +1232,12 @@ function initScrollSpy() {
         if (saved) {
             const data = JSON.parse(saved);
             applyCmsData(data);
+        } else {
+            // Fetch central portfolio-data.json directly from repository
+            fetch('data/portfolio-data.json')
+                .then(r => r.ok ? r.json() : null)
+                .then(d => { if (d) applyCmsData(d); })
+                .catch(() => {});
         }
     } catch(e) {}
 
