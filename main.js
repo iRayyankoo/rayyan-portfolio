@@ -1223,3 +1223,82 @@ function initScrollSpy() {
         });
     }, { passive: true });
 }
+
+// --- CMS & Dashboard Live Synchronization ---
+(function initCmsSync() {
+    // 1. Check for published/saved local draft
+    try {
+        const saved = localStorage.getItem('rayyan_portfolio_draft');
+        if (saved) {
+            const data = JSON.parse(saved);
+            applyCmsData(data);
+        }
+    } catch(e) {}
+
+    // 2. Listen for postMessage from admin dashboard iframe
+    window.addEventListener('message', (event) => {
+        if (!event.data) return;
+        if (event.data.type === 'PORTFOLIO_UPDATE' && event.data.data) {
+            applyCmsData(event.data.data);
+        } else if (event.data.type === 'PORTFOLIO_REALTIME') {
+            applyRealtimePatch(event.data);
+        }
+    });
+
+    function applyCmsData(data) {
+        if (!data) return;
+        const lang = document.documentElement.getAttribute('lang') || 'ar';
+        
+        // Update Headline
+        const titleEl = document.querySelector('.hero-title');
+        if (titleEl && data.hero?.headline && data.hero?.headlineAccent) {
+            const head = data.hero.headline[lang] || data.hero.headline.ar;
+            const acc = data.hero.headlineAccent[lang] || data.hero.headlineAccent.ar;
+            titleEl.innerHTML = `${head} <span class="accent-span">${acc}</span>`;
+        }
+
+        // Update Lead
+        const descEl = document.querySelector('.hero-desc');
+        if (descEl && data.hero?.lead) {
+            descEl.innerHTML = data.hero.lead[lang] || data.hero.lead.ar;
+        }
+
+        // Update Status
+        const statusEl = document.querySelector('.status-pill [data-i18n="hero_status"]');
+        if (statusEl && data.profile?.status?.text) {
+            statusEl.textContent = data.profile.status.text[lang] || data.profile.status.text.ar;
+        }
+
+        // Update Video Scale
+        const videoEl = document.querySelector('.hero-scene-video');
+        if (videoEl && data.hero?.visual?.scale) {
+            videoEl.style.transform = `scale(${data.hero.visual.scale})`;
+        }
+
+        // Update Theme
+        if (data.meta?.theme?.defaultTheme) {
+            document.documentElement.setAttribute('data-theme', data.meta.theme.defaultTheme);
+        }
+    }
+
+    function applyRealtimePatch(patch) {
+        const lang = document.documentElement.getAttribute('lang') || 'ar';
+        if (patch.type === 'scale') {
+            const videoEl = document.querySelector('.hero-scene-video');
+            if (videoEl) videoEl.style.transform = `scale(${patch.scale})`;
+        } else if (patch.type === 'headlineAr' && lang === 'ar') {
+            const titleEl = document.querySelector('.hero-title');
+            const acc = titleEl?.querySelector('.accent-span')?.outerHTML || '';
+            if (titleEl) titleEl.innerHTML = `${patch.value} ${acc}`;
+        } else if (patch.type === 'headlineAccentAr' && lang === 'ar') {
+            const spanEl = document.querySelector('.hero-title .accent-span');
+            if (spanEl) spanEl.textContent = patch.value;
+        } else if (patch.type === 'statusAr' && lang === 'ar') {
+            const statusEl = document.querySelector('.status-pill [data-i18n="hero_status"]');
+            if (statusEl) statusEl.textContent = patch.value;
+        } else if (patch.type === 'theme') {
+            document.documentElement.setAttribute('data-theme', patch.value);
+        }
+    }
+})();
+

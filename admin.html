@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم · Rayyan Portfolio CMS & Platform</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-base: #08090a;
+            --bg-surface: #0f1115;
+            --bg-elevated: #161920;
+            --bg-input: #1a1e26;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-focus: #24B1B1;
+            --accent: #24B1B1;
+            --accent-glow: rgba(36, 177, 177, 0.2);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --text-dim: #6b7280;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --font-sans: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+        }
+
+        [data-theme="cobalt"] { --accent: #3b82f6; --accent-glow: rgba(59, 130, 246, 0.2); }
+        [data-theme="gold"] { --accent: #d4af37; --accent-glow: rgba(212, 175, 55, 0.2); }
+        [data-theme="violet"] { --accent: #8b5cf6; --accent-glow: rgba(139, 92, 246, 0.2); }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 14px;
+            line-height: 1.5;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header Bar */
+        .dash-header {
+            height: 56px;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(36, 177, 177, 0.1);
+            padding: 0.3rem 0.65rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(36, 177, 177, 0.25);
+        }
+
+        .brand-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .header-tools {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-tool {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg-elevated);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
+            padding: 0.4rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.78rem;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-tool:hover {
+            color: var(--text-main);
+            border-color: var(--accent);
+        }
+
+        .btn-tool.active {
+            background: rgba(36, 177, 177, 0.15);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-primary-action {
+            background: var(--accent);
+            color: #000;
+            font-weight: 600;
+            border: none;
+            padding: 0.45rem 1rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.82rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary-action:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Workspace Grid (Sidebar + Editor + Live Preview) */
+        .workspace {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Sidebar Navigation */
+        .dash-sidebar {
+            width: 240px;
+            background: var(--bg-surface);
+            border-inline-end: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-section-title {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-dim);
+            padding: 1.25rem 1.25rem 0.5rem;
+            font-family: var(--font-mono);
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.65rem 1.25rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            border-inline-start: 2px solid transparent;
+        }
+
+        .nav-item:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .nav-item.active {
+            color: var(--accent);
+            background: rgba(36, 177, 177, 0.08);
+            border-inline-start-color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Editor Main Canvas */
+        .dash-editor {
+            flex: 1;
+            background: var(--bg-base);
+            overflow-y: auto;
+            padding: 1.75rem 2rem;
+            min-width: 400px;
+        }
+
+        .editor-header {
+            margin-bottom: 1.75rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Form Controls & Cards */
+        .card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .card-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .field-group {
+            margin-bottom: 1.15rem;
+        }
+
+        .field-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.4rem;
+        }
+
+        .field-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .field-lang-tabs {
+            display: inline-flex;
+            background: var(--bg-elevated);
+            padding: 2px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+            gap: 2px;
+        }
+
+        .lang-tab-btn {
+            font-size: 0.68rem;
+            font-family: var(--font-mono);
+            padding: 2px 6px;
+            border: none;
+            background: transparent;
+            color: var(--text-dim);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .lang-tab-btn.active {
+            background: var(--accent);
+            color: #000;
+            font-weight: 700;
+        }
+
+        .input-text, .textarea, .select {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            padding: 0.6rem 0.85rem;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s;
+            outline: none;
+        }
+
+        .input-text:focus, .textarea:focus, .select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        .textarea {
+            min-height: 80px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .slider-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .slider-range {
+            flex: 1;
+            accent-color: var(--accent);
+        }
+
+        .slider-val {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            min-width: 45px;
+            text-align: center;
+        }
+
+        /* Live Preview Pane */
+        .dash-preview {
+            width: 48%;
+            background: #000;
+            border-inline-start: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+
+        .preview-toolbar {
+            height: 44px;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .device-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--bg-elevated);
+            padding: 2px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .device-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .device-btn.active {
+            background: rgba(36, 177, 177, 0.2);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .preview-frame-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #050607;
+            overflow: hidden;
+            padding: 0.75rem;
+        }
+
+        .preview-iframe-box {
+            background: #000;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+        }
+
+        .preview-iframe-box.device-mobile {
+            width: 390px;
+            height: 800px;
+            max-height: 95%;
+            border-radius: 36px;
+            border: 4px solid #222;
+        }
+
+        .preview-iframe-box.device-tablet {
+            width: 768px;
+            height: 900px;
+            max-height: 95%;
+        }
+
+        iframe#previewFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            inset-inline-end: 20px;
+            background: var(--bg-elevated);
+            color: var(--text-main);
+            border: 1px solid var(--accent);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 1.25rem;
+            font-size: 0.82rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 9999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Items List & Reordering */
+        .item-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .item-row:hover {
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .item-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .item-thumb {
+            width: 44px;
+            height: 32px;
+            border-radius: 4px;
+            object-fit: cover;
+            background: #000;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .item-title {
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .item-sub {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+        }
+
+        .item-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-icon {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-icon:hover {
+            color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .btn-icon.delete:hover {
+            color: var(--danger);
+        }
+
+        /* Custom Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 36px;
+            height: 20px;
+        }
+
+        .switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            transition: .3s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 2px;
+            bottom: 2px;
+            background-color: var(--text-muted);
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(16px);
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="dash-header">
+        <div class="header-brand">
+            <div class="brand-pill">
+                <i data-lucide="cpu" style="width: 14px; height: 14px;"></i>
+                <span>PORTFOLIO OS // CMS</span>
+            </div>
+            <span class="brand-title" id="topSiteTitle">ريان الضحيان · إدارة المحتوى</span>
+        </div>
+
+        <div class="header-tools">
+            <!-- Language toggle for editor interface -->
+            <button type="button" class="btn-tool" id="btnToggleEditorLang" title="تبديل لغة الواجهة">
+                <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                <span id="editorLangLabel">English</span>
+            </button>
+
+            <!-- Toggle Live Preview Panel -->
+            <button type="button" class="btn-tool active" id="btnTogglePreview" title="إظهار/إخفاء نافذة المعاينة">
+                <i data-lucide="panel-right-close" style="width: 14px; height: 14px;"></i>
+                <span>المعاينة الحية</span>
+            </button>
+
+            <!-- Export JSON -->
+            <button type="button" class="btn-tool" id="btnExportJson" title="تصدير ملف البيانات JSON">
+                <i data-lucide="download" style="width: 13px; height: 13px;"></i>
+                <span>تصدير</span>
+            </button>
+
+            <!-- Primary Save & Publish Button -->
+            <button type="button" class="btn-primary-action" id="btnPublish">
+                <i data-lucide="check" style="width: 14px; height: 14px;"></i>
+                <span>نشر التعديلات</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Workspace -->
+    <div class="workspace">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar">
+            <div class="sidebar-section-title">أقسام الموقع</div>
+            
+            <a class="nav-item active" data-tab="hero">
+                <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+                <span>الواجهة والهوية (Hero)</span>
+            </a>
+            
+            <a class="nav-item" data-tab="terminal">
+                <i data-lucide="terminal" style="width: 16px; height: 16px;"></i>
+                <span>الطرفية البرمجية</span>
+            </a>
+
+            <a class="nav-item" data-tab="marquee">
+                <i data-lucide="building-2" style="width: 16px; height: 16px;"></i>
+                <span>شريط الشركات والخبرات</span>
+            </a>
+
+            <a class="nav-item" data-tab="projects">
+                <i data-lucide="folder-kanban" style="width: 16px; height: 16px;"></i>
+                <span>معرض المشاريع</span>
+            </a>
+
+            <a class="nav-item" data-tab="services">
+                <i data-lucide="layers" style="width: 16px; height: 16px;"></i>
+                <span>مجالات التخصص</span>
+            </a>
+
+            <a class="nav-item" data-tab="experience">
+                <i data-lucide="briefcase" style="width: 16px; height: 16px;"></i>
+                <span>المسار المهني</span>
+            </a>
+
+            <a class="nav-item" data-tab="metrics">
+                <i data-lucide="trending-up" style="width: 16px; height: 16px;"></i>
+                <span>الأثر والإحصائيات</span>
+            </a>
+
+            <a class="nav-item" data-tab="about">
+                <i data-lucide="user" style="width: 16px; height: 16px;"></i>
+                <span>نبذة عني والسيرة</span>
+            </a>
+
+            <div class="sidebar-section-title">المنصة والمظهر</div>
+
+            <a class="nav-item" data-tab="theme">
+                <i data-lucide="palette" style="width: 16px; height: 16px;"></i>
+                <span>الألوان والهوية البصرية</span>
+            </a>
+
+            <a class="nav-item" data-tab="saas">
+                <i data-lucide="cloud" style="width: 16px; height: 16px;"></i>
+                <span>السحابة ومنصة SaaS</span>
+            </a>
+        </aside>
+
+        <!-- Main Form Editor Canvas -->
+        <main class="dash-editor" id="editorCanvas">
+            
+            <!-- TAB 1: HERO & IDENTITY -->
+            <div class="tab-content" id="tab-hero">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">الواجهة الرئيسية والهوية (Hero Section)</h2>
+                        <p class="section-desc">تحكم بالعناوين الضخمة، الشارة العلوية، زر الإجراء، ومجسم محطة العمل ثلاثي الأبعاد.</p>
+                    </div>
+                </div>
+
+                <!-- Status Badge -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="circle-dot" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            شارة الحالة العلوية (Status Pill)
+                        </span>
+                        <label class="switch">
+                            <input type="checkbox" id="heroStatusActive" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="field-group">
+                        <div class="field-label-row">
+                            <label class="field-label">نص الشارة (عربي)</label>
+                        </div>
+                        <input type="text" class="input-text" id="heroStatusTextAr" value="متاح للمشاريع واستشارات النمو">
+                    </div>
+                    <div class="field-group">
+                        <div class="field-label-row">
+                            <label class="field-label">نص الشارة (English)</label>
+                        </div>
+                        <input type="text" class="input-text" id="heroStatusTextEn" value="Open to projects & growth advisory" dir="ltr">
+                    </div>
+                </div>
+
+                <!-- Headline -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="type" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            العنوان الرئيسي (Headline)
+                        </span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">العنوان الرئيسي (عربي)</label>
+                        <input type="text" class="input-text" id="heroHeadlineAr" value="أبني مسارات النمو، ذكاء الأعمال، والتجارب الرقمية">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الكلمات المميزة بلون الـ Accent (عربي)</label>
+                        <input type="text" class="input-text" id="heroHeadlineAccentAr" value="المدعومة بالذكاء الاصطناعي.">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">العنوان الرئيسي (English)</label>
+                        <input type="text" class="input-text" id="heroHeadlineEn" value="Building scalable growth, Business Intelligence, and digital brands" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الكلمات المميزة بلون الـ Accent (English)</label>
+                        <input type="text" class="input-text" id="heroHeadlineAccentEn" value="powered by AI." dir="ltr">
+                    </div>
+                </div>
+
+                <!-- Lead Paragraph -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="align-right" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            الفقرة التعريفية (Lead Description)
+                        </span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الوصف التقديمي (عربي)</label>
+                        <textarea class="textarea" id="heroLeadAr">أدمج تحليلات ذكاء الأعمال (BI) مع استراتيجيات التسويق والأداء، وبناء الهويات البصرية الراسخة، وحلول الذكاء الاصطناعي (AI) لهندسة نمو مستدام وتجارب رقمية ذات أثر ملموس وقابل للقياس.</textarea>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الوصف التقديمي (English)</label>
+                        <textarea class="textarea" id="heroLeadEn" dir="ltr">Bridging Business Intelligence (BI) and data analytics with high-converting marketing, authoritative brand identity, and AI-driven workflows to build sustainable enterprise growth and measurable ROI.</textarea>
+                    </div>
+                </div>
+
+                <!-- 3D Video & Scale Controls -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="video" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            مشهد محطة العمل والـ 3D (3D Workstation Scene)
+                        </span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">مصدر الفيديو المفرغ (Asset Path)</label>
+                        <input type="text" class="input-text" id="heroVideoSrc" value="assets/hero-character-workstation-1080p.mp4" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <div class="field-label-row">
+                            <label class="field-label">مقياس التكبير (Scale Zoom)</label>
+                            <span class="slider-val" id="videoScaleVal">1.22x</span>
+                        </div>
+                        <div class="slider-row">
+                            <input type="range" min="0.8" max="1.6" step="0.02" value="1.22" class="slider-range" id="heroVideoScaleSlider">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: TERMINAL SIMULATION -->
+            <div class="tab-content" id="tab-terminal" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">محاكي الطرفية البرمجية (Terminal Widget)</h2>
+                        <p class="section-desc">تحكم بنصوص المخرجات الحية وأمر سطر الأوامر التفاعلي أسفل أزرار الهيرو.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="field-group">
+                        <label class="field-label">عنوان جلسة الطرفية (Session Label)</label>
+                        <input type="text" class="input-text" id="termSessionLabel" value="SESSION // BI_AI_PIPELINE" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الأمر التلقائي المتحرك (Typing Command)</label>
+                        <input type="text" class="input-text" id="termPromptCommand" value="pipeline --connect --source=bigquery" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">السطر الأول (Warehouse Telemetry)</label>
+                        <input type="text" class="input-text" id="termLine1" value="› Data Warehouse connected: BigQuery / Supabase" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">السطر الثاني (Conversion Funnel Lift)</label>
+                        <input type="text" class="input-text" id="termLine2" value="› Conversion Funnel (CRO): +38.4% Uplift" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">السطر الثالث المميز (AI Workflows)</label>
+                        <input type="text" class="input-text" id="termLine3" value="› AI Automation Workflows: Operational" dir="ltr">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: PARTNERS MARQUEE -->
+            <div class="tab-content" id="tab-marquee" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">شريط الشركات والشركاء (Experience Marquee)</h2>
+                        <p class="section-desc">الشركات والجهات الكبرى التي قمت بقيادة مشاريع معها (أمازون، مطارات الرياض، T&S، وهج، نحت).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="marqueeItemsList">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: PROJECTS -->
+            <div class="tab-content" id="tab-projects" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">معرض الأعمال والأنظمة (Projects Showcase)</h2>
+                        <p class="section-desc">تحكم ببطاقات المشاريع، العناوين، الأوصاف، بطاقات الـ Blueprint، وروابط الأنظمة المباشرة.</p>
+                    </div>
+                    <button type="button" class="btn-tool active" id="btnAddNewProject">
+                        <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                        <span>إضافة مشروع جديد</span>
+                    </button>
+                </div>
+                <div id="projectsListContainer">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- TAB 5: SERVICES -->
+            <div class="tab-content" id="tab-services" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">مجالات التخصص والخدمات (Capabilities)</h2>
+                        <p class="section-desc">البطاقات الأربعة الرئيسية: ذكاء الأعمال، التسويق والنمو، الهوية البصرية، وحلول الذكاء الاصطناعي.</p>
+                    </div>
+                </div>
+                <div id="servicesListContainer">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- TAB 6: CAREER EXPERIENCE -->
+            <div class="tab-content" id="tab-experience" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">المسار المهني والخبرات (Career Timeline)</h2>
+                        <p class="section-desc">المحطات الوظيفية والقيادية، الأدوار، الفترات، والإنجازات الميدانية.</p>
+                    </div>
+                </div>
+                <div id="experienceListContainer">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- TAB 7: METRICS & IMPACT -->
+            <div class="tab-content" id="tab-metrics" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">الأثر الاستراتيجي والأرقام (Strategic Impact)</h2>
+                        <p class="section-desc">بطاقات الإحصائيات البارزة (+38.4% نمو، 10+ قطاعات، 99.9% موثوقية).</p>
+                    </div>
+                </div>
+                <div id="metricsListContainer">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- TAB 8: ABOUT & CONTACT -->
+            <div class="tab-content" id="tab-about" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">نبذة عني وروابط التواصل (About & Contact)</h2>
+                        <p class="section-desc">البيانات الشخصية، روابط التواصل الاجتماعي، وملف السيرة الذاتية PDF.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="field-group">
+                        <label class="field-label">السيرة الذاتية المختصرة (عربي)</label>
+                        <textarea class="textarea" id="aboutBioAr" style="min-height: 100px;"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">السيرة الذاتية المختصرة (English)</label>
+                        <textarea class="textarea" id="aboutBioEn" dir="ltr" style="min-height: 100px;"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">رابط ملف السيرة الذاتية (CV PDF File)</label>
+                        <input type="text" class="input-text" id="aboutCvFile" value="assets/Rayyan_Aldohian_CV.pdf" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">البريد الإلكتروني (Email)</label>
+                        <input type="email" class="input-text" id="socialEmail" value="contact@rayyan.sa" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">رابط LinkedIn</label>
+                        <input type="url" class="input-text" id="socialLinkedin" value="https://linkedin.com/in/rayyan-aldohian" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">رابط GitHub</label>
+                        <input type="url" class="input-text" id="socialGithub" value="https://github.com/iRayyanKoo" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">رابط X (تويتر)</label>
+                        <input type="url" class="input-text" id="socialX" value="https://x.com/rayyan_aldohian" dir="ltr">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 9: THEME & BRANDING -->
+            <div class="tab-content" id="tab-theme" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">الهوية البصرية والألوان (Theme & Branding)</h2>
+                        <p class="section-desc">تحكم باللون الأساسي للموقع (Accent Color) ليعكس طابعك المفضل.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="field-group">
+                        <label class="field-label">الثيم الافتراضي للموقع</label>
+                        <select class="select" id="themeSelect">
+                            <option value="teal">Cyan Teal (#24B1B1) - الافتراضي الفاخر</option>
+                            <option value="cobalt">Royal Cobalt (#3B82F6) - الأزرق الملكي</option>
+                            <option value="gold">Imperial Gold (#D4AF37) - الذهبي الراقي</option>
+                            <option value="violet">Future Violet (#8B5CF6) - البنفسجي المستقبلي</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 10: SAAS PLATFORM & SUPABASE -->
+            <div class="tab-content" id="tab-saas" style="display: none;">
+                <div class="editor-header">
+                    <div>
+                        <h2 class="section-title">إعدادات المنصة السحابية (SaaS Architecture)</h2>
+                        <p class="section-desc">تحويل لوحة التحكم هذه إلى منصة SaaS متعددة المستخدمين (Multi-Tenancy) مع Supabase و Vercel.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="database" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            قاعدة بيانات Supabase (PostgreSQL)
+                        </span>
+                        <span class="brand-pill" style="font-size: 0.68rem;">Ready for Connect</span>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+                        تم تجهيز مخطط قاعدة البيانات بالكامل في ملف <code style="color: var(--accent);">supabase/schema.sql</code>. يتضمن جداول العزل (RLS) لدعم آلاف المشتركين كل مستخدم بصفحته المستقلة.
+                    </p>
+                    <div class="field-group">
+                        <label class="field-label">اسم المنصة المقترح (Platform Name)</label>
+                        <input type="text" class="input-text" id="saasPlatformName" value="PulsePortfolio // Elite Builder" dir="ltr">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">معرف المستخدم الحالي (Tenant ID)</label>
+                        <input type="text" class="input-text" id="saasTenantId" value="rayyan" dir="ltr" readonly style="opacity: 0.7;">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">النطاق المخصص (Custom Domain)</label>
+                        <input type="text" class="input-text" id="saasCustomDomain" value="rayyan.sa" dir="ltr">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Right Live Preview Pane -->
+        <section class="dash-preview" id="previewPanel">
+            <div class="preview-toolbar">
+                <div class="device-selector">
+                    <button type="button" class="device-btn active" data-device="desktop">
+                        <i data-lucide="monitor" style="width: 13px; height: 13px;"></i>
+                        <span>سطح المكتب</span>
+                    </button>
+                    <button type="button" class="device-btn" data-device="tablet">
+                        <i data-lucide="tablet" style="width: 13px; height: 13px;"></i>
+                        <span>تابلت</span>
+                    </button>
+                    <button type="button" class="device-btn" data-device="mobile">
+                        <i data-lucide="smartphone" style="width: 13px; height: 13px;"></i>
+                        <span>جوال</span>
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <a href="index.html" target="_blank" class="btn-tool" style="text-decoration: none;">
+                        <i data-lucide="external-link" style="width: 13px; height: 13px;"></i>
+                        <span>فتح الموقع</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="preview-frame-container">
+                <div class="preview-iframe-box" id="previewBox">
+                    <iframe id="previewFrame" src="index.html"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toastMessage">
+        <i data-lucide="check-circle" style="width: 16px; height: 16px; color: var(--accent);"></i>
+        <span id="toastText">تم حفظ التعديلات بنجاح!</span>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        let portfolioData = null;
+
+        // Initialize icons
+        lucide.createIcons();
+
+        // Load data
+        async function initDashboard() {
+            try {
+                const res = await fetch('data/portfolio-data.json');
+                portfolioData = await res.json();
+                
+                // Check if there is local draft
+                const savedDraft = localStorage.getItem('rayyan_portfolio_draft');
+                if (savedDraft) {
+                    try {
+                        const parsed = JSON.parse(savedDraft);
+                        portfolioData = Object.assign(portfolioData, parsed);
+                    } catch(e) {}
+                }
+
+                populateForm();
+                setupEventListeners();
+                lucide.createIcons();
+            } catch(e) {
+                console.error('Failed to load portfolio-data.json:', e);
+            }
+        }
+
+        // Populate Form Fields
+        function populateForm() {
+            if (!portfolioData) return;
+
+            // Hero
+            document.getElementById('heroStatusActive').checked = portfolioData.profile?.status?.active ?? true;
+            document.getElementById('heroStatusTextAr').value = portfolioData.profile?.status?.text?.ar || '';
+            document.getElementById('heroStatusTextEn').value = portfolioData.profile?.status?.text?.en || '';
+            document.getElementById('heroHeadlineAr').value = portfolioData.hero?.headline?.ar || '';
+            document.getElementById('heroHeadlineAccentAr').value = portfolioData.hero?.headlineAccent?.ar || '';
+            document.getElementById('heroHeadlineEn').value = portfolioData.hero?.headline?.en || '';
+            document.getElementById('heroHeadlineAccentEn').value = portfolioData.hero?.headlineAccent?.en || '';
+            document.getElementById('heroLeadAr').value = portfolioData.hero?.lead?.ar || '';
+            document.getElementById('heroLeadEn').value = portfolioData.hero?.lead?.en || '';
+            document.getElementById('heroVideoSrc').value = portfolioData.hero?.visual?.src || '';
+            document.getElementById('heroVideoScaleSlider').value = portfolioData.hero?.visual?.scale || 1.22;
+            document.getElementById('videoScaleVal').innerText = (portfolioData.hero?.visual?.scale || 1.22) + 'x';
+
+            // Terminal
+            document.getElementById('termSessionLabel').value = portfolioData.terminal?.sessionLabel || '';
+            document.getElementById('termPromptCommand').value = portfolioData.terminal?.promptCommand?.ar || '';
+            if (portfolioData.terminal?.lines) {
+                if (portfolioData.terminal.lines[0]) document.getElementById('termLine1').value = portfolioData.terminal.lines[0].text?.ar || '';
+                if (portfolioData.terminal.lines[1]) document.getElementById('termLine2').value = portfolioData.terminal.lines[1].text?.ar || '';
+                if (portfolioData.terminal.lines[2]) document.getElementById('termLine3').value = portfolioData.terminal.lines[2].text?.ar || '';
+            }
+
+            // About & Social
+            document.getElementById('aboutBioAr').value = portfolioData.about?.bio?.ar || '';
+            document.getElementById('aboutBioEn').value = portfolioData.about?.bio?.en || '';
+            document.getElementById('aboutCvFile').value = portfolioData.about?.cvFile || '';
+            document.getElementById('socialEmail').value = portfolioData.social?.email || '';
+            document.getElementById('socialLinkedin').value = portfolioData.social?.linkedin || '';
+            document.getElementById('socialGithub').value = portfolioData.social?.github || '';
+            document.getElementById('socialX').value = portfolioData.social?.x || '';
+
+            // Theme
+            document.getElementById('themeSelect').value = portfolioData.meta?.theme?.defaultTheme || 'teal';
+
+            // Render Dynamic Lists
+            renderMarqueeList();
+            renderProjectsList();
+            renderServicesList();
+            renderExperienceList();
+            renderMetricsList();
+        }
+
+        // Render Projects
+        function renderProjectsList() {
+            const container = document.getElementById('projectsListContainer');
+            if (!container || !portfolioData.projects) return;
+
+            container.innerHTML = portfolioData.projects.map((p, idx) => `
+                <div class="card" id="project-card-${idx}">
+                    <div class="card-header">
+                        <div class="item-info">
+                            <img src="${p.image}" class="item-thumb" alt="">
+                            <div>
+                                <span class="item-title">${p.title?.ar || p.title?.en}</span>
+                                <div class="item-sub">${p.category} · ${p.year}</div>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <label class="switch" title="إظهار في الصفحة الرئيسية">
+                                <input type="checkbox" ${p.featured ? 'checked' : ''} onchange="updateProjectField(${idx}, 'featured', this.checked)">
+                                <span class="slider"></span>
+                            </label>
+                            <button type="button" class="btn-icon delete" onclick="deleteProject(${idx})" title="حذف">
+                                <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">اسم المشروع (عربي)</label>
+                            <input type="text" class="input-text" value="${p.title?.ar || ''}" onchange="updateProjectField(${idx}, 'title.ar', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">اسم المشروع (English)</label>
+                            <input type="text" class="input-text" value="${p.title?.en || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'title.en', this.value)">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">الوصف السريع (عربي)</label>
+                            <input type="text" class="input-text" value="${p.description?.ar || ''}" onchange="updateProjectField(${idx}, 'description.ar', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">الوصف السريع (English)</label>
+                            <input type="text" class="input-text" value="${p.description?.en || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'description.en', this.value)">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">مسار صورة البطاقة (Dark Blueprint)</label>
+                            <input type="text" class="input-text" value="${p.image || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'image', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">رابط المنظومة الحية (Live URL)</label>
+                            <input type="text" class="input-text" value="${p.liveUrl || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'liveUrl', this.value)">
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // Render Marquee
+        function renderMarqueeList() {
+            const container = document.getElementById('marqueeItemsList');
+            if (!container || !portfolioData.marquee) return;
+
+            container.innerHTML = portfolioData.marquee.map((m, idx) => `
+                <div class="item-row">
+                    <div class="item-info">
+                        <img src="${m.logo}" class="item-thumb" style="object-fit: contain; padding: 2px;" alt="">
+                        <div>
+                            <span class="item-title">${m.name}</span>
+                            <div class="item-sub">${m.subtitle?.ar || m.subtitle?.en}</div>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <input type="text" class="input-text" style="width: 140px; padding: 2px 6px; font-size: 0.75rem;" value="${m.subtitle?.ar || ''}" onchange="updateMarqueeSubtitle(${idx}, this.value)">
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // Render Services
+        function renderServicesList() {
+            const container = document.getElementById('servicesListContainer');
+            if (!container || !portfolioData.services) return;
+
+            container.innerHTML = portfolioData.services.map((s, idx) => `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="${s.icon || 'star'}" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            ${s.title?.ar || s.title?.en}
+                        </span>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">العنوان (عربي)</label>
+                        <input type="text" class="input-text" value="${s.title?.ar || ''}" onchange="updateServiceField(${idx}, 'title.ar', this.value)">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">العنوان (English)</label>
+                        <input type="text" class="input-text" value="${s.title?.en || ''}" dir="ltr" onchange="updateServiceField(${idx}, 'title.en', this.value)">
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label">الشرح والتفاصيل (عربي)</label>
+                        <textarea class="textarea" onchange="updateServiceField(${idx}, 'description.ar', this.value)">${s.description?.ar || ''}</textarea>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // Render Experience
+        function renderExperienceList() {
+            const container = document.getElementById('experienceListContainer');
+            if (!container || !portfolioData.experience) return;
+
+            container.innerHTML = portfolioData.experience.map((e, idx) => `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">${e.company?.ar || e.company?.en} · ${e.role?.ar || e.role?.en}</span>
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">${e.period}</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">المسمى الوظيفي (عربي)</label>
+                            <input type="text" class="input-text" value="${e.role?.ar || ''}" onchange="updateExpField(${idx}, 'role.ar', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">المسمى الوظيفي (English)</label>
+                            <input type="text" class="input-text" value="${e.role?.en || ''}" dir="ltr" onchange="updateExpField(${idx}, 'role.en', this.value)">
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        // Render Metrics
+        function renderMetricsList() {
+            const container = document.getElementById('metricsListContainer');
+            if (!container || !portfolioData.metrics) return;
+
+            container.innerHTML = `
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    ${portfolioData.metrics.map((m, idx) => `
+                        <div class="card">
+                            <div class="field-group">
+                                <label class="field-label">القيمة الرقمية</label>
+                                <input type="text" class="input-text" style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);" value="${m.value}" onchange="updateMetricField(${idx}, 'value', this.value)">
+                            </div>
+                            <div class="field-group">
+                                <label class="field-label">العنوان (عربي)</label>
+                                <input type="text" class="input-text" value="${m.label?.ar || ''}" onchange="updateMetricField(${idx}, 'label.ar', this.value)">
+                            </div>
+                            <div class="field-group">
+                                <label class="field-label">العنوان (English)</label>
+                                <input type="text" class="input-text" value="${m.label?.en || ''}" dir="ltr" onchange="updateMetricField(${idx}, 'label.en', this.value)">
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            // Tab navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+                    
+                    item.classList.add('active');
+                    const tabId = 'tab-' + item.dataset.tab;
+                    const content = document.getElementById(tabId);
+                    if (content) content.style.display = 'block';
+                });
+            });
+
+            // Video Scale Slider
+            const slider = document.getElementById('heroVideoScaleSlider');
+            slider.addEventListener('input', (e) => {
+                const val = parseFloat(e.target.value).toFixed(2);
+                document.getElementById('videoScaleVal').innerText = val + 'x';
+                if (!portfolioData.hero) portfolioData.hero = {};
+                if (!portfolioData.hero.visual) portfolioData.hero.visual = {};
+                portfolioData.hero.visual.scale = parseFloat(val);
+                
+                // Realtime broadcast to preview
+                sendRealtimeUpdate({ type: 'scale', scale: val });
+            });
+
+            // Live Input Realtime sync
+            const syncInputs = [
+                { id: 'heroHeadlineAr', path: 'hero.headline.ar', type: 'headlineAr' },
+                { id: 'heroHeadlineAccentAr', path: 'hero.headlineAccent.ar', type: 'headlineAccentAr' },
+                { id: 'heroStatusTextAr', path: 'profile.status.text.ar', type: 'statusAr' },
+                { id: 'themeSelect', path: 'meta.theme.defaultTheme', type: 'theme' }
+            ];
+
+            syncInputs.forEach(({ id, path, type }) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', (e) => {
+                        setDeep(portfolioData, path, e.target.value);
+                        sendRealtimeUpdate({ type, value: e.target.value });
+                    });
+                }
+            });
+
+            // Toggle Preview Panel
+            const btnTogglePreview = document.getElementById('btnTogglePreview');
+            btnTogglePreview.addEventListener('click', () => {
+                const preview = document.getElementById('previewPanel');
+                if (preview.style.display === 'none') {
+                    preview.style.display = 'flex';
+                    btnTogglePreview.classList.add('active');
+                } else {
+                    preview.style.display = 'none';
+                    btnTogglePreview.classList.remove('active');
+                }
+            });
+
+            // Device Preview Switcher
+            document.querySelectorAll('.device-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const box = document.getElementById('previewBox');
+                    box.className = 'preview-iframe-box';
+                    if (btn.dataset.device === 'mobile') {
+                        box.classList.add('device-mobile');
+                    } else if (btn.dataset.device === 'tablet') {
+                        box.classList.add('device-tablet');
+                    }
+                });
+            });
+
+            // Publish / Save Button
+            document.getElementById('btnPublish').addEventListener('click', saveAndPublish);
+
+            // Export JSON
+            document.getElementById('btnExportJson').addEventListener('click', () => {
+                collectFormData();
+                const blob = new Blob([JSON.stringify(portfolioData, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'portfolio-data.json';
+                a.click();
+                showToast('تم تصدير ملف portfolio-data.json بنجاح!');
+            });
+        }
+
+        function collectFormData() {
+            if (!portfolioData) return;
+            portfolioData.profile.status.active = document.getElementById('heroStatusActive').checked;
+            portfolioData.profile.status.text.ar = document.getElementById('heroStatusTextAr').value;
+            portfolioData.profile.status.text.en = document.getElementById('heroStatusTextEn').value;
+            portfolioData.hero.headline.ar = document.getElementById('heroHeadlineAr').value;
+            portfolioData.hero.headlineAccent.ar = document.getElementById('heroHeadlineAccentAr').value;
+            portfolioData.hero.headline.en = document.getElementById('heroHeadlineEn').value;
+            portfolioData.hero.headlineAccent.en = document.getElementById('heroHeadlineAccentEn').value;
+            portfolioData.hero.lead.ar = document.getElementById('heroLeadAr').value;
+            portfolioData.hero.lead.en = document.getElementById('heroLeadEn').value;
+            portfolioData.hero.visual.src = document.getElementById('heroVideoSrc').value;
+            portfolioData.hero.visual.scale = parseFloat(document.getElementById('heroVideoScaleSlider').value);
+
+            portfolioData.about.bio.ar = document.getElementById('aboutBioAr').value;
+            portfolioData.about.bio.en = document.getElementById('aboutBioEn').value;
+            portfolioData.about.cvFile = document.getElementById('aboutCvFile').value;
+            portfolioData.social.email = document.getElementById('socialEmail').value;
+            portfolioData.social.linkedin = document.getElementById('socialLinkedin').value;
+            portfolioData.social.github = document.getElementById('socialGithub').value;
+            portfolioData.social.x = document.getElementById('socialX').value;
+
+            portfolioData.meta.theme.defaultTheme = document.getElementById('themeSelect').value;
+        }
+
+        // Save and Publish
+        async function saveAndPublish() {
+            collectFormData();
+            localStorage.setItem('rayyan_portfolio_draft', JSON.stringify(portfolioData));
+
+            // Broadcast to iframe
+            const iframe = document.getElementById('previewFrame');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ type: 'PORTFOLIO_UPDATE', data: portfolioData }, '*');
+            }
+
+            showToast('تم حفظ ونشر كافة التعديلات على الموقع بنجاح!');
+        }
+
+        // Realtime postMessage to iframe
+        function sendRealtimeUpdate(msg) {
+            const iframe = document.getElementById('previewFrame');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ type: 'PORTFOLIO_REALTIME', ...msg }, '*');
+            }
+            try {
+                if (iframe && iframe.contentDocument) {
+                    const doc = iframe.contentDocument;
+                    if (msg.type === 'scale') {
+                        const v = doc.querySelector('.hero-scene-video');
+                        if (v) v.style.transform = `scale(${msg.scale})`;
+                    } else if (msg.type === 'headlineAr') {
+                        const t = doc.querySelector('.hero-title');
+                        const acc = t?.querySelector('.accent-span')?.outerHTML || '';
+                        if (t) t.innerHTML = `${msg.value} ${acc}`;
+                    } else if (msg.type === 'headlineAccentAr') {
+                        const s = doc.querySelector('.hero-title .accent-span');
+                        if (s) s.textContent = msg.value;
+                    } else if (msg.type === 'statusAr') {
+                        const s = doc.querySelector('.status-pill [data-i18n="hero_status"]');
+                        if (s) s.textContent = msg.value;
+                    } else if (msg.type === 'theme') {
+                        doc.documentElement.setAttribute('data-theme', msg.value);
+                    }
+                }
+            } catch(e) {}
+        }
+
+        // Toast Notification
+        function showToast(text) {
+            const toast = document.getElementById('toastMessage');
+            document.getElementById('toastText').innerText = text;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+
+        // Helpers
+        function setDeep(obj, path, val) {
+            const parts = path.split('.');
+            let curr = obj;
+            for (let i = 0; i < parts.length - 1; i++) {
+                if (!curr[parts[i]]) curr[parts[i]] = {};
+                curr = curr[parts[i]];
+            }
+            curr[parts[parts.length - 1]] = val;
+        }
+
+        function updateProjectField(idx, field, val) {
+            if (portfolioData.projects && portfolioData.projects[idx]) {
+                setDeep(portfolioData.projects[idx], field, val);
+                saveDraftAuto();
+            }
+        }
+
+        function updateServiceField(idx, field, val) {
+            if (portfolioData.services && portfolioData.services[idx]) {
+                setDeep(portfolioData.services[idx], field, val);
+                saveDraftAuto();
+            }
+        }
+
+        function updateExpField(idx, field, val) {
+            if (portfolioData.experience && portfolioData.experience[idx]) {
+                setDeep(portfolioData.experience[idx], field, val);
+                saveDraftAuto();
+            }
+        }
+
+        function updateMetricField(idx, field, val) {
+            if (portfolioData.metrics && portfolioData.metrics[idx]) {
+                setDeep(portfolioData.metrics[idx], field, val);
+                saveDraftAuto();
+            }
+        }
+
+        function updateMarqueeSubtitle(idx, val) {
+            if (portfolioData.marquee && portfolioData.marquee[idx]) {
+                if (!portfolioData.marquee[idx].subtitle) portfolioData.marquee[idx].subtitle = {};
+                portfolioData.marquee[idx].subtitle.ar = val;
+                saveDraftAuto();
+            }
+        }
+
+        function deleteProject(idx) {
+            if (confirm('هل أنت متأكد من حذف هذا المشروع؟')) {
+                portfolioData.projects.splice(idx, 1);
+                renderProjectsList();
+                saveDraftAuto();
+                showToast('تم حذف المشروع.');
+            }
+        }
+
+        function saveDraftAuto() {
+            localStorage.setItem('rayyan_portfolio_draft', JSON.stringify(portfolioData));
+        }
+
+        // Run
+        window.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>

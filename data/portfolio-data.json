@@ -1,0 +1,567 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-09-15T22:26:27.845Z",
+  "meta": {
+    "siteName": "Rayyan Aldohian · Portfolio",
+    "siteUrl": "https://irayyankoo.github.io/rayyan-portfolio",
+    "defaultLanguage": "ar",
+    "supportedLanguages": [
+      "ar",
+      "en"
+    ],
+    "theme": {
+      "defaultTheme": "teal",
+      "customAccent": "#24B1B1"
+    }
+  },
+  "profile": {
+    "name": {
+      "ar": "ريان الضحيان",
+      "en": "Rayyan Aldohian"
+    },
+    "handle": "rayyan.aldohian",
+    "status": {
+      "active": true,
+      "text": {
+        "ar": "متاح للمشاريع واستشارات النمو",
+        "en": "Open to projects & growth advisory"
+      }
+    }
+  },
+  "hero": {
+    "headline": {
+      "ar": "أبني مسارات النمو، ذكاء الأعمال، والتجارب الرقمية",
+      "en": "Building scalable growth, Business Intelligence, and digital brands"
+    },
+    "headlineAccent": {
+      "ar": "المدعومة بالذكاء الاصطناعي.",
+      "en": "powered by AI."
+    },
+    "lead": {
+      "ar": "أدمج تحليلات ذكاء الأعمال (BI) مع استراتيجيات التسويق والأداء، وبناء الهويات البصرية الراسخة، وحلول الذكاء الاصطناعي (AI) لهندسة نمو مستدام وتجارب رقمية ذات أثر ملموس وقابل للقياس.",
+      "en": "Bridging Business Intelligence (BI) and data analytics with high-converting marketing, authoritative brand identity, and AI-driven workflows to build sustainable enterprise growth and measurable ROI."
+    },
+    "ctas": [
+      {
+        "id": "work",
+        "type": "primary",
+        "label": {
+          "ar": "استعرض الأعمال",
+          "en": "See the work"
+        },
+        "link": "#work",
+        "icon": "arrow-down-left"
+      },
+      {
+        "id": "contact",
+        "type": "link",
+        "label": {
+          "ar": "بدء محادثة",
+          "en": "Start a conversation"
+        },
+        "link": "#contact",
+        "icon": "arrow-left"
+      }
+    ],
+    "visual": {
+      "type": "video",
+      "src": "assets/hero-character-workstation-1080p.mp4",
+      "scale": 1.22,
+      "glowColor": "rgba(36, 177, 177, 0.22)",
+      "alt": "Rayyan Aldohian - 3D Character Workstation"
+    }
+  },
+  "terminal": {
+    "sessionLabel": "SESSION // BI_AI_PIPELINE",
+    "promptCommand": {
+      "ar": "pipeline --connect --source=bigquery",
+      "en": "pipeline --connect --source=bigquery"
+    },
+    "lines": [
+      {
+        "id": "line1",
+        "type": "info",
+        "text": {
+          "ar": "› Data Warehouse connected: BigQuery / Supabase",
+          "en": "› Data Warehouse connected: BigQuery / Supabase"
+        }
+      },
+      {
+        "id": "line2",
+        "type": "metric",
+        "text": {
+          "ar": "› Conversion Funnel (CRO): +38.4% Uplift",
+          "en": "› Conversion Funnel (CRO): +38.4% Uplift"
+        }
+      },
+      {
+        "id": "line3",
+        "type": "accent",
+        "text": {
+          "ar": "› AI Automation Workflows: Operational",
+          "en": "› AI Automation Workflows: Operational"
+        }
+      }
+    ]
+  },
+  "marquee": [
+    {
+      "id": "ts",
+      "name": "T&S Holding",
+      "subtitle": {
+        "ar": "مجموعة شركات قابضة",
+        "en": "Corporate Group"
+      },
+      "logo": "assets/logos/ts-white.svg",
+      "type": "svg"
+    },
+    {
+      "id": "wahag",
+      "name": "Wahag Entertainment",
+      "subtitle": {
+        "ar": "إعلام وترفيه إبداعي",
+        "en": "Creative & Media"
+      },
+      "logo": "assets/logos/Wahag.png",
+      "type": "png"
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "subtitle": {
+        "ar": "عمليات خدمة العملاء العالمية",
+        "en": "Global CS Operations"
+      },
+      "logo": "assets/logos/Amazon_logo.svg.webp",
+      "type": "webp"
+    },
+    {
+      "id": "rac",
+      "name": "Riyadh Airports",
+      "subtitle": {
+        "ar": "تشغيل وحوكمة مطارات",
+        "en": "Operations & Governance"
+      },
+      "logo": "assets/logos/Riyadh-airports-01.webp",
+      "type": "webp"
+    },
+    {
+      "id": "naht",
+      "name": "Naht Real Estate",
+      "subtitle": {
+        "ar": "تطوير عقاري وأنظمة ERP",
+        "en": "Real Estate & ERP"
+      },
+      "logo": "assets/logos/naht-white.png",
+      "type": "png"
+    }
+  ],
+  "projects": [
+    {
+      "id": "naht-erp",
+      "featured": true,
+      "year": "2026",
+      "category": "ERP / BI",
+      "statusBadge": {
+        "ar": "نظام مؤسسي نشط",
+        "en": "Actively maintained"
+      },
+      "title": {
+        "ar": "منظومة نحت ERP",
+        "en": "Naht Enterprise ERP"
+      },
+      "description": {
+        "ar": "نظام تخطيط الموارد، المحاسبة المزدوجة، وإدارة الأصول العقارية",
+        "en": "Double-entry accounting, trial balances, and real estate asset management"
+      },
+      "tags": [
+        "ERP Systems",
+        "Double-Entry Accounting",
+        "Real Estate BI",
+        "Supabase",
+        "Node.js"
+      ],
+      "image": "assets/p11-naht-erp.png",
+      "caseStudyUrl": "projects/naht-erp.html",
+      "liveUrl": "https://naht-re.sa/erp",
+      "domain": "naht-re.sa/erp"
+    },
+    {
+      "id": "naht-crm",
+      "featured": true,
+      "year": "2026",
+      "category": "CRM / BI",
+      "statusBadge": {
+        "ar": "نظام مباشر ونشط",
+        "en": "Actively maintained"
+      },
+      "title": {
+        "ar": "نظام نحت CRM",
+        "en": "NAHT Real Estate CRM"
+      },
+      "description": {
+        "ar": "محرك ذكاء الأعمال، قنوات الاستقطاب، وأتمتة مسارات المبيعات",
+        "en": "Business Intelligence, multi-channel lead routing & ROAS telemetry"
+      },
+      "tags": [
+        "Real Estate CRM",
+        "WhatsApp API",
+        "BigQuery BI",
+        "Lead Automation",
+        "ROAS"
+      ],
+      "image": "assets/p10-naht-crm.png",
+      "caseStudyUrl": "projects/naht-crm.html",
+      "liveUrl": "https://naht-re.sa/crm",
+      "domain": "naht-re.sa/crm"
+    },
+    {
+      "id": "naht-web",
+      "featured": true,
+      "year": "2026",
+      "category": "Web / Portal",
+      "statusBadge": {
+        "ar": "بوابة عامة نشطة",
+        "en": "Active Public Portal"
+      },
+      "title": {
+        "ar": "بوابة نحت العقارية",
+        "en": "Naht Real Estate Portal"
+      },
+      "description": {
+        "ar": "البوابة العامة لاستعراض وحجز المشاريع السكنية الفاخرة بالرياض",
+        "en": "Interactive showcase and live reservation portal for luxury Riyadh projects"
+      },
+      "tags": [
+        "Luxury Portal",
+        "Dynamic Floorplans",
+        "Live Booking Sync",
+        "Fast CDN"
+      ],
+      "image": "assets/p6-naht-web.png",
+      "caseStudyUrl": "projects/naht-web.html",
+      "liveUrl": "https://naht-re.sa",
+      "domain": "naht-re.sa"
+    },
+    {
+      "id": "ts-holding",
+      "featured": true,
+      "year": "2025",
+      "category": "Corporate / Portal",
+      "statusBadge": {
+        "ar": "منصة مؤسسية حية",
+        "en": "Enterprise Platform"
+      },
+      "title": {
+        "ar": "منصة مجموعة T&S",
+        "en": "T&S Holding Group Platform"
+      },
+      "description": {
+        "ar": "المنصة الرقمية الموحدة لـ 10 قطاعات استثمارية كبرى",
+        "en": "Unified corporate portal consolidating 10 major investment sectors"
+      },
+      "tags": [
+        "Holding Portal",
+        "Multi-Sector Architecture",
+        "Design System",
+        "Cloudflare"
+      ],
+      "image": "assets/p01-ts-portal.png",
+      "caseStudyUrl": "projects/ts-holding.html",
+      "liveUrl": "https://ts-holding.sa",
+      "domain": "ts-holding.sa"
+    },
+    {
+      "id": "ts-academy",
+      "featured": true,
+      "year": "2025",
+      "category": "EdTech / Academy",
+      "statusBadge": {
+        "ar": "منصة تدريبية نشطة",
+        "en": "Active Platform"
+      },
+      "title": {
+        "ar": "أكاديمية T&S للتميز",
+        "en": "T&S Excellence Academy"
+      },
+      "description": {
+        "ar": "منصة تطوير الكفاءات الوطنية ومراكز التقييم المهني المعتمد",
+        "en": "Leadership development, interactive curriculum, and B2B client enrollment"
+      },
+      "tags": [
+        "EdTech",
+        "Assessment Center",
+        "B2B Workflows",
+        "Next.js"
+      ],
+      "image": "assets/p02-ts-academy.png",
+      "caseStudyUrl": "projects/ts-academy.html",
+      "liveUrl": "https://academy.ts-holding.sa",
+      "domain": "academy.ts-holding.sa"
+    }
+  ],
+  "services": [
+    {
+      "id": "bi",
+      "icon": "bar-chart-3",
+      "title": {
+        "ar": "ذكاء الأعمال وتحليل البيانات (BI)",
+        "en": "Business Intelligence & Data Analytics"
+      },
+      "description": {
+        "ar": "بناء لوحات تحكم تفاعلية وتنفيذية متقدمة، وربط مصادر البيانات المتفرقة لاستخراج رؤى استراتيجية تكشف فرص التوسع وتحسن كفاءة القرارات التشغيلية والتسويقية.",
+        "en": "Architecting executive dashboards, unifying fragmented telemetry, and extracting strategic intelligence that unlocks scalable ROI and operational precision."
+      },
+      "chips": [
+        "BigQuery",
+        "Supabase",
+        "SQL Pipelines",
+        "Executive Dashboards",
+        "Conversion Funnels"
+      ]
+    },
+    {
+      "id": "growth",
+      "icon": "trending-up",
+      "title": {
+        "ar": "التسويق واستراتيجيات النمو (Growth & CRO)",
+        "en": "Performance Marketing & Growth Strategy"
+      },
+      "description": {
+        "ar": "تخطيط الحملات الإعلانية الممولة الموجهة بالأرقام (Google & Meta Ads)، وهندسة مسارات التحويل (Funnels)، وتحسين معدل التحويل لتعظيم العائد الاستثماري على كل ريال.",
+        "en": "Data-backed paid acquisition (Google & Meta Ads), conversion rate optimization (CRO), and rigorous funnel engineering to maximize capital efficiency."
+      },
+      "chips": [
+        "Paid Media (Ads)",
+        "CRO Optimization",
+        "ROAS Modeling",
+        "Attribution Tracking",
+        "A/B Testing"
+      ]
+    },
+    {
+      "id": "brand",
+      "icon": "palette",
+      "title": {
+        "ar": "بناء وتطوير الهويات البصرية (Brand Identity)",
+        "en": "Brand Identity & Design Systems"
+      },
+      "description": {
+        "ar": "تصميم هويات بصرية وتجارية متكاملة تنطلق من الفهم العميق للجمهور، وتوحيد لغة التصميم عبر المنصات والتطبيقات والحملات لترسيخ مكانة العلامة في السوق.",
+        "en": "Designing authoritative brand identities anchored in market psychology, paired with scalable Design Systems that unify every enterprise touchpoint."
+      },
+      "chips": [
+        "Brand Architecture",
+        "Design Systems",
+        "Typography & Tokens",
+        "WCAG 2.1 AA",
+        "Guidelines"
+      ]
+    },
+    {
+      "id": "ai",
+      "icon": "bot",
+      "title": {
+        "ar": "حلول وأتمتة الذكاء الاصطناعي (AI Solutions)",
+        "en": "AI Solutions & Workflow Automation"
+      },
+      "description": {
+        "ar": "توظيف وكلاء ونماذج الذكاء الاصطناعي في تحليل سلوك العملاء، أتمتة تدفقات العمل التسويقية والإدارية، وتسريع إنتاج وتخصيص المحتوى الذكي بدقة عالية.",
+        "en": "Deploying autonomous AI agents, fine-tuned LLM workflows, and intelligent pipeline automations that eliminate manual bottlenecks."
+      },
+      "chips": [
+        "Autonomous AI Agents",
+        "LLM Workflows",
+        "API Integrations",
+        "CRM Automations",
+        "WhatsApp Bot"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "ts",
+      "company": {
+        "ar": "مجموعة T&S القابضة",
+        "en": "T&S Holding Group"
+      },
+      "role": {
+        "ar": "أخصائي أول تسويق رقمي",
+        "en": "Senior Digital Marketing Specialist"
+      },
+      "period": "04/2025 – 05/2026",
+      "location": {
+        "ar": "الرياض، المملكة العربية السعودية",
+        "en": "Riyadh, Saudi Arabia"
+      },
+      "bullets": [
+        {
+          "ar": "صياغة وتنفيذ الاستراتيجيات الرقمية لتعزيز وتوسيع الحضور المؤسسي للمجموعة عبر منصات X و LinkedIn.",
+          "en": "Authored and spearheaded omnichannel growth strategies expanding corporate digital presence across LinkedIn and X."
+        },
+        {
+          "ar": "تصميم وإدارة خطط وجداول المحتوى التحريري لرفع معدلات التفاعل وضمان الاتساق البصري عبر 10 قطاعات أعمال.",
+          "en": "Orchestrated editorial content architecture, boosting audience engagement while maintaining strict visual cohesion across 10 business units."
+        },
+        {
+          "ar": "التعاون الوثيق مع فرق التصميم والاستراتيجية لإطلاق حملات تسويقية متزامنة مع إنجازات وتوسعات المجموعة.",
+          "en": "Synchronized high-impact cross-functional campaigns aligning corporate expansions with national milestones."
+        }
+      ]
+    },
+    {
+      "id": "wahag",
+      "company": {
+        "ar": "شركة وهج للترفيه",
+        "en": "Wahag Entertainment"
+      },
+      "role": {
+        "ar": "أخصائي تسويق",
+        "en": "Marketing Specialist"
+      },
+      "period": "02/2024 – 03/2025",
+      "location": {
+        "ar": "الرياض، المملكة العربية السعودية",
+        "en": "Riyadh, Saudi Arabia"
+      },
+      "bullets": [
+        {
+          "ar": "قيادة حملات تسويقية متكاملة رسخت مكانة وهج كجهة إبداعية رائدة في قطاع الترفيه.",
+          "en": "Directed multi-channel marketing initiatives establishing Wahag as an avant-garde creative benchmark in the entertainment sector."
+        },
+        {
+          "ar": "إدارة مشروع إعادة تطوير الهوية التجارية (Rebranding)، وتوحيد لغة التصميم ونبرة الصوت عبر كافة القنوات.",
+          "en": "Led comprehensive brand re-architecture, codifying design systems and brand tone across all media touchpoints."
+        }
+      ]
+    },
+    {
+      "id": "amazon",
+      "company": {
+        "ar": "شركة أمازون (Amazon)",
+        "en": "Amazon"
+      },
+      "role": {
+        "ar": "عمليات خدمة العملاء (CS Operations)",
+        "en": "CS Operations"
+      },
+      "period": "10/2022 – 07/2023",
+      "location": {
+        "ar": "الرياض، المملكة العربية السعودية",
+        "en": "Riyadh, Saudi Arabia"
+      },
+      "bullets": [
+        {
+          "ar": "تحليل مؤشرات الأداء التشغيلية (KPIs) بدقة لرصد فجوات الأداء واقتراح تحسينات عملية مستدامة.",
+          "en": "Conducted rigorous KPI root-cause telemetry, optimizing SLA adherence under global Amazon standards."
+        }
+      ]
+    },
+    {
+      "id": "rac",
+      "company": {
+        "ar": "شركة مطارات الرياض (RAC)",
+        "en": "Riyadh Airports (RAC)"
+      },
+      "role": {
+        "ar": "منسق إداري",
+        "en": "Administrative Coordinator"
+      },
+      "period": "02/2020 – 09/2022",
+      "location": {
+        "ar": "الرياض، المملكة العربية السعودية",
+        "en": "Riyadh, Saudi Arabia"
+      },
+      "bullets": [
+        {
+          "ar": "إدارة وتنظيم الجداول التشغيلية اليومية لفرق خدمة العملاء في مرافق المطار الحيوية.",
+          "en": "Administered 24/7 operational scheduling and resource management across passenger terminal hubs."
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "value": "+38.4%",
+      "label": {
+        "ar": "ارتفاع معدل التحويل (CRO)",
+        "en": "Conversion Rate Lift (CRO)"
+      },
+      "sub": {
+        "ar": "عبر تحسين المسارات واختبارات A/B",
+        "en": "Via data-driven funnel engineering"
+      }
+    },
+    {
+      "value": "10+",
+      "label": {
+        "ar": "قطاعات أعمال استثمارية",
+        "en": "Enterprise Sectors"
+      },
+      "sub": {
+        "ar": "تحت مظلة هوية وبنية رقمية موحدة",
+        "en": "Unified under cohesive digital infrastructure"
+      }
+    },
+    {
+      "value": "99.9%",
+      "label": {
+        "ar": "جاهزية الأنظمة وسرعة المعالجة",
+        "en": "System Uptime & SLA"
+      },
+      "sub": {
+        "ar": "بنية سحابية فائقة الاعتمادية",
+        "en": "High-reliability cloud architecture"
+      }
+    },
+    {
+      "value": "+50K",
+      "label": {
+        "ar": "مستخدمين ومستفيدين نشطين",
+        "en": "Active End Users"
+      },
+      "sub": {
+        "ar": "ضمن المنصات والتطبيقات المطورة",
+        "en": "Across deployed platforms and workflows"
+      }
+    }
+  ],
+  "about": {
+    "title": {
+      "ar": "نبذة عني والمسيرة المهنية",
+      "en": "About Me & Professional Career"
+    },
+    "bio": {
+      "ar": "متخصص في هندسة النمو، ذكاء الأعمال (BI)، وحلول الذكاء الاصطناعي. أمتلك خلفية أكاديمية في معلوماتية الأعمال من جامعة ولاية أيداهو الأمريكية وخبرة ميدانية في كبرى الشركات (أمازون، مطارات الرياض، T&S القابضة). أركز على بناء وتطوير الأنظمة التي تدمج التحليلات المتقدمة بالأثر التجاري الملموس.",
+      "en": "Growth Architect, Business Intelligence strategist, and AI systems builder. Holding a degree in Business Informatics from Idaho State University with proven track record across leading enterprises (Amazon, Riyadh Airports, T&S Holding). Dedicated to building scalable digital engines that fuse deep analytics with measurable commercial impact."
+    },
+    "education": {
+      "degree": {
+        "ar": "معلوماتية الأعمال (Business Informatics)",
+        "en": "Business Informatics"
+      },
+      "institution": {
+        "ar": "جامعة ولاية أيداهو (Idaho State University)",
+        "en": "Idaho State University"
+      },
+      "years": "2015 – 2019",
+      "location": "Pocatello, Idaho, USA"
+    },
+    "cvFile": "assets/Rayyan_Aldohian_CV.pdf"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/in/rayyan-aldohian",
+    "github": "https://github.com/iRayyanKoo",
+    "x": "https://x.com/rayyan_aldohian",
+    "email": "contact@rayyan.sa",
+    "whatsapp": "+966500000000"
+  },
+  "saasPlatform": {
+    "enabled": false,
+    "platformName": "PulsePortfolio",
+    "version": "1.0-preview",
+    "allowRegistrations": false,
+    "tenantId": "rayyan",
+    "customDomain": "rayyan.sa"
+  }
+}
