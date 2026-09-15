@@ -804,6 +804,33 @@ html[lang="ar"] .btn-outline-accent {
     color: var(--color-bone);
 }
 
+.btn-icon-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-line);
+    background: rgba(18, 21, 24, 0.6);
+    color: var(--color-muted);
+    transition: all 0.25s var(--ease-premium);
+    flex-shrink: 0;
+}
+
+.btn-icon-accent:hover {
+    border-color: var(--color-accent-border);
+    color: var(--color-accent);
+    background: var(--color-accent-10);
+    transform: translateY(-2px);
+}
+
+.cta-social-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
 /* Arabic Typography for Buttons */
 html[dir="rtl"] .btn-primary-accent,
 html[dir="rtl"] .btn-outline-accent,
