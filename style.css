@@ -277,7 +277,8 @@ html[lang="ar"] .font-display {
     transition: border-color 0.3s ease;
 }
 
-.nav-container {
+.nav-container,
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
