@@ -46,6 +46,7 @@
 
     <!-- Stylesheets & Icons -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collectible-figure.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -207,19 +208,16 @@
                     </div>
                 </div>
 
-                <!-- Right Visual / Portrait Card -->
-                <div class="hero-visual-card">
-                    <div class="hero-visual-inner">
-                        <div class="hero-portrait-frame">
-                            <img src="assets/profile.jpg" alt="Rayyan Aldohian" loading="eager">
-                        </div>
-                        <div class="hero-spec-chips">
-                            <span class="spec-chip highlight">Business Intelligence</span>
-                            <span class="spec-chip">Artificial Intelligence</span>
-                            <span class="spec-chip">Brand Identity</span>
-                            <span class="spec-chip">Growth & CRO</span>
-                            <span class="spec-chip">Marketing Automation</span>
-                        </div>
+                <!-- Right Visual: 3D Saudi Character Workstation (Standalone & Floating like Source) -->
+                <div class="hero-scene-stage" id="heroSceneStage" aria-label="Rayyan Aldohian - 3D Character Workstation">
+                    <!-- Ambient Aura Glow Behind 3D Scene -->
+                    <div class="hero-scene-glow" aria-hidden="true"></div>
+
+                    <!-- 3D Interactive Parallax Tilt Container -->
+                    <div class="hero-scene-wrapper" id="heroSceneWrapper">
+                        <video class="hero-scene-video" id="heroCharacterVideo" autoplay loop muted playsinline preload="auto">
+                            <source src="assets/hero-character-workstation-1080p.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -236,7 +234,7 @@
              ========================================================================== -->
         <section class="marquee-section" aria-label="Companies and Entities">
             <div class="marquee-header">
-                <span class="marquee-subtitle" data-i18n="marquee_trusted">خبرات ومشاريع مع كبرى الجهات والشركات الرائدة</span>
+                <span class="marquee-subtitle" data-i18n="marquee_trusted">خبرات ومحطات مهنية في كبرى الشركات والمؤسسات الرائدة</span>
             </div>
             <div class="marquee-wrapper">
                 <div class="marquee-track">
@@ -244,6 +242,15 @@
                     <div class="marquee-group">
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/naht-white.png" alt="Naht Real Estate" class="marquee-logo-img naht-logo">
+                            </span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">Real Estate &amp; ERP</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge logo-badge-img">
                                 <img src="assets/logos/ts-white.svg" alt="T&amp;S Holding" class="marquee-logo-img ts-logo">
                             </span>
                             <div class="marquee-brand-text">
@@ -280,48 +287,47 @@
                         </div>
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
-                                <img src="assets/logos/ISU-vertical.png" alt="Idaho State University" class="marquee-logo-img isu-logo">
+                                <img src="assets/logos/naht-white.png" alt="Naht Real Estate" class="marquee-logo-img naht-logo">
                             </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Idaho State University</span>
-                                <span class="marquee-brand-tag">Academic Alma Mater</span>
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">Real Estate &amp; ERP</span>
                             </div>
                         </div>
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
-                                <img src="assets/logos/saudi-club-emblem.png" alt="Saudi Students Association Pocatello" class="marquee-logo-img saudi-club-logo">
+                                <img src="assets/logos/ts-white.svg" alt="T&amp;S Holding" class="marquee-logo-img ts-logo">
                             </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Saudi Club Pocatello</span>
-                                <span class="marquee-brand-tag">Media &amp; Community (5 Yrs)</span>
+                                <span class="marquee-brand-name">T&amp;S Holding</span>
+                                <span class="marquee-brand-tag">Corporate Group</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">NHT</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Wahag.png" alt="Wahag Entertainment" class="marquee-logo-img wahag-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Naht Real Estate</span>
-                                <span class="marquee-brand-tag">ERP &amp; Development</span>
+                                <span class="marquee-brand-name">Wahag Entertainment</span>
+                                <span class="marquee-brand-tag">Creative &amp; Media</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">HRK</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Amazon_logo.svg.webp" alt="Amazon" class="marquee-logo-img amazon-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">HRKH Solutions</span>
-                                <span class="marquee-brand-tag">Human Capital B2B</span>
+                                <span class="marquee-brand-name">Amazon</span>
+                                <span class="marquee-brand-tag">Global CS Operations</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">SPX</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Riyadh-airports-01.webp" alt="Riyadh Airports" class="marquee-logo-img rac-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">SportX Platform</span>
-                                <span class="marquee-brand-tag">Sports Ecosystem</span>
-                            </div>
-                        </div>
-                        <div class="marquee-item">
-                            <span class="marquee-logo-badge">R88</span>
-                            <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Ri88 Food Co.</span>
-                                <span class="marquee-brand-tag">Brand &amp; Packaging</span>
+                                <span class="marquee-brand-name">Riyadh Airports</span>
+                                <span class="marquee-brand-tag">Operations &amp; Governance</span>
                             </div>
                         </div>
                     </div>
@@ -329,6 +335,15 @@
                     <div class="marquee-group" aria-hidden="true">
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/naht-white.png" alt="Naht Real Estate" class="marquee-logo-img naht-logo">
+                            </span>
+                            <div class="marquee-brand-text">
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">Real Estate &amp; ERP</span>
+                            </div>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="marquee-logo-badge logo-badge-img">
                                 <img src="assets/logos/ts-white.svg" alt="T&amp;S Holding" class="marquee-logo-img ts-logo">
                             </span>
                             <div class="marquee-brand-text">
@@ -365,48 +380,47 @@
                         </div>
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
-                                <img src="assets/logos/ISU-vertical.png" alt="Idaho State University" class="marquee-logo-img isu-logo">
+                                <img src="assets/logos/naht-white.png" alt="Naht Real Estate" class="marquee-logo-img naht-logo">
                             </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Idaho State University</span>
-                                <span class="marquee-brand-tag">Academic Alma Mater</span>
+                                <span class="marquee-brand-name">Naht Real Estate</span>
+                                <span class="marquee-brand-tag">Real Estate &amp; ERP</span>
                             </div>
                         </div>
                         <div class="marquee-item">
                             <span class="marquee-logo-badge logo-badge-img">
-                                <img src="assets/logos/saudi-club-emblem.png" alt="Saudi Students Association Pocatello" class="marquee-logo-img saudi-club-logo">
+                                <img src="assets/logos/ts-white.svg" alt="T&amp;S Holding" class="marquee-logo-img ts-logo">
                             </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Saudi Club Pocatello</span>
-                                <span class="marquee-brand-tag">Media &amp; Community (5 Yrs)</span>
+                                <span class="marquee-brand-name">T&amp;S Holding</span>
+                                <span class="marquee-brand-tag">Corporate Group</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">NHT</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Wahag.png" alt="Wahag Entertainment" class="marquee-logo-img wahag-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Naht Real Estate</span>
-                                <span class="marquee-brand-tag">ERP &amp; Development</span>
+                                <span class="marquee-brand-name">Wahag Entertainment</span>
+                                <span class="marquee-brand-tag">Creative &amp; Media</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">HRK</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Amazon_logo.svg.webp" alt="Amazon" class="marquee-logo-img amazon-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">HRKH Solutions</span>
-                                <span class="marquee-brand-tag">Human Capital B2B</span>
+                                <span class="marquee-brand-name">Amazon</span>
+                                <span class="marquee-brand-tag">Global CS Operations</span>
                             </div>
                         </div>
                         <div class="marquee-item">
-                            <span class="marquee-logo-badge">SPX</span>
+                            <span class="marquee-logo-badge logo-badge-img">
+                                <img src="assets/logos/Riyadh-airports-01.webp" alt="Riyadh Airports" class="marquee-logo-img rac-logo">
+                            </span>
                             <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">SportX Platform</span>
-                                <span class="marquee-brand-tag">Sports Ecosystem</span>
-                            </div>
-                        </div>
-                        <div class="marquee-item">
-                            <span class="marquee-logo-badge">R88</span>
-                            <div class="marquee-brand-text">
-                                <span class="marquee-brand-name">Ri88 Food Co.</span>
-                                <span class="marquee-brand-tag">Brand &amp; Packaging</span>
+                                <span class="marquee-brand-name">Riyadh Airports</span>
+                                <span class="marquee-brand-tag">Operations &amp; Governance</span>
                             </div>
                         </div>
                     </div>
@@ -426,18 +440,18 @@
                             <span data-i18n="tag_work">أعمال مختارة</span>
                         </span>
                         <h2 class="section-heading font-display" data-i18n="heading_work">
-                            مشاريع وأنظمة تصنع أثراً حقيقياً في السوق.
+                            أنظمة وتطبيقات تصنع أثراً حقيقياً.
                         </h2>
                     </div>
-                    <a href="#contact" class="section-header-link" data-i18n="link_discuss_project">
-                        <span>طلب استشارة أو مشروع</span>
-                        <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                    <a href="projects.html" class="section-header-link">
+                        <span data-i18n="link_all_projects">كافة المشاريع</span>
+                        <svg class="header-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
                     </a>
                 </div>
 
                 <!-- Projects Grid (Window Mockups like sunnypatel.net) -->
                 <div class="projects-grid">
-                    <!-- Project 0: NAHT Enterprise ERP (Localhost 3500) -->
+                    <!-- Project 0: NAHT Enterprise ERP -->
                     <a href="projects/naht-erp.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -447,15 +461,15 @@
                                 <span class="window-url">naht-re.sa/erp</span>
                             </div>
                             <div class="window-preview">
-                                <img src="assets/naht-erp-logo.png" alt="منظومة نحت ERP" loading="lazy">
+                                <img src="assets/p11-naht-erp.jpg" alt="منظومة نحت ERP" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p0_title">منظومة نحت العقارية المتكاملة (ERP)</h3>
+                                <h3 class="card-title" data-i18n="p0_title">منظومة نحت ERP</h3>
                                 <span class="card-year">2026</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p0_desc">منظومة ERP متكاملة مبنية على Next.js 15 وPrisma ORM تجمع بين قيود المحاسبة المزدوجة، موازين المراجعة D4، وسجلات التدقيق المشفرة، وإدارة الأصول العقارية.</p>
+                            <p class="card-tagline" data-i18n="p0_desc">نظام تخطيط الموارد، المحاسبة المزدوجة، وإدارة الأصول العقارية</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_erp">نظام مؤسسي نشط</span>
@@ -473,15 +487,15 @@
                                 <span class="window-url">naht-re.sa/crm</span>
                             </div>
                             <div class="window-preview">
-                                <img src="assets/naht-crm-logo.png" alt="نحت CRM" loading="lazy">
+                                <img src="assets/p10-naht-crm.jpg" alt="نظام نحت CRM" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p1_title">منصة نحت العقارية (CRM)</h3>
+                                <h3 class="card-title" data-i18n="p1_title">نظام نحت CRM</h3>
                                 <span class="card-year">2026</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p1_desc">منصة CRM عقارية وذكاء أعمال سحابية تدمج الويب هوك لإعلانات Google وMeta مع قنوات WhatsApp، وتوفر تحليلات فورية لسرعة الاستجابة والعائد الإعلاني ROAS.</p>
+                            <p class="card-tagline" data-i18n="p1_desc">محرك ذكاء الأعمال، قنوات الاستقطاب، وأتمتة مسارات المبيعات</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_active">نظام مباشر ونشط</span>
@@ -499,15 +513,15 @@
                                 <span class="window-url">naht-re.sa</span>
                             </div>
                             <div class="window-preview">
-                                <img src="assets/p6-naht-web.png" alt="بوابة نحت العقارية" loading="lazy">
+                                <img src="assets/p6-naht-web-live.jpg" alt="بوابة نحت العقارية" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p_naht_web_title">بوابة نحت العقارية واستعراض المشاريع</h3>
+                                <h3 class="card-title" data-i18n="p_naht_web_title">بوابة نحت العقارية</h3>
                                 <span class="card-year">2025</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p_naht_web_desc">البوابة الرقمية العامة لشركة نحت العقارية لاستعراض المشاريع السكنية الفاخرة بالرياض، المخططات التفاعلية، وحجز المعاينات المباشرة المرتبطة آلياً بالـ CRM.</p>
+                            <p class="card-tagline" data-i18n="p_naht_web_desc">البوابة العامة لاستعراض وحجز المشاريع السكنية الفاخرة بالرياض</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_showcase">بوابة عامة نشطة</span>
@@ -522,7 +536,7 @@
                                 <div class="window-dots">
                                     <span></span><span></span><span></span>
                                 </div>
-                                <span class="window-url">tsholding.sa</span>
+                                <span class="window-url">ts.sa/en</span>
                             </div>
                             <div class="window-preview">
                                 <img src="assets/p2-ts-holding.png" alt="مجموعة T&S القابضة" loading="lazy">
@@ -530,10 +544,10 @@
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p2_title">منصة مجموعة T&S القابضة</h3>
+                                <h3 class="card-title" data-i18n="p2_title">منصة مجموعة T&S</h3>
                                 <span class="card-year">2025</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p2_desc">المنصة الرقمية المؤسسية لمجموعة T&S القابضة لتوحيد 10 قطاعات أعمال كبرى، موفرة سرعة تحميل فائقة عبر Edge CDN، وتوافقاً ثنائي اللغة، وظهوراً استثمارياً استثنائياً.</p>
+                            <p class="card-tagline" data-i18n="p2_desc">المنصة الرقمية الموحدة لـ 10 قطاعات استثمارية كبرى</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_live">منصة مؤسسية حية</span>
@@ -541,7 +555,7 @@
                         </div>
                     </a>
 
-                    <!-- Project: T&S Human Capital Academy Platform -->
+                    <!-- Project 4: T&S Human Capital Academy Platform -->
                     <a href="projects/ts-academy.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -556,10 +570,10 @@
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p_ts_academy_title">منصة أكاديمية T&S للتميز وبناء القدرات</h3>
+                                <h3 class="card-title" data-i18n="p_ts_academy_title">أكاديمية T&S للتميز</h3>
                                 <span class="card-year">2024</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p_ts_academy_desc">المنصة الرقمية لأكاديمية T&S لتطوير الكفاءات الوطنية وبناء القدرات المؤسسية، إدارة مراكز التقييم، وجدولة الدورات التخصصية، وربط بوابات التسجيل آلياً مع CRM.</p>
+                            <p class="card-tagline" data-i18n="p_ts_academy_desc">منصة تطوير الكفاءات الوطنية ومراكز التقييم المهني المعتمد</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_academy">منصة تدريبية نشطة</span>
@@ -567,7 +581,7 @@
                         </div>
                     </a>
 
-                    <!-- Project 3: SportX Platform -->
+                    <!-- Project 5: SportX Platform -->
                     <a href="projects/sportx.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -585,7 +599,7 @@
                                 <h3 class="card-title" data-i18n="p3_title">منصة SportX الرياضية</h3>
                                 <span class="card-year">2024</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p3_desc">منظومة رياضية متكاملة لإدارة الملاعب والبطولات تعتمد على Redis لمنع تضارب الحجوزات، مع جدولة آلية للمسابقات، وإصدار تذاكر QR ذكية، ودفع إلكتروني فوري.</p>
+                            <p class="card-tagline" data-i18n="p3_desc">منظومة حجز الملاعب، جدولة البطولات، والتذاكر الذكية المشفرة</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_growth">مسار نمو متسارع</span>
@@ -593,7 +607,7 @@
                         </div>
                     </a>
 
-                    <!-- Project 4: Brand Architecture & Guidelines Hub -->
+                    <!-- Project 6: Brand Architecture & Guidelines Hub -->
                     <a href="projects/brand-hub.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -608,18 +622,18 @@
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p4_title">بوابة ونظام الهوية البصرية</h3>
+                                <h3 class="card-title" data-i18n="p4_title">مركز حوكمة الهوية</h3>
                                 <span class="card-year">2024</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p4_desc">بوابة رقمية تفاعلية تعتمد على Design Tokens لتوحيد الأصول البصرية، الخطوط، وباليتات الألوان، وضمان اتساق الهوية بنسبة 100% عبر كافة شركات المجموعة.</p>
+                            <p class="card-tagline" data-i18n="p4_desc">بوابة حوكمة الهوية البصرية، مصفوفة التصميم، والأصول الرقمية</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
-                                <span data-i18n="status_system">Design System</span>
+                                <span data-i18n="status_system">Design System معتمد</span>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Project 5: HRKH Recruitment Solutions -->
+                    <!-- Project 7: HRKH Recruitment Solutions -->
                     <a href="projects/hrkh.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -634,10 +648,10 @@
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p5_title">منصة وحملات شركة حركة</h3>
+                                <h3 class="card-title" data-i18n="p5_title">منصة توظيف حركة HRKH</h3>
                                 <span class="card-year">2023</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p5_desc">منصة B2B وحملات نمو موجهة على LinkedIn وGoogle Ads لشركة حركة لاستقطاب الكفاءات التنفيذية وحلول التوطين، أثمرت عن أكثر من 30 عقداً مؤسسياً.</p>
+                            <p class="card-tagline" data-i18n="p5_desc">منصة B2B وحملات نمو لاستقطاب الكفاءات وعقود التوطين المؤسسي</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_delivered">مشروع مكتمل الأثر</span>
@@ -645,7 +659,7 @@
                         </div>
                     </a>
 
-                    <!-- Project 6: Ri88 SaaS Multi-Utility Platform -->
+                    <!-- Project 8: Ri88 SaaS Multi-Utility Platform -->
                     <a href="projects/ri88.html" class="project-card">
                         <div class="window-mockup">
                             <div class="window-bar">
@@ -660,10 +674,10 @@
                         </div>
                         <div class="card-content">
                             <div class="card-title-row">
-                                <h3 class="card-title" data-i18n="p6_title">منصة الأدوات الذكية Ri88 SaaS</h3>
+                                <h3 class="card-title" data-i18n="p6_title">منصة الأدوات الذكية Ri88</h3>
                                 <span class="card-year">2024</span>
                             </div>
-                            <p class="card-tagline" data-i18n="p6_desc">منظومة SaaS ويب متعددة الخدمات توفر أكثر من 50 أداة ذكية مجانية (حاسبات مالية سعودية، معالجة PDF، تحرير وسائط عبر WebAssembly، وأدوات مطورين) بمعالجة محلية تضمن الخصوصية.</p>
+                            <p class="card-tagline" data-i18n="p6_desc">منظومة سحابية تضم +50 أداة ذكية مجانية بمعالجة محلية فورية</p>
                             <div class="card-status">
                                 <span class="mini-ping"></span>
                                 <span data-i18n="status_saas">منصة SaaS سحابية</span>
@@ -884,6 +898,9 @@
 
             <div class="footer-bottom">
                 <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <div class="footer-saudi-badge" title="صُنع في السعودية / Saudi Made">
+                    <img src="assets/logos/saudi-made.png" alt="Saudi Made - صناعة سعودية" class="saudi-made-logo">
+                </div>
                 <span data-i18n="footer_credit">Designed and built from scratch.</span>
             </div>
         </div>
@@ -891,5 +908,36 @@
 
     <!-- Main Logic & Translations -->
     <script src="main.js"></script>
+
+    <!-- 3D Standalone Workstation Parallax Tilt (matching Sunny Patel) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stage = document.getElementById('heroSceneStage');
+            const wrapper = document.getElementById('heroSceneWrapper');
+            const video = document.getElementById('heroCharacterVideo');
+
+            if (video) {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {});
+                }
+            }
+
+            if (stage && wrapper) {
+                stage.addEventListener('mousemove', (e) => {
+                    const rect = stage.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    const rx = -(y / (rect.height / 2)) * 10;
+                    const ry = (x / (rect.width / 2)) * 10;
+                    wrapper.style.transform = `perspective(1000px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+                });
+
+                stage.addEventListener('mouseleave', () => {
+                    wrapper.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

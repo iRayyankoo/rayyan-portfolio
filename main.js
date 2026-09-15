@@ -20,47 +20,83 @@ const translations = {
         btn_see_work: "استعرض الأعمال",
         btn_contact_link: "بدء محادثة",
         scroll_label: "SCROLL",
+        btn_mode_box: "مجسم العلبة 3D (Aurox Box)",
+        btn_mode_ws: "محطة العمل 3D (Workstation)",
+        btn_mode_webgl: "مجسم WebGL تفاعلي",
+        btn_mode_cinema: "العرض السينمائي (Render)",
+        toy_caption: "RAYYAN // غرفة ذكاء الأعمال والنمو · 3D LIVE",
+        cube_status: "معرض تفاعلي · هوية وذكاء",
+        cube_spec: "3D · OCTANE 8K",
+        chip_bi: "ذكاء الأعمال",
+        chip_ai: "ذكاء اصطناعي",
+        chip_brand: "هويات بصرية",
+        chip_growth: "استراتيجيات النمو",
+        chip_auto: "أتمتة التسويق",
         
         tag_work: "أعمال مختارة",
-        heading_work: "مشاريع وأنظمة تصنع أثراً حقيقياً في السوق.",
-        link_discuss_project: "طلب استشارة أو مشروع",
+        heading_work: "أنظمة وتطبيقات تصنع أثراً حقيقياً.",
+        link_all_projects: "كافة المشاريع",
+        link_all_projects_text: "كافة المشاريع",
+        link_discuss_project: "كافة المشاريع",
         
-        p0_title: "منظومة نحت العقارية المتكاملة (ERP)",
-        p0_desc: "منظومة ERP متكاملة مبنية على Next.js 15 وPrisma ORM تجمع بين قيود المحاسبة المزدوجة، موازين المراجعة D4، وسجلات التدقيق المشفرة، وإدارة الأصول العقارية.",
+        p0_title: "منظومة نحت ERP",
+        p0_desc: "نظام تخطيط الموارد، المحاسبة المزدوجة، وإدارة الأصول العقارية",
         status_erp: "نظام مؤسسي نشط",
 
-        p1_title: "منصة نحت العقارية (CRM)",
-        p1_desc: "منصة CRM عقارية وذكاء أعمال سحابية تدمج الويب هوك لإعلانات Google وMeta مع قنوات WhatsApp، وتوفر تحليلات فورية لسرعة الاستجابة والعائد الإعلاني ROAS.",
+        p1_title: "نظام نحت CRM",
+        p1_desc: "محرك ذكاء الأعمال، قنوات الاستقطاب، وأتمتة مسارات المبيعات",
         status_active: "نظام مباشر ونشط",
 
-        p_naht_web_title: "بوابة نحت العقارية واستعراض المشاريع",
-        p_naht_web_desc: "البوابة الرقمية العامة لشركة نحت العقارية لاستعراض المشاريع السكنية الفاخرة بالرياض، المخططات التفاعلية، وحجز المعاينات المباشرة المرتبطة آلياً بالـ CRM.",
+        p_naht_web_title: "بوابة نحت العقارية",
+        p_naht_web_desc: "البوابة العامة لاستعراض وحجز المشاريع السكنية الفاخرة بالرياض",
         status_showcase: "بوابة عامة نشطة",
         
-        p2_title: "منصة مجموعة T&S القابضة",
-        p2_desc: "المنصة الرقمية المؤسسية لمجموعة T&S القابضة لتوحيد 10 قطاعات أعمال كبرى، موفرة سرعة تحميل فائقة عبر Edge CDN، وتوافقاً ثنائي اللغة، وظهوراً استثمارياً استثنائياً.",
+        p2_title: "منصة مجموعة T&S",
+        p2_desc: "المنصة الرقمية الموحدة لـ 10 قطاعات استثمارية كبرى",
         status_live: "منصة مؤسسية حية",
         
-        p_ts_academy_title: "منصة أكاديمية T&S للتميز وبناء القدرات",
-        p_ts_academy_desc: "المنصة الرقمية لأكاديمية T&S لتطوير الكفاءات الوطنية وبناء القدرات المؤسسية، إدارة مراكز التقييم، وجدولة الدورات التخصصية، وربط بوابات التسجيل آلياً مع CRM.",
+        p_ts_academy_title: "أكاديمية T&S للتميز",
+        p_ts_academy_desc: "منصة تطوير الكفاءات الوطنية ومراكز التقييم المهني المعتمد",
         status_academy: "منصة تدريبية نشطة",
         
         p3_title: "منصة SportX الرياضية",
-        p3_desc: "منظومة رياضية متكاملة لإدارة الملاعب والبطولات تعتمد على Redis لمنع تضارب الحجوزات، مع جدولة آلية للمسابقات، وإصدار تذاكر QR ذكية، ودفع إلكتروني فوري.",
+        p3_desc: "منظومة حجز الملاعب، جدولة البطولات، والتذاكر الذكية المشفرة",
         status_growth: "مسار نمو متسارع",
         
-        p4_title: "بوابة ونظام الهوية البصرية",
-        p4_desc: "بوابة رقمية تفاعلية تعتمد على Design Tokens لتوحيد الأصول البصرية، الخطوط، وباليتات الألوان، وضمان اتساق الهوية بنسبة 100% عبر كافة شركات المجموعة.",
-        status_system: "Design System",
+        p4_title: "مركز حوكمة الهوية",
+        p4_desc: "بوابة حوكمة الهوية البصرية، مصفوفة التصميم، والأصول الرقمية",
+        status_system: "Design System معتمد",
         
-        p5_title: "منصة وحملات شركة حركة",
-        p5_desc: "منصة B2B وحملات نمو موجهة على LinkedIn وGoogle Ads لشركة حركة لاستقطاب الكفاءات التنفيذية وحلول التوطين، أثمرت عن أكثر من 30 عقداً مؤسسياً.",
+        p5_title: "منصة توظيف حركة HRKH",
+        p5_desc: "منصة B2B وحملات نمو لاستقطاب الكفاءات وعقود التوطين المؤسسي",
         status_delivered: "مشروع مكتمل الأثر",
         
-        p6_title: "منصة الأدوات الذكية Ri88 SaaS",
-        p6_desc: "منظومة SaaS ويب متعددة الخدمات توفر أكثر من 50 أداة ذكية مجانية (حاسبات مالية سعودية، معالجة PDF، تحرير وسائط عبر WebAssembly، وأدوات مطورين) بمعالجة محلية تضمن الخصوصية.",
+        p6_title: "منصة الأدوات الذكية Ri88",
+        p6_desc: "منظومة سحابية تضم +50 أداة ذكية مجانية بمعالجة محلية فورية",
         status_saas: "منصة SaaS سحابية",
         status_brand: "منصة SaaS سحابية",
+
+        // --- Projects Archive Page Keys ---
+        projects_page_title: "كافة المشاريع والأنظمة · ريان الضحيان",
+        tag_projects_archive: "المشاريع",
+        heading_projects_archive: "أعمال وأنظمة بنيتها، من الفكرة إلى الأثر.",
+        lead_projects_archive: "أنظمة تعتمد عليها فرق العمل يومياً، منصات رقمية وحلول تشغيلية متكاملة، كل مشروع تم إطلاقه وتوثيقه بدقة. استكشف دراسة الحالة لكل مشروع لمعرفة القصة كاملة.",
+        
+        p0_story: "منصة رقمية مؤسسية تجمع بين ذكاء الأعمال (BI) والإدارة المالية المتقدمة، وإدارة الكوادر والمشاريع العقارية في بيئة تشغيلية موحدة ومؤتمتة ومبنية بمعايير المحاسبة المزدوجة وسجل تدقيق مالي غير قابل للتعديل.",
+        p1_story: "منظومة سحابية متكاملة لإدارة علاقات العملاء في قطاع التطوير والوساطة العقارية، تربط الحملات الإعلانية بمسار الصفقات وتوفر توزيعاً ذكياً للفرص مع ربط فوري بـ WhatsApp Business API وتتبع دقيق لعائد الإنفاق الإعلاني.",
+        p_naht_web_story: "البوابة العامة لشركة نحت العقارية، توفر استعراضاً تفاعلياً للمشاريع السكنية الفاخرة بالرياض، مع مخططات معمارية ديناميكية وتزامن فوري للحجوزات مع نظام الـ CRM وسرعة استجابة فائقة.",
+        p2_story: "المنصة الرقمية الموحدة لمجموعة T&S القابضة لإعادة هيكلة الحضور المؤسسي وتوحيد 10 قطاعات استثمارية كبرى تحت لغة وهوية بصرية واحدة وبنية سحابية عالمية فائقة السرعة.",
+        p_ts_academy_story: "منصة تدريبية واستشارية متخصصة في تأهيل القيادات وتطوير الكفاءات الوطنية، تضم دليلاً تفاعلياً للبرامج ومراكز تقييم مهني معتمدة مع مسارات تسجيل مؤتمتة لعملاء B2B.",
+        p3_story: "منظومة رقمية شاملة لحجز الملاعب والمنشآت الرياضية، جدولة دوريات وبطولات المجموعات تلقائياً، وإصدار تذاكر ذكية مشفرة بـ QR Code مع تكامل مع بوابات الدفع الوطنية (مدى و Apple Pay).",
+        p4_story: "مركز رقمي لحوكمة الهوية المؤسسية يضم مصفوفة الألوان والخطوط (Design Tokens) ومستودع الأصول الموجهة (SVG & AI)، مع معايير وصول WCAG 2.1 AA لضمان الاتساق البصري عبر كافة الشركات التابعة.",
+        p5_story: "منصة رقمية موجهة لعملاء B2B وحملات نمو مخصصة على LinkedIn و Google لاستقطاب الكفاءات القيادية وإبرام عقود التوطين المؤسسي مع لوحة قياس فورية للطلبات.",
+        p6_story: "منظومة SaaS سحابية تجمع أكثر من 50 أداة ذكية مجانية للمستخدمين، تشمل الحاسبات المالية المعتمدة، معالجة ملفات PDF، وتحرير الفيديو بتقنية WebAssembly محلياً داخل المتصفح دون رفع أي بيانات للخوادم.",
+
+        cs_case_study: "دراسة الحالة",
+        cs_source: "المصدر",
+        cs_live: "المعاينة",
+        cs_docs: "التوثيق",
+        cs_source_enterprise: "مستودع مؤسسي خاص",
         
         tag_services: "مجالات التخصص",
         heading_services: "بناء الأنظمة الرقمية التي تدمج البيانات بالنمو.",
@@ -140,7 +176,7 @@ const translations = {
         cert_meta: "التسويق الاحترافي عبر منصات التواصل الاجتماعي",
         cert_meta_issuer: "Meta · 2025",
 
-        marquee_trusted: "خبرات ومشاريع مع كبرى الجهات والشركات الرائدة",
+        marquee_trusted: "خبرات ومحطات مهنية في كبرى الشركات والمؤسسات الرائدة",
         
         tag_impact: "الأثر الاستراتيجي",
         heading_impact: "أثر ملموس عبر شركات ومجموعات الأعمال.",
@@ -202,11 +238,11 @@ const translations = {
         cs_erp_h1: "01. سياق التحدي ونقاط الاختناق التشغيلي",
         cs_erp_p1: "مع تسارع أعمال التطوير والبيع على الخارطة في شركة <strong>نحت العقارية</strong> عبر مشاريع حيوية في الرياض (نحت 13، 14، 18، 19، 20، 21، 22، 23)، واجهت الإدارة اختناقات ناتجة عن تشتت الأنظمة: برامج محاسبية منفصلة لا تتواصل مع سجلات البيع، جداول يدوية لحجوزات الوحدات تتسبب في مخاطر التضارب والازدواجية، وغياب الرؤية الموحدة لتدفق السيولة وتكاليف المقاولين. <em>كان الهدف بناء منظومة مركزية واحدة تدير الأصول المالية والتشغيلية من حجز الوحدة حتى الإغلاق المحاسبي النهائي.</em>",
         cs_erp_h2: "02. المعمارية التقنية والحل الهندسي",
-        cs_erp_p2: "تم تصميم المنظومة بنمط المعمارية الأحادية المعيارية <code>Modular Monolith</code> بالاعتماد على <code>Next.js 15 App Router</code> و <code>TypeScript</code> مع قاعدة بيانات علائقية <code>PostgreSQL</code> عبر <code>Prisma ORM</code>. طُبقت معايير المحاسبة المزدوجة <code>Double-Entry General Ledger</code> المؤتمتة وموازين المراجعة <code>D4 Trial Balance</code>، مع بناء سجل تدقيق مالي غير قابل للمسح أو التعديل <code>Append-Only Audit Log</code> يوثق كل قيد وتعديل بدقة جنائية تلبي أعلى متطلبات الامتثال المالي.",
+        cs_erp_p2: "تم تصميم المنظومة بنمط المعمارية الأحادية المعيارية <em>Modular Monolith</em> بالاعتماد على <code>Next.js 15</code> و <code>TypeScript</code> مع قاعدة بيانات علائقية <code>PostgreSQL</code> عبر <code>Prisma ORM</code>. طُبقت معايير المحاسبة المزدوجة <em>Double-Entry General Ledger</em> المؤتمتة وموازين المراجعة <em>D4 Trial Balance</em>، مع بناء سجل تدقيق مالي غير قابل للمسح أو التعديل <em>Append-Only Audit Log</em> يوثق كل قيد وتعديل بدقة جنائية تلبي أعلى متطلبات الامتثال المالي.",
         cs_erp_h3: "03. استراتيجية التنفيذ والتكامل التشغيلي",
         cs_erp_p3: "قُسمت المنظومة إلى وحدات وظيفية مترابطة: محرك إدارة المخزون العقاري الذي يتيح تتبع نسب الإنجاز، النماذج المعمارية، الأسعار الديناميكية، وإصدار عقود الحجز إلكترونياً، بالتكامل مع بوابة خدمة ذاتية للموارد البشرية لإدارة الإجازات والتكليفات وفق مصفوفة صلاحيات مشددة <em>Role-Based Access Control (RBAC)</em>، وبيئة اختبار معزولة <em>Isolated Sandbox Lab</em> لمعاينة القيود قبل ترحيلها.",
         cs_erp_h4: "04. الأثر المالي والنتائج الرقمية المحققة",
-        cs_erp_p4: "أحدثت المنظومة تحولاً جذرياً في كفاءة الفريق الإداري والمالي، حيث ألغت تماماً الاعتماد على الجداول المتفرقة، وحولت الاجتماعات الدورية من التخمين إلى اتخاذ قرارات تستند إلى لوحات ذكاء أعمال لحظية <code>BI Telemetry</code> تكشف هوامش الربحية وتدفقات السيولة.",
+        cs_erp_p4: "أحدثت المنظومة تحولاً جذرياً في كفاءة الفريق الإداري والمالي، حيث ألغت تماماً الاعتماد على الجداول المتفرقة، وحولت الاجتماعات الدورية من التخمين إلى اتخاذ قرارات تستند إلى لوحات ذكاء أعمال لحظية <em>BI Telemetry</em> تكشف هوامش الربحية وتدفقات السيولة.",
         cs_erp_m1_val: "-65%",
         cs_erp_m1_lbl: "تسريع الإغلاق المالي والقيود المحاسبية",
         cs_erp_m2_val: "100%",
@@ -228,11 +264,11 @@ const translations = {
         cs_crm_h1: "01. سياق التحدي ونقاط الاختناق في المبيعات",
         cs_crm_p1: "في تسويق المشاريع العقارية الفاخرة، يمثل بطء التواصل مع العميل المحتمل <em>Lead Decay</em> السبب الأكبر لخسارة الصفقات. كان فريق المبيعات يستقبل مئات البيانات يومياً من إعلانات Meta وGoogle، لكن التوزيع اليدوي استغرق من 4 إلى 12 ساعة، مما أدى إلى تسرب العملاء لمنافسين آخرين وصعوبة قياس كفاءة الميزانيات الإعلانية.",
         cs_crm_h2: "02. المعمارية التقنية والتكامل السحابي",
-        cs_crm_p2: "تم بناء المنصة على قاعدة بيانات سحابية لحظية <code>Supabase PostgreSQL</code> مع واجهة تفاعلية خفيفة، وربط مباشر عبر <code>Webhooks API</code> لاستقبال طلبات الشراء لحظة إرسالها من إعلانات Meta Lead Ads وGoogle Ads. دُمجت واجهة برمجة تطبيقات <code>Bevatel WhatsApp Business Cloud API</code> للتواصل الفوري الآلي وتوثيق كافة المحادثات في سجل العميل الموحد.",
+        cs_crm_p2: "تم بناء المنصة على قاعدة بيانات سحابية لحظية <code>Supabase PostgreSQL</code> مع واجهة تفاعلية خفيفة، وربط مباشر عبر واجهات الربط السحابي Webhooks لاستقبال طلبات الشراء لحظة إرسالها من إعلانات Meta Lead Ads وGoogle Ads. دُمجت واجهة برمجة تطبيقات <em>Bevatel WhatsApp Business Cloud API</em> للتواصل الفوري الآلي وتوثيق كافة المحادثات في سجل العميل الموحد.",
         cs_crm_h3: "03. استراتيجية التنفيذ وهندسة التدفقات",
-        cs_crm_p3: "ابتُكرت خوارزمية ذكية لتوزيع الفرص <em>Smart Distribution Engine</em> توزع العملاء على المستشارين حسب التخصص الجغرافي والقدرة الاستيعابية، مع نظام تصعيد آلي يعيد سحب العميل في حال عدم استجابة الوسيط خلال <em>15 دقيقة</em>. كما جهزت المنصة بنظام تتبع <code>UTM Attribution</code> يربط كل صفقة بيع مغلقة بالإعلان والكلمة الدلالية المحددة.",
+        cs_crm_p3: "ابتُكرت خوارزمية ذكية لتوزيع الفرص <em>Smart Distribution Engine</em> توزع العملاء على المستشارين حسب التخصص الجغرافي والقدرة الاستيعابية، مع نظام تصعيد آلي يعيد سحب العميل في حال عدم استجابة الوسيط خلال <em>15 دقيقة</em>. كما جهزت المنصة بنظام تتبع <em>UTM Attribution</em> يربط كل صفقة بيع مغلقة بالإعلان والكلمة الدلالية المحددة.",
         cs_crm_h4: "04. الأثر التجاري والنتائج الرقمية المحققة",
-        cs_crm_p4: "نجحت المنصة في تحويل إدارة المبيعات العقارية إلى بيئة عمل محكومة بالبيانات اللحظية عبر لوحات <code>Chart.js Telemetry</code>، مما سرع من وتيرة المبيعات وخفض الهدر الإعلاني بشكل ملموس.",
+        cs_crm_p4: "نجحت المنصة في تحويل إدارة المبيعات العقارية إلى بيئة عمل محكومة بالبيانات اللحظية عبر لوحات <em>Chart.js Telemetry</em>، مما سرع من وتيرة المبيعات وخفض الهدر الإعلاني بشكل ملموس.",
         cs_crm_m1_val: "< 8 دقائق",
         cs_crm_m1_lbl: "متوسط زمن أول استجابة للعميل المحتمل",
         cs_crm_m2_val: "+38%",
@@ -253,9 +289,9 @@ const translations = {
         cs_naht_web_h1: "01. سياق التحدي وتجربة المشتري في البيع على الخارطة",
         cs_naht_web_p1: "في مشاريع التطوير والبيع على الخارطة، يواجه المشتري صعوبة كبيرة في تصور المساحات والتشطيبات والمخططات عبر الكتيبات الورقية وملفات PDF التقليدية. كما كانت آلية الاستفسار اليدوية عبر أرقام الهواتف تسبب تسرباً كبيراً في طلبات المشترين المهتمين. احتاجت شركة <strong>نحت العقارية</strong> إلى بوابة عامة راقية تليق بهيبة مشاريعها بالرياض وتمنح المشتري تجربة استكشاف تفاعلية وتحول اهتمامه إلى حجز مؤكد.",
         cs_naht_web_h2: "02. المعمارية التقنية وتجربة التصفح التفاعلية",
-        cs_naht_web_p2: "تم تطوير البوابة بالاعتماد على <code>Next.js App Router</code> و <code>TypeScript</code> لتحقيق أعلى سرعات التحميل اللحظية وأفضل نتائج الأرشفة بمحركات البحث <code>Technical SEO</code>، مدعومة باستعراض بصري للمخططات المعمارية عالية الدقة، مع واجهات متجاوبة بالكامل تضمن تجربة هاتف ذكي فائقة السلاسة.",
+        cs_naht_web_p2: "تم تطوير البوابة بالاعتماد على <code>Next.js</code> و <code>TypeScript</code> لتحقيق أعلى سرعات التحميل اللحظية وأفضل نتائج الأرشفة بمحركات البحث <em>Technical SEO</em>، مدعومة باستعراض بصري للمخططات المعمارية عالية الدقة، مع واجهات متجاوبة بالكامل تضمن تجربة هاتف ذكي فائقة السلاسة.",
         cs_naht_web_h3: "03. التكامل مع مسار المبيعات ومحرك الـ CRM",
-        cs_naht_web_p3: "ربطت المنصة كافة نماذج حجز المعاينات وطلب كراسات الشروط آلياً عبر <code>Webhooks API</code> مباشرة مع <strong>نظام نحت CRM</strong> وقنوات <code>WhatsApp Business API</code>، ليتم إشعار مستشار المبيعات وتأهيل المشتري في أقل من 8 دقائق.",
+        cs_naht_web_p3: "ربطت المنصة كافة نماذج حجز المعاينات وطلب كراسات الشروط آلياً عبر واجهات الربط السحابي Webhooks مباشرة مع <strong>نظام نحت CRM</strong> وقنوات <em>WhatsApp Business API</em>، ليتم إشعار مستشار المبيعات وتأهيل المشتري في أقل من 8 دقائق.",
         cs_naht_web_h4: "04. الأثر التسويقي والمؤشرات الرقمية المحققة",
         cs_naht_web_p4: "حولت البوابة تسويق مشاريع نحت من مجرد إعلانات متفرقة إلى منظومة تدفق مبيعات متكاملة عززت من ثقة المشترين والمستثمرين وسرعت من وتيرة حجز الوحدات السكنية.",
         cs_naht_web_m1_val: "+180,000",
@@ -280,9 +316,9 @@ const translations = {
         cs_ts_h1: "01. سياق التحدي وتشتت الحضور المؤسسي",
         cs_ts_p1: "مع تنوع استثمارات <strong>مجموعة T&S القابضة</strong> عبر 10 قطاعات تشمل التطوير العقاري، الضيافة، التقنية، الفعاليات الرياضية، والحلول اللوجستية، واجهت المجموعة تشتتاً رقمياً واسعاً بوجود مواقع متفرقة لا تعكس الحجم الحقيقي لأصول المجموعة وقيمتها الاستثمارية أمام الصناديق والمؤسسات المالية.",
         cs_ts_h2: "02. المعمارية الرقمية والأداء السحابي",
-        cs_ts_p2: "تم تأسيس بنية تحتية سحابية موزعة تعتمد على تقنيات الويب الحديثة وشبكات التوزيع الطرفية <code>Edge CDN</code> لتوفير أداء فائق بزمن استجابة أقل من ثانية واحدة عالمياً. طُبقت معايير <code>Technical SEO</code> المتقدمة وهيكلة البيانات <code>Schema.org JSON-LD</code> المتوافقة مع محركات البحث العالمية ومعايير الوصولية WCAG.",
+        cs_ts_p2: "تم تأسيس بنية تحتية سحابية موزعة تعتمد على تقنيات الويب الحديثة وشبكات التوزيع الطرفية <em>Edge CDN</em> لتوفير أداء فائق بزمن استجابة أقل من ثانية واحدة عالمياً. طُبقت معايير <em>Technical SEO</em> المتقدمة وهيكلة البيانات <em>Schema.org JSON-LD</em> المتوافقة مع محركات البحث العالمية ومعايير الوصولية WCAG.",
         cs_ts_h3: "03. حوكمة العلامة وبوابات الأعمال المتخصصة",
-        cs_ts_p3: "صيغت معمارية علامات تجارية <code>Brand Architecture</code> توازن بين هيبة الشركة القابضة واستقلالية كل شركة تابعة. وفّرت المنصة بوابات قطاعية متخصصة تبرز إنجازات ومشاريع كل قطاع بنقرة واحدة، مع بوابة تواصل مركزية توجه طلبات الشراكة مباشرة لمجالس إدارة الشركات التابعة.",
+        cs_ts_p3: "صيغت معمارية علامات تجارية <em>Brand Architecture</em> توازن بين هيبة الشركة القابضة واستقلالية كل شركة تابعة. وفّرت المنصة بوابات قطاعية متخصصة تبرز إنجازات ومشاريع كل قطاع بنقرة واحدة، مع بوابة تواصل مركزية توجه طلبات الشراكة مباشرة لمجالس إدارة الشركات التابعة.",
         cs_ts_h4: "04. الأثر الاستثماري والمؤشرات المحققة",
         cs_ts_p4: "تحولت المنصة إلى أصل استراتيجي رسخ المكانة الريادية للمجموعة، ومكن المستثمرين وصناع القرار من تقييم المحفظة الاستثمارية والمشاريع التوسعية بكفاءة غير مسبوقة.",
         cs_ts_m1_val: "10",
@@ -305,9 +341,9 @@ const translations = {
         cs_academy_h1: "01. سياق التحدي ونقاط الاختناق في تأهيل الكفاءات المؤسسية",
         cs_academy_p1: "واجهت برامج تدريب وتأهيل الكفاءات المؤسسية في المملكة تحديات كبرى تمثلت في الاعتماد على أساليب تسجيل تقليدية بطيئة، وصعوبة قياس الأثر التدريبي وتحديد الفجوات المهارية بدقة، وتشتت بيانات المتدربين بين منسقي الموارد البشرية والجهات التدريبية. برزت الحاجة لمنصة موحدة تدمج استعراض المسارات التدريبية، الجدولة الآلية، ومراكز تقييم الكفاءات.",
         cs_academy_h2: "02. المعمارية التقنية ومحرك إدارة البرامج والتقييمات",
-        cs_academy_p2: "تم بناء المنصة باستخدام <code>Next.js</code> و <code>TypeScript</code> لضمان استجابة لحظية وسرعة تصفح عالية للكتالوج التدريبي. صُممت المنصة لتشمل دمج أدوات التقييم النفسي ومحاكاة بيئات العمل، مع نظام تقويم ديناميكي تفاعلي <code>Training Calendar</code> يتيح للشركات والأفراد تصفية البرامج حسب المجال المهني والتواريخ المتاحة.",
+        cs_academy_p2: "تم بناء المنصة باستخدام <code>Next.js</code> و <code>TypeScript</code> لضمان استجابة لحظية وسرعة تصفح عالية للكتالوج التدريبي. صُممت المنصة لتشمل دمج أدوات التقييم النفسي ومحاكاة بيئات العمل، مع نظام تقويم ديناميكي تفاعلي تقويم البرامج التفاعلي يتيح للشركات والأفراد تصفية البرامج حسب المجال المهني والتواريخ المتاحة.",
         cs_academy_h3: "03. التكامل مع بوابات التسجيل ومسارات الاستقطاب B2B",
-        cs_academy_p3: "تم ربط نماذج التسجيل وطلبات استشارات التدريب المؤسسي آلياً عبر <code>Webhooks</code> مع أنظمة إدارة علاقات العملاء (CRM)، لتأهيل طلبات العقود المؤسسية وتوجيهها لمستشاري التدريب فورياً، مع توفير تأكيد فوري للحجز وإرسال كراسات البرامج عبر <code>WhatsApp API</code> و <code>Automated Email Triggers</code>.",
+        cs_academy_p3: "تم ربط نماذج التسجيل وطلبات استشارات التدريب المؤسسي آلياً عبر واجهات الربط Webhooks مع أنظمة إدارة علاقات العملاء (CRM)، لتأهيل طلبات العقود المؤسسية وتوجيهها لمستشاري التدريب فورياً، مع توفير تأكيد فوري للحجز وإرسال كراسات البرامج عبر تطبيق WhatsApp و رسائل البريد المؤتمتة.",
         cs_academy_h4: "04. الأثر التدريبي والمؤشرات الرقمية المحققة",
         cs_academy_p4: "حققت الأكاديمية قفزة نوعية في بناء القدرات المهنية وتعزيز الجاهزية التشغيلية للكوادر الوطنية في القطاعين الحكومي والخاص:",
         cs_academy_m1_val: "+12,000",
@@ -332,9 +368,9 @@ const translations = {
         cs_sportx_h1: "01. سياق التحدي والفوضى التشغيلية في الملاعب",
         cs_sportx_p1: "أدى الزخم الرياضي الكبير في المملكة إلى تضاعف الإقبال على الملاعب والمنافسات المجتمعية. غير أن أصحاب المنشآت الرياضية عانوا من اعتماد كامل على الرسائل والاتصالات اليدوية، مما تسبب في تضارب الحجوزات المتزامنة، وضياع الإيرادات النقدية، وفوضى تنظيم لوائح البطولات وجداول المباريات.",
         cs_sportx_h2: "02. المعمارية التقنية ومحرك التزامن اللحظي",
-        cs_sportx_p2: "تم بناء محرك تزامن لحظي <code>Real-Time Slot Engine</code> مدعوم بذاكرة <code>Redis</code> فائقة السرعة وبروتوكول <code>WebSockets</code> لإقفال الفترات الزمنية لحظياً ومنع التضارب نهائياً. كما طُورت خوارزمية ذكية لجدولة البطولات <em>Tournament Engine</em> تحسب النقاط والمجموعات وفوارق الأهداف تلقائياً دون أي تدخل يدوي.",
+        cs_sportx_p2: "تم بناء محرك تزامن لحظي محرك حجز لحظي مدعوم بذاكرة <code>Redis</code> فائقة السرعة وبروتوكول <code>WebSockets</code> لإقفال الفترات الزمنية لحظياً ومنع التضارب نهائياً. كما طُورت خوارزمية ذكية لجدولة البطولات <em>Tournament Engine</em> تحسب النقاط والمجموعات وفوارق الأهداف تلقائياً دون أي تدخل يدوي.",
         cs_sportx_h3: "03. تجربة الجماهير والبوابات الرقمية",
-        cs_sportx_p3: "أتاحت المنصة إصدار بطاقات دخول إلكترونية بتشفير <code>Dynamic QR Codes</code> لمسحها عند بوابات الدخول خلال ثوانٍ معدودة، مع ربط سلس بمدافع الدفع الوطنية (مدى و Apple Pay)، وتطبيق نظام المحفظة الرقمية <code>Digital Wallet</code> للاسترداد الفوري عند إلغاء المواعيد.",
+        cs_sportx_p3: "أتاحت المنصة إصدار بطاقات دخول إلكترونية بتشفير <em>Dynamic QR</em> لمسحها عند بوابات الدخول خلال ثوانٍ معدودة، مع ربط سلس بمدافع الدفع الوطنية (مدى و Apple Pay)، وتطبيق نظام المحفظة الرقمية المحافظ الرقمية (Apple & Google Wallet) للاسترداد الفوري عند إلغاء المواعيد.",
         cs_sportx_h4: "04. الأثر التشغيلي والعوائد المحققة",
         cs_sportx_p4: "حولت المنصة إدارة المرافق والبطولات إلى منظومة رقمية ذات كفاءة تشغيلية كاملة، ورفعت من معدلات تشغيل الملاعب خلال ساعات الصباح وبعد منتصف الليل عبر سياسات التسعير الديناميكي.",
         cs_sportx_m1_val: "+45,000",
@@ -359,9 +395,9 @@ const translations = {
         cs_brand_h1: "01. سياق التحدي وتآكل الهوية عبر الوكالات",
         cs_brand_p1: "مع تعدد الشركات التابعة والتعاقد مع وكالات إعلانية ومصممين خارجيين، أدت أدلة الهوية التقليدية بصيغة PDF إلى تشوهات بصرية متكررة: استخدام درجات ألوان غير معايرة، تشويه نسب الشعار، واختلاف خامات وألوان المطبوعات بين مورد وآخر، مما أضعف الحضور المؤسسي للعلامة.",
         cs_brand_h2: "02. معمارية محددات التصميم (Design Tokens)",
-        cs_brand_p2: "تم تحويل الهوية البصرية إلى لغة برمجية موحدة عبر محددات التصميم <code>Design Tokens</code> التي تُصدر قيم الألوان بدقة (HEX, RGB, CMYK, Pantone) والخطوط والمسافات آلياً. وتضمنت البوابة فاحصاً لحظياً لتباين الألوان وفق معايير <code>WCAG 2.1</code> لضمان القراءة وسهولة الوصول.",
+        cs_brand_p2: "تم تحويل الهوية البصرية إلى لغة برمجية موحدة عبر محددات التصميم <em>Design Tokens</em> التي تُصدر قيم الألوان بدقة (HEX, RGB, CMYK, Pantone) والخطوط والمسافات آلياً. وتضمنت البوابة فاحصاً لحظياً لتباين الألوان وفق معايير <em>WCAG 2.1 AA</em> لضمان القراءة وسهولة الوصول.",
         cs_brand_h3: "03. مستودع الأصول الرقمية (DAM) والحوكمة",
-        cs_brand_p3: "أنشئت مكتبة أصول سحابية مركزية تتيح تنزيل الشعارات المتجهة <code>Vector SVG / AI</code> والأيقونات المخصصة (أكثر من 150 أيقونة) بنقرة واحدة، مع شاشات تفاعلية توضح الاستخدامات الصحيحة والخاطئة <em>Do's & Don'ts</em> وقوالب تجهيز الطباعة وسماكات الورق.",
+        cs_brand_p3: "أنشئت مكتبة أصول سحابية مركزية تتيح تنزيل الشعارات المتجهة <em>Vector SVG & AI</em> والأيقونات المخصصة (أكثر من 150 أيقونة) بنقرة واحدة، مع شاشات تفاعلية توضح الاستخدامات الصحيحة والخاطئة <em>Do's & Don'ts</em> وقوالب تجهيز الطباعة وسماكات الورق.",
         cs_brand_h4: "04. الأثر التشغيلي وسرعة الإنتاج",
         cs_brand_p4: "ألغت المنظومة الحاجة للمراجعات اليدوية المتكررة للمواد التسويقية، وضمنت ظهوراً متطابقاً بنسبة 100% في كافة المنصات الرقمية، الحملات الإعلانية، وأجنحة المعارض الدولية.",
         cs_brand_m1_val: "200+",
@@ -386,9 +422,9 @@ const translations = {
         cs_hrkh_h1: "01. سياق التحدي وسوق التوظيف التنفيذي",
         cs_hrkh_p1: "في ظل الحراك الاقتصادي وتسارع متطلبات التوطين، واجهت شركة <strong>حركة</strong> صعوبة الاعتماد على أساليب تطوير الأعمال التقليدية البطيئة. احتاجت الشركة إلى منصة B2B ذات موثوقية عالية وحملات أداء رقمية موجهة تستهدف قيادات الموارد البشرية والمدراء التنفيذيين في كبرى الشركات السعودية.",
         cs_hrkh_h2: "02. هندسة منصة B2B وتحسين معدل التحويل (CRO)",
-        cs_hrkh_p2: "تم تطوير منصة تفاعلية تركز على تسهيل طلب عروض الأسعار عبر نماذج مخصصة تجمع الاحتياج الوظيفي وتوجهه فورياً لفريق الاستشاريين. طُبقت أحدث ممارسات <code>CRO</code> لتقليل الاحتكاك، مع بناء مسار مستقل لاستقبال وتصنيف السير الذاتية للباحثين عن عمل آلياً.",
+        cs_hrkh_p2: "تم تطوير منصة تفاعلية تركز على تسهيل طلب عروض الأسعار عبر نماذج مخصصة تجمع الاحتياج الوظيفي وتوجهه فورياً لفريق الاستشاريين. طُبقت أحدث ممارسات <em>CRO</em> لتقليل الاحتكاك، مع بناء مسار مستقل لاستقبال وتصنيف السير الذاتية للباحثين عن عمل آلياً.",
         cs_hrkh_h3: "03. استراتيجية النمو والحملات الموجهة",
-        cs_hrkh_p3: "أُطلقت حملات استهداف دقيقة عبر <code>LinkedIn Ads</code> و <code>Google Search Ads</code> تركز على صناع القرار في قطاعات المقاولات، التجزئة، والتقنية. صيغت الرسائل التسويقية لتركز على سرعة تزويد الكفاءات والامتثال لنسب التوطين، مع مراقبة يومية لتكلفة الاستحواذ المؤسسي <em>CAC</em>.",
+        cs_hrkh_p3: "أُطلقت حملات استهداف دقيقة عبر <em>LinkedIn Ads</em> و <em>Google Search Ads</em> تركز على صناع القرار في قطاعات المقاولات، التجزئة، والتقنية. صيغت الرسائل التسويقية لتركز على سرعة تزويد الكفاءات والامتثال لنسب التوطين، مع مراقبة يومية لتكلفة الاستحواذ المؤسسي <em>CAC</em>.",
         cs_hrkh_h4: "04. الأثر التجاري والتعاقدات المحققة",
         cs_hrkh_p4: "حققت الاستراتيجية طفرة في استقطاب العملاء المؤسسيين، وحولت الموقع من مجرد بروفايل تعريفي إلى قناة رئيسية لتوليد الصفقات التشغيلية المستمرة.",
         cs_hrkh_m1_val: "+30",
@@ -413,9 +449,9 @@ const translations = {
         cs_ri88_h1: "01. سياق التحدي وتشتت أدوات الإنتاجية",
         cs_ri88_p1: "يواجه المستخدمون ورواد الأعمال في السوق السعودي والمنطقة تشتتاً كبيراً عند إنجاز المهام الرقمية اليومية؛ حيث يضطر المستخدم للتنقل بين عشرات المواقع المنفصلة (لحساب ضريبة القيمة المضافة، جدول استهلاك القروض، حساب صافي الراتب والتأمينات، دمج وتعديل الـ PDF، وتحويل ملفات الفيديو والصور). غالبية هذه المواقع تفرض رسوم اشتراك باهظة، أو تغرق المستخدم بإعلانات مزعجة، أو تشكل مخاطر جسيمة على خصوصية البيانات برفع المستندات المالية والملفات الحساسة إلى خوادم سحابية خارجية مجهولة.",
         cs_ri88_h2: "02. المعمارية التقنية والمعالجة الآمنة (Client-Side Computing)",
-        cs_ri88_p2: "بُنيت المنصة بأحدث إصدارات <code>Next.js 16 App Router</code> و <code>React 19</code> مع <code>TypeScript</code> و <code>Tailwind CSS v4</code>. تمثل القرار الهندسي المحوري في اعتماد المعالجة الموضعية على جانب العميل <code>Client-Side Processing</code> باستخدام تقنية <code>WebAssembly (WASM)</code> عبر مكتبات <code>@ffmpeg/ffmpeg</code> و <code>pdf-lib</code> و <code>Canvas API</code>. نقل هذا المعمار عبء المعالجة الحسابية بالكامل لمتصفح المستخدم، مما وفر حماية مطلقة للبيانات دون رفع بايت واحد للخوادم (Zero-Cloud Retention)، وخفض تكاليف البنية التحتية والاستضافة إلى الصفر تقريباً.",
+        cs_ri88_p2: "بُنيت المنصة بأحدث إصدارات <code>Next.js 16</code> و <code>React 19</code> مع <code>TypeScript</code> و <code>Tailwind CSS v4</code>. تمثل القرار الهندسي المحوري في اعتماد المعالجة الموضعية على جانب العميل معالجة محلية بالكامل باستخدام تقنية <code>WebAssembly (WASM)</code> عبر مكتبات <code>@ffmpeg/ffmpeg</code> و <code>pdf-lib</code> و <code>Canvas API</code>. نقل هذا المعمار عبء المعالجة الحسابية بالكامل لمتصفح المستخدم، مما وفر حماية مطلقة للبيانات دون رفع بايت واحد للخوادم (Zero-Cloud Retention)، وخفض تكاليف البنية التحتية والاستضافة إلى الصفر تقريباً.",
         cs_ri88_h3: "03. هندسة واجهة المستخدم (Bento UI) والوصول السريع",
-        cs_ri88_p3: "صُممت المنصة وفق أحدث أنماط واجهات الويب <code>Bento Grid Layout</code> وتأثيرات زجاجية راقية <em>Glassmorphism</em> تدعم الوضعين الداكن والفاتح. زُوّدت المنصة بنافذة أوامر سريعة <code>Command Palette (Ctrl+K)</code> تتيح البحث الفوري والتنقل بين الأدوات في أجزاء من الثانية. كما دُمج نظام حسابات مرن عبر <code>NextAuth.js</code> مع قاعدة بيانات <code>PostgreSQL</code> عبر <code>Prisma ORM</code> لحفظ تفضيلات المستخدم والأدوات المفضلة، مع تجهيز خطة اشتراكات متقدمة (Pro Tier) عبر بوابة <code>Stripe</code>.",
+        cs_ri88_p3: "صُممت المنصة وفق أحدث أنماط واجهات الويب <em>Bento Grid Layout</em> وتأثيرات زجاجية راقية <em>Glassmorphism</em> تدعم الوضعين الداكن والفاتح. زُوّدت المنصة بنافذة أوامر سريعة <em>Command Palette (Ctrl+K)</em> تتيح البحث الفوري والتنقل بين الأدوات في أجزاء من الثانية. كما دُمج نظام حسابات مرن عبر <code>NextAuth.js</code> مع قاعدة بيانات <code>PostgreSQL</code> عبر <code>Prisma ORM</code> لحفظ تفضيلات المستخدم والأدوات المفضلة، مع تجهيز خطة اشتراكات متقدمة (Pro Tier) عبر بوابة <code>Stripe</code>.",
         cs_ri88_h4: "04. الأثر التشغيلي والنتائج الرقمية المحققة",
         cs_ri88_p4: "أثبتت المنصة في إطلاقها التجريبي (Beta) قدرتها على أن تكون الوجهة اليومية الشاملة للإنتاجية، محققة وفورات زمنية ملحوظة للمستخدمين وتجربة استخدام خالية تماماً من الإعلانات أو الاحتكاك.",
         cs_ri88_m1_val: "+50",
@@ -447,47 +483,83 @@ const translations = {
         btn_see_work: "See the work",
         btn_contact_link: "Start a conversation",
         scroll_label: "SCROLL",
+        btn_mode_box: "3D Box (Aurox Box)",
+        btn_mode_ws: "3D Workstation (Holograms)",
+        btn_mode_webgl: "WebGL Interactive (3D)",
+        btn_mode_cinema: "Cinema 3D (Render)",
+        toy_caption: "RAYYAN // BI & AI GROWTH ROOM · 3D LIVE",
+        cube_status: "EXHIBIT // HERITAGE & AI",
+        cube_spec: "3D · OCTANE 8K",
+        chip_bi: "Business Intelligence",
+        chip_ai: "Artificial Intelligence",
+        chip_brand: "Brand Identity",
+        chip_growth: "Growth & CRO",
+        chip_auto: "Marketing Automation",
         
         tag_work: "Selected Work",
-        heading_work: "Systems and platforms that drive measurable market impact.",
-        link_discuss_project: "Discuss a project",
+        heading_work: "Things people actually use.",
+        link_all_projects: "All projects",
+        link_all_projects_text: "All projects",
+        link_discuss_project: "All projects",
         
-        p0_title: "Naht Enterprise ERP & Operations",
-        p0_desc: "End-to-end real estate ERP on Next.js 15 & Prisma ORM unifying double-entry general ledgers, D4 trial balances, immutable audit logs, and property asset lifecycles.",
-        status_erp: "Active ERP system",
+        p0_title: "Naht Enterprise ERP",
+        p0_desc: "Double-entry accounting, trial balances, and real estate asset management",
+        status_erp: "Actively maintained",
 
-        p1_title: "NAHT Real Estate CRM & BI",
-        p1_desc: "PropTech sales CRM & BI platform integrating Google & Meta Ads webhooks with WhatsApp APIs, featuring real-time lead routing and ROAS attribution telemetry.",
+        p1_title: "NAHT Real Estate CRM",
+        p1_desc: "Business Intelligence, multi-channel lead routing & ROAS telemetry",
         status_active: "Actively maintained",
 
-        p_naht_web_title: "Naht Real Estate Public Showcase",
-        p_naht_web_desc: "The public-facing digital portal for Naht Real Estate showcasing off-plan residential developments in Riyadh, interactive unit floor plans, and virtual walkthrough bookings.",
-        status_showcase: "Active Public Portal",
+        p_naht_web_title: "Naht Real Estate Portal",
+        p_naht_web_desc: "Luxury residential showcase and direct reservation portal in Riyadh",
+        status_showcase: "Actively maintained",
         
-        p2_title: "T&S Holding Corporate Platform",
-        p2_desc: "Corporate holding platform unifying 10 high-growth enterprise subsidiaries under a singular design system with sub-second Edge CDN speed and bilingual parity.",
-        status_live: "Live enterprise platform",
+        p2_title: "T&S Holding Group",
+        p2_desc: "Unified corporate platform powering 10 major investment sectors",
+        status_live: "Actively maintained",
         
-        p_ts_academy_title: "T&S Human Capital Academy Platform",
-        p_ts_academy_desc: "Digital portal for T&S Academy empowering national talent and institutional capability building, managing assessment centers, executive training tracks, and automated CRM enrollment webhooks.",
-        status_academy: "Active Academy Platform",
+        p_ts_academy_title: "T&S Capability Academy",
+        p_ts_academy_desc: "Workforce development, psychometric assessment & accredited LMS",
+        status_academy: "Actively maintained",
         
-        p3_title: "SportX Sports Management",
-        p3_desc: "Digital sports ecosystem managing venue reservations and tournaments with Redis concurrency locks, automated bracket scheduling, and encrypted QR ticketing.",
-        status_growth: "High-growth system",
+        p3_title: "SportX Platform",
+        p3_desc: "Sports venues management, tournament brackets & QR ticketing",
+        status_growth: "Actively maintained",
         
-        p4_title: "Brand Architecture & Design Hub",
-        p4_desc: "Living design system and digital asset hub powered by Design Tokens, standardizing visual assets, typography, and color tokens across 10 corporate subsidiaries.",
+        p4_title: "Brand Architecture Hub",
+        p4_desc: "Design tokens, asset repository & unified guidelines governance",
         status_system: "Design System",
         
-        p5_title: "HRKH Recruitment Platform",
-        p5_desc: "B2B recruitment authority platform and targeted executive acquisition funnels driving over 30 enterprise staffing contracts and -35% lower CAC.",
-        status_delivered: "Delivered & scaling",
+        p5_title: "HRKH Recruitment Solutions",
+        p5_desc: "B2B executive staffing platform and localized talent acquisition",
+        status_delivered: "Delivered Project",
         
-        p6_title: "Ri88 SaaS Utility Ecosystem",
-        p6_desc: "Multi-utility Web SaaS platform delivering 50+ free client-side tools across Saudi financial calculators, PDF processing, WebAssembly media editing, and developer utilities.",
-        status_saas: "Active SaaS Platform",
-        status_brand: "Active SaaS Platform",
+        p6_title: "Ri88 Smart Tools SaaS",
+        p6_desc: "50+ privacy-first utility tools with instant client-side WASM execution",
+        status_saas: "Actively maintained",
+        status_brand: "Actively maintained",
+
+        // --- Projects Archive Page Keys ---
+        projects_page_title: "Projects & Systems Archive · Rayyan Aldohian",
+        tag_projects_archive: "Projects",
+        heading_projects_archive: "Things I've built, end to end.",
+        lead_projects_archive: "Apps real people use, systems work that goes down to the machine code, and enterprise platforms, each one shipped and documented. Open any project for the full story.",
+
+        p0_story: "An enterprise digital platform integrating Business Intelligence, automated double-entry ledger accounting, and real estate asset management with an immutable append-only audit trail.",
+        p1_story: "Cloud-native CRM built for high-velocity real estate brokerage, tracking leads from ad spend to closed deals with automated smart distribution and WhatsApp Business Cloud API sync.",
+        p_naht_web_story: "The flagship public portal for Naht Real Estate, delivering an interactive architectural showcase for luxury off-plan residences in Riyadh with instant webhook lead routing.",
+        p2_story: "Flagship corporate platform restructuring the digital presence of T&S Holding, unifying 10 high-growth business sectors under an authoritative design system and global edge CDN.",
+        p_ts_academy_story: "Authoritative corporate capability development portal featuring executive learning tracks, psychometric assessment diagnostics, and automated B2B enrollment funnels.",
+        p3_story: "Digital sports ecosystem managing venue bookings, automated tournament brackets, and encrypted dynamic QR ticketing with Saudi payment gateway integration (Mada & Apple Pay).",
+        p4_story: "Living design system and digital asset management hub housing vector assets, design tokens, and WCAG accessibility standards across 10 corporate subsidiaries.",
+        p5_story: "Strategic B2B digital platform and account-based performance campaigns driving executive recruitment and corporate staffing contracts across Saudi Arabia.",
+        p6_story: "Privacy-first SaaS suite featuring 50+ utility tools, Saudi financial calculators, PDF processing, and video editing with zero-cloud client-side WebAssembly execution.",
+
+        cs_case_study: "Case study",
+        cs_source: "Source",
+        cs_live: "Live Platform",
+        cs_docs: "Docs",
+        cs_source_enterprise: "Private Enterprise",
         
         tag_services: "What I Do",
         heading_services: "Building digital ecosystems where data intelligence meets scalable growth.",
@@ -567,7 +639,7 @@ const translations = {
         cert_meta: "Social Media Marketing Professional Certificate",
         cert_meta_issuer: "Meta · 2025",
 
-        marquee_trusted: "Field experience and partnerships with leading enterprises",
+        marquee_trusted: "Career experience across leading enterprises",
         
         tag_impact: "Strategic Impact",
         heading_impact: "Measurable performance across diversified corporate sectors.",
@@ -629,11 +701,11 @@ const translations = {
         cs_erp_h1: "01. Business Challenge & Operational Bottlenecks",
         cs_erp_p1: "With the rapid acceleration of off-plan sales and real estate development across Riyadh at <strong>Naht Real Estate</strong> (Naht 13, 14, 18, 19, 20, 21, 22, 23), management encountered severe operational friction: disparate accounting packages isolated from sales transactions, manual spreadsheets for unit reservation holds causing dangerous duplication risks, and an absence of unified cashflow and contractor milestone visibility. <em>The mission was to architect a single central nervous system governing financial and physical assets from reservation to final financial ledger reconciliation.</em>",
         cs_erp_h2: "02. Technical Architecture & Engineering Decisions",
-        cs_erp_p2: "The system was designed as a <code>Modular Monolith</code> leveraging <code>Next.js 15 App Router</code> and <code>TypeScript</code> over a relational <code>PostgreSQL</code> database managed via <code>Prisma ORM</code>. Strict <code>Double-Entry General Ledger</code> accounting and automated <code>D4 Trial Balance</code> ledgers were implemented, backed by an immutable <code>Append-Only Audit Log</code> documenting every journal entry with forensic precision to satisfy stringent institutional audit standards.",
+        cs_erp_p2: "The system was designed as a <em>Modular Monolith</em> leveraging <code>Next.js 15</code> and <code>TypeScript</code> over a relational <code>PostgreSQL</code> database managed via <code>Prisma ORM</code>. Strict <em>Double-Entry General Ledger</em> accounting and automated <em>D4 Trial Balance</em> ledgers were implemented, backed by an immutable <em>Append-Only Audit Log</em> documenting every journal entry with forensic precision to satisfy stringent institutional audit standards.",
         cs_erp_h3: "03. Implementation Strategy & Operational Integration",
         cs_erp_p3: "The platform was decomposed into interoperable modules: a real-time property inventory engine tracking construction completion stages, architectural typologies, dynamic pricing, and digital reservation contracts, coupled with an employee self-service HR portal governing leave requests and task delegation under a hardened <em>Role-Based Access Control (RBAC)</em> matrix and an <em>Isolated Sandbox Lab</em> for testing financial entries prior to ledger posting.",
         cs_erp_h4: "04. Financial Impact & Quantifiable Results",
-        cs_erp_p4: "The deployment delivered an operational transformation for executive and financial leadership, eliminating spreadsheet dependencies and converting routine reviews from guesswork into data-driven decisions via real-time <code>BI Telemetry</code> displaying margins, burn rates, and liquidity reserves.",
+        cs_erp_p4: "The deployment delivered an operational transformation for executive and financial leadership, eliminating spreadsheet dependencies and converting routine reviews from guesswork into data-driven decisions via real-time <em>BI Telemetry</em> displaying margins, burn rates, and liquidity reserves.",
         cs_erp_m1_val: "-65%",
         cs_erp_m1_lbl: "Faster Financial Month-End Closing",
         cs_erp_m2_val: "100%",
@@ -655,11 +727,11 @@ const translations = {
         cs_crm_h1: "01. Sales Bottlenecks & Lead Leakage Challenge",
         cs_crm_p1: "In premium real estate marketing, buyer latency (<em>Lead Decay</em>) is the chief cause of lost transactions. The sales team received hundreds of inquiries daily from Meta and Google Ads, but manual broker distribution took between 4 and 12 hours, allowing high-intent buyers to slip away to competing developments while obscuring true marketing channel efficiency.",
         cs_crm_h2: "02. Cloud Architecture & Real-Time Data Pipelines",
-        cs_crm_p2: "The platform was built on <code>Supabase PostgreSQL</code> for sub-second reactive sync with a lightweight web interface, connecting via direct <code>Webhooks API</code> endpoints to ingest buyer inquiries the instant they submit Meta Lead Ads or Google Ads forms. We integrated the <code>Bevatel WhatsApp Business Cloud API</code> to trigger automated instant engagement and log conversation transcripts in unified buyer profiles.",
+        cs_crm_p2: "The platform was built on <code>Supabase PostgreSQL</code> for sub-second reactive sync with a lightweight web interface, connecting via direct واجهات الربط السحابي Webhooks endpoints to ingest buyer inquiries the instant they submit Meta Lead Ads or Google Ads forms. We integrated the <em>Bevatel WhatsApp Business Cloud API</em> to trigger automated instant engagement and log conversation transcripts in unified buyer profiles.",
         cs_crm_h3: "03. Execution Strategy & Smart Routing Mechanics",
-        cs_crm_p3: "A proprietary <em>Smart Distribution Engine</em> routes inquiries to brokers based on geographic specialization, tier, and real-time workload, backed by automated SLA escalations that reallocate the lead if unattended within <em>15 minutes</em>. Granular <code>UTM Attribution</code> binds every closed sale back to the exact campaign, creative variant, and search keyword.",
+        cs_crm_p3: "A proprietary <em>Smart Distribution Engine</em> routes inquiries to brokers based on geographic specialization, tier, and real-time workload, backed by automated SLA escalations that reallocate the lead if unattended within <em>15 minutes</em>. Granular <em>UTM Attribution</em> binds every closed sale back to the exact campaign, creative variant, and search keyword.",
         cs_crm_h4: "04. Commercial Impact & Measurable Uplift",
-        cs_crm_p4: "The CRM transformed brokerage operations into a data-driven sales engine powered by live <code>Chart.js Telemetry</code> dashboards, dramatically accelerating deal velocity and eliminating ad budget waste.",
+        cs_crm_p4: "The CRM transformed brokerage operations into a data-driven sales engine powered by live <em>Chart.js Telemetry</em> dashboards, dramatically accelerating deal velocity and eliminating ad budget waste.",
         cs_crm_m1_val: "< 8 mins",
         cs_crm_m1_lbl: "Median First-Response Latency",
         cs_crm_m2_val: "+38%",
@@ -680,9 +752,9 @@ const translations = {
         cs_naht_web_h1: "01. Off-Plan Customer Friction & Visualization Challenge",
         cs_naht_web_p1: "In off-plan real estate sales, buyers face significant hurdles conceptualizing finishes, layouts, and dimensions through static brochures and cumbersome PDFs. Furthermore, manual phone inquiries led to substantial drop-off rates. <strong>Naht Real Estate</strong> required a premier public portal matching the architectural prestige of its Riyadh developments that converts buyer intrigue into confirmed site walkthroughs.",
         cs_naht_web_h2: "02. Technical Architecture & Dynamic UI Rendering",
-        cs_naht_web_p2: "The portal was engineered using <code>Next.js App Router</code> and <code>TypeScript</code> for instantaneous edge delivery and industry-leading <code>Technical SEO</code> rankings. High-resolution architectural floor plans and unit models render dynamically with fluid responsive adaptations across all mobile viewports.",
+        cs_naht_web_p2: "The portal was engineered using <code>Next.js</code> and <code>TypeScript</code> for instantaneous edge delivery and industry-leading <em>Technical SEO</em> rankings. High-resolution architectural floor plans and unit models render dynamically with fluid responsive adaptations across all mobile viewports.",
         cs_naht_web_h3: "03. Sales Integration & CRM Webhooks Automation",
-        cs_naht_web_p3: "Every walkthrough reservation and prospectus request is routed automatically via secure <code>Webhooks API</code> pipelines into the <strong>Naht CRM Engine</strong> and <code>WhatsApp Business API</code>, dispatching instant notifications to sales consultants and qualifying buyer intent within 8 minutes.",
+        cs_naht_web_p3: "Every walkthrough reservation and prospectus request is routed automatically via secure واجهات الربط السحابي Webhooks pipelines into the <strong>Naht CRM Engine</strong> and <em>WhatsApp Business API</em>, dispatching instant notifications to sales consultants and qualifying buyer intent within 8 minutes.",
         cs_naht_web_h4: "04. Marketing ROI & Measurable Performance",
         cs_naht_web_p4: "The portal transformed Naht's off-plan marketing from fragmented digital campaigns into a cohesive acquisition engine, reinforcing buyer trust and accelerating unit reservation velocity.",
         cs_naht_web_m1_val: "+180,000",
@@ -707,9 +779,9 @@ const translations = {
         cs_ts_h1: "01. Corporate Challenge & Multi-Brand Fragmentation",
         cs_ts_p1: "As <strong>T&S Holding Group</strong> expanded across 10 diverse sectors—including real estate development, supply chain logistics, tech ventures, sports entertainment, and hospitality—it faced severe brand dilution from fragmented, outdated websites that failed to project the group's institutional scale and financial standing before sovereign funds and institutional partners.",
         cs_ts_h2: "02. Digital Architecture & Edge Performance",
-        cs_ts_p2: "We engineered a modern headless cloud architecture delivered via distributed <code>Edge CDN</code> networks to achieve sub-second global page loads. The platform features strict bilingual parity (Arabic RTL & English LTR), comprehensive <code>Technical SEO</code> optimization, and rich <code>Schema.org JSON-LD</code> structured data meeting rigorous WCAG accessibility standards.",
+        cs_ts_p2: "We engineered a modern headless cloud architecture delivered via distributed <em>Edge CDN</em> networks to achieve sub-second global page loads. The platform features strict bilingual parity (Arabic RTL & English LTR), comprehensive <em>Technical SEO</em> optimization, and rich <em>Schema.org JSON-LD</em> structured data meeting rigorous WCAG accessibility standards.",
         cs_ts_h3: "03. Brand Governance & Subsidiary Portals",
-        cs_ts_p3: "An enterprise <code>Brand Architecture</code> was established, balancing corporate parent authority with individual subsidiary autonomy. Sector-specific interactive hubs allow investors to examine division track records with one click, backed by a unified investor relations routing portal connecting directly with subsidiary boards.",
+        cs_ts_p3: "An enterprise <em>Brand Architecture</em> was established, balancing corporate parent authority with individual subsidiary autonomy. Sector-specific interactive hubs allow investors to examine division track records with one click, backed by a unified investor relations routing portal connecting directly with subsidiary boards.",
         cs_ts_h4: "04. Institutional Impact & Organic Visibility",
         cs_ts_p4: "The platform established an authoritative digital flagship that solidified the group's market prestige and empowered institutional investors to analyze capital allocation and joint-venture opportunities with unprecedented clarity.",
         cs_ts_m1_val: "10",
@@ -732,9 +804,9 @@ const translations = {
         cs_academy_h1: "01. Enterprise Workforce Capability Gaps & Skill Bottlenecks",
         cs_academy_p1: "Corporate capability development across Saudi enterprises often suffered from cumbersome offline enrollments, lack of standardized competency diagnostics, and fragmented trainee tracking between HR leaders and training providers. <strong>T&S Academy</strong> needed a modern enterprise gateway integrating executive program catalogs, automated schedules, and accredited assessment centers into a frictionless digital journey.",
         cs_academy_h2: "02. Technical Architecture & Dynamic Assessment Engine",
-        cs_academy_p2: "Engineered with <code>Next.js</code> and <code>TypeScript</code>, the platform delivers instantaneous edge page loads for seamless course discovery. It incorporates psychometric assessment diagnostics and a dynamic, interactive <code>Training Calendar</code> allowing enterprises and professionals to filter programs by competency track and availability.",
+        cs_academy_p2: "Engineered with <code>Next.js</code> and <code>TypeScript</code>, the platform delivers instantaneous edge page loads for seamless course discovery. It incorporates psychometric assessment diagnostics and a dynamic, interactive تقويم البرامج التفاعلي allowing enterprises and professionals to filter programs by competency track and availability.",
         cs_academy_h3: "03. Enterprise B2B Acquisition & CRM Webhook Pipelines",
-        cs_academy_p3: "Every corporate proposal request and individual enrollment is ingested via secure <code>Webhooks</code> directly into central CRM funnels. Automated triggers dispatch instant syllabus packets and scheduling confirmations via <code>WhatsApp Business API</code> and priority email queues, qualifying training opportunities within minutes.",
+        cs_academy_p3: "Every corporate proposal request and individual enrollment is ingested via secure واجهات الربط Webhooks directly into central CRM funnels. Automated triggers dispatch instant syllabus packets and scheduling confirmations via <em>WhatsApp Business API</em> and priority email queues, qualifying training opportunities within minutes.",
         cs_academy_h4: "04. Educational ROI & Measurable Capability Metrics",
         cs_academy_p4: "The academy accelerated capability transformation across government and private sector clients, creating a measurable impact on workforce readiness and leadership succession.",
         cs_academy_m1_val: "+12,000",
@@ -759,9 +831,9 @@ const translations = {
         cs_sportx_h1: "01. Operational Bottlenecks in Sports Venues",
         cs_sportx_p1: "The unprecedented athletic boom across Saudi Arabia drove massive demand for amateur tournaments and court bookings. However, venue owners and event organizers relied entirely on fragmented manual text messaging and phone calls, resulting in frequent double-booking conflicts, revenue leakages, and chaotic paper tournament brackets.",
         cs_sportx_h2: "02. Concurrency Architecture & Real-Time Sync",
-        cs_sportx_p2: "We built a <code>Real-Time Slot Engine</code> powered by in-memory <code>Redis</code> locks and <code>WebSockets</code> to lock booking slots instantly and permanently prevent race conditions. An automated <em>Tournament Engine</em> computes group stages, knockout trees, goal differentials, and tie-breakers autonomously with zero human intervention.",
+        cs_sportx_p2: "We built a محرك حجز لحظي powered by in-memory <code>Redis</code> locks and <code>WebSockets</code> to lock booking slots instantly and permanently prevent race conditions. An automated <em>Tournament Engine</em> computes group stages, knockout trees, goal differentials, and tie-breakers autonomously with zero human intervention.",
         cs_sportx_h3: "03. Fan Experience & Contactless Access",
-        cs_sportx_p3: "The platform generates encrypted <code>Dynamic QR Codes</code> for turnstile validation within seconds, integrated with Saudi national payment rails (Mada, Visa, and Apple Pay). An automated <code>Digital Wallet</code> manages instantaneous refunds upon cancellation, eliminating cashier friction.",
+        cs_sportx_p3: "The platform generates encrypted <em>Dynamic QR</em> for turnstile validation within seconds, integrated with Saudi national payment rails (Mada, Visa, and Apple Pay). An automated المحافظ الرقمية (Apple & Google Wallet) manages instantaneous refunds upon cancellation, eliminating cashier friction.",
         cs_sportx_h4: "04. Operational Scale & Revenue Growth",
         cs_sportx_p4: "SportX modernized venue management into a frictionless digital business, boosting pitch occupancy during morning and late-night windows through algorithmic surge and off-peak dynamic pricing.",
         cs_sportx_m1_val: "+45,000",
@@ -786,9 +858,9 @@ const translations = {
         cs_brand_h1: "01. Brand Dilution & Asset Fragmentation",
         cs_brand_p1: "With rapid corporate diversification across 10 companies and dozens of agency partners, static PDF brand guidelines quickly degraded into visual chaos: uncalibrated color values, warped logo aspect ratios, and mismatched print stock specifications between vendors, eroding corporate authority.",
         cs_brand_h2: "02. Design Token Architecture & Web-Native Assets",
-        cs_brand_p2: "We translated brand identity into an automated code vocabulary powered by <code>Design Tokens</code> exposing color values (HEX, RGB, CMYK, Pantone), responsive typography scales, and spatial grids. An automated <code>WCAG 2.1</code> contrast verifier guarantees accessibility compliance across all digital touchpoints.",
+        cs_brand_p2: "We translated brand identity into an automated code vocabulary powered by <em>Design Tokens</em> exposing color values (HEX, RGB, CMYK, Pantone), responsive typography scales, and spatial grids. An automated <em>WCAG 2.1 AA</em> contrast verifier guarantees accessibility compliance across all digital touchpoints.",
         cs_brand_h3: "03. Digital Asset Management (DAM) & Governance",
-        cs_brand_p3: "A centralized cloud DAM provides instant one-click downloads for verified <code>Vector SVG & AI</code> assets and custom icon packs (150+ bespoke symbols), accompanied by interactive <em>Do's & Don'ts</em> visual guidelines and print dieline specifications.",
+        cs_brand_p3: "A centralized cloud DAM provides instant one-click downloads for verified <em>Vector SVG & AI</em> assets and custom icon packs (150+ bespoke symbols), accompanied by interactive <em>Do's & Don'ts</em> visual guidelines and print dieline specifications.",
         cs_brand_h4: "04. Operational Velocity & Brand Coherence",
         cs_brand_p4: "The portal eliminated creative bottlenecks, guaranteeing 100% aesthetic precision across all digital applications, multi-million SAR advertising campaigns, and international trade pavilions.",
         cs_brand_m1_val: "200+",
@@ -813,9 +885,9 @@ const translations = {
         cs_hrkh_h1: "01. Market Bottlenecks in Executive Recruitment",
         cs_hrkh_p1: "Amid rapid economic transformation and aggressive Saudization mandates, <strong>HRKH</strong> faced the limitations of traditional outbound sales. The company required an authoritative B2B platform and high-intent performance campaigns capable of engaging C-suite executives and Chief Human Resources Officers (CHROs) across top Saudi corporations.",
         cs_hrkh_h2: "02. B2B Web Engineering & Conversion Architecture",
-        cs_hrkh_p2: "We architected an interactive platform engineered to streamline inbound Requests-for-Proposals (RFPs) through intuitive multi-step forms capturing precise headcount requisitions. Modern <code>CRO</code> principles reduced form friction, complemented by an automated resume submission funnel for talent candidates.",
+        cs_hrkh_p2: "We architected an interactive platform engineered to streamline inbound Requests-for-Proposals (RFPs) through intuitive multi-step forms capturing precise headcount requisitions. Modern <em>CRO</em> principles reduced form friction, complemented by an automated resume submission funnel for talent candidates.",
         cs_hrkh_h3: "03. Targeted Growth Strategy & Account-Based Marketing",
-        cs_hrkh_p3: "Precision performance campaigns were deployed across <code>LinkedIn Ads</code> and high-intent <code>Google Search Ads</code> targeting executives in contracting, retail, and tech. Ad messaging highlighted SLA-backed placement velocity and Saudization compliance, paired with daily tracking of corporate <em>CAC</em>.",
+        cs_hrkh_p3: "Precision performance campaigns were deployed across <em>LinkedIn Ads</em> and high-intent <em>Google Search Ads</em> targeting executives in contracting, retail, and tech. Ad messaging highlighted SLA-backed placement velocity and Saudization compliance, paired with daily tracking of corporate <em>CAC</em>.",
         cs_hrkh_h4: "04. Commercial Growth & Enterprise Partnerships",
         cs_hrkh_p4: "The strategy drove an institutional breakthrough, transitioning the web presence from a brochure into a primary generator of multi-year corporate staffing contracts.",
         cs_hrkh_m1_val: "+30",
@@ -840,9 +912,9 @@ const translations = {
         cs_ri88_h1: "01. Problem Context: The Utility Fragmentation Crisis",
         cs_ri88_p1: "Digital creators, professionals, and Saudi businesses suffer from extreme tool fragmentation—switching across dozens of disconnected websites to calculate VAT, loan amortizations, GOSI net salaries, merge PDFs, or convert media. Most legacy tools lock basic utilities behind aggressive paywalls, bombard users with tracking ads, or introduce critical data security liabilities by requiring sensitive financial records and media files to be uploaded to opaque cloud servers.",
         cs_ri88_h2: "02. Engineering Architecture & Client-Side Privacy",
-        cs_ri88_p2: "The platform was engineered on <code>Next.js 16 App Router</code> and <code>React 19</code> with <code>TypeScript</code> and <code>Tailwind CSS v4</code>. A pivotal architectural decision was adopting strict <code>Client-Side Processing</code> leveraging <code>WebAssembly (WASM)</code> via <code>@ffmpeg/ffmpeg</code>, <code>pdf-lib</code>, and <code>Canvas API</code>. Executing compute-heavy media rendering and document parsing directly inside the client's browser guarantees absolute zero-cloud retention of sensitive data while driving server compute overhead down to virtually zero.",
+        cs_ri88_p2: "The platform was engineered on <code>Next.js 16</code> and <code>React 19</code> with <code>TypeScript</code> and <code>Tailwind CSS v4</code>. A pivotal architectural decision was adopting strict معالجة محلية بالكامل leveraging <code>WebAssembly (WASM)</code> via <code>@ffmpeg/ffmpeg</code>, <code>pdf-lib</code>, and <code>Canvas API</code>. Executing compute-heavy media rendering and document parsing directly inside the client's browser guarantees absolute zero-cloud retention of sensitive data while driving server compute overhead down to virtually zero.",
         cs_ri88_h3: "03. Bento UX Design, Command Palette & Persistence",
-        cs_ri88_p3: "User experience was structured around an ultra-clean <code>Bento Grid Layout</code> with dark glassmorphic aesthetics and full dark/light theme switching. A global <code>Command Palette (Ctrl+K)</code> enables sub-second keyboard navigation across all utilities. Persistent state and favorite pinning are governed by <code>PostgreSQL</code> and <code>Prisma ORM</code> integrated with <code>NextAuth.js</code> authentication, complemented by a scalable recurring subscription gateway via <code>Stripe</code>.",
+        cs_ri88_p3: "User experience was structured around an ultra-clean <em>Bento Grid Layout</em> with dark glassmorphic aesthetics and full dark/light theme switching. A global <em>Command Palette (Ctrl+K)</em> enables sub-second keyboard navigation across all utilities. Persistent state and favorite pinning are governed by <code>PostgreSQL</code> and <code>Prisma ORM</code> integrated with <code>NextAuth.js</code> authentication, complemented by a scalable recurring subscription gateway via <code>Stripe</code>.",
         cs_ri88_h4: "04. Operational Telemetry & Measured Results",
         cs_ri88_p4: "In its public beta rollout, Ri88 proved its efficacy as a daily driver for productivity, delivering significant daily time savings for end-users while eliminating advertising clutter and third-party tracking.",
         cs_ri88_m1_val: "+50",
@@ -935,6 +1007,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) {
         window.lucide.createIcons();
     }
+
+    // 7. Hero 3D Toy Blister Pack Tilt Interaction
+    initHeroToyTilt();
 });
 
 // --- Language Function ---
@@ -968,6 +1043,10 @@ function setLanguage(lang) {
         }
     });
 
+    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+        el.textContent = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    });
+
     if (window.lucide) {
         window.lucide.createIcons();
     }
@@ -978,6 +1057,7 @@ function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('rayyan_theme', theme);
     updateBadgeTheme(theme);
+    updateHeroToyTheme(theme);
 }
 
 function updateBadgeTheme(theme) {
@@ -995,6 +1075,66 @@ function updateBadgeTheme(theme) {
         if (src && src.includes('img.shields.io/badge/')) {
             src = src.replace(/-[0-9a-fA-F]{6}\?/, `-${color}?`);
             img.setAttribute('src', src);
+        }
+    });
+}
+
+function updateHeroToyTheme(theme) {
+    const toyImages = document.querySelectorAll('.toy-img');
+    if (!toyImages.length) return;
+
+    let targetClass = 'toy-teal';
+    if (theme === 'cobalt') targetClass = 'toy-cobalt';
+    else if (theme === 'gold' || theme === 'ember') targetClass = 'toy-gold';
+    else if (theme === 'violet') targetClass = 'toy-violet';
+
+    toyImages.forEach(img => {
+        if (img.classList.contains(targetClass)) {
+            img.classList.add('active');
+        } else {
+            img.classList.remove('active');
+        }
+    });
+}
+
+function initHeroToyTilt() {
+    const stage = document.getElementById('heroToyStage');
+    const pack = document.getElementById('toyPackWrapper');
+    const glare = document.getElementById('toyGlassGlare');
+    if (!stage || !pack) return;
+
+    let bounds;
+    function updateBounds() {
+        bounds = stage.getBoundingClientRect();
+    }
+    updateBounds();
+    window.addEventListener('resize', updateBounds, { passive: true });
+    window.addEventListener('scroll', updateBounds, { passive: true });
+
+    stage.addEventListener('mousemove', (e) => {
+        if (!bounds) updateBounds();
+        const x = e.clientX - bounds.left;
+        const y = e.clientY - bounds.top;
+        const centerX = bounds.width / 2;
+        const centerY = bounds.height / 2;
+
+        const rotateX = ((centerY - y) / centerY) * 11;
+        const rotateY = ((x - centerX) / centerX) * 11;
+
+        pack.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+
+        if (glare) {
+            const glareX = (x / bounds.width) * 100;
+            const glareY = (y / bounds.height) * 100;
+            glare.style.opacity = '1';
+            glare.style.background = `radial-gradient(circle at ${glareX.toFixed(1)}% ${glareY.toFixed(1)}%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 65%)`;
+        }
+    });
+
+    stage.addEventListener('mouseleave', () => {
+        pack.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        if (glare) {
+            glare.style.opacity = '0';
         }
     });
 }

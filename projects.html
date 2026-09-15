@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="teal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="projects_page_title">كافة المشاريع والأنظمة · ريان الضحيان</title>
+    <meta name="description" content="أعمال وأنظمة ريان الضحيان - منصات وحلول رقمية وذكاء أعمال تم بناؤها وإطلاقها بنجاح للشركات والجهات الكبرى.">
+    <meta name="author" content="Rayyan Aldohian">
+    <link rel="canonical" href="https://irayyankoo.github.io/rayyan-portfolio/projects.html">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="كافة المشاريع والأنظمة · ريان الضحيان">
+    <meta property="og:description" content="أنظمة تعتمد عليها فرق العمل يومياً، منصات رقمية وحلول تشغيلية متكاملة، كل مشروع تم إطلاقه وتوثيقه بدقة.">
+    <meta property="og:image" content="assets/p11-naht-erp.jpg">
+    <meta property="og:url" content="https://irayyankoo.github.io/rayyan-portfolio/projects.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets & Icons -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- Monospace Brandmark -->
+            <a href="index.html" class="brand-logo" dir="ltr" aria-label="Rayyan Aldohian">
+                <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+            </a>
+
+            <!-- Numbered Nav Links -->
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="projects.html" class="nav-link active">
+                    <span class="nav-num">01</span>
+                    <span data-i18n="nav_work">المشاريع</span>
+                </a>
+                <a href="index.html#services" class="nav-link">
+                    <span class="nav-num">02</span>
+                    <span data-i18n="nav_services">مجالات التخصص</span>
+                </a>
+                <a href="experience.html" class="nav-link">
+                    <span class="nav-num">03</span>
+                    <span data-i18n="nav_experience">الخبرات المهنية</span>
+                </a>
+                <a href="index.html#impact" class="nav-link">
+                    <span class="nav-num">04</span>
+                    <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <span class="nav-num">05</span>
+                    <span data-i18n="nav_about">نبذة عني</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <span class="nav-num">06</span>
+                    <span data-i18n="nav_contact">تواصل</span>
+                </a>
+            </nav>
+
+            <!-- Actions (Language, Theme, Contact) -->
+            <div class="header-actions">
+                <!-- Theme Picker -->
+                <div class="theme-picker">
+                    <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Change Accent Color" title="Theme Color">
+                        <i data-lucide="palette" style="width: 14px; height: 14px;"></i>
+                    </button>
+                    <div class="theme-dropdown" id="themeDropdown">
+                        <button type="button" class="theme-opt" data-set-theme="teal">
+                            <span class="theme-dot" style="background: #24B1B1;"></span> Cyan Teal (#24B1B1)
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="cobalt">
+                            <span class="theme-dot" style="background: #3b82f6;"></span> Royal Cobalt
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="gold">
+                            <span class="theme-dot" style="background: #d4af37;"></span> Imperial Gold
+                        </button>
+                        <button type="button" class="theme-opt" data-set-theme="violet">
+                            <span class="theme-dot" style="background: #8b5cf6;"></span> Future Violet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Language Toggle -->
+                <button type="button" class="lang-btn" id="langToggleBtn" aria-label="Toggle Language">
+                    <i data-lucide="globe" style="width: 13px; height: 13px;"></i>
+                    <span id="langText">English</span>
+                </button>
+
+                <!-- Get in Touch CTA -->
+                <a href="index.html#contact" class="btn-outline-accent" data-i18n="btn_touch">
+                    <span>تواصل معي</span>
+                    <i data-lucide="arrow-up-left" style="width: 14px; height: 14px;"></i>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+                    <i data-lucide="menu" style="width: 18px; height: 18px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="projects.html" class="mobile-nav-link active">
+            <span class="nav-num">01</span> <span data-i18n="nav_work">المشاريع</span>
+        </a>
+        <a href="index.html#services" class="mobile-nav-link">
+            <span class="nav-num">02</span> <span data-i18n="nav_services">مجالات التخصص</span>
+        </a>
+        <a href="experience.html" class="mobile-nav-link">
+            <span class="nav-num">03</span> <span data-i18n="nav_experience">الخبرات المهنية</span>
+        </a>
+        <a href="index.html#impact" class="mobile-nav-link">
+            <span class="nav-num">04</span> <span data-i18n="nav_impact">الأثر الاستراتيجي</span>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+            <span class="nav-num">05</span> <span data-i18n="nav_about">نبذة عني</span>
+        </a>
+        <a href="index.html#contact" class="mobile-nav-link">
+            <span class="nav-num">06</span> <span data-i18n="nav_contact">تواصل</span>
+        </a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main id="main-content" class="projects-page-main">
+        <div class="ambient-glow" aria-hidden="true"></div>
+        <div class="container">
+            <!-- Back to Home Link -->
+            <a href="index.html" class="case-study-back">
+                <i data-lucide="arrow-right"></i>
+                <span data-i18n="cs_back_home">العودة للرئيسية</span>
+            </a>
+
+            <!-- Page Header (matching sunnypatel.net/projects) -->
+            <div class="projects-archive-header" style="margin-top: 1.5rem;">
+                <span class="section-tag">
+                    <span class="line" aria-hidden="true"></span>
+                    <span data-i18n="tag_projects_archive">المشاريع</span>
+                </span>
+                <h1 class="about-headline font-display" data-i18n="heading_projects_archive">
+                    أعمال وأنظمة بنيتها، من الفكرة إلى الأثر.
+                </h1>
+                <p class="hero-desc" style="max-width: 48rem; margin-top: 0.75rem;" data-i18n="lead_projects_archive">
+                    أنظمة تعتمد عليها فرق العمل يومياً، منصات رقمية وحلول تشغيلية متكاملة، كل مشروع تم إطلاقه وتوثيقه بدقة. استكشف دراسة الحالة لكل مشروع لمعرفة القصة كاملة.
+                </p>
+            </div>
+
+                        <!-- Projects Archive List (Alternating 2-Column Zigzag like sunnypatel.net) -->
+            <div class="projects-archive-list">
+                <!-- ==========================================================
+                     PROJECT 01: PROJECT-NAHT-ERP
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-naht-erp">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/naht-erp.html" class="window-mockup" aria-label="منظومة نحت ERP">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">naht-re.sa/erp</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p11-naht-erp.jpg" alt="منظومة نحت ERP" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">01</span>
+                            <span class="project-year">2026</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_erp">نظام مؤسسي نشط</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/naht-erp.html" data-i18n="p0_title">منظومة نحت ERP</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p0_desc">
+                            نظام تخطيط الموارد، المحاسبة المزدوجة، وإدارة الأصول العقارية
+                        </p>
+                        <p class="project-row-desc" data-i18n="p0_story">
+                            منصة رقمية مؤسسية تجمع بين ذكاء الأعمال (BI) والإدارة المالية المتقدمة، وإدارة الكوادر والمشاريع العقارية في بيئة تشغيلية موحدة ومؤتمتة ومبنية بمعايير المحاسبة المزدوجة وسجل تدقيق مالي غير قابل للتعديل.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Next.js 15</li>
+                        <li>TypeScript</li>
+                        <li>Prisma ORM</li>
+                        <li>PostgreSQL</li>
+                        <li>Tailwind CSS</li>
+                        <li>RBAC Architecture</li>
+                        <li>Double-Entry GL</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">10,000+</span>
+                        <span class="metric-label font-mono" data-ar="قيود محاسبية" data-en="ledger entries">قيود محاسبية</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">100%</span>
+                        <span class="metric-label font-mono" data-ar="توازن تدقيق D4" data-en="audit balance">توازن تدقيق D4</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/naht-erp.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://ts.sa/en" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <span class="project-link-badge">
+                        <i data-lucide="shield-check" style="width: 13px; height: 13px;"></i>
+                        <span data-i18n="cs_source_enterprise">مستودع مؤسسي خاص</span>
+                    </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 02: PROJECT-NAHT-CRM
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-naht-crm">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/naht-crm.html" class="window-mockup" aria-label="نظام نحت CRM">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">naht-re.sa/crm</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p10-naht-crm.jpg" alt="نظام نحت CRM" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">02</span>
+                            <span class="project-year">2026</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_active">نظام مباشر ونشط</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/naht-crm.html" data-i18n="p1_title">نظام نحت CRM</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p1_desc">
+                            محرك ذكاء الأعمال، قنوات الاستقطاب، وأتمتة مسارات المبيعات
+                        </p>
+                        <p class="project-row-desc" data-i18n="p1_story">
+                            منظومة سحابية متكاملة لإدارة علاقات العملاء في قطاع التطوير والوساطة العقارية، تربط الحملات الإعلانية بمسار الصفقات وتوفر توزيعاً ذكياً للفرص مع ربط فوري بـ WhatsApp Business API وتتبع دقيق لعائد الإنفاق الإعلاني.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Supabase</li>
+                        <li>PostgreSQL</li>
+                        <li>Webhooks API</li>
+                        <li>WhatsApp Cloud API</li>
+                        <li>Chart.js</li>
+                        <li>Tailwind CSS</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+38.4%</span>
+                        <span class="metric-label font-mono" data-ar="نمو التحويل (CRO)" data-en="CRO uplift">نمو التحويل (CRO)</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">15,000+</span>
+                        <span class="metric-label font-mono" data-ar="عميل تمت معالجته" data-en="leads routed">عميل تمت معالجته</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/naht-crm.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://ts.sa/en" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <span class="project-link-badge">
+                        <i data-lucide="shield-check" style="width: 13px; height: 13px;"></i>
+                        <span data-i18n="cs_source_enterprise">مستودع مؤسسي خاص</span>
+                    </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 03: PROJECT-NAHT-WEB
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-naht-web">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/naht-web.html" class="window-mockup" aria-label="بوابة نحت العقارية">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">naht-re.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p6-naht-web-live.jpg" alt="بوابة نحت العقارية" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">03</span>
+                            <span class="project-year">2025</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_showcase">بوابة عامة نشطة</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/naht-web.html" data-i18n="p_naht_web_title">بوابة نحت العقارية</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p_naht_web_desc">
+                            البوابة العامة لاستعراض وحجز المشاريع السكنية الفاخرة بالرياض
+                        </p>
+                        <p class="project-row-desc" data-i18n="p_naht_web_story">
+                            البوابة العامة لشركة نحت العقارية، توفر استعراضاً تفاعلياً للمشاريع السكنية الفاخرة بالرياض، مع مخططات معمارية ديناميكية وتزامن فوري للحجوزات مع نظام الـ CRM وسرعة استجابة فائقة.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Next.js 14</li>
+                        <li>TypeScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>Webhooks API</li>
+                        <li>Core Web Vitals</li>
+                        <li>Floor Plans UI</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">< 1.1s</span>
+                        <span class="metric-label font-mono" data-ar="سرعة التحميل" data-en="page load speed">سرعة التحميل</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+180K</span>
+                        <span class="metric-label font-mono" data-ar="زيارة سنوية" data-en="annual visits">زيارة سنوية</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/naht-web.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://ts.sa/en" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <span class="project-link-badge">
+                        <i data-lucide="shield-check" style="width: 13px; height: 13px;"></i>
+                        <span data-i18n="cs_source_enterprise">مستودع مؤسسي خاص</span>
+                    </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 04: PROJECT-TS-HOLDING
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-ts-holding">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/ts-holding.html" class="window-mockup" aria-label="منصة مجموعة T&S">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">ts.sa/en</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p2-ts-holding.png" alt="منصة مجموعة T&S" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">04</span>
+                            <span class="project-year">2025</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                     <span class="ping-bubble"></span>
+                                     <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_live">منصة مؤسسية حية</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/ts-holding.html" data-i18n="p2_title">منصة مجموعة T&S</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p2_desc">
+                            المنصة الرقمية الموحدة لـ 10 قطاعات استثمارية كبرى
+                        </p>
+                        <p class="project-row-desc" data-i18n="p2_story">
+                            المنصة الرقمية الموحدة لمجموعة T&S القابضة لإعادة هيكلة الحضور المؤسسي وتوحيد 10 قطاعات استثمارية كبرى تحت لغة وهوية بصرية واحدة وبنية سحابية عالمية فائقة السرعة.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Headless Architecture</li>
+                        <li>Edge CDN</li>
+                        <li>TypeScript</li>
+                        <li>Bilingual RTL/LTR</li>
+                        <li>Brand Architecture</li>
+                        <li>Schema.org</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">10</span>
+                        <span class="metric-label font-mono" data-ar="قطاعات استثمارية موحدة" data-en="unified sectors">قطاعات استثمارية موحدة</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">99.9%</span>
+                        <span class="metric-label font-mono" data-ar="جاهزية سحابية SLA" data-en="uptime SLA">جاهزية سحابية SLA</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/ts-holding.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://ts.sa/en" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 05: PROJECT-TS-ACADEMY
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-ts-academy">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/ts-academy.html" class="window-mockup" aria-label="أكاديمية T&S للتميز">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">tsacademy.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p3-ts-academy.png" alt="أكاديمية T&S للتميز" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">05</span>
+                            <span class="project-year">2024</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_academy">منصة تدريبية نشطة</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/ts-academy.html" data-i18n="p_ts_academy_title">أكاديمية T&S للتميز</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p_ts_academy_desc">
+                            منصة تطوير الكفاءات الوطنية ومراكز التقييم المهني المعتمد
+                        </p>
+                        <p class="project-row-desc" data-i18n="p_ts_academy_story">
+                            منصة تدريبية واستشارية متخصصة في تأهيل القيادات وتطوير الكفاءات الوطنية، تضم دليلاً تفاعلياً للبرامج ومراكز تقييم مهني معتمدة مع مسارات تسجيل مؤتمتة لعملاء B2B.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Next.js</li>
+                        <li>TypeScript</li>
+                        <li>Psychometric LMS</li>
+                        <li>B2B Funnels</li>
+                        <li>WhatsApp API</li>
+                        <li>Training Telemetry</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+12,000</span>
+                        <span class="metric-label font-mono" data-ar="متدرب معتمد" data-en="certified trainees">متدرب معتمد</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">94%</span>
+                        <span class="metric-label font-mono" data-ar="معدل الرضا" data-en="satisfaction rate">معدل الرضا</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/ts-academy.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://tsacademy.sa" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 06: PROJECT-SPORTX
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-sportx">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/sportx.html" class="window-mockup" aria-label="منصة SportX الرياضية">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">sportx.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p4-sportx.png" alt="منصة SportX الرياضية" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">06</span>
+                            <span class="project-year">2024</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_growth">مسار نمو متسارع</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/sportx.html" data-i18n="p3_title">منصة SportX الرياضية</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p3_desc">
+                            منظومة حجز الملاعب، جدولة البطولات، والتذاكر الذكية المشفرة
+                        </p>
+                        <p class="project-row-desc" data-i18n="p3_story">
+                            منظومة رقمية شاملة لحجز الملاعب والمنشآت الرياضية، جدولة دوريات وبطولات المجموعات تلقائياً، وإصدار تذاكر ذكية مشفرة بـ QR Code مع تكامل مع بوابات الدفع الوطنية (مدى و Apple Pay).
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Redis In-Memory</li>
+                        <li>WebSockets</li>
+                        <li>Dynamic QR</li>
+                        <li>Mada & Apple Pay</li>
+                        <li>Tournament Engine</li>
+                        <li>Node.js</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+45,000</span>
+                        <span class="metric-label font-mono" data-ar="حجز ملاعب مؤتمت" data-en="automated bookings">حجز ملاعب مؤتمت</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">0%</span>
+                        <span class="metric-label font-mono" data-ar="تضارب بالحجوزات" data-en="booking conflicts">تضارب بالحجوزات</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/sportx.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://sportx.sa" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 07: PROJECT-BRAND-HUB
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-brand-hub">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/brand-hub.html" class="window-mockup" aria-label="مركز حوكمة الهوية">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">brand.guidelines.ts</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p9-brand-hub.png" alt="مركز حوكمة الهوية" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">07</span>
+                            <span class="project-year">2024</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_system">Design System معتمد</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/brand-hub.html" data-i18n="p4_title">مركز حوكمة الهوية</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p4_desc">
+                            بوابة حوكمة الهوية البصرية، مصفوفة التصميم، والأصول الرقمية
+                        </p>
+                        <p class="project-row-desc" data-i18n="p4_story">
+                            مركز رقمي لحوكمة الهوية المؤسسية يضم مصفوفة الألوان والخطوط (Design Tokens) ومستودع الأصول الموجهة (SVG & AI)، مع معايير وصول WCAG 2.1 AA لضمان الاتساق البصري عبر كافة الشركات التابعة.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>Design Tokens</li>
+                        <li>Vector SVG & AI</li>
+                        <li>WCAG 2.1 AA</li>
+                        <li>Digital Asset Mgmt</li>
+                        <li>Figma Tokens</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">200+</span>
+                        <span class="metric-label font-mono" data-ar="رمز تصميم وأصل رقمي" data-en="design tokens & assets">رمز تصميم وأصل رقمي</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">100%</span>
+                        <span class="metric-label font-mono" data-ar="معايير وصول WCAG" data-en="WCAG compliance">معايير وصول WCAG</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/brand-hub.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <span class="project-link-badge">
+                        <i data-lucide="layout" style="width: 13px; height: 13px;"></i>
+                        <span data-i18n="status_system">Design System معتمد</span>
+                    </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 08: PROJECT-HRKH
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-hrkh">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/hrkh.html" class="window-mockup" aria-label="منصة توظيف حركة HRKH">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">hrkh.sa</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p7-hrkh.png" alt="منصة توظيف حركة HRKH" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">08</span>
+                            <span class="project-year">2023</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_delivered">مشروع مكتمل الأثر</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/hrkh.html" data-i18n="p5_title">منصة توظيف حركة HRKH</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p5_desc">
+                            منصة B2B وحملات نمو لاستقطاب الكفاءات وعقود التوطين المؤسسي
+                        </p>
+                        <p class="project-row-desc" data-i18n="p5_story">
+                            منصة رقمية موجهة لعملاء B2B وحملات نمو مخصصة على LinkedIn و Google لاستقطاب الكفاءات القيادية وإبرام عقود التوطين المؤسسي مع لوحة قياس فورية للطلبات.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>B2B Acquisition</li>
+                        <li>LinkedIn Ads API</li>
+                        <li>CRO Architecture</li>
+                        <li>Automated ATS</li>
+                        <li>Analytics Telemetry</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+140%</span>
+                        <span class="metric-label font-mono" data-ar="نمو تدفق المرشحين" data-en="pipeline growth">نمو تدفق المرشحين</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+30</span>
+                        <span class="metric-label font-mono" data-ar="عقود توطين B2B" data-en="enterprise contracts">عقود توطين B2B</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/hrkh.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://hrkh.sa" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==========================================================
+                     PROJECT 09: PROJECT-RI88
+                     ========================================================== -->
+                <article class="project-archive-item" id="project-ri88">
+                    <!-- Column: Window Mockup with Ambient Glow -->
+                    <div class="window-mockup-wrapper">
+                        <div class="window-glow" aria-hidden="true"></div>
+                        <a href="projects/ri88.html" class="window-mockup" aria-label="منصة الأدوات الذكية Ri88">
+                            <div class="window-bar">
+                                <div class="window-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span class="window-url">ri88.info</span>
+                            </div>
+                            <div class="window-preview">
+                                <img src="assets/p8-ri88.png" alt="منصة الأدوات الذكية Ri88" loading="lazy">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Column: Story, Meta, Metrics & Links -->
+                    <div class="project-story-col">
+                        <div class="project-row-meta">
+                            <span class="project-num">09</span>
+                            <span class="project-year">2024</span>
+                            <span class="project-meta-line" aria-hidden="true"></span>
+                            <span class="project-status">
+                                <span class="ping-container">
+                                    <span class="ping-bubble"></span>
+                                    <span class="ping-core"></span>
+                                </span>
+                                <span data-i18n="status_saas">منصة SaaS سحابية</span>
+                            </span>
+                        </div>
+                        <h2 class="project-row-title font-display">
+                            <a href="projects/ri88.html" data-i18n="p6_title">منصة الأدوات الذكية Ri88</a>
+                        </h2>
+                        <p class="project-row-tagline font-mono" data-i18n="p6_desc">
+                            منظومة سحابية تضم +50 أداة ذكية مجانية بمعالجة محلية فورية
+                        </p>
+                        <p class="project-row-desc" data-i18n="p6_story">
+                            منظومة SaaS سحابية تجمع أكثر من 50 أداة ذكية مجانية للمستخدمين، تشمل الحاسبات المالية المعتمدة، معالجة ملفات PDF، وتحرير الفيديو بتقنية WebAssembly محلياً داخل المتصفح دون رفع أي بيانات للخوادم.
+                        </p>
+                        <ul class="project-tech-list">
+                        <li>WebAssembly (WASM)</li>
+                        <li>FFmpeg WASM</li>
+                        <li>Next.js 16</li>
+                        <li>React 19</li>
+                        <li>pdf-lib</li>
+                        <li>Tailwind v4</li>
+                        </ul>
+                        <div class="project-metrics-row">
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">+50</span>
+                        <span class="metric-label font-mono" data-ar="أداة ذكية فورية" data-en="instant utility tools">أداة ذكية فورية</span>
+                    </div>
+                    <div class="project-metric-item">
+                        <span class="metric-num font-display">0 ms</span>
+                        <span class="metric-label font-mono" data-ar="معالجة محلية WASM" data-en="WASM latency">معالجة محلية WASM</span>
+                    </div>
+                        </div>
+                        <div class="project-links-row">
+                    <a href="projects/ri88.html" class="project-link-cs">
+                        <span data-i18n="cs_case_study">دراسة الحالة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                    <a href="https://ri88.info" target="_blank" rel="noopener noreferrer" class="project-link-ext">
+                        <span data-i18n="cs_live">المعاينة</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                    </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="index.html" class="brand-logo footer-brand" dir="ltr">
+                        <span>rayyan</span><span class="dot">.</span><span>aldohian</span>
+                    </a>
+                    <p class="footer-sub" data-i18n="footer_role">
+                        متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="projects.html" data-i18n="nav_work">المشاريع</a>
+                    <a href="index.html#services" data-i18n="nav_services">مجالات التخصص</a>
+                    <a href="experience.html" data-i18n="nav_experience">الخبرات المهنية</a>
+                    <a href="index.html#impact" data-i18n="nav_impact">الأثر</a>
+                    <a href="about.html" data-i18n="nav_about">نبذة عني</a>
+                    <a href="https://wa.me/966558113135" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="mailto:Rayyan.aldohian@gmail.com">Rayyan.aldohian@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/rayyan-aldohian" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/iRayyanKoo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Rayyan Aldohian. All rights reserved.</span>
+                <div class="footer-saudi-badge" title="صُنع في السعودية / Saudi Made">
+                    <img src="assets/logos/saudi-made.png" alt="Saudi Made - صناعة سعودية" class="saudi-made-logo">
+                </div>
+                <span data-i18n="footer_credit">Designed and built from scratch.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic & Translations -->
+    <script src="main.js"></script>
+</body>
+</html>
