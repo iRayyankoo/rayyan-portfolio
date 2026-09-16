@@ -39,9 +39,9 @@ const translations = {
         link_all_projects_text: "كافة المشاريع",
         link_discuss_project: "كافة المشاريع",
         
-        p0_title: "منظومة نحت ERP",
-        p0_desc: "نظام تخطيط الموارد، المحاسبة المزدوجة، وإدارة الأصول العقارية",
-        status_erp: "نظام مؤسسي نشط",
+        p0_title: "بوابة شركة نحت المتكاملة",
+        p0_desc: "البوابة المركزية الموحدة لإدارة العمليات المؤسسية، ذكاء الأعمال، وحوكمة قطاعات الشركة",
+        status_erp: "بوابة مؤسسية نشطة",
 
         p1_title: "نظام نحت CRM",
         p1_desc: "محرك ذكاء الأعمال، قنوات الاستقطاب، وأتمتة مسارات المبيعات",
@@ -82,7 +82,7 @@ const translations = {
         heading_projects_archive: "أعمال وأنظمة بنيتها، من الفكرة إلى الأثر.",
         lead_projects_archive: "أنظمة تعتمد عليها فرق العمل يومياً، منصات رقمية وحلول تشغيلية متكاملة، كل مشروع تم إطلاقه وتوثيقه بدقة. استكشف دراسة الحالة لكل مشروع لمعرفة القصة كاملة.",
         
-        p0_story: "منصة رقمية مؤسسية تجمع بين ذكاء الأعمال (BI) والإدارة المالية المتقدمة، وإدارة الكوادر والمشاريع العقارية في بيئة تشغيلية موحدة ومؤتمتة ومبنية بمعايير المحاسبة المزدوجة وسجل تدقيق مالي غير قابل للتعديل.",
+        p0_story: "بوابة رقمية مؤسسية موحدة لكافة قطاعات وأقسام الشركة، تجمع بين إدارة العمليات التشغيلية، ذكاء الأعمال (BI)، إدارة المشاريع والكوادر، والربط المالي الشامل في بيئة سحابية مركزية ومؤتمتة بالكامل.",
         p1_story: "منظومة سحابية متكاملة لإدارة علاقات العملاء في قطاع التطوير والوساطة العقارية، تربط الحملات الإعلانية بمسار الصفقات وتوفر توزيعاً ذكياً للفرص مع ربط فوري بـ WhatsApp Business API وتتبع دقيق لعائد الإنفاق الإعلاني.",
         p_naht_web_story: "البوابة العامة لشركة نحت العقارية، توفر استعراضاً تفاعلياً للمشاريع السكنية الفاخرة بالرياض، مع مخططات معمارية ديناميكية وتزامن فوري للحجوزات مع نظام الـ CRM وسرعة استجابة فائقة.",
         p2_story: "المنصة الرقمية الموحدة لمجموعة T&S القابضة لإعادة هيكلة الحضور المؤسسي وتوحيد 10 قطاعات استثمارية كبرى تحت لغة وهوية بصرية واحدة وبنية سحابية عالمية فائقة السرعة.",
@@ -502,9 +502,9 @@ const translations = {
         link_all_projects_text: "All projects",
         link_discuss_project: "All projects",
         
-        p0_title: "Naht Enterprise ERP",
-        p0_desc: "Double-entry accounting, trial balances, and real estate asset management",
-        status_erp: "Actively maintained",
+        p0_title: "Naht Enterprise Portal",
+        p0_desc: "Unified corporate portal for operations, Business Intelligence & enterprise governance",
+        status_erp: "Active Enterprise Portal",
 
         p1_title: "NAHT Real Estate CRM",
         p1_desc: "Business Intelligence, multi-channel lead routing & ROAS telemetry",
@@ -545,7 +545,7 @@ const translations = {
         heading_projects_archive: "Things I've built, end to end.",
         lead_projects_archive: "Apps real people use, systems work that goes down to the machine code, and enterprise platforms, each one shipped and documented. Open any project for the full story.",
 
-        p0_story: "An enterprise digital platform integrating Business Intelligence, automated double-entry ledger accounting, and real estate asset management with an immutable append-only audit trail.",
+        p0_story: "A centralized enterprise portal serving the entire company, unifying operational workflows, Business Intelligence (BI), project asset management, and cross-departmental governance into an automated cloud ecosystem.",
         p1_story: "Cloud-native CRM built for high-velocity real estate brokerage, tracking leads from ad spend to closed deals with automated smart distribution and WhatsApp Business Cloud API sync.",
         p_naht_web_story: "The flagship public portal for Naht Real Estate, delivering an interactive architectural showcase for luxury off-plan residences in Riyadh with instant webhook lead routing.",
         p2_story: "Flagship corporate platform restructuring the digital presence of T&S Holding, unifying 10 high-growth business sectors under an authoritative design system and global edge CDN.",

@@ -40,33 +40,33 @@
   <text x="907" y="554" class="corner-cross">+</text>
 
   <g transform="translate(75, 88)">
-    <text x="0" y="0" class="mono-sm">SYS // 01 · ENTERPRISE RESOURCE PLANNING</text>
+    <text x="0" y="0" class="mono-sm">SYS // 01 · UNIFIED ENTERPRISE PORTAL</text>
     <circle cx="810" cy="-4" r="3.5" fill="#24B1B1"/>
-    <text x="795" y="0" text-anchor="end" class="mono-accent">ACTIVE ERP SYSTEM</text>
+    <text x="795" y="0" text-anchor="end" class="mono-accent">ACTIVE ENTERPRISE PORTAL</text>
   </g>
 
   <g transform="translate(480, 195)" text-anchor="middle">
-    <rect x="-140" y="-17" width="280" height="30" rx="15" fill="#121518" stroke="#24B1B1" stroke-opacity="0.4" stroke-width="1"/>
-    <circle cx="-117" cy="-2" r="3" fill="#24B1B1"/>
-    <text x="8" y="3" text-anchor="middle" class="badge-text">FINANCIAL ARCHITECTURE</text>
+    <rect x="-130" y="-17" width="260" height="30" rx="15" fill="#121518" stroke="#24B1B1" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="-107" cy="-2" r="3" fill="#24B1B1"/>
+    <text x="8" y="3" text-anchor="middle" class="badge-text">ENTERPRISE PORTAL</text>
   </g>
 
   <g transform="translate(480, 280)" text-anchor="middle">
-    <text x="0" y="0" class="brand-en">NAHT ERP<tspan fill="#24B1B1">.</tspan></text>
+    <text x="0" y="0" class="brand-en">NAHT PORTAL<tspan fill="#24B1B1">.</tspan></text>
   </g>
   
   <g transform="translate(480, 335)" text-anchor="middle">
-    <text x="0" y="0" class="brand-ar">منظومة نحت المحاسبية</text>
+    <text x="0" y="0" class="brand-ar">بوابة شركة نحت المتكاملة</text>
   </g>
 
-  <line x1="360" y1="370" x2="600" y2="370" class="accent-line"/>
+  <line x1="330" y1="370" x2="630" y2="370" class="accent-line"/>
 
   <g transform="translate(480, 410)" text-anchor="middle">
-    <text x="0" y="0" class="tagline">Double-Entry Accounting // Trial Balances // Asset Governance</text>
+    <text x="0" y="0" class="tagline">Corporate Operations // Business Intelligence // Asset Governance</text>
   </g>
 
   <g transform="translate(75, 518)">
-    <text x="0" y="0" class="mono-sm">POSTGRESQL · BI DASHBOARD · ASSET LEDGER</text>
-    <text x="810" y="0" text-anchor="end" class="mono-sm">MULTI-BRANCH · AUDIT READY · REAL ESTATE</text>
+    <text x="0" y="0" class="mono-sm">POSTGRESQL · BI DASHBOARD · OPERATIONS HUB</text>
+    <text x="810" y="0" text-anchor="end" class="mono-sm">COMPANY-WIDE SUITE · MULTI-DEPARTMENT · CLOUD</text>
   </g>
 </svg>
