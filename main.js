@@ -1226,11 +1226,25 @@ function initScrollSpy() {
 
 // --- CMS & Dashboard Live Synchronization ---
 (function initCmsSync() {
+    function formatHeroLead(text) {
+        if (!text) return '';
+        if (text.includes('<em>')) return text;
+        return text
+            .replace(/(ذكاء الأعمال(?:\s*\(BI\))?)/g, '<em>$1</em>')
+            .replace(/(الهويات البصرية(?:\s*الراسخة)?)/g, '<em>$1</em>')
+            .replace(/(الذكاء الاصطناعي(?:\s*\(AI\))?)/g, '<em>$1</em>')
+            .replace(/(Business Intelligence(?:\s*\(BI\))?)/gi, '<em>$1</em>')
+            .replace(/(authoritative brand identity)/gi, '<em>$1</em>')
+            .replace(/(AI-driven workflows)/gi, '<em>$1</em>');
+    }
+
     // 1. Check for published/saved local draft
     try {
         const saved = localStorage.getItem('rayyan_portfolio_draft');
         if (saved) {
             const data = JSON.parse(saved);
+            if (data.hero?.lead?.ar) data.hero.lead.ar = formatHeroLead(data.hero.lead.ar);
+            if (data.hero?.lead?.en) data.hero.lead.en = formatHeroLead(data.hero.lead.en);
             applyCmsData(data);
         } else {
             // Fetch central portfolio-data.json directly from repository
@@ -1263,10 +1277,11 @@ function initScrollSpy() {
             titleEl.innerHTML = `${head} <span class="accent-span">${acc}</span>`;
         }
 
-        // Update Lead
+        // Update Lead with accents
         const descEl = document.querySelector('.hero-desc');
         if (descEl && data.hero?.lead) {
-            descEl.innerHTML = data.hero.lead[lang] || data.hero.lead.ar;
+            const rawLead = data.hero.lead[lang] || data.hero.lead.ar;
+            descEl.innerHTML = formatHeroLead(rawLead);
         }
 
         // Update Status
@@ -1295,7 +1310,7 @@ function initScrollSpy() {
                         ${data.marquee.map(m => `
                             <div class="marquee-item">
                                 <span class="marquee-logo-badge logo-badge-img">
-                                    <img src="${m.logo}" alt="${m.name}" class="marquee-logo-img">
+                                     <img src="${m.logo}" alt="${m.name}" class="marquee-logo-img">
                                 </span>
                                 <div class="marquee-brand-text">
                                     <span class="marquee-brand-name">${m.name}</span>
@@ -1335,6 +1350,12 @@ function initScrollSpy() {
         } else if (patch.type === 'headlineAccentAr' && lang === 'ar') {
             const spanEl = document.querySelector('.hero-title .accent-span');
             if (spanEl) spanEl.textContent = patch.value;
+        } else if (patch.type === 'leadAr' && lang === 'ar') {
+            const descEl = document.querySelector('.hero-desc');
+            if (descEl) descEl.innerHTML = formatHeroLead(patch.value);
+        } else if (patch.type === 'leadEn' && lang === 'en') {
+            const descEl = document.querySelector('.hero-desc');
+            if (descEl) descEl.innerHTML = formatHeroLead(patch.value);
         } else if (patch.type === 'statusAr' && lang === 'ar') {
             const statusEl = document.querySelector('.status-pill [data-i18n="hero_status"]');
             if (statusEl) statusEl.textContent = patch.value;

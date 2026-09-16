@@ -1606,6 +1606,7 @@
             const syncInputs = [
                 { id: 'heroHeadlineAr', path: 'hero.headline.ar', type: 'headlineAr' },
                 { id: 'heroHeadlineAccentAr', path: 'hero.headlineAccent.ar', type: 'headlineAccentAr' },
+                { id: 'heroLeadAr', path: 'hero.lead.ar', type: 'leadAr' },
                 { id: 'heroStatusTextAr', path: 'profile.status.text.ar', type: 'statusAr' },
                 { id: 'themeSelect', path: 'meta.theme.defaultTheme', type: 'theme' }
             ];
@@ -1664,6 +1665,18 @@
             });
         }
 
+        function formatHeroLead(text) {
+            if (!text) return '';
+            if (text.includes('<em>')) return text;
+            return text
+                .replace(/(ذكاء الأعمال(?:\s*\(BI\))?)/g, '<em>$1</em>')
+                .replace(/(الهويات البصرية(?:\s*الراسخة)?)/g, '<em>$1</em>')
+                .replace(/(الذكاء الاصطناعي(?:\s*\(AI\))?)/g, '<em>$1</em>')
+                .replace(/(Business Intelligence(?:\s*\(BI\))?)/gi, '<em>$1</em>')
+                .replace(/(authoritative brand identity)/gi, '<em>$1</em>')
+                .replace(/(AI-driven workflows)/gi, '<em>$1</em>');
+        }
+
         function collectFormData() {
             if (!portfolioData) return;
             portfolioData.profile.status.active = document.getElementById('heroStatusActive').checked;
@@ -1673,8 +1686,8 @@
             portfolioData.hero.headlineAccent.ar = document.getElementById('heroHeadlineAccentAr').value;
             portfolioData.hero.headline.en = document.getElementById('heroHeadlineEn').value;
             portfolioData.hero.headlineAccent.en = document.getElementById('heroHeadlineAccentEn').value;
-            portfolioData.hero.lead.ar = document.getElementById('heroLeadAr').value;
-            portfolioData.hero.lead.en = document.getElementById('heroLeadEn').value;
+            portfolioData.hero.lead.ar = formatHeroLead(document.getElementById('heroLeadAr').value);
+            portfolioData.hero.lead.en = formatHeroLead(document.getElementById('heroLeadEn').value);
             portfolioData.hero.visual.src = document.getElementById('heroVideoSrc').value;
             portfolioData.hero.visual.scale = parseFloat(document.getElementById('heroVideoScaleSlider').value);
 
@@ -1722,6 +1735,9 @@
                     } else if (msg.type === 'headlineAccentAr') {
                         const s = doc.querySelector('.hero-title .accent-span');
                         if (s) s.textContent = msg.value;
+                    } else if (msg.type === 'leadAr') {
+                        const d = doc.querySelector('.hero-desc');
+                        if (d) d.innerHTML = formatHeroLead(msg.value);
                     } else if (msg.type === 'statusAr') {
                         const s = doc.querySelector('.status-pill [data-i18n="hero_status"]');
                         if (s) s.textContent = msg.value;
