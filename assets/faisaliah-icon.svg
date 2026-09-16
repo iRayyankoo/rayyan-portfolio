@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <title>Al Faisaliah Tower - Riyadh Landmark</title>
+    <!-- Sky Circle -->
+    <circle cx="256" cy="270" r="195" fill="#A5D9EB" stroke="#244964" stroke-width="18"/>
+    
+    <!-- White Clouds -->
+    <!-- Left Cloud -->
+    <path d="M 145 200 h 45 a 15 15 0 0 0 0 -30 a 20 20 0 0 0 -35 -5 a 14 14 0 0 0 -10 35 z" fill="#FFFFFF"/>
+    <!-- Right Cloud -->
+    <path d="M 320 260 h 65 a 20 20 0 0 0 0 -40 a 26 26 0 0 0 -45 -6 a 18 18 0 0 0 -20 46 z" fill="#FFFFFF"/>
+
+    <!-- Al Faisaliah Tower Body -->
+    <polygon points="256,40 185,462 327,462" fill="#CAD3D8" stroke="#244964" stroke-width="12" stroke-linejoin="round"/>
+    
+    <!-- Center Spine Line -->
+    <line x1="256" y1="40" x2="256" y2="462" stroke="#244964" stroke-width="6"/>
+
+    <!-- Horizontal Louvers / Slat Lines -->
+    <line x1="252" y1="90" x2="260" y2="90" stroke="#244964" stroke-width="4"/>
+    <line x1="248" y1="120" x2="264" y2="120" stroke="#244964" stroke-width="4"/>
+    
+    <!-- Golden/Dark Observation Globe -->
+    <circle cx="256" cy="155" r="22" fill="#244964"/>
+    
+    <!-- Chevron / Lattice Structural Trusses -->
+    <polygon points="225,200 256,180 287,200 287,215 256,195 225,215" fill="#244964"/>
+    
+    <line x1="220" y1="230" x2="292" y2="230" stroke="#244964" stroke-width="4"/>
+    <line x1="216" y1="245" x2="296" y2="245" stroke="#244964" stroke-width="4"/>
+    <line x1="212" y1="260" x2="300" y2="260" stroke="#244964" stroke-width="4"/>
+    <line x1="208" y1="275" x2="304" y2="275" stroke="#244964" stroke-width="4"/>
+
+    <polygon points="205,300 256,275 307,300 307,315 256,290 205,315" fill="#244964"/>
+
+    <line x1="202" y1="330" x2="310" y2="330" stroke="#244964" stroke-width="4"/>
+    <line x1="198" y1="345" x2="314" y2="345" stroke="#244964" stroke-width="4"/>
+    <line x1="194" y1="360" x2="318" y2="360" stroke="#244964" stroke-width="4"/>
+    <line x1="190" y1="375" x2="322" y2="375" stroke="#244964" stroke-width="4"/>
+
+    <polygon points="188,400 256,370 324,400 324,416 256,386 188,416" fill="#244964"/>
+
+    <line x1="186" y1="430" x2="326" y2="430" stroke="#244964" stroke-width="4"/>
+    <line x1="184" y1="445" x2="328" y2="445" stroke="#244964" stroke-width="4"/>
+
+    <!-- Spire Needle -->
+    <line x1="256" y1="30" x2="256" y2="55" stroke="#244964" stroke-width="6" stroke-linecap="round"/>
+</svg>
