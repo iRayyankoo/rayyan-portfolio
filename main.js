@@ -1307,17 +1307,27 @@ function initScrollSpy() {
             if (track) {
                 const buildGroup = (hidden = false) => `
                     <div class="marquee-group"${hidden ? ' aria-hidden="true"' : ''}>
-                        ${data.marquee.map(m => `
+                        ${data.marquee.map(m => {
+                            let logoSrc = m.logo;
+                            if (logoSrc && logoSrc.includes('Amazon_logo')) {
+                                logoSrc = 'assets/logos/amazon-white.svg';
+                            }
+                            const logoClass = m.name?.toLowerCase().includes('amazon') ? ' amazon-logo'
+                                : m.name?.toLowerCase().includes('riyadh') ? ' rac-logo'
+                                : m.name?.toLowerCase().includes('wahag') ? ' wahag-logo'
+                                : m.name?.toLowerCase().includes('naht') ? ' naht-logo'
+                                : m.name?.toLowerCase().includes('holding') ? ' ts-logo' : '';
+                            return `
                             <div class="marquee-item">
                                 <span class="marquee-logo-badge logo-badge-img">
-                                     <img src="${m.logo}" alt="${m.name}" class="marquee-logo-img">
+                                     <img src="${logoSrc}" alt="${m.name}" class="marquee-logo-img${logoClass}">
                                 </span>
                                 <div class="marquee-brand-text">
                                     <span class="marquee-brand-name">${m.name}</span>
                                     <span class="marquee-brand-tag">${m.subtitle?.[lang] || m.subtitle?.ar || ''}</span>
                                 </div>
                             </div>
-                        `).join('')}
+                        `;}).join('')}
                     </div>
                 `;
                 track.innerHTML = buildGroup(false) + buildGroup(true);
