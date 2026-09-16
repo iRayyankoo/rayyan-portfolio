@@ -219,6 +219,7 @@ const translations = {
         
         footer_role: "متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية",
         footer_credit: "صنع في قلب العاصمة الرياض",
+        footer_rights: "© 2026 ريان الضحيان. جميع الحقوق محفوظة.",
 
         // --- Case Studies Shared Keys ---
         cs_back: "العودة لكافة المشاريع",
@@ -682,6 +683,7 @@ const translations = {
         
         footer_role: "Specialist in Business Intelligence, Marketing, Brand Identity & Growth · Riyadh, Saudi Arabia",
         footer_credit: "Crafted in the heart of the capital, Riyadh.",
+        footer_rights: "© 2026 Rayyan Aldohian. All rights reserved.",
 
         // --- Case Studies Shared Keys ---
         cs_back: "Back to all projects",

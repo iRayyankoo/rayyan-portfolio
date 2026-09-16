@@ -1219,16 +1219,19 @@ html[dir="rtl"] .toy-caption-tag {
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding: 0.5rem 0 0.85rem;
     mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 
 .marquee-track {
     display: flex;
+    align-items: center;
     width: max-content;
     gap: 1.75rem;
     will-change: transform;
     animation: marquee-scroll 32s linear infinite;
+    padding: 2px 0;
 }
 
 .marquee-track:hover {
@@ -1263,19 +1266,22 @@ html[lang="ar"] .marquee-track {
     align-items: center;
     gap: 1.75rem;
     flex-shrink: 0;
+    padding: 2px 0;
 }
 
 .marquee-item {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.6rem 1.15rem;
+    padding: 0.65rem 1.25rem;
+    min-height: 3.5rem;
     border-radius: var(--radius-sm);
     background: var(--color-surface);
     border: 1px solid var(--color-line);
     transition: all 0.25s var(--ease-premium);
     user-select: none;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .marquee-item:hover {
@@ -1350,7 +1356,14 @@ html[lang="ar"] .marquee-track {
 .marquee-brand-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.15;
+    line-height: 1.2;
+    justify-content: center;
+}
+
+html[lang="ar"] .marquee-brand-text,
+html[dir="rtl"] .marquee-brand-text {
+    line-height: 1.35;
+    padding-bottom: 2px;
 }
 
 .marquee-brand-name {
@@ -1371,6 +1384,13 @@ html[lang="ar"] .marquee-track {
     color: var(--color-muted);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+html[lang="ar"] .marquee-brand-tag,
+html[dir="rtl"] .marquee-brand-tag {
+    font-family: var(--font-arabic, var(--font-sans));
+    font-size: 0.72rem;
+    letter-spacing: 0;
 }
 
 /* ==========================================================================
