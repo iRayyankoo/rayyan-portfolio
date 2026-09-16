@@ -864,13 +864,15 @@
                 <div class="editor-header">
                     <div>
                         <h2 class="section-title">شريط الشركات والشركاء (Experience Marquee)</h2>
-                        <p class="section-desc">الشركات والجهات الكبرى التي قمت بقيادة مشاريع معها (أمازون، مطارات الرياض، T&S، وهج، نحت).</p>
+                        <p class="section-desc">إدارة الشركات والجهات الكبرى (تعديل الأسماء، الشعارات، الأنشطة، وإضافة جهات جديدة).</p>
                     </div>
+                    <button type="button" class="btn-tool active" id="btnAddNewMarquee" onclick="addNewMarqueeItem()">
+                        <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                        <span>إضافة شركة / جهة جديدة</span>
+                    </button>
                 </div>
-                <div class="card">
-                    <div id="marqueeItemsList">
-                        <!-- Rendered by JS -->
-                    </div>
+                <div id="marqueeItemsList">
+                    <!-- Rendered by JS -->
                 </div>
             </div>
 
@@ -881,7 +883,7 @@
                         <h2 class="section-title">معرض الأعمال والأنظمة (Projects Showcase)</h2>
                         <p class="section-desc">تحكم ببطاقات المشاريع، العناوين، الأوصاف، بطاقات الـ Blueprint، وروابط الأنظمة المباشرة.</p>
                     </div>
-                    <button type="button" class="btn-tool active" id="btnAddNewProject">
+                    <button type="button" class="btn-tool active" id="btnAddNewProject" onclick="addNewProject()">
                         <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
                         <span>إضافة مشروع جديد</span>
                     </button>
@@ -898,6 +900,10 @@
                         <h2 class="section-title">مجالات التخصص والخدمات (Capabilities)</h2>
                         <p class="section-desc">البطاقات الأربعة الرئيسية: ذكاء الأعمال، التسويق والنمو، الهوية البصرية، وحلول الذكاء الاصطناعي.</p>
                     </div>
+                    <button type="button" class="btn-tool active" id="btnAddNewService" onclick="addNewService()">
+                        <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                        <span>إضافة مجال جديد</span>
+                    </button>
                 </div>
                 <div id="servicesListContainer">
                     <!-- Rendered by JS -->
@@ -911,6 +917,10 @@
                         <h2 class="section-title">المسار المهني والخبرات (Career Timeline)</h2>
                         <p class="section-desc">المحطات الوظيفية والقيادية، الأدوار، الفترات، والإنجازات الميدانية.</p>
                     </div>
+                    <button type="button" class="btn-tool active" id="btnAddNewExperience" onclick="addNewExperience()">
+                        <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                        <span>إضافة خبرة جديدة</span>
+                    </button>
                 </div>
                 <div id="experienceListContainer">
                     <!-- Rendered by JS -->
@@ -924,6 +934,10 @@
                         <h2 class="section-title">الأثر الاستراتيجي والأرقام (Strategic Impact)</h2>
                         <p class="section-desc">بطاقات الإحصائيات البارزة (+38.4% نمو، 10+ قطاعات، 99.9% موثوقية).</p>
                     </div>
+                    <button type="button" class="btn-tool active" id="btnAddNewMetric" onclick="addNewMetric()">
+                        <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                        <span>إضافة مؤشر جديد</span>
+                    </button>
                 </div>
                 <div id="metricsListContainer">
                     <!-- Rendered by JS -->
@@ -1180,6 +1194,14 @@
             renderMetricsList();
         }
 
+        // Broadcast live updates to preview frame
+        function broadcastToPreview() {
+            const iframe = document.getElementById('previewFrame');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ type: 'PORTFOLIO_UPDATE', data: portfolioData }, '*');
+            }
+        }
+
         // Render Projects
         function renderProjectsList() {
             const container = document.getElementById('projectsListContainer');
@@ -1189,18 +1211,18 @@
                 <div class="card" id="project-card-${idx}">
                     <div class="card-header">
                         <div class="item-info">
-                            <img src="${p.image}" class="item-thumb" alt="">
+                            <img src="${p.image}" class="item-thumb" style="object-fit: cover; background: #000;" alt="">
                             <div>
                                 <span class="item-title">${p.title?.ar || p.title?.en}</span>
-                                <div class="item-sub">${p.category} · ${p.year}</div>
+                                <div class="item-sub">${p.category || 'نظام تقني'} · ${p.year || '2026'}</div>
                             </div>
                         </div>
                         <div class="item-actions">
                             <label class="switch" title="إظهار في الصفحة الرئيسية">
-                                <input type="checkbox" ${p.featured ? 'checked' : ''} onchange="updateProjectField(${idx}, 'featured', this.checked)">
+                                <input type="checkbox" ${p.featured !== false ? 'checked' : ''} onchange="updateProjectField(${idx}, 'featured', this.checked)">
                                 <span class="slider"></span>
                             </label>
-                            <button type="button" class="btn-icon delete" onclick="deleteProject(${idx})" title="حذف">
+                            <button type="button" class="btn-icon delete" onclick="deleteProject(${idx})" title="حذف المشروع">
                                 <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
                             </button>
                         </div>
@@ -1208,36 +1230,73 @@
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="field-group">
                             <label class="field-label">اسم المشروع (عربي)</label>
-                            <input type="text" class="input-text" value="${p.title?.ar || ''}" onchange="updateProjectField(${idx}, 'title.ar', this.value)">
+                            <input type="text" class="input-text" value="${p.title?.ar || ''}" oninput="updateProjectField(${idx}, 'title.ar', this.value)">
                         </div>
                         <div class="field-group">
                             <label class="field-label">اسم المشروع (English)</label>
-                            <input type="text" class="input-text" value="${p.title?.en || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'title.en', this.value)">
+                            <input type="text" class="input-text" value="${p.title?.en || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'title.en', this.value)">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">تصنيف المشروع</label>
+                            <input type="text" class="input-text" value="${p.category || ''}" oninput="updateProjectField(${idx}, 'category', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">السنة</label>
+                            <input type="text" class="input-text" value="${p.year || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'year', this.value)">
                         </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="field-group">
                             <label class="field-label">الوصف السريع (عربي)</label>
-                            <input type="text" class="input-text" value="${p.description?.ar || ''}" onchange="updateProjectField(${idx}, 'description.ar', this.value)">
+                            <input type="text" class="input-text" value="${p.description?.ar || ''}" oninput="updateProjectField(${idx}, 'description.ar', this.value)">
                         </div>
                         <div class="field-group">
                             <label class="field-label">الوصف السريع (English)</label>
-                            <input type="text" class="input-text" value="${p.description?.en || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'description.en', this.value)">
+                            <input type="text" class="input-text" value="${p.description?.en || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'description.en', this.value)">
                         </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="field-group">
-                            <label class="field-label">مسار صورة البطاقة (Dark Blueprint)</label>
-                            <input type="text" class="input-text" value="${p.image || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'image', this.value)">
+                            <label class="field-label">مسار صورة البطاقة (Blueprint Image)</label>
+                            <input type="text" class="input-text" value="${p.image || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'image', this.value)">
                         </div>
                         <div class="field-group">
                             <label class="field-label">رابط المنظومة الحية (Live URL)</label>
-                            <input type="text" class="input-text" value="${p.liveUrl || ''}" dir="ltr" onchange="updateProjectField(${idx}, 'liveUrl', this.value)">
+                            <input type="text" class="input-text" value="${p.liveUrl || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'liveUrl', this.value)">
                         </div>
                     </div>
                 </div>
             `).join('');
             lucide.createIcons();
+        }
+
+        function addNewProject() {
+            if (!portfolioData.projects) portfolioData.projects = [];
+            portfolioData.projects.unshift({
+                id: 'project_' + Date.now(),
+                featured: true,
+                title: { ar: 'مشروع رقمي جديد', en: 'New Digital Project' },
+                category: 'حلول تقنية واستراتيجية',
+                year: '2026',
+                image: 'assets/projects/naht_system_01.png',
+                description: {
+                    ar: 'وصف مختصر لمنظومة المشروع وأثرها المباشر على نمو الأعمال...',
+                    en: 'Brief description of the platform and direct business impact...'
+                },
+                blueprint: {
+                    metric1: { label: 'كفاءة التشغيل', value: '+45%' },
+                    metric2: { label: 'سرعة الإنجاز', value: '3 أسابيع' }
+                },
+                liveUrl: 'https://example.com'
+            });
+            renderProjectsList();
+            saveDraftAuto();
+            broadcastToPreview();
+            showToast('🚀 تمت إضافة مشروع جديد بنجاح! تم إدراجه في أعلى القائمة لتعديله.');
+            const card = document.getElementById('project-card-0');
+            if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         // Render Marquee
@@ -1246,20 +1305,92 @@
             if (!container || !portfolioData.marquee) return;
 
             container.innerHTML = portfolioData.marquee.map((m, idx) => `
-                <div class="item-row">
-                    <div class="item-info">
-                        <img src="${m.logo}" class="item-thumb" style="object-fit: contain; padding: 2px;" alt="">
-                        <div>
-                            <span class="item-title">${m.name}</span>
-                            <div class="item-sub">${m.subtitle?.ar || m.subtitle?.en}</div>
+                <div class="card" id="marquee-card-${idx}">
+                    <div class="card-header">
+                        <div class="item-info">
+                            <img src="${m.logo}" class="item-thumb" style="object-fit: contain; padding: 2px; background: rgba(255,255,255,0.06); border-radius: 6px;" alt="${m.name}">
+                            <div>
+                                <span class="item-title">${m.name || 'جهة غير مسماة'}</span>
+                                <div class="item-sub">${m.subtitle?.ar || m.subtitle?.en || 'مجال الشريك'}</div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-icon delete" onclick="deleteMarqueeItem(${idx})" title="حذف الشركة">
+                            <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
+                        </button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">اسم الشركة أو الجهة</label>
+                            <input type="text" class="input-text" value="${m.name || ''}" oninput="updateMarqueeField(${idx}, 'name', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">مسار الشعار (Logo Path / URL)</label>
+                            <input type="text" class="input-text" value="${m.logo || ''}" dir="ltr" oninput="updateMarqueeField(${idx}, 'logo', this.value)">
                         </div>
                     </div>
-                    <div class="item-actions">
-                        <input type="text" class="input-text" style="width: 140px; padding: 2px 6px; font-size: 0.75rem;" value="${m.subtitle?.ar || ''}" onchange="updateMarqueeSubtitle(${idx}, this.value)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">نشاط الشركة (عربي)</label>
+                            <input type="text" class="input-text" value="${m.subtitle?.ar || ''}" oninput="updateMarqueeField(${idx}, 'subtitle.ar', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">نشاط الشركة (English)</label>
+                            <input type="text" class="input-text" value="${m.subtitle?.en || ''}" dir="ltr" oninput="updateMarqueeField(${idx}, 'subtitle.en', this.value)">
+                        </div>
                     </div>
                 </div>
             `).join('');
             lucide.createIcons();
+        }
+
+        function addNewMarqueeItem() {
+            if (!portfolioData.marquee) portfolioData.marquee = [];
+            portfolioData.marquee.push({
+                name: 'شركة جديدة',
+                logo: 'assets/logos/ts-white.svg',
+                subtitle: {
+                    ar: 'مجال الشركة أو قطاعها',
+                    en: 'Company Industry'
+                }
+            });
+            renderMarqueeList();
+            saveDraftAuto();
+            broadcastToPreview();
+            showToast('✨ تمت إضافة شركة جديدة إلى شريط الشركاء! يمكنك تعديل تفاصيلها الآن.');
+            const newCard = document.getElementById(`marquee-card-${portfolioData.marquee.length - 1}`);
+            if (newCard) newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function deleteMarqueeItem(idx) {
+            const name = portfolioData.marquee[idx]?.name || 'هذه الشركة';
+            if (confirm(`هل أنت متأكد من حذف "${name}" من شريط الشركاء؟`)) {
+                portfolioData.marquee.splice(idx, 1);
+                renderMarqueeList();
+                saveDraftAuto();
+                broadcastToPreview();
+                showToast('تم حذف الشركة من الشريط.');
+            }
+        }
+
+        function updateMarqueeField(idx, field, val) {
+            if (!portfolioData.marquee || !portfolioData.marquee[idx]) return;
+            setDeep(portfolioData.marquee[idx], field, val);
+            // also update live header badge in card
+            const card = document.getElementById(`marquee-card-${idx}`);
+            if (card) {
+                if (field === 'name') {
+                    const titleEl = card.querySelector('.item-title');
+                    if (titleEl) titleEl.innerText = val;
+                } else if (field === 'logo') {
+                    const imgEl = card.querySelector('.item-thumb');
+                    if (imgEl) imgEl.src = val;
+                } else if (field === 'subtitle.ar') {
+                    const subEl = card.querySelector('.item-sub');
+                    if (subEl) subEl.innerText = val;
+                }
+            }
+            saveDraftAuto();
+            broadcastToPreview();
         }
 
         // Render Services
@@ -1268,28 +1399,58 @@
             if (!container || !portfolioData.services) return;
 
             container.innerHTML = portfolioData.services.map((s, idx) => `
-                <div class="card">
+                <div class="card" id="service-card-${idx}">
                     <div class="card-header">
                         <span class="card-title">
                             <i data-lucide="${s.icon || 'star'}" style="width: 16px; height: 16px; color: var(--accent);"></i>
                             ${s.title?.ar || s.title?.en}
                         </span>
+                        <button type="button" class="btn-icon delete" onclick="deleteServiceItem(${idx})" title="حذف التخصص">
+                            <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
+                        </button>
                     </div>
                     <div class="field-group">
                         <label class="field-label">العنوان (عربي)</label>
-                        <input type="text" class="input-text" value="${s.title?.ar || ''}" onchange="updateServiceField(${idx}, 'title.ar', this.value)">
+                        <input type="text" class="input-text" value="${s.title?.ar || ''}" oninput="updateServiceField(${idx}, 'title.ar', this.value)">
                     </div>
                     <div class="field-group">
                         <label class="field-label">العنوان (English)</label>
-                        <input type="text" class="input-text" value="${s.title?.en || ''}" dir="ltr" onchange="updateServiceField(${idx}, 'title.en', this.value)">
+                        <input type="text" class="input-text" value="${s.title?.en || ''}" dir="ltr" oninput="updateServiceField(${idx}, 'title.en', this.value)">
                     </div>
                     <div class="field-group">
                         <label class="field-label">الشرح والتفاصيل (عربي)</label>
-                        <textarea class="textarea" onchange="updateServiceField(${idx}, 'description.ar', this.value)">${s.description?.ar || ''}</textarea>
+                        <textarea class="textarea" oninput="updateServiceField(${idx}, 'description.ar', this.value)">${s.description?.ar || ''}</textarea>
                     </div>
                 </div>
             `).join('');
             lucide.createIcons();
+        }
+
+        function addNewService() {
+            if (!portfolioData.services) portfolioData.services = [];
+            portfolioData.services.push({
+                id: 'service_' + Date.now(),
+                icon: 'layers',
+                title: { ar: 'مجال تخصص جديد', en: 'New Capability' },
+                description: {
+                    ar: 'شرح تفصيلي لما تقدمه في هذا المجال للشركات والعملاء...',
+                    en: 'Detailed description of this capability and strategic impact...'
+                }
+            });
+            renderServicesList();
+            saveDraftAuto();
+            broadcastToPreview();
+            showToast('✨ تمت إضافة تخصص جديد بنجاح!');
+        }
+
+        function deleteServiceItem(idx) {
+            if (confirm('هل أنت متأكد من حذف هذا التخصص؟')) {
+                portfolioData.services.splice(idx, 1);
+                renderServicesList();
+                saveDraftAuto();
+                broadcastToPreview();
+                showToast('تم حذف التخصص.');
+            }
         }
 
         // Render Experience
@@ -1298,24 +1459,62 @@
             if (!container || !portfolioData.experience) return;
 
             container.innerHTML = portfolioData.experience.map((e, idx) => `
-                <div class="card">
+                <div class="card" id="exp-card-${idx}">
                     <div class="card-header">
                         <span class="card-title">${e.company?.ar || e.company?.en} · ${e.role?.ar || e.role?.en}</span>
-                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">${e.period}</span>
+                        <div class="item-actions">
+                            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); margin-left: 0.5rem;">${e.period}</span>
+                            <button type="button" class="btn-icon delete" onclick="deleteExpItem(${idx})" title="حذف المحطة الوظيفية">
+                                <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                        <div class="field-group">
+                            <label class="field-label">اسم الشركة / الجهة (عربي)</label>
+                            <input type="text" class="input-text" value="${e.company?.ar || ''}" oninput="updateExpField(${idx}, 'company.ar', this.value)">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">الفترة الزمنية</label>
+                            <input type="text" class="input-text" value="${e.period || ''}" dir="ltr" oninput="updateExpField(${idx}, 'period', this.value)">
+                        </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="field-group">
                             <label class="field-label">المسمى الوظيفي (عربي)</label>
-                            <input type="text" class="input-text" value="${e.role?.ar || ''}" onchange="updateExpField(${idx}, 'role.ar', this.value)">
+                            <input type="text" class="input-text" value="${e.role?.ar || ''}" oninput="updateExpField(${idx}, 'role.ar', this.value)">
                         </div>
                         <div class="field-group">
                             <label class="field-label">المسمى الوظيفي (English)</label>
-                            <input type="text" class="input-text" value="${e.role?.en || ''}" dir="ltr" onchange="updateExpField(${idx}, 'role.en', this.value)">
+                            <input type="text" class="input-text" value="${e.role?.en || ''}" dir="ltr" oninput="updateExpField(${idx}, 'role.en', this.value)">
                         </div>
                     </div>
                 </div>
             `).join('');
             lucide.createIcons();
+        }
+
+        function addNewExperience() {
+            if (!portfolioData.experience) portfolioData.experience = [];
+            portfolioData.experience.unshift({
+                company: { ar: 'شركة جديدة', en: 'New Company' },
+                role: { ar: 'المسمى الوظيفي والقيادي', en: 'Leadership Role' },
+                period: '2025 - الآن'
+            });
+            renderExperienceList();
+            saveDraftAuto();
+            broadcastToPreview();
+            showToast('✨ تمت إضافة محطة وظيفية جديدة!');
+        }
+
+        function deleteExpItem(idx) {
+            if (confirm('هل أنت متأكد من حذف هذه المحطة الوظيفية؟')) {
+                portfolioData.experience.splice(idx, 1);
+                renderExperienceList();
+                saveDraftAuto();
+                broadcastToPreview();
+                showToast('تم حذف المحطة الوظيفية.');
+            }
         }
 
         // Render Metrics
@@ -1326,24 +1525,52 @@
             container.innerHTML = `
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                     ${portfolioData.metrics.map((m, idx) => `
-                        <div class="card">
+                        <div class="card" id="metric-card-${idx}">
+                            <div class="card-header" style="padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+                                <span class="card-title" style="font-family: var(--font-mono); font-size: 1rem; color: var(--accent);">${m.value}</span>
+                                <button type="button" class="btn-icon delete" onclick="deleteMetricItem(${idx})" title="حذف المؤشر">
+                                    <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+                                </button>
+                            </div>
                             <div class="field-group">
                                 <label class="field-label">القيمة الرقمية</label>
-                                <input type="text" class="input-text" style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);" value="${m.value}" onchange="updateMetricField(${idx}, 'value', this.value)">
+                                <input type="text" class="input-text" style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);" value="${m.value}" oninput="updateMetricField(${idx}, 'value', this.value)">
                             </div>
                             <div class="field-group">
                                 <label class="field-label">العنوان (عربي)</label>
-                                <input type="text" class="input-text" value="${m.label?.ar || ''}" onchange="updateMetricField(${idx}, 'label.ar', this.value)">
+                                <input type="text" class="input-text" value="${m.label?.ar || ''}" oninput="updateMetricField(${idx}, 'label.ar', this.value)">
                             </div>
                             <div class="field-group">
                                 <label class="field-label">العنوان (English)</label>
-                                <input type="text" class="input-text" value="${m.label?.en || ''}" dir="ltr" onchange="updateMetricField(${idx}, 'label.en', this.value)">
+                                <input type="text" class="input-text" value="${m.label?.en || ''}" dir="ltr" oninput="updateMetricField(${idx}, 'label.en', this.value)">
                             </div>
                         </div>
                     `).join('')}
                 </div>
             `;
             lucide.createIcons();
+        }
+
+        function addNewMetric() {
+            if (!portfolioData.metrics) portfolioData.metrics = [];
+            portfolioData.metrics.push({
+                value: '+50%',
+                label: { ar: 'مؤشر أداء جديد', en: 'New Metric' }
+            });
+            renderMetricsList();
+            saveDraftAuto();
+            broadcastToPreview();
+            showToast('✨ تمت إضافة مؤشر إحصائي جديد!');
+        }
+
+        function deleteMetricItem(idx) {
+            if (confirm('هل أنت متأكد من حذف هذا المؤشر؟')) {
+                portfolioData.metrics.splice(idx, 1);
+                renderMetricsList();
+                saveDraftAuto();
+                broadcastToPreview();
+                showToast('تم حذف المؤشر.');
+            }
         }
 
         // Setup Event Listeners

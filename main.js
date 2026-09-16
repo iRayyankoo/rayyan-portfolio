@@ -1285,6 +1285,42 @@ function initScrollSpy() {
         if (data.meta?.theme?.defaultTheme) {
             document.documentElement.setAttribute('data-theme', data.meta.theme.defaultTheme);
         }
+
+        // Update Marquee Track
+        if (data.marquee && Array.isArray(data.marquee)) {
+            const track = document.querySelector('.marquee-track');
+            if (track) {
+                const buildGroup = (hidden = false) => `
+                    <div class="marquee-group"${hidden ? ' aria-hidden="true"' : ''}>
+                        ${data.marquee.map(m => `
+                            <div class="marquee-item">
+                                <span class="marquee-logo-badge logo-badge-img">
+                                    <img src="${m.logo}" alt="${m.name}" class="marquee-logo-img">
+                                </span>
+                                <div class="marquee-brand-text">
+                                    <span class="marquee-brand-name">${m.name}</span>
+                                    <span class="marquee-brand-tag">${m.subtitle?.[lang] || m.subtitle?.ar || ''}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                track.innerHTML = buildGroup(false) + buildGroup(true);
+            }
+        }
+
+        // Update Metrics
+        if (data.metrics && Array.isArray(data.metrics)) {
+            const metricCards = document.querySelectorAll('.impact-grid .impact-card');
+            data.metrics.forEach((m, idx) => {
+                if (metricCards[idx]) {
+                    const numEl = metricCards[idx].querySelector('.impact-num');
+                    const labelEl = metricCards[idx].querySelector('.impact-desc');
+                    if (numEl) numEl.textContent = m.value;
+                    if (labelEl) labelEl.textContent = m.label?.[lang] || m.label?.ar || '';
+                }
+            });
+        }
     }
 
     function applyRealtimePatch(patch) {
