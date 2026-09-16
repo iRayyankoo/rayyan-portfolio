@@ -218,7 +218,7 @@ const translations = {
         btn_whatsapp: "واتساب مباشر",
         
         footer_role: "متخصص في ذكاء الأعمال، التسويق، الهويات البصرية والنمو · الرياض، المملكة العربية السعودية",
-        footer_credit: "Designed and built from scratch.",
+        footer_credit: "صنع في قلب العاصمة الرياض",
 
         // --- Case Studies Shared Keys ---
         cs_back: "العودة لكافة المشاريع",
@@ -681,7 +681,7 @@ const translations = {
         btn_whatsapp: "Direct WhatsApp",
         
         footer_role: "Specialist in Business Intelligence, Marketing, Brand Identity & Growth · Riyadh, Saudi Arabia",
-        footer_credit: "Designed and built from scratch.",
+        footer_credit: "Crafted in the heart of the capital, Riyadh.",
 
         // --- Case Studies Shared Keys ---
         cs_back: "Back to all projects",
