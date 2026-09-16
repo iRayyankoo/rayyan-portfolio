@@ -682,7 +682,7 @@ const translations = {
         btn_whatsapp: "Direct WhatsApp",
         
         footer_role: "Specialist in Business Intelligence, Marketing, Brand Identity & Growth · Riyadh, Saudi Arabia",
-        footer_credit: "Crafted in the heart of the capital, Riyadh.",
+        footer_credit: "Crafted in the heart of Riyadh",
         footer_rights: "© 2026 Rayyan Aldohian. All rights reserved.",
 
         // --- Case Studies Shared Keys ---
