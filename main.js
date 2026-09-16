@@ -1052,6 +1052,11 @@ function setLanguage(lang) {
     if (window.lucide) {
         window.lucide.createIcons();
     }
+
+    // Re-apply CMS data for the selected language (marquee, hero, metrics)
+    if (window.__portfolioData && typeof window.__applyCmsData === 'function') {
+        window.__applyCmsData(window.__portfolioData);
+    }
 }
 
 // --- Theme Function ---
@@ -1247,12 +1252,18 @@ function initScrollSpy() {
             const data = JSON.parse(saved);
             if (data.hero?.lead?.ar) data.hero.lead.ar = formatHeroLead(data.hero.lead.ar);
             if (data.hero?.lead?.en) data.hero.lead.en = formatHeroLead(data.hero.lead.en);
+            window.__portfolioData = data;
             applyCmsData(data);
         } else {
             // Fetch central portfolio-data.json directly from repository
             fetch('data/portfolio-data.json')
                 .then(r => r.ok ? r.json() : null)
-                .then(d => { if (d) applyCmsData(d); })
+                .then(d => {
+                    if (d) {
+                        window.__portfolioData = d;
+                        applyCmsData(d);
+                    }
+                })
                 .catch(() => {});
         }
     } catch(e) {}
@@ -1261,14 +1272,27 @@ function initScrollSpy() {
     window.addEventListener('message', (event) => {
         if (!event.data) return;
         if (event.data.type === 'PORTFOLIO_UPDATE' && event.data.data) {
+            window.__portfolioData = event.data.data;
             applyCmsData(event.data.data);
         } else if (event.data.type === 'PORTFOLIO_REALTIME') {
             applyRealtimePatch(event.data);
         }
     });
 
+    const defaultCompanySubtitles = {
+        'ts': { ar: 'مجموعة شركات قابضة', en: 'Corporate Group' },
+        'holding': { ar: 'مجموعة شركات قابضة', en: 'Corporate Group' },
+        'wahag': { ar: 'إعلام وترفيه إبداعي', en: 'Creative & Media' },
+        'amazon': { ar: 'عمليات خدمة العملاء العالمية', en: 'Global CS Operations' },
+        'rac': { ar: 'تشغيل وحوكمة مطارات', en: 'Operations & Governance' },
+        'riyadh': { ar: 'تشغيل وحوكمة مطارات', en: 'Operations & Governance' },
+        'naht': { ar: 'تطوير عقاري وأنظمة ERP', en: 'Real Estate & ERP' }
+    };
+
     function applyCmsData(data) {
         if (!data) return;
+        window.__portfolioData = data;
+        window.__applyCmsData = applyCmsData;
         const lang = document.documentElement.getAttribute('lang') || 'ar';
         
         // Update Headline
@@ -1321,6 +1345,27 @@ function initScrollSpy() {
                                 : m.name?.toLowerCase().includes('wahag') ? ' wahag-logo'
                                 : m.name?.toLowerCase().includes('naht') ? ' naht-logo'
                                 : m.name?.toLowerCase().includes('holding') ? ' ts-logo' : '';
+
+                            let subAr = '';
+                            let subEn = '';
+                            if (m.subtitle && typeof m.subtitle === 'object') {
+                                subAr = m.subtitle.ar || '';
+                                subEn = m.subtitle.en || '';
+                            } else if (typeof m.subtitle === 'string') {
+                                subAr = m.subtitle;
+                            }
+
+                            const key = (m.id || m.name || '').toLowerCase();
+                            for (const [k, v] of Object.entries(defaultCompanySubtitles)) {
+                                if (key.includes(k)) {
+                                    if (!subAr) subAr = v.ar;
+                                    if (!subEn) subEn = v.en;
+                                    break;
+                                }
+                            }
+
+                            const activeSub = lang === 'en' ? (subEn || subAr) : (subAr || subEn);
+
                             return `
                             <div class="marquee-item">
                                 <span class="marquee-logo-badge logo-badge-img">
@@ -1328,7 +1373,7 @@ function initScrollSpy() {
                                 </span>
                                 <div class="marquee-brand-text">
                                     <span class="marquee-brand-name">${m.name}</span>
-                                    <span class="marquee-brand-tag">${m.subtitle?.[lang] || m.subtitle?.ar || ''}</span>
+                                    <span class="marquee-brand-tag" data-ar="${subAr}" data-en="${subEn}">${activeSub}</span>
                                 </div>
                             </div>
                         `;}).join('')}
