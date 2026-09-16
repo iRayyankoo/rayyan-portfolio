@@ -66,7 +66,7 @@
     "visual": {
       "type": "video",
       "src": "assets/hero-character-workstation-1080p.mp4",
-      "scale": 1.22,
+      "scale": 1.44,
       "glowColor": "rgba(36, 177, 177, 0.22)",
       "alt": "Rayyan Aldohian - 3D Character Workstation"
     }
