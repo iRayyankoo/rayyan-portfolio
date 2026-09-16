@@ -213,27 +213,35 @@
             flex: 1;
             background: var(--bg-base);
             overflow-y: auto;
-            padding: 1.75rem 2rem;
-            min-width: 400px;
+            padding: 1.25rem 1.75rem;
+            min-width: 380px;
+        }
+
+        .dash-editor-inner {
+            max-width: 920px;
+            margin-inline: auto;
+            width: 100%;
         }
 
         .editor-header {
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.25rem;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            gap: 1rem;
         }
 
         .section-title {
-            font-size: 1.35rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--text-main);
+            letter-spacing: -0.01em;
         }
 
         .section-desc {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
-            margin-top: 0.25rem;
+            margin-top: 0.2rem;
         }
 
         /* Form Controls & Cards */
@@ -241,21 +249,22 @@
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
             border-radius: var(--radius-md);
-            padding: 1.25rem;
-            margin-bottom: 1.5rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.6rem;
             border-bottom: 1px solid var(--border-subtle);
         }
 
         .card-title {
-            font-size: 0.92rem;
+            font-size: 0.86rem;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -263,21 +272,112 @@
             color: var(--text-main);
         }
 
+        .card-divider {
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 0.85rem 0;
+        }
+
+        .group-subtitle {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .form-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .form-grid-2-1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 680px) {
+            .form-grid-2, .form-grid-3, .form-grid-2-1 {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .field-group {
-            margin-bottom: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .field-group[dir="ltr"] {
+            text-align: left;
+        }
+
+        .field-group:last-child {
+            margin-bottom: 0;
         }
 
         .field-label-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
+            width: 100%;
+        }
+
+        .field-label-row .field-label {
+            margin-bottom: 0;
         }
 
         .field-label {
-            font-size: 0.8rem;
+            font-size: 0.76rem;
             font-weight: 600;
             color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .lang-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: 0.62rem;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+        }
+
+        .lang-badge.ar {
+            background: rgba(36, 177, 177, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(36, 177, 177, 0.3);
+        }
+
+        .lang-badge.en {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .accent-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+            box-shadow: 0 0 6px var(--accent-glow);
+            flex-shrink: 0;
         }
 
         .field-lang-tabs {
@@ -312,22 +412,28 @@
             border: 1px solid var(--border-subtle);
             color: var(--text-main);
             font-family: var(--font-sans);
-            font-size: 0.85rem;
-            padding: 0.6rem 0.85rem;
+            font-size: 0.8125rem;
+            padding: 0.45rem 0.75rem;
             border-radius: var(--radius-sm);
             transition: all 0.2s;
             outline: none;
         }
 
+        .input-text {
+            height: 36px;
+        }
+
         .input-text:focus, .textarea:focus, .select:focus {
             border-color: var(--accent);
             box-shadow: 0 0 0 2px var(--accent-glow);
+            background: rgba(26, 30, 38, 0.95);
         }
 
         .textarea {
-            min-height: 80px;
+            min-height: 64px;
             resize: vertical;
-            line-height: 1.6;
+            line-height: 1.5;
+            padding: 0.5rem 0.75rem;
         }
 
         .slider-row {
@@ -723,6 +829,7 @@
 
         <!-- Main Form Editor Canvas -->
         <main class="dash-editor" id="editorCanvas">
+          <div class="dash-editor-inner">
             
             <!-- TAB 1: HERO & IDENTITY -->
             <div class="tab-content" id="tab-hero">
@@ -733,77 +840,120 @@
                     </div>
                 </div>
 
-                <!-- Status Badge -->
-                <div class="card">
-                    <div class="card-header">
-                        <span class="card-title">
-                            <i data-lucide="circle-dot" style="width: 16px; height: 16px; color: var(--accent);"></i>
-                            شارة الحالة العلوية (Status Pill)
-                        </span>
-                        <label class="switch">
-                            <input type="checkbox" id="heroStatusActive" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    <div class="field-group">
-                        <div class="field-label-row">
-                            <label class="field-label">نص الشارة (عربي)</label>
-                        </div>
-                        <input type="text" class="input-text" id="heroStatusTextAr" value="متاح للمشاريع واستشارات النمو">
-                    </div>
-                    <div class="field-group">
-                        <div class="field-label-row">
-                            <label class="field-label">نص الشارة (English)</label>
-                        </div>
-                        <input type="text" class="input-text" id="heroStatusTextEn" value="Open to projects & growth advisory" dir="ltr">
-                    </div>
-                </div>
-
-                <!-- Headline -->
+                <!-- Group 1: Status Pill & Main Headline -->
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">
                             <i data-lucide="type" style="width: 16px; height: 16px; color: var(--accent);"></i>
-                            العنوان الرئيسي (Headline)
+                            العناوين الرئيسية وشارة الحالة (Headlines & Status)
                         </span>
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <span style="font-size: 0.72rem; color: var(--text-muted);">شارة الحالة</span>
+                            <label class="switch">
+                                <input type="checkbox" id="heroStatusActive" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">العنوان الرئيسي (عربي)</label>
-                        <input type="text" class="input-text" id="heroHeadlineAr" value="أبني مسارات النمو، ذكاء الأعمال، والتجارب الرقمية">
+
+                    <!-- Status Pill (Bilingual) -->
+                    <div class="group-subtitle">
+                        <i data-lucide="circle-dot" style="width: 12px; height: 12px; color: var(--accent);"></i>
+                        شارة الحالة العلوية (Status Pill)
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">الكلمات المميزة بلون الـ Accent (عربي)</label>
-                        <input type="text" class="input-text" id="heroHeadlineAccentAr" value="المدعومة بالذكاء الاصطناعي.">
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>نص الشارة</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <input type="text" class="input-text" id="heroStatusTextAr" value="متاح للمشاريع واستشارات النمو">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Status Text</span>
+                            </label>
+                            <input type="text" class="input-text" id="heroStatusTextEn" value="Open to projects & growth advisory">
+                        </div>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">العنوان الرئيسي (English)</label>
-                        <input type="text" class="input-text" id="heroHeadlineEn" value="Building scalable growth, Business Intelligence, and digital brands" dir="ltr">
+
+                    <div class="card-divider"></div>
+
+                    <!-- Main Headline (Bilingual) -->
+                    <div class="group-subtitle">
+                        <i data-lucide="heading" style="width: 12px; height: 12px; color: var(--accent);"></i>
+                        العنوان العريض الأساسي (Headline)
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">الكلمات المميزة بلون الـ Accent (English)</label>
-                        <input type="text" class="input-text" id="heroHeadlineAccentEn" value="powered by AI." dir="ltr">
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>العنوان الرئيسي</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <input type="text" class="input-text" id="heroHeadlineAr" value="أبني مسارات النمو، ذكاء الأعمال، والتجارب الرقمية">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Main Headline</span>
+                            </label>
+                            <input type="text" class="input-text" id="heroHeadlineEn" value="Building scalable growth, Business Intelligence, and digital brands">
+                        </div>
+                    </div>
+
+                    <!-- Accent Highlight Words (Bilingual) -->
+                    <div class="form-grid-2" style="margin-top: 0.6rem;">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                                    <span class="accent-dot"></span>
+                                    <span>الكلمات المميزة بلون الـ Accent</span>
+                                </span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <input type="text" class="input-text" id="heroHeadlineAccentAr" value="المدعومة بالذكاء الاصطناعي.">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                                    <span>Accent Words</span>
+                                    <span class="accent-dot"></span>
+                                </span>
+                            </label>
+                            <input type="text" class="input-text" id="heroHeadlineAccentEn" value="powered by AI.">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Lead Paragraph -->
+                <!-- Group 2: Lead Description (Bilingual) -->
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">
                             <i data-lucide="align-right" style="width: 16px; height: 16px; color: var(--accent);"></i>
-                            الفقرة التعريفية (Lead Description)
+                            الفقرة التعريفية الاستراتيجية (Lead Description)
                         </span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">الوصف التقديمي (عربي)</label>
-                        <textarea class="textarea" id="heroLeadAr">أدمج تحليلات ذكاء الأعمال (BI) مع استراتيجيات التسويق والأداء، وبناء الهويات البصرية الراسخة، وحلول الذكاء الاصطناعي (AI) لهندسة نمو مستدام وتجارب رقمية ذات أثر ملموس وقابل للقياس.</textarea>
-                    </div>
-                    <div class="field-group">
-                        <label class="field-label">الوصف التقديمي (English)</label>
-                        <textarea class="textarea" id="heroLeadEn" dir="ltr">Bridging Business Intelligence (BI) and data analytics with high-converting marketing, authoritative brand identity, and AI-driven workflows to build sustainable enterprise growth and measurable ROI.</textarea>
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>الوصف التقديمي</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <textarea class="textarea" id="heroLeadAr">أدمج تحليلات ذكاء الأعمال (BI) مع استراتيجيات التسويق والأداء، وبناء الهويات البصرية الراسخة، وحلول الذكاء الاصطناعي (AI) لهندسة نمو مستدام وتجارب رقمية ذات أثر ملموس وقابل للقياس.</textarea>
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Lead Description</span>
+                            </label>
+                            <textarea class="textarea" id="heroLeadEn">Bridging Business Intelligence (BI) and data analytics with high-converting marketing, authoritative brand identity, and AI-driven workflows to build sustainable enterprise growth and measurable ROI.</textarea>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 3D Video & Scale Controls -->
+                <!-- Group 3: 3D Video & Scale Controls -->
                 <div class="card">
                     <div class="card-header">
                         <span class="card-title">
@@ -811,17 +961,19 @@
                             مشهد محطة العمل والـ 3D (3D Workstation Scene)
                         </span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">مصدر الفيديو المفرغ (Asset Path)</label>
-                        <input type="text" class="input-text" id="heroVideoSrc" value="assets/hero-character-workstation-1080p.mp4" dir="ltr">
-                    </div>
-                    <div class="field-group">
-                        <div class="field-label-row">
-                            <label class="field-label">مقياس التكبير (Scale Zoom)</label>
-                            <span class="slider-val" id="videoScaleVal">1.44x</span>
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">مصدر الفيديو المفرغ (Asset Path)</label>
+                            <input type="text" class="input-text" id="heroVideoSrc" value="assets/hero-character-workstation-1080p.mp4" dir="ltr">
                         </div>
-                        <div class="slider-row">
-                            <input type="range" min="0.8" max="1.6" step="0.02" value="1.44" class="slider-range" id="heroVideoScaleSlider">
+                        <div class="field-group">
+                            <div class="field-label-row">
+                                <label class="field-label"><span>مقياس التكبير (Zoom)</span></label>
+                                <span class="slider-val" id="videoScaleVal">1.44x</span>
+                            </div>
+                            <div class="slider-row" style="height: 36px;">
+                                <input type="range" min="0.8" max="1.6" step="0.02" value="1.44" class="slider-range" id="heroVideoScaleSlider">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -837,13 +989,29 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="field-group">
-                        <label class="field-label">عنوان جلسة الطرفية (Session Label)</label>
-                        <input type="text" class="input-text" id="termSessionLabel" value="SESSION // BI_AI_PIPELINE" dir="ltr">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="terminal" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            إعدادات جلسة الطرفية والأمر (Session & Command)
+                        </span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">الأمر التلقائي المتحرك (Typing Command)</label>
-                        <input type="text" class="input-text" id="termPromptCommand" value="pipeline --connect --source=bigquery" dir="ltr">
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">عنوان جلسة الطرفية (Session Label)</label>
+                            <input type="text" class="input-text" id="termSessionLabel" value="SESSION // BI_AI_PIPELINE" dir="ltr">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">الأمر التلقائي المتحرك (Typing Command)</label>
+                            <input type="text" class="input-text" id="termPromptCommand" value="pipeline --connect --source=bigquery" dir="ltr">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="list-ordered" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            أسطر القياس والبيانات اللحظية (Telemetry Output Lines)
+                        </span>
                     </div>
                     <div class="field-group">
                         <label class="field-label">السطر الأول (Warehouse Telemetry)</label>
@@ -953,34 +1121,77 @@
                         <p class="section-desc">البيانات الشخصية، روابط التواصل الاجتماعي، وملف السيرة الذاتية PDF.</p>
                     </div>
                 </div>
+
+                <!-- Group 1: Biography & CV -->
                 <div class="card">
-                    <div class="field-group">
-                        <label class="field-label">السيرة الذاتية المختصرة (عربي)</label>
-                        <textarea class="textarea" id="aboutBioAr" style="min-height: 100px;"></textarea>
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="user" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            السيرة الذاتية المختصرة (Executive Bio)
+                        </span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">السيرة الذاتية المختصرة (English)</label>
-                        <textarea class="textarea" id="aboutBioEn" dir="ltr" style="min-height: 100px;"></textarea>
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>السيرة المختصرة</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <textarea class="textarea" id="aboutBioAr" style="min-height: 85px;"></textarea>
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Short Bio</span>
+                            </label>
+                            <textarea class="textarea" id="aboutBioEn" style="min-height: 85px;"></textarea>
+                        </div>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">رابط ملف السيرة الذاتية (CV PDF File)</label>
-                        <input type="text" class="input-text" id="aboutCvFile" value="assets/Rayyan_Aldohian_CV.pdf" dir="ltr">
+                    <div class="field-group" dir="ltr" style="margin-top: 0.5rem;">
+                        <label class="field-label">
+                            <span class="lang-badge en">PDF</span>
+                            <span>مسار ملف السيرة الذاتية (CV PDF Asset)</span>
+                        </label>
+                        <input type="text" class="input-text" id="aboutCvFile" value="assets/Rayyan_Aldohian_CV.pdf">
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">البريد الإلكتروني (Email)</label>
-                        <input type="email" class="input-text" id="socialEmail" value="contact@rayyan.sa" dir="ltr">
+                </div>
+
+                <!-- Group 2: Contact & Social Links -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">
+                            <i data-lucide="share-2" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            قنوات التواصل والمنصات (Contact & Social Links)
+                        </span>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">رابط LinkedIn</label>
-                        <input type="url" class="input-text" id="socialLinkedin" value="https://linkedin.com/in/rayyan-aldohian" dir="ltr">
-                    </div>
-                    <div class="field-group">
-                        <label class="field-label">رابط GitHub</label>
-                        <input type="url" class="input-text" id="socialGithub" value="https://github.com/iRayyanKoo" dir="ltr">
-                    </div>
-                    <div class="field-group">
-                        <label class="field-label">رابط X (تويتر)</label>
-                        <input type="url" class="input-text" id="socialX" value="https://x.com/rayyan_aldohian" dir="ltr">
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <i data-lucide="mail" style="width: 13px; height: 13px; color: var(--accent);"></i>
+                                <span>البريد الإلكتروني (Email)</span>
+                            </label>
+                            <input type="email" class="input-text" id="socialEmail" value="contact@rayyan.sa" dir="ltr">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <i data-lucide="linkedin" style="width: 13px; height: 13px; color: var(--accent);"></i>
+                                <span>LinkedIn Profile</span>
+                            </label>
+                            <input type="url" class="input-text" id="socialLinkedin" value="https://linkedin.com/in/rayyan-aldohian">
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label">
+                                <i data-lucide="github" style="width: 13px; height: 13px; color: var(--accent);"></i>
+                                <span>حساب GitHub</span>
+                            </label>
+                            <input type="url" class="input-text" id="socialGithub" value="https://github.com/iRayyanKoo" dir="ltr">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <i data-lucide="twitter" style="width: 13px; height: 13px; color: var(--accent);"></i>
+                                <span>X (Twitter) Profile</span>
+                            </label>
+                            <input type="url" class="input-text" id="socialX" value="https://x.com/rayyan_aldohian">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1075,7 +1286,7 @@
                     </ul>
                 </div>
             </div>
-
+          </div>
         </main>
 
         <!-- Right Live Preview Pane -->
@@ -1228,44 +1439,56 @@
                             </button>
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2">
                         <div class="field-group">
-                            <label class="field-label">اسم المشروع (عربي)</label>
+                            <label class="field-label">
+                                <span>اسم المشروع</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
                             <input type="text" class="input-text" value="${p.title?.ar || ''}" oninput="updateProjectField(${idx}, 'title.ar', this.value)">
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">اسم المشروع (English)</label>
-                            <input type="text" class="input-text" value="${p.title?.en || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'title.en', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Project Title</span>
+                            </label>
+                            <input type="text" class="input-text" value="${p.title?.en || ''}" oninput="updateProjectField(${idx}, 'title.en', this.value)">
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2-1">
                         <div class="field-group">
-                            <label class="field-label">تصنيف المشروع</label>
+                            <label class="field-label">تصنيف المشروع (Category)</label>
                             <input type="text" class="input-text" value="${p.category || ''}" oninput="updateProjectField(${idx}, 'category', this.value)">
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">السنة</label>
-                            <input type="text" class="input-text" value="${p.year || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'year', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">السنة (Year)</label>
+                            <input type="text" class="input-text" value="${p.year || ''}" oninput="updateProjectField(${idx}, 'year', this.value)">
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2">
                         <div class="field-group">
-                            <label class="field-label">الوصف السريع (عربي)</label>
-                            <input type="text" class="input-text" value="${p.description?.ar || ''}" oninput="updateProjectField(${idx}, 'description.ar', this.value)">
+                            <label class="field-label">
+                                <span>الوصف السريع</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <textarea class="textarea" style="min-height: 54px;" oninput="updateProjectField(${idx}, 'description.ar', this.value)">${p.description?.ar || ''}</textarea>
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">الوصف السريع (English)</label>
-                            <input type="text" class="input-text" value="${p.description?.en || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'description.en', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Quick Description</span>
+                            </label>
+                            <textarea class="textarea" style="min-height: 54px;" oninput="updateProjectField(${idx}, 'description.en', this.value)">${p.description?.en || ''}</textarea>
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="field-group">
+                    <div class="form-grid-2">
+                        <div class="field-group" dir="ltr">
                             <label class="field-label">مسار صورة البطاقة (Blueprint Image)</label>
-                            <input type="text" class="input-text" value="${p.image || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'image', this.value)">
+                            <input type="text" class="input-text" value="${p.image || ''}" oninput="updateProjectField(${idx}, 'image', this.value)">
                         </div>
-                        <div class="field-group">
+                        <div class="field-group" dir="ltr">
                             <label class="field-label">رابط المنظومة الحية (Live URL)</label>
-                            <input type="text" class="input-text" value="${p.liveUrl || ''}" dir="ltr" oninput="updateProjectField(${idx}, 'liveUrl', this.value)">
+                            <input type="text" class="input-text" value="${p.liveUrl || ''}" oninput="updateProjectField(${idx}, 'liveUrl', this.value)">
                         </div>
                     </div>
                 </div>
@@ -1319,24 +1542,30 @@
                             <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
                         </button>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2">
                         <div class="field-group">
-                            <label class="field-label">اسم الشركة أو الجهة</label>
+                            <label class="field-label">اسم الشركة أو الشريك</label>
                             <input type="text" class="input-text" value="${m.name || ''}" oninput="updateMarqueeField(${idx}, 'name', this.value)">
                         </div>
-                        <div class="field-group">
+                        <div class="field-group" dir="ltr">
                             <label class="field-label">مسار الشعار (Logo Path / URL)</label>
-                            <input type="text" class="input-text" value="${m.logo || ''}" dir="ltr" oninput="updateMarqueeField(${idx}, 'logo', this.value)">
+                            <input type="text" class="input-text" value="${m.logo || ''}" oninput="updateMarqueeField(${idx}, 'logo', this.value)">
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2">
                         <div class="field-group">
-                            <label class="field-label">نشاط الشركة (عربي)</label>
+                            <label class="field-label">
+                                <span>نشاط الشركة / القطاع</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
                             <input type="text" class="input-text" value="${m.subtitle?.ar || ''}" oninput="updateMarqueeField(${idx}, 'subtitle.ar', this.value)">
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">نشاط الشركة (English)</label>
-                            <input type="text" class="input-text" value="${m.subtitle?.en || ''}" dir="ltr" oninput="updateMarqueeField(${idx}, 'subtitle.en', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Industry / Category</span>
+                            </label>
+                            <input type="text" class="input-text" value="${m.subtitle?.en || ''}" oninput="updateMarqueeField(${idx}, 'subtitle.en', this.value)">
                         </div>
                     </div>
                 </div>
@@ -1403,24 +1632,44 @@
                 <div class="card" id="service-card-${idx}">
                     <div class="card-header">
                         <span class="card-title">
-                            <i data-lucide="${s.icon || 'star'}" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                            <i data-lucide="${s.icon || 'layers'}" style="width: 16px; height: 16px; color: var(--accent);"></i>
                             ${s.title?.ar || s.title?.en}
                         </span>
                         <button type="button" class="btn-icon delete" onclick="deleteServiceItem(${idx})" title="حذف التخصص">
                             <i data-lucide="trash-2" style="width: 15px; height: 15px;"></i>
                         </button>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">العنوان (عربي)</label>
-                        <input type="text" class="input-text" value="${s.title?.ar || ''}" oninput="updateServiceField(${idx}, 'title.ar', this.value)">
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>العنوان</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <input type="text" class="input-text" value="${s.title?.ar || ''}" oninput="updateServiceField(${idx}, 'title.ar', this.value)">
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Title</span>
+                            </label>
+                            <input type="text" class="input-text" value="${s.title?.en || ''}" oninput="updateServiceField(${idx}, 'title.en', this.value)">
+                        </div>
                     </div>
-                    <div class="field-group">
-                        <label class="field-label">العنوان (English)</label>
-                        <input type="text" class="input-text" value="${s.title?.en || ''}" dir="ltr" oninput="updateServiceField(${idx}, 'title.en', this.value)">
-                    </div>
-                    <div class="field-group">
-                        <label class="field-label">الشرح والتفاصيل (عربي)</label>
-                        <textarea class="textarea" oninput="updateServiceField(${idx}, 'description.ar', this.value)">${s.description?.ar || ''}</textarea>
+                    <div class="form-grid-2">
+                        <div class="field-group">
+                            <label class="field-label">
+                                <span>الشرح والتفاصيل</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
+                            <textarea class="textarea" style="min-height: 60px;" oninput="updateServiceField(${idx}, 'description.ar', this.value)">${s.description?.ar || ''}</textarea>
+                        </div>
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Description</span>
+                            </label>
+                            <textarea class="textarea" style="min-height: 60px;" oninput="updateServiceField(${idx}, 'description.en', this.value)">${s.description?.en || ''}</textarea>
+                        </div>
                     </div>
                 </div>
             `).join('');
@@ -1462,7 +1711,10 @@
             container.innerHTML = portfolioData.experience.map((e, idx) => `
                 <div class="card" id="exp-card-${idx}">
                     <div class="card-header">
-                        <span class="card-title">${e.company?.ar || e.company?.en} · ${e.role?.ar || e.role?.en}</span>
+                        <span class="card-title">
+                            <i data-lucide="briefcase" style="width: 15px; height: 15px; color: var(--accent);"></i>
+                            ${e.company?.ar || e.company?.en} · ${e.role?.ar || e.role?.en}
+                        </span>
                         <div class="item-actions">
                             <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); margin-left: 0.5rem;">${e.period}</span>
                             <button type="button" class="btn-icon delete" onclick="deleteExpItem(${idx})" title="حذف المحطة الوظيفية">
@@ -1470,24 +1722,33 @@
                             </button>
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2-1">
                         <div class="field-group">
-                            <label class="field-label">اسم الشركة / الجهة (عربي)</label>
+                            <label class="field-label">
+                                <span>اسم الشركة / الجهة</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
                             <input type="text" class="input-text" value="${e.company?.ar || ''}" oninput="updateExpField(${idx}, 'company.ar', this.value)">
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">الفترة الزمنية</label>
-                            <input type="text" class="input-text" value="${e.period || ''}" dir="ltr" oninput="updateExpField(${idx}, 'period', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">الفترة الزمنية (Period)</label>
+                            <input type="text" class="input-text" value="${e.period || ''}" oninput="updateExpField(${idx}, 'period', this.value)">
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2">
                         <div class="field-group">
-                            <label class="field-label">المسمى الوظيفي (عربي)</label>
+                            <label class="field-label">
+                                <span>المسمى الوظيفي</span>
+                                <span class="lang-badge ar">AR</span>
+                            </label>
                             <input type="text" class="input-text" value="${e.role?.ar || ''}" oninput="updateExpField(${idx}, 'role.ar', this.value)">
                         </div>
-                        <div class="field-group">
-                            <label class="field-label">المسمى الوظيفي (English)</label>
-                            <input type="text" class="input-text" value="${e.role?.en || ''}" dir="ltr" oninput="updateExpField(${idx}, 'role.en', this.value)">
+                        <div class="field-group" dir="ltr">
+                            <label class="field-label">
+                                <span class="lang-badge en">EN</span>
+                                <span>Job Title</span>
+                            </label>
+                            <input type="text" class="input-text" value="${e.role?.en || ''}" oninput="updateExpField(${idx}, 'role.en', this.value)">
                         </div>
                     </div>
                 </div>
@@ -1524,26 +1785,34 @@
             if (!container || !portfolioData.metrics) return;
 
             container.innerHTML = `
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-grid-2">
                     ${portfolioData.metrics.map((m, idx) => `
                         <div class="card" id="metric-card-${idx}">
-                            <div class="card-header" style="padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
-                                <span class="card-title" style="font-family: var(--font-mono); font-size: 1rem; color: var(--accent);">${m.value}</span>
+                            <div class="card-header" style="padding-bottom: 0.4rem; margin-bottom: 0.6rem;">
+                                <span class="card-title" style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--accent);">${m.value}</span>
                                 <button type="button" class="btn-icon delete" onclick="deleteMetricItem(${idx})" title="حذف المؤشر">
                                     <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
                                 </button>
                             </div>
                             <div class="field-group">
-                                <label class="field-label">القيمة الرقمية</label>
-                                <input type="text" class="input-text" style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);" value="${m.value}" oninput="updateMetricField(${idx}, 'value', this.value)">
+                                <label class="field-label">القيمة الرقمية (Metric Value)</label>
+                                <input type="text" class="input-text" style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);" value="${m.value}" dir="ltr" oninput="updateMetricField(${idx}, 'value', this.value)">
                             </div>
-                            <div class="field-group">
-                                <label class="field-label">العنوان (عربي)</label>
-                                <input type="text" class="input-text" value="${m.label?.ar || ''}" oninput="updateMetricField(${idx}, 'label.ar', this.value)">
-                            </div>
-                            <div class="field-group">
-                                <label class="field-label">العنوان (English)</label>
-                                <input type="text" class="input-text" value="${m.label?.en || ''}" dir="ltr" oninput="updateMetricField(${idx}, 'label.en', this.value)">
+                            <div class="form-grid-2">
+                                <div class="field-group">
+                                    <label class="field-label">
+                                        <span>العنوان</span>
+                                        <span class="lang-badge ar">AR</span>
+                                    </label>
+                                    <input type="text" class="input-text" value="${m.label?.ar || ''}" oninput="updateMetricField(${idx}, 'label.ar', this.value)">
+                                </div>
+                                <div class="field-group" dir="ltr">
+                                    <label class="field-label">
+                                        <span class="lang-badge en">EN</span>
+                                        <span>Label</span>
+                                    </label>
+                                    <input type="text" class="input-text" value="${m.label?.en || ''}" oninput="updateMetricField(${idx}, 'label.en', this.value)">
+                                </div>
                             </div>
                         </div>
                     `).join('')}
@@ -1771,6 +2040,7 @@
             if (portfolioData.projects && portfolioData.projects[idx]) {
                 setDeep(portfolioData.projects[idx], field, val);
                 saveDraftAuto();
+                broadcastToPreview();
             }
         }
 
@@ -1778,6 +2048,7 @@
             if (portfolioData.services && portfolioData.services[idx]) {
                 setDeep(portfolioData.services[idx], field, val);
                 saveDraftAuto();
+                broadcastToPreview();
             }
         }
 
@@ -1785,6 +2056,7 @@
             if (portfolioData.experience && portfolioData.experience[idx]) {
                 setDeep(portfolioData.experience[idx], field, val);
                 saveDraftAuto();
+                broadcastToPreview();
             }
         }
 
@@ -1792,6 +2064,7 @@
             if (portfolioData.metrics && portfolioData.metrics[idx]) {
                 setDeep(portfolioData.metrics[idx], field, val);
                 saveDraftAuto();
+                broadcastToPreview();
             }
         }
 
@@ -1800,6 +2073,7 @@
                 if (!portfolioData.marquee[idx].subtitle) portfolioData.marquee[idx].subtitle = {};
                 portfolioData.marquee[idx].subtitle.ar = val;
                 saveDraftAuto();
+                broadcastToPreview();
             }
         }
 
@@ -1808,6 +2082,7 @@
                 portfolioData.projects.splice(idx, 1);
                 renderProjectsList();
                 saveDraftAuto();
+                broadcastToPreview();
                 showToast('تم حذف المشروع.');
             }
         }
