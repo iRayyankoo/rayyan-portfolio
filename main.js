@@ -1311,6 +1311,8 @@ function initScrollSpy() {
                             let logoSrc = m.logo;
                             if (logoSrc && logoSrc.includes('Amazon_logo')) {
                                 logoSrc = 'assets/logos/amazon-white.svg';
+                            } else if (logoSrc && (logoSrc.includes('Riyadh-airports') || logoSrc.includes('riyadh-airports'))) {
+                                logoSrc = 'assets/logos/riyadh-airports-white.png';
                             }
                             const logoClass = m.name?.toLowerCase().includes('amazon') ? ' amazon-logo'
                                 : m.name?.toLowerCase().includes('riyadh') ? ' rac-logo'

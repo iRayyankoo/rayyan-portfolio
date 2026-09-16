@@ -1314,13 +1314,11 @@ html[lang="ar"] .marquee-track {
 }
 
 .marquee-logo-img.amazon-logo {
-    filter: brightness(0) invert(1);
-    transform: scale(0.92);
+    transform: scale(1.05);
 }
 
 .marquee-logo-img.rac-logo {
-    filter: brightness(0) invert(1);
-    transform: scale(1.1);
+    transform: scale(1.18);
 }
 
 .marquee-logo-img.wahag-logo {
@@ -1826,13 +1824,11 @@ html[dir="rtl"] .card-status span {
 }
 
 .company-logo-img.amazon-logo {
-    filter: brightness(0) invert(1);
-    transform: scale(0.92);
+    transform: scale(1.05);
 }
 
 .company-logo-img.rac-logo {
-    filter: brightness(0) invert(1);
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
 .company-logo-img.wahag-logo {
