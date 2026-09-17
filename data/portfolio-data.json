@@ -560,6 +560,17 @@
         "logo": "assets/logos/google.svg"
       },
       {
+        "id": "microsoft-power-bi",
+        "name": {
+          "ar": "الشهادة الاحترافية في تحليل البيانات (Microsoft Power BI Data Analyst)",
+          "en": "Microsoft Power BI Data Analyst Professional Certificate"
+        },
+        "issuer": "Microsoft",
+        "year": "2026",
+        "credentialUrl": "https://www.coursera.org/specializations/microsoft-power-bi-data-analyst",
+        "logo": "assets/logos/microsoft.svg"
+      },
+      {
         "id": "illinois-digital-marketing",
         "name": {
           "ar": "تخصص التسويق الرقمي (Digital Marketing Specialization)",
