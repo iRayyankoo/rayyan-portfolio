@@ -169,6 +169,8 @@ const translations = {
         edu_period: "2015 – 2019 · الولايات المتحدة الأمريكية",
         edu_desc: "تأسيس أكاديمي عميق يدمج نظم المعلومات وقواعد البيانات مع مفاهيم الأعمال والتسويق الحديث في بيئة دولية.",
         
+        cert_google_ai: "الشهادة الاحترافية في الذكاء الاصطناعي (Google AI)",
+        cert_google_ai_issuer: "Google · 2026",
         cert_ibm: "تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي",
         cert_ibm_issuer: "IBM · 2025",
         cert_google: "أسس التسويق الرقمي والتجارة الإلكترونية",
@@ -633,6 +635,8 @@ const translations = {
         edu_period: "2015 – 2019 · Pocatello, USA",
         edu_desc: "Rigorous academic grounding in information systems, database architectures, and international business management.",
         
+        cert_google_ai: "Google AI Professional Certificate",
+        cert_google_ai_issuer: "Google · 2026",
         cert_ibm: "Generative AI for Digital Marketing Specialization",
         cert_ibm_issuer: "IBM · 2025",
         cert_google: "Foundations of Digital Marketing and E-commerce",

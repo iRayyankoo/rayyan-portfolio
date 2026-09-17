@@ -547,6 +547,49 @@
       "years": "2015 – 2019",
       "location": "Pocatello, Idaho, USA"
     },
+    "certifications": [
+      {
+        "id": "google-ai",
+        "name": {
+          "ar": "الشهادة الاحترافية في الذكاء الاصطناعي (Google AI)",
+          "en": "Google AI Professional Certificate"
+        },
+        "issuer": "Google",
+        "year": "2026",
+        "credentialUrl": "https://www.coursera.org/professional-certificates/google-ai",
+        "logo": "assets/logos/google.svg"
+      },
+      {
+        "id": "ibm-genai",
+        "name": {
+          "ar": "تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي",
+          "en": "Generative AI for Digital Marketing Specialization"
+        },
+        "issuer": "IBM",
+        "year": "2025",
+        "logo": "assets/logos/ibm.svg"
+      },
+      {
+        "id": "google-digital-marketing",
+        "name": {
+          "ar": "أسس التسويق الرقمي والتجارة الإلكترونية",
+          "en": "Foundations of Digital Marketing and E-commerce"
+        },
+        "issuer": "Google",
+        "year": "2025",
+        "logo": "assets/logos/google.svg"
+      },
+      {
+        "id": "meta-social-marketing",
+        "name": {
+          "ar": "التسويق الاحترافي عبر منصات التواصل الاجتماعي",
+          "en": "Social Media Marketing Professional Certificate"
+        },
+        "issuer": "Meta",
+        "year": "2025",
+        "logo": "assets/logos/meta.svg"
+      }
+    ],
     "cvFile": "assets/Rayyan_Aldohian_CV.pdf"
   },
   "social": {
