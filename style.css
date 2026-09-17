@@ -1865,6 +1865,10 @@ html[dir="rtl"] .card-status span {
     transform: scale(1.1);
 }
 
+.company-logo-img.naht-logo {
+    transform: scale(1.12);
+}
+
 .company-logo-img.saudi-club-logo {
     transform: scale(1.15);
 }

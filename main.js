@@ -113,10 +113,19 @@ const translations = {
         heading_experience: "خبرات ميدانية تصنع الفارق بين الاستراتيجية والتنفيذ.",
         experience_lead: "مسار مهني يدمج الانضباط التشغيلي في كبرى الشركات العالمية، قيادة استراتيجيات النمو والهوية للشركات القابضة، والتأسيس الأكاديمي والتقني المدعوم بحلول الذكاء الاصطناعي وذكاء الأعمال.",
         experience_page_title: "المسار المهني والخبرات · ريان الضحيان",
-        experience_teaser_desc: "محطات قيادية وتجارب تشغيلية في كبرى الشركات (أمازون، مطارات الرياض، مجموعة T&S القابضة، وهج)، مدعومة باعتمادات عالمية وتأسيس أكاديمي أمريكي.",
+        experience_teaser_desc: "محطات قيادية وتجارب تشغيلية في كبرى الشركات (شركة نحت العقارية، مجموعة T&S القابضة، وهج، أمازون، مطارات الرياض)، مدعومة باعتمادات عالمية وتأسيس أكاديمي أمريكي.",
         btn_explore_career: "استعراض كامل المسار المهني والشهادات",
         cs_back_home: "العودة للرئيسية",
         
+        // Experience 0: Naht Real Estate
+        exp_0_role: "أخصائي أول تسويق رقمي",
+        exp_0_company: "شركة نحت العقارية | Naht",
+        exp_0_period: "05/2026 – الحالي",
+        exp_0_location: "الرياض، المملكة العربية السعودية",
+        exp_0_b1: "قيادة استراتيجيات التسويق الرقمي والأداء وبناء الأنظمة الرقمية لتسويق المشاريع العقارية الفاخرة.",
+        exp_0_b2: "تطوير وإدارة منظومة الـ CRM وأتمتة مسارات العملاء ولوحات تحكم ذكاء الأعمال (BI) لرفع معدل التحويل.",
+        exp_0_b3: "إدارة الحضور الرقمي، الحملات الإعلانية المدفوعة، وتجربة المستخدم عبر البوابات الرقمية لتعزيز مكانة العلامة.",
+
         // Experience 1: T&S
         exp_1_role: "أخصائي أول تسويق رقمي",
         exp_1_company: "مجموعة T&S القابضة",
@@ -583,10 +592,19 @@ const translations = {
         heading_experience: "Field-tested expertise bridging strategy and execution.",
         experience_lead: "A progressive career combining Amazon-grade operational discipline, high-growth marketing and brand leadership for diversified holding groups, and strong academic foundations in business informatics enhanced with AI & BI capabilities.",
         experience_page_title: "Career & Experience · Rayyan Aldohian",
-        experience_teaser_desc: "Strategic leadership and operational excellence across leading enterprises (Amazon, RAC, T&S Holding, Wahag), backed by global credentials and US academic foundations.",
+        experience_teaser_desc: "Strategic leadership and operational excellence across leading enterprises (Naht Real Estate, T&S Holding, Wahag, Amazon, RAC), backed by global credentials and US academic foundations.",
         btn_explore_career: "Explore Full Career & Credentials",
         cs_back_home: "Back to Home",
         
+        // Experience 0: Naht Real Estate
+        exp_0_role: "Senior Digital Marketing Specialist",
+        exp_0_company: "Naht | نحت",
+        exp_0_period: "05/2026 – Present",
+        exp_0_location: "Riyadh, Saudi Arabia · On-site",
+        exp_0_b1: "Leading digital marketing strategies, performance campaigns, and digital infrastructure to drive acquisition for luxury real estate developments.",
+        exp_0_b2: "Engineering custom CRM workflows, automated lead pipelines, and BI intelligence dashboards to accelerate lead-to-deal conversion.",
+        exp_0_b3: "Governing brand authority, paid media campaigns, and user experience across digital portals to scale investor reach and brand valuation.",
+
         // Experience 1: T&S
         exp_1_role: "Senior Digital Marketing Specialist",
         exp_1_company: "T&S Holding Group",

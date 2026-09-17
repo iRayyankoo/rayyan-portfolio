@@ -380,6 +380,36 @@
   ],
   "experience": [
     {
+      "id": "naht",
+      "company": {
+        "ar": "شركة نحت العقارية | Naht",
+        "en": "Naht Real Estate"
+      },
+      "role": {
+        "ar": "أخصائي أول تسويق رقمي",
+        "en": "Senior Digital Marketing Specialist"
+      },
+      "period": "05/2026 – الحالي",
+      "location": {
+        "ar": "الرياض، المملكة العربية السعودية",
+        "en": "Riyadh, Saudi Arabia · On-site"
+      },
+      "bullets": [
+        {
+          "ar": "قيادة استراتيجيات التسويق الرقمي والأداء وبناء الأنظمة الرقمية لتسويق المشاريع العقارية الفاخرة.",
+          "en": "Leading digital marketing strategies, performance campaigns, and digital infrastructure to drive acquisition for luxury real estate developments."
+        },
+        {
+          "ar": "تطوير وإدارة منظومة الـ CRM وأتمتة مسارات العملاء ولوحات تحكم ذكاء الأعمال (BI) لرفع معدل التحويل.",
+          "en": "Engineering custom CRM workflows, automated lead pipelines, and BI intelligence dashboards to accelerate lead-to-deal conversion."
+        },
+        {
+          "ar": "إدارة الحضور الرقمي، الحملات الإعلانية المدفوعة، وتجربة المستخدم عبر البوابات الرقمية لتعزيز مكانة العلامة.",
+          "en": "Governing brand authority, paid media campaigns, and user experience across digital portals to scale investor reach and brand valuation."
+        }
+      ]
+    },
+    {
       "id": "ts",
       "company": {
         "ar": "مجموعة T&S القابضة",
@@ -532,8 +562,8 @@
       "en": "About Me & Professional Career"
     },
     "bio": {
-      "ar": "متخصص في هندسة النمو، ذكاء الأعمال (BI)، وحلول الذكاء الاصطناعي. أمتلك خلفية أكاديمية في معلوماتية الأعمال من جامعة ولاية أيداهو الأمريكية وخبرة ميدانية في كبرى الشركات (أمازون، مطارات الرياض، T&S القابضة). أركز على بناء وتطوير الأنظمة التي تدمج التحليلات المتقدمة بالأثر التجاري الملموس.",
-      "en": "Growth Architect, Business Intelligence strategist, and AI systems builder. Holding a degree in Business Informatics from Idaho State University with proven track record across leading enterprises (Amazon, Riyadh Airports, T&S Holding). Dedicated to building scalable digital engines that fuse deep analytics with measurable commercial impact."
+      "ar": "متخصص في هندسة النمو، ذكاء الأعمال (BI)، وحلول الذكاء الاصطناعي. أمتلك خلفية أكاديمية في معلوماتية الأعمال من جامعة ولاية أيداهو الأمريكية وخبرة ميدانية في كبرى الشركات (شركة نحت العقارية، مجموعة T&S القابضة، أمازون، مطارات الرياض). أركز على بناء وتطوير الأنظمة التي تدمج التحليلات المتقدمة بالأثر التجاري الملموس.",
+      "en": "Growth Architect, Business Intelligence strategist, and AI systems builder. Holding a degree in Business Informatics from Idaho State University with proven track record across leading enterprises (Naht Real Estate, T&S Holding, Amazon, Riyadh Airports). Dedicated to building scalable digital engines that fuse deep analytics with measurable commercial impact."
     },
     "education": {
       "degree": {
