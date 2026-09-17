@@ -171,6 +171,8 @@ const translations = {
         
         cert_google_ai: "الشهادة الاحترافية في الذكاء الاصطناعي (Google AI)",
         cert_google_ai_issuer: "Google · 2026",
+        cert_illinois_marketing: "تخصص التسويق الرقمي (Digital Marketing)",
+        cert_illinois_marketing_issuer: "جامعة إلينوي إربانا-شامبين (UIUC) · 2026",
         cert_ibm: "تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي",
         cert_ibm_issuer: "IBM · 2025",
         cert_google: "أسس التسويق الرقمي والتجارة الإلكترونية",
@@ -637,6 +639,8 @@ const translations = {
         
         cert_google_ai: "Google AI Professional Certificate",
         cert_google_ai_issuer: "Google · 2026",
+        cert_illinois_marketing: "Digital Marketing Specialization",
+        cert_illinois_marketing_issuer: "University of Illinois Urbana-Champaign · 2026",
         cert_ibm: "Generative AI for Digital Marketing Specialization",
         cert_ibm_issuer: "IBM · 2025",
         cert_google: "Foundations of Digital Marketing and E-commerce",

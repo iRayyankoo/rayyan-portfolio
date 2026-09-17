@@ -2209,6 +2209,10 @@ html[lang="ar"] .experience-meta {
     transform: scale(1.08);
 }
 
+.cert-logo-img.illinois-logo {
+    transform: scale(0.96);
+}
+
 .cert-item:hover .cert-issuer-badge {
     border-color: var(--color-accent-border);
     box-shadow: 0 0 10px var(--color-accent-glow);
@@ -2224,6 +2228,10 @@ html[lang="ar"] .experience-meta {
 
 .cert-item:hover .cert-logo-img.meta-logo {
     transform: scale(1.18);
+}
+
+.cert-item:hover .cert-logo-img.illinois-logo {
+    transform: scale(1.08);
 }
 
 .cert-name {

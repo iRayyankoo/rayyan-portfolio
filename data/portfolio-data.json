@@ -560,6 +560,17 @@
         "logo": "assets/logos/google.svg"
       },
       {
+        "id": "illinois-digital-marketing",
+        "name": {
+          "ar": "تخصص التسويق الرقمي (Digital Marketing Specialization)",
+          "en": "Digital Marketing Specialization"
+        },
+        "issuer": "University of Illinois Urbana-Champaign",
+        "year": "2026",
+        "credentialUrl": "https://www.coursera.org/specializations/digital-marketing",
+        "logo": "assets/logos/illinois.svg"
+      },
+      {
         "id": "ibm-genai",
         "name": {
           "ar": "تخصص الذكاء الاصطناعي التوليدي للتسويق الرقمي",
