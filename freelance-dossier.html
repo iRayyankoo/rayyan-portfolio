@@ -302,58 +302,33 @@
       direction: ltr;
     }
 
-    /* Academic Degree Card */
-    .academic-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    /* BI Practice Areas Grid */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 10px 14px;
-      margin-bottom: 14px;
+      padding: 9px 12px;
+      border-top: 3px solid #0284c7;
     }
 
-    .academic-card img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .academic-details {
-      flex: 1;
-    }
-
-    .academic-details .deg-title {
-      font-size: 12px;
+    .pillar-title {
+      font-size: 10.5px;
       font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 2px;
+      color: #0c4a6e;
+      margin-bottom: 3px;
     }
 
-    .academic-details .deg-sub {
-      font-size: 10px;
-      color: #64748b;
-      font-weight: 600;
-    }
-
-    .academic-details .deg-desc {
-      font-size: 9.5px;
+    .pillar-desc {
+      font-size: 8.5px;
       color: #475569;
-      margin-top: 3px;
-      line-height: 1.4;
-    }
-
-    .academic-badge {
-      background: #ecfdf5;
-      color: #059669;
-      border: 1px solid #a7f3d0;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 9px;
-      font-weight: 800;
-      flex-shrink: 0;
+      line-height: 1.45;
     }
 
     /* Certifications Grid */
@@ -733,7 +708,7 @@
 
       <!-- Executive Statement -->
       <div class="exec-summary">
-        <strong>الملخص التنفيذي والأهلية المهنية:</strong> متخصص في ذكاء الأعمال (Business Intelligence) وتحليل البيانات، حاصل على بكالوريوس في معلوماتية الأعمال من جامعة ولاية أيداهو (الولايات المتحدة الأمريكية) ومعتمد رسمياً من <strong>Microsoft</strong> كـ <strong>Power BI Data Analyst (PL-300)</strong> ومن <strong>Google</strong> في الذكاء الاصطناعي التطبيقي. أمتلك خبرة عملية رائدة في بناء وتصميم نماذج البيانات التفاعلية (Data Modeling & Star Schema)، استخراج مؤشرات الأداء الحيوية عبر تقنيات DAX المتقدمة، وهندسة لوحات التحكم التنفيذية (Executive BI Dashboards) الداعمة لاتخاذ القرارات الاستراتيجية ورفع معدلات التحويل التجاري والتشغيلي.
+        <strong>الملخص التنفيذي والأهلية المهنية:</strong> متخصص معتمد في ذكاء الأعمال (Business Intelligence) وتحليل البيانات، حاصل على اعتمادات مهنية عالمية متقدمة من <strong>Microsoft</strong> كـ <strong>Power BI Data Analyst (PL-300)</strong> ومن <strong>Google</strong> في الذكاء الاصطناعي التطبيقي والتحليل التنبؤي، بالإضافة إلى اعتمادات تخصصية من <strong>جامعة إلينوي (UIUC)</strong> و <strong>IBM</strong>. أمتلك خبرة عملية رائدة في بناء وتصميم نماذج البيانات التفاعلية (Data Modeling & Star Schema)، صياغة مقاييس DAX المعقدة، وهندسة لوحات التحكم التنفيذية (Executive BI Dashboards) الداعمة لاتخاذ القرارات الاستراتيجية ورفع معدلات التحويل التجاري والتشغيلي.
       </div>
 
       <!-- Metric Highlights -->
@@ -756,26 +731,9 @@
         </div>
       </div>
 
-      <!-- Academic Qualification -->
-      <div class="sec-header">
-        <div class="icon-cube">1</div>
-        <h2>المؤهل الأكاديمي المعتمد</h2>
-        <span class="en-sub">Accredited Academic Qualification</span>
-      </div>
-
-      <div class="academic-card">
-        <img src="assets/logos/isu-bengal.png" alt="Idaho State University">
-        <div class="academic-details">
-          <div class="deg-title">بكالوريوس العلوم في معلوماتية الأعمال (B.S. in Business Informatics)</div>
-          <div class="deg-sub">جامعة ولاية أيداهو (Idaho State University) - الولايات المتحدة الأمريكية</div>
-          <div class="deg-desc">تخصص دقيق يجمع بين نظم المعلومات الإدارية، تحليل وتعدين البيانات الضخمة، نمذجة العمليات التجارية، وإدارة قواعد البيانات العلائقية لدعم اتخاذ القرار المؤسسي.</div>
-        </div>
-        <div class="academic-badge">مؤهل معتمد رسمي</div>
-      </div>
-
       <!-- Professional Certifications in BI & AI -->
       <div class="sec-header">
-        <div class="icon-cube">2</div>
+        <div class="icon-cube">1</div>
         <h2>الشهادات والاعتمادات المهنية العالمية في ذكاء الأعمال والبيانات</h2>
         <span class="en-sub">Global Professional Certifications</span>
       </div>
@@ -819,6 +777,32 @@
             <div class="cert-issuer">IBM | Specialized Credential</div>
             <div class="cert-desc">استخدام تقنيات الذكاء الاصطناعي التوليدي وهندسة الأوامر المتقدمة (Prompt Engineering) لإنشاء تقارير ذكاء أعمال آلية وتحليل الاستفسارات المعقدة.</div>
           </div>
+        </div>
+      </div>
+
+      <!-- Core BI Practice & Consulting Areas -->
+      <div class="sec-header">
+        <div class="icon-cube">2</div>
+        <h2>مجالات ونطاقات الاستشارات والخدمات المعتمدة في ذكاء الأعمال</h2>
+        <span class="en-sub">Core BI Consulting & Service Domains</span>
+      </div>
+
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <div class="pillar-title">لوحات التحكم التنفيذية (Executive Dashboards)</div>
+          <div class="pillar-desc">تصميم لوحات مؤشرات تفاعلية وفورية عبر Power BI تربط مخرجات المبيعات والعمليات والتسويق لتمكين الإدارة من اتخاذ القرارات المدعومة بالبيانات.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">نمذجة البيانات والمقاييس (Data Modeling & DAX)</div>
+          <div class="pillar-desc">بناء هياكل المخططات النجمية (Star Schema)، صياغة معادلات DAX المتقدمة للربحية والنمو، وضمان اتساق وموثوقية العلاقات بين الجداول.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">هندسة وتكامل البيانات (ETL Pipelines)</div>
+          <div class="pillar-desc">ربط وتوحيد تدفقات البيانات من أنظمة متعددة (CRM, Ads, ERP, SQL) عبر مسارات أتمتة دورية تختصر زمن استخراج التقارير بنسبة 100%.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-title">التحليل التنبؤي وتحسين التحويل (Predictive & CRO)</div>
+          <div class="pillar-desc">تطبيق حلول الذكاء الاصطناعي لتحليل مسار رحلة العميل واكتشاف نقاط الاختناق، ورفع معدلات التحويل التجاري وخفض تكلفة الاستحواذ.</div>
         </div>
       </div>
     </div>
@@ -1081,7 +1065,7 @@
         </div>
         <div class="legal-statement">
           <strong>إقرار نظامي بصحة البيانات والجاهزية المهنية للعمل الحر:</strong>
-          أقر أنا <strong>ريان بن محمد الضحيان</strong> بصحة كافة المؤهلات الأكاديمية والشهادات الاحترافية وسجلات الخبرة وسابقة الأعمال الموضحة في هذا الملف، وأؤكد أهليتي الكاملة لتقديم الخدمات الاستشارية والتنفيذية المستقلة في تخصص <strong>ذكاء الأعمال (Business Intelligence)</strong> وفق الأنظمة واللوائح المعمول بها لدى وزارة الموارد البشرية ومنصة العمل الحر بالمملكة العربية السعودية. يمكن التحقق المباشر من النماذج الحية عبر مسح الرمز المقابل أو زيارة الرابط الرسمي:
+          أقر أنا <strong>ريان بن محمد الضحيان</strong> بصحة كافة الشهادات المهنية والاعتمادات الاحترافية وسجلات الخبرة وسابقة الأعمال الموضحة في هذا الملف، وأؤكد أهليتي الكاملة لتقديم الخدمات الاستشارية والتنفيذية المستقلة في تخصص <strong>ذكاء الأعمال (Business Intelligence)</strong> وفق الأنظمة واللوائح المعمول بها لدى وزارة الموارد البشرية ومنصة العمل الحر بالمملكة العربية السعودية. يمكن التحقق المباشر من النماذج الحية عبر مسح الرمز المقابل أو زيارة الرابط الرسمي:
           <span style="direction:ltr; display:inline-block; font-family:'Inter',sans-serif; color:#0284c7; font-weight:700;">https://irayyankoo.github.io/rayyan-portfolio</span>
           <div class="signature-row">
             <div>التاريخ: سبتمبر 2026م</div>
