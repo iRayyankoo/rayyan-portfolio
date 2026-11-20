@@ -987,9 +987,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Theme Initialization
-    let savedTheme = localStorage.getItem('rayyan_theme') || 'teal';
+    let savedTheme = localStorage.getItem('rayyan_theme') || 'violet';
     if (savedTheme === 'emerald') savedTheme = 'teal';
-    setTheme(savedTheme);
+    setTheme(savedTheme, false);
 
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     const themeDropdown = document.getElementById('themeDropdown');
@@ -1090,9 +1090,9 @@ function setLanguage(lang) {
 }
 
 // --- Theme Function ---
-function setTheme(theme) {
+function setTheme(theme, persist = true) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('rayyan_theme', theme);
+    if (persist) localStorage.setItem('rayyan_theme', theme);
     updateBadgeTheme(theme);
     updateHeroToyTheme(theme);
 }
@@ -1353,8 +1353,8 @@ function initScrollSpy() {
         }
 
         // Update Theme
-        if (data.meta?.theme?.defaultTheme) {
-            document.documentElement.setAttribute('data-theme', data.meta.theme.defaultTheme);
+        if (data.meta?.theme?.defaultTheme && (window.self !== window.top || !localStorage.getItem('rayyan_theme'))) {
+            setTheme(data.meta.theme.defaultTheme, false);
         }
 
         // Update Marquee Track
