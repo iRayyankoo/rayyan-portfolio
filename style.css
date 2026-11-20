@@ -4378,3 +4378,59 @@ html[dir="rtl"] .project-link-badge span {
     color: var(--color-bone);
 }
 
+
+/* Align the existing mobile palette, language and navigation controls. */
+@media (max-width: 919px) {
+    .site-header .header-actions :is(.theme-btn, .lang-btn, .mobile-toggle) {
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        min-block-size: 44px;
+        block-size: 44px;
+        min-inline-size: 44px;
+        padding-block: 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    .site-header .header-actions :is(.theme-btn, .mobile-toggle) {
+        inline-size: 44px;
+        padding-inline: 0;
+    }
+
+    .site-header .header-actions .lang-btn {
+        inline-size: auto;
+        padding-inline: .55rem;
+    }
+
+    .site-header .header-actions :is(.theme-btn, .lang-btn, .mobile-toggle) > :is(i, svg) {
+        display: block;
+        inline-size: 16px !important;
+        block-size: 16px !important;
+        width: 16px !important;
+        height: 16px !important;
+        flex: 0 0 16px;
+        stroke-width: 2;
+    }
+}
+
+@media (max-width: 374px) {
+    .site-header :is(.nav-container, .header-container) {
+        gap: .375rem;
+        padding-inline: .625rem;
+    }
+
+    .site-header .brand-logo {
+        margin-inline-end: 0;
+        font-size: .825rem;
+    }
+
+    .site-header .header-actions {
+        gap: .375rem;
+    }
+
+    .site-header .header-actions .lang-btn {
+        padding-inline: .45rem;
+        font-size: .75rem;
+    }
+}
