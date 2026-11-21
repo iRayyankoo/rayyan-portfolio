@@ -1,3 +1,5 @@
+# This copy is at /rayyan-portfolio/robots.txt and does not control host crawling.
+# Submit this project's sitemap directly in Search Console as needed.
 User-agent: *
 Allow: /
 
